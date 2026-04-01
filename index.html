@@ -637,7 +637,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
   </div>
 </div>
 
-<div class="co co-t"><strong>Production note:</strong> The SVG renderings above are structural approximations of the GPS checkerboard globe mark for digital reference. For production use, always source the official vector files (SVG / EPS / AI) from the GPS shared drive. The actual logo mark has precise dot placement, sizing, and opacity values that this reference representation approximates.</div>
+<div class="co co-t"><strong class='en'>Production note:</strong><strong class='zh'>製作備註：</strong><span class='en'>The SVG renderings above are structural approximations. For production use, source official vector files (SVG / EPS / AI) from the GPS shared drive. Both Chinese Main and English Main lockups are equally valid — select based on the primary audience language.</span><span class='zh'>以上 SVG 為結構性近似圖。正式製作時，請從 GPS 共用磁碟取用官方向量檔（SVG / EPS / AI）。中文主標和英文主標兩種組合同等有效——依受眾主要語言選擇。</span> of the GPS checkerboard globe mark for digital reference. For production use, always source the official vector files (SVG / EPS / AI) from the GPS shared drive. The actual logo mark has precise dot placement, sizing, and opacity values that this reference representation approximates.</div>
 
 <h3><span class="en">Logo Lockups — Specifications</span><span class="zh">標誌組合——規格</span></h3>
 <p class="en">Horizontal Lockup is the default and primary choice for most use cases. If space is limited, use the secondary vertical logos. The logo mark alone can be used where space is very limited, such as web clip or favicon. Each lockup exists in <strong>Chinese Main Lockup</strong> and <strong>English Main Lockup</strong> variants — both are equally valid. Select based on the audience's primary language.</p><p class="zh">水平組合標誌是大多數使用場景的預設和首選。空間有限時使用垂直組合。標誌圖標可在極小空間（如網頁圖示或 favicon）單獨使用。每種組合都有<strong>中文主標</strong>和<strong>英文主標</strong>兩種變體——兩者同等有效，依受眾主要語言選擇。</p>
@@ -661,6 +661,24 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <h3><span class="en">Clearspace</span><span class="zh">安全空間</span></h3>
 <p class="en">Always keep a minimum amount of clear space around the logo — free from text, graphics, and other elements. This minimum clearspace scales with the size of the logo mark and should never be reduced.</p><p class="zh">始終在標誌周圍保留最低安全空間——遠離文字、圖形及其他元素。此最小安全空間隨標誌圖標尺寸等比縮放，不得減少。</p>
+<!-- Clearspace visual diagram -->
+<div style="display:flex;gap:16px;margin:16px 0;flex-wrap:wrap">
+  <svg width="240" height="100" viewBox="0 0 240 100" style="background:var(--g50);border-radius:8px;border:1px solid var(--g200)">
+    <rect x="60" y="20" width="120" height="60" fill="none" stroke="var(--turquoise)" stroke-width="1" stroke-dasharray="4,3" rx="2"/>
+    <rect x="75" y="32" width="90" height="36" fill="var(--turquoise-100)" rx="2"/>
+    <text x="120" y="54" text-anchor="middle" font-size="8" font-family="var(--fm)" fill="var(--turquoise-700)">LOGO AREA</text>
+    <line x1="60" y1="15" x2="75" y2="15" stroke="var(--danger)" stroke-width=".8"/><text x="67" y="12" text-anchor="middle" font-size="6" fill="var(--danger)" font-family="var(--fm)">1/4</text>
+    <line x1="55" y1="20" x2="55" y2="32" stroke="var(--danger)" stroke-width=".8"/><text x="48" y="28" text-anchor="middle" font-size="6" fill="var(--danger)" font-family="var(--fm)">1/4</text>
+    <text x="120" y="95" text-anchor="middle" font-size="7" fill="var(--g500)" font-family="var(--fe)"><tspan class="en">Horizontal — 1/4 mark size all sides</tspan><tspan class="zh">水平——四邊各為圖標尺寸的 1/4</tspan></text>
+  </svg>
+  <svg width="140" height="100" viewBox="0 0 140 100" style="background:var(--g50);border-radius:8px;border:1px solid var(--g200)">
+    <rect x="20" y="10" width="100" height="80" fill="none" stroke="var(--turquoise)" stroke-width="1" stroke-dasharray="4,3" rx="2"/>
+    <rect x="35" y="22" width="70" height="56" fill="var(--turquoise-100)" rx="2"/>
+    <text x="70" y="54" text-anchor="middle" font-size="8" font-family="var(--fm)" fill="var(--turquoise-700)">LOGO</text>
+    <line x1="20" y1="6" x2="35" y2="6" stroke="var(--danger)" stroke-width=".8"/><text x="27" y="4" text-anchor="middle" font-size="6" fill="var(--danger)" font-family="var(--fm)">1/2</text>
+    <text x="70" y="98" text-anchor="middle" font-size="7" fill="var(--g500)" font-family="var(--fe)"><tspan class="en">Vertical — 1/2 mark width</tspan><tspan class="zh">垂直——圖標寬度的 1/2</tspan></text>
+  </svg>
+</div>
 <table class="T"><thead><tr><th>Lockup</th><th>Clearspace Rule</th><th>Notation</th></tr></thead><tbody>
 <tr><td><strong>Horizontal logo</strong></td><td>1/4 of the logo mark size on all sides</td><td><code>1/2a</code> top · <code>1/2b</code> bottom · <code>a</code> sides</td></tr>
 <tr><td><strong>Vertical logo</strong></td><td>1/2 of the logo mark width on all sides</td><td><code>1/2a</code> top · <code>b</code> bottom · <code>1/2b</code> sides</td></tr>
@@ -669,23 +687,31 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <h3><span class="en">Scalability</span><span class="zh">尺寸規範</span></h3>
 <p class="en">The logo was designed and tested to work at various sizes. Never use the logo smaller than the minimum sizes defined above. Below the standard minimum, an optical version of the logo is available with adjusted stroke weights and spacing to preserve legibility. Vertical lockups fall back to the horizontal optical logo at smaller scales.</p><p class="zh">標誌經設計和測試，可在各種尺寸下正常使用。永遠不要以小於上述最低尺寸使用標誌。低於標準最小值時，可使用經調整筆畫粗細和間距的光學版本，以維持清晰度。垂直組合在較小尺寸時改用水平光學版本。</p>
+<!-- Scalability visual — minimum size reference -->
+<div style="display:flex;gap:20px;align-items:flex-end;margin:16px 0;padding:20px;background:var(--g50);border-radius:8px;border:1px solid var(--g200);flex-wrap:wrap">
+  <div style="text-align:center"><div style="height:36px;width:90px;background:var(--turquoise-100);border:1px dashed var(--turquoise);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:7px;color:var(--turquoise-700);font-weight:700">36px</div><div style="font-size:8px;color:var(--g500);margin-top:4px"><span class="en">Horizontal min</span><span class="zh">水平最小</span></div></div>
+  <div style="text-align:center"><div style="height:28px;width:70px;background:var(--orange-50);border:1px dashed var(--orange);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:7px;color:var(--orange-600);font-weight:700">28px</div><div style="font-size:8px;color:var(--g500);margin-top:4px"><span class="en">Optical min</span><span class="zh">光學最小</span></div></div>
+  <div style="text-align:center"><div style="height:36px;width:36px;background:var(--turquoise-100);border:1px dashed var(--turquoise);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:7px;color:var(--turquoise-700);font-weight:700">36</div><div style="font-size:8px;color:var(--g500);margin-top:4px"><span class="en">Mark min</span><span class="zh">圖標最小</span></div></div>
+  <div style="text-align:center"><div style="height:20px;width:20px;background:var(--orange-50);border:1px dashed var(--orange);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:6px;color:var(--orange-600);font-weight:700">20</div><div style="font-size:8px;color:var(--g500);margin-top:4px"><span class="en">Mark optical</span><span class="zh">圖標光學</span></div></div>
+  <div style="text-align:center"><div style="height:160px;width:40px;background:var(--turquoise-100);border:1px dashed var(--turquoise);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:7px;color:var(--turquoise-700);font-weight:700;writing-mode:vertical-lr">160px</div><div style="font-size:8px;color:var(--g500);margin-top:4px"><span class="en">Vert. tall</span><span class="zh">垂直（高）</span></div></div>
+</div>
 
 <h3><span class="en">Logo Misuse</span><span class="zh">標誌誤用</span></h3>
 <p class="en">The appearance of the logo must remain consistent. It should not be reinterpreted, modified, or embellished. No attempt should be made to alter the logo in any way.</p><p class="zh">標誌的外觀必須保持一致。不得重新詮釋、修改或美化。任何人不得以任何方式改動標誌。</p>
 <div class="cg c3">
-  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 01</div><div class="cd-v"><span class="en">Do not resize the mark</span><span class="zh">不可重新調整圖標尺寸</span></div><div class="cd-n">The mark and logotype must always scale together proportionally. Never enlarge or shrink the mark independently of the text.</div></div>
-  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 02</div><div class="cd-v"><span class="en">Do not rotate the logo</span><span class="zh">不可旋轉標誌</span></div><div class="cd-n">The logo must always appear in its standard upright orientation. No angular rotation is permitted.</div></div>
-  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 03</div><div class="cd-v"><span class="en">Do not change the color of the mark alone</span><span class="zh">不可單獨更改圖標顏色</span></div><div class="cd-n">The mark and text must share the same color treatment. Do not recolor the globe independently.</div></div>
-  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 04</div><div class="cd-v"><span class="en">Do not outline the logo</span><span class="zh">不可將標誌轉為外框</span></div><div class="cd-n">The logo uses solid fills. Do not convert to outline, add strokes, or apply border effects.</div></div>
-  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 05</div><div class="cd-v"><span class="en">Do not add gradients to the logotype</span><span class="zh">不可對標誌文字添加漸層</span></div><div class="cd-n">The gradient belongs to brand surfaces, not the logotype itself. Keep the text portion single-color.</div></div>
-  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 06</div><div class="cd-v"><span class="en">Do not stretch or manipulate</span><span class="zh">不可拉伸或變形</span></div><div class="cd-n">Never distort, warp, squeeze, or disproportionately scale the logo. Maintain exact aspect ratios at all times.</div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 01</div><div class="cd-v"><span class="en">Do not resize the mark</span><span class="zh">不可重新調整圖標尺寸</span></div><div class="cd-n"><span class='en'>The mark and logotype must always scale together proportionally. Never enlarge or shrink the mark independently of the text.</span><span class='zh'>圖標和標誌文字必須始終等比縮放。永遠不要獨立於文字單獨放大或縮小圖標。</span></div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 02</div><div class="cd-v"><span class="en">Do not rotate the logo</span><span class="zh">不可旋轉標誌</span></div><div class="cd-n"><span class='en'>The logo must always appear in its standard upright orientation. No angular rotation is permitted.</span><span class='zh'>標誌必須始終以標準直立方向呈現。不允許任何角度旋轉。</span></div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 03</div><div class="cd-v"><span class="en">Do not change the color of the mark alone</span><span class="zh">不可單獨更改圖標顏色</span></div><div class="cd-n"><span class='en'>The mark and text must share the same color treatment. Do not recolor the globe independently.</span><span class='zh'>圖標和文字必須共用相同的色彩處理。不要單獨更改球體顏色。</span></div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 04</div><div class="cd-v"><span class="en">Do not outline the logo</span><span class="zh">不可將標誌轉為外框</span></div><div class="cd-n"><span class='en'>The logo uses solid fills. Do not convert to outline, add strokes, or apply border effects.</span><span class='zh'>標誌使用實心填充。不要轉為外框、添加筆畫或套用邊框效果。</span></div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 05</div><div class="cd-v"><span class="en">Do not add gradients to the logotype</span><span class="zh">不可對標誌文字添加漸層</span></div><div class="cd-n"><span class='en'>The gradient belongs to brand surfaces, not the logotype itself. Keep the text portion single-color.</span><span class='zh'>漸層屬於品牌表面，而非標誌文字本身。保持文字部分為單一顏色。</span></div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 06</div><div class="cd-v"><span class="en">Do not stretch or manipulate</span><span class="zh">不可拉伸或變形</span></div><div class="cd-n"><span class='en'>Never distort, warp, squeeze, or disproportionately scale the logo. Maintain exact aspect ratios at all times.</span><span class='zh'>永遠不要扭曲、變形、壓縮或不等比縮放標誌。任何時候都要維持精確的長寬比。</span></div></div>
 </div>
 
 <h3><span class="en">Logo Clarity</span><span class="zh">標誌清晰度</span></h3>
 <p class="en">When creating a composition, it is important to have enough contrast between background and logo to maximize legibility.</p><p class="zh">在製作構圖時，確保背景與標誌之間有足夠的對比度以最大化清晰度至關重要。</p>
 <div class="dd">
-  <div class="do"><b>Do</b>Use the standard color logo on clean, light backgrounds. Use the white (reversed) logo on solid dark backgrounds. Ensure the background provides sufficient contrast — light solids, subtle gradients, or clear photographic areas all work.</div>
-  <div class="dt"><b>Don't</b>Do not place the standard logo on same-tone colored backgrounds where contrast is insufficient. Do not place the reversed logo on busy, detailed, or low-contrast photographic backgrounds where the mark becomes illegible.</div>
+  <div class="do"><b>正確</b><span class='en'>Use the standard color logo on clean, light backgrounds. Use the white (reversed) logo on solid dark backgrounds. Ensure the background provides sufficient contrast — light solids, subtle gradients, or clear photographic areas all work.</span><span class='zh'>在乾淨的淺色背景上使用標準彩色標誌。在深色背景上使用白色（反白）標誌。確保背景提供足夠的對比——淺色單色、柔和漸層或乾淨的攝影區域皆可。</span></div>
+  <div class="dt"><b>禁止</b><span class='en'>Do not place the standard logo on same-tone colored backgrounds where contrast is insufficient. Do not place the reversed logo on busy, detailed, or low-contrast photographic backgrounds where the mark becomes illegible.</span><span class='zh'>不要將標準標誌放在對比不足的同色調背景上。不要將反白標誌放在繁忙、細節過多或低對比度的攝影背景上，這會使標誌難以辨識。</span></div>
 </div>
 </div>
 
@@ -717,6 +743,17 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
   <div class="sw"><div class="sw-c" style="background:#fff;border-bottom:1px solid #eee"></div><div class="sw-i"><div class="sw-n">White</div><div class="sw-v">#FFFFFF</div></div></div>
 </div>
 <h3><span class="en">Color Ratio</span><span class="zh">色彩比例</span></h3>
+<!-- Color ratio visual bar -->
+<div style="display:flex;border-radius:8px;overflow:hidden;height:40px;margin:12px 0;box-shadow:0 1px 3px rgba(0,0,0,.06)">
+  <div style="flex:6;background:linear-gradient(135deg,#26A7B0,#CAC3D2);display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700">30–80%</div>
+  <div style="flex:3;background:#E8EDF0;display:flex;align-items:center;justify-content:center;color:var(--g500);font-size:11px;font-weight:700">10–60%</div>
+  <div style="flex:3;background:linear-gradient(135deg,#F6AD90,#8CC897);display:flex;align-items:center;justify-content:center;color:var(--ink);font-size:11px;font-weight:700">10–60%</div>
+</div>
+<div style="display:flex;gap:0;font-size:9px;color:var(--g500);margin-bottom:12px">
+  <div style="flex:6;text-align:center"><span class="en">Primary / Image</span><span class="zh">主色 / 影像</span></div>
+  <div style="flex:3;text-align:center"><span class="en">Neutral</span><span class="zh">中性色</span></div>
+  <div style="flex:3;text-align:center"><span class="en">Secondary</span><span class="zh">輔助色</span></div>
+</div>
 <table class="T"><thead><tr><th>Role</th><th>Ratio</th><th>Application</th></tr></thead><tbody>
 <tr><td><strong>Primary</strong></td><td><code>30–80%</code></td><td>Hero backgrounds, key visuals, brand surfaces</td></tr>
 <tr><td><strong>Neutral</strong></td><td><code>10–60%</code></td><td>Body backgrounds, card surfaces, text containers</td></tr>
@@ -724,15 +761,15 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 </tbody></table>
 <h3><span class="en">Color Application</span><span class="zh">色彩應用</span></h3>
 <div class="dd">
-  <div class="do"><b>Do</b>Use neutral colors as base and highlight with the primary gradient. Use primary colors as base and balance with neutral tones. Use secondary colors to create alternative gradients that serve as thematic accents.</div>
-  <div class="dt"><b>Don't</b>Do not overuse colors or skip neutral balance. Do not color logos or type arbitrarily without ensuring contrast between background and type. Do not use harsh neon tones or visually jarring combinations. Do not apply random rainbows or unbalanced color blocks.</div>
+  <div class="do"><b>正確</b><span class='en'>Use neutral colors as base and highlight with the primary gradient. Use primary colors as base and balance with neutral tones. Use secondary colors to create alternative gradients that serve as thematic accents.</span><span class='zh'>以中性色為底，以主漸層做強調。以主色為底，以中性色調平衡。使用輔助色創建作為主題點綴的替代漸層。</span></div>
+  <div class="dt"><b>禁止</b><span class='en'>Do not overuse colors or skip neutral balance. Do not color logos or type arbitrarily without ensuring contrast between background and type. Do not use harsh neon tones or visually jarring combinations. Do not apply random rainbows or unbalanced color blocks.</span><span class='zh'>不要過度使用色彩或忽略中性色平衡。不要任意為標誌或文字上色而未確保背景與文字的對比。不要使用刺眼的霓虹色或視覺不協調的組合。不要使用隨意的彩虹色或不平衡的色塊。</span></div>
 </div>
 </div>
 
 <!-- ═══ 05 TINT SCALES ═══ -->
 <div class="S" id="s05">
 <div class="Sh"><div class="Sn">Chapter 05 — Visual Identity</div><div class="St">Tint & Shade Scales</div><div class="Ss">色調漸變階梯</div><div class="So">Owner: <b>MarCom Team</b></div></div>
-<p>Each brand color expands into an 11-step scale (50→950) for consistent UI, charts, and data visualization.</p>
+<p class="en">Each brand color expands into an 11-step scale (50→950) for consistent UI, charts, and data visualization.</p><p class="zh">每種品牌色彩擴展為 11 階色階（50→950），用於一致的 UI、圖表和數據視覺化。</p>
 <h4>Turquoise</h4>
 <div class="sr"><div class="sc lt" style="background:#F0FAFB"><span class="lb">50</span><span>#F0FAFB</span></div><div class="sc lt" style="background:#D4F1F3"><span class="lb">100</span><span>#D4F1F3</span></div><div class="sc lt" style="background:#A8E3E8"><span class="lb">200</span><span>#A8E3E8</span></div><div class="sc" style="background:#6DCDD5"><span class="lb">300</span><span>#6DCDD5</span></div><div class="sc" style="background:#3DB9C2"><span class="lb">400</span><span>#3DB9C2</span></div><div class="sc" style="background:#26A7B0"><span class="lb">500</span><span>#26A7B0</span></div><div class="sc" style="background:#1E8A92"><span class="lb">600</span><span>#1E8A92</span></div><div class="sc" style="background:#186E75"><span class="lb">700</span><span>#186E75</span></div><div class="sc" style="background:#145860"><span class="lb">800</span><span>#145860</span></div><div class="sc" style="background:#0F4249"><span class="lb">900</span><span>#0F4249</span></div><div class="sc" style="background:#082A30"><span class="lb">950</span><span>#082A30</span></div></div>
 <h4>Copper</h4>
@@ -800,7 +837,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <!-- ═══ 08 ACCESSIBILITY ═══ -->
 <div class="S" id="s08">
 <div class="Sh"><div class="Sn">Chapter 08 — Visual Identity</div><div class="St">Accessibility Pairings</div><div class="Ss">無障礙色彩配對</div><div class="So">Owner: <b>MarCom Team</b></div></div>
-<p>Every color combination must meet WCAG 2.1 AA: 4.5:1 for normal text, 3:1 for large text (≥18px bold or ≥24px).</p>
+<p class="en">Every color combination must meet WCAG 2.1 AA: 4.5:1 for normal text, 3:1 for large text (≥18px bold or ≥24px).</p><p class="zh">每種色彩組合必須符合 WCAG 2.1 AA：一般文字 4.5:1，大型文字（≥18px 粗體或 ≥24px）3:1。</p>
 <h3><span class="en">Light Mode</span><span class="zh">淺色模式</span></h3>
 <div class="ag">
   <div class="ap"><div class="ap-s" style="background:#FAFBFC;color:#0A1A22">Body on White</div><div class="ap-i"><span class="r ok">16.2:1</span> AAA</div></div>
@@ -814,7 +851,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
   <div class="ap"><div class="ap-s" style="background:#0D1B21;color:#E2E8EC">Body on Dark</div><div class="ap-i"><span class="r ok">12.8:1</span> AAA</div></div>
   <div class="ap"><div class="ap-s" style="background:#142229;color:#3DB9C2">Accent on Surface</div><div class="ap-i"><span class="r ok">5.6:1</span> AA</div></div>
 </div>
-<div class="co co-a"><strong>Forbidden:</strong> White on Turquoise-500 for body (3.2:1 fails AA). White on Copper-300 (2.1:1 fails all). Purple-400 on White (3.0:1 — use Purple-600).</div>
+<div class="co co-a"><strong><span class='en'>Forbidden:</span><span class='zh'>禁止：</span></strong><span class='en'>White on Turquoise-500 for body (3.2:1 fails AA). White on Copper-300 (2.1:1 fails all). Purple-400 on White (3.0:1 — use Purple-600).</span><span class='zh'>Turquoise-500 上的白色內文（3.2:1 不符合 AA）。Copper-300 上的白色（2.1:1 全不符合）。白色上的 Purple-400（3.0:1——改用 Purple-600）。</span> for body (3.2:1 fails AA). White on Copper-300 (2.1:1 fails all). Purple-400 on White (3.0:1 — use Purple-600).</div>
 </div>
 
 <!-- ═══ 09 TYPOGRAPHY ═══ -->
@@ -845,8 +882,8 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <h3><span class="en">Type on Image 文字於影像上</span><span class="zh">影像上的文字</span></h3>
 <p class="en">Typography can be applied on top of imagery. In these instances, use black typography on lighter images, and white typography on darker images to ensure that there is enough contrast. Never use colored typography on imagery.</p><p class="zh">文字可以置於影像之上。在這些情況下，淺色影像上使用黑色文字，深色影像上使用白色文字，以確保有足夠的對比度。永遠不要在影像上使用彩色文字。</p>
 <div class="dd">
-  <div class="do"><b>Do</b>Use white text over subtle dark overlay to ensure readability. Use black text on clean, light backgrounds. Always meet WCAG AA contrast (4.5:1 for body text).</div>
-  <div class="dt"><b>Don't</b>Avoid placing light text on bright or detailed backgrounds. Do not use colored text over photos — it reduces legibility and looks unprofessional. Never sacrifice contrast for aesthetic preference.</div>
+  <div class="do"><b>正確</b><span class='en'>Use white text over subtle dark overlay to ensure readability. Use black text on clean, light backgrounds. Always meet WCAG AA contrast (4.5:1 for body text).</span><span class='zh'>在深色覆蓋層上使用白色文字以確保可讀性。在乾淨的淺色背景上使用黑色文字。始終達到 WCAG AA 對比標準（內文 4.5:1）。</span></div>
+  <div class="dt"><b>禁止</b><span class='en'>Avoid placing light text on bright or detailed backgrounds. Do not use colored text over photos — it reduces legibility and looks unprofessional. Never sacrifice contrast for aesthetic preference.</span><span class='zh'>避免在明亮或細節繁多的背景上使用淺色文字。不要在照片上使用彩色文字——會降低可讀性且顯得不專業。永遠不要為了美觀偏好而犧牲對比度。</span></div>
 </div>
 </div>
 
@@ -861,25 +898,39 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <h3><span class="en">Three Element Styles</span><span class="zh">三種元素風格</span></h3>
 <p class="en">Visual elements derived from the GPS logomark's grid structure and curved form can be applied in three distinct styles.</p><p class="zh">源自 GPS 標誌圖標的網格結構和曲線造型的視覺元素，可以三種不同風格呈現。</p>
 <div class="cg c3">
-  <div class="cd"><div class="cd-l">Style 01</div><div class="cd-v"><span class="en">Blurred Organic</span><span class="zh">模糊有機風格</span></div><div class="cd-n">Soft, atmospheric renderings of the checkerboard dots with gaussian blur and transparency. Used for background textures, hero sections, and brand-building materials where a subtle, modern feel is desired.</div></div>
-  <div class="cd"><div class="cd-l">Style 02</div><div class="cd-v"><span class="en">Flowing Organic</span><span class="zh">流動有機風格</span></div><div class="cd-n">Curved, dynamic arrangements of dots and shapes suggesting movement and protection. Used for event materials, campaign visuals, and content where energy and motion are desired.</div></div>
-  <div class="cd"><div class="cd-l">Style 03</div><div class="cd-v"><span class="en">Sharp Geometric</span><span class="zh">銳利幾何風格</span></div><div class="cd-n">Crisp, grid-aligned checkerboard patterns with clear edges. Used for data-driven content, technical documents, signage, and materials requiring precision and structure.</div></div>
+  <div class="cd"><div class="cd-l">Style 01</div><div class="cd-v"><span class="en">Blurred Organic</span><span class="zh">模糊有機風格</span></div><div class="cd-n"><span class='en'>Soft, atmospheric renderings of the checkerboard dots with gaussian blur and transparency. Used for background textures, hero sections, and brand-building materials where a subtle, modern feel is desired.</span><span class='zh'>以高斯模糊和透明度呈現的柔和、氛圍感棋格點陣。用於背景紋理、主視覺區段和需要微妙現代感的品牌建設材料。</span></div></div>
+  <div class="cd"><div class="cd-l">Style 02</div><div class="cd-v"><span class="en">Flowing Organic</span><span class="zh">流動有機風格</span></div><div class="cd-n"><span class='en'>Curved, dynamic arrangements of dots and shapes suggesting movement and protection. Used for event materials, campaign visuals, and content where energy and motion are desired.</span><span class='zh'>暗示運動和保護的曲線、動態圓點與形狀排列。用於活動材料、宣傳視覺和需要能量感與動態感的內容。</span></div></div>
+  <div class="cd"><div class="cd-l">Style 03</div><div class="cd-v"><span class="en">Sharp Geometric</span><span class="zh">銳利幾何風格</span></div><div class="cd-n"><span class='en'>Crisp, grid-aligned checkerboard patterns with clear edges. Used for data-driven content, technical documents, signage, and materials requiring precision and structure.</span><span class='zh'>邊緣清晰的網格對齊棋格圖案。用於數據驅動內容、技術文件、標識和需要精確與結構感的材料。</span></div></div>
 </div>
 
 <h3><span class="en">Graphic Application</span><span class="zh">圖形應用</span></h3>
 <div class="dd">
-  <div class="do"><b>Do</b>Use graphic elements for general layout enhancement on brand gradient backgrounds. Use as appropriate repeated patterns for texture and depth. Use for highlight moments — accent corners, section dividers, and focal points alongside photography.</div>
-  <div class="dt"><b>Don't</b>Do not overuse the graphics — excessive pattern coverage overwhelms content and reduces readability. Elements should complement, never compete with, the content they accompany. Maintain visual breathing room.</div>
+  <div class="do"><b>正確</b><span class='en'>Use graphic elements for general layout enhancement on brand gradient backgrounds. Use as appropriate repeated patterns for texture and depth. Use for highlight moments — accent corners, section dividers, and focal points alongside photography.</span><span class='zh'>在品牌漸層背景上使用圖形元素做版面強化。適當使用重複圖案增添紋理和深度。用於強調時刻——裝飾角落、區段分隔線和攝影旁的焦點。</span></div>
+  <div class="dt"><b>禁止</b><span class='en'>Do not overuse the graphics — excessive pattern coverage overwhelms content and reduces readability. Elements should complement, never compete with, the content they accompany. Maintain visual breathing room.</span><span class='zh'>不要過度使用圖形——過多的圖案覆蓋會壓過內容並降低可讀性。元素應輔助、而非與其伴隨的內容競爭。維持視覺呼吸空間。</span></div>
 </div>
 
 <h3><span class="en">Icon System</span><span class="zh">圖標系統</span></h3>
-<p>All icons must be custom SVG — no icon libraries (FontAwesome, Material, etc.).</p>
-<table class="T"><thead><tr><th>Icon Property</th><th>Spec</th></tr></thead><tbody>
-<tr><td>Stroke</td><td><code>1.5–2px</code> consistent</td></tr>
-<tr><td>Corner radius</td><td><code>2px</code> min</td></tr>
-<tr><td>Grid</td><td><code>24×24px</code>, <code>2px</code> padding</td></tr>
-<tr><td>Color</td><td>Single-color, <code>currentColor</code></td></tr>
-</tbody></table>
+<p class="en">All icons must be custom SVG — no icon libraries (FontAwesome, Material, etc.).</p>
+<p class="zh">所有圖標必須為自製 SVG——不使用圖標庫（FontAwesome、Material 等）。</p>
+<!-- Icon grid spec visual -->
+<div style="display:flex;gap:16px;margin:12px 0;flex-wrap:wrap;align-items:flex-start">
+  <svg width="120" height="120" viewBox="0 0 120 120" style="background:var(--g50);border-radius:8px;border:1px solid var(--g200)">
+    <rect x="10" y="10" width="100" height="100" fill="none" stroke="var(--g300)" stroke-width=".5" stroke-dasharray="2,2"/>
+    <rect x="18" y="18" width="84" height="84" fill="none" stroke="var(--turquoise)" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="60" y="8" text-anchor="middle" font-size="6" fill="var(--g400)" font-family="Consolas,monospace">24px</text>
+    <text x="60" y="114" text-anchor="middle" font-size="5" fill="var(--turquoise)" font-family="Consolas,monospace">2px pad</text>
+    <path d="M42 42 L78 42 L78 78 L42 78 Z" fill="none" stroke="var(--ink)" stroke-width="2.5" rx="3"/>
+    <path d="M52 58 L58 64 L70 52" fill="none" stroke="var(--turquoise)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <div>
+    <table class="T"><thead><tr><th><span class="en">Icon Property</span><span class="zh">圖標屬性</span></th><th><span class="en">Spec</span><span class="zh">規格</span></th></tr></thead><tbody>
+    <tr><td><span class="en">Stroke</span><span class="zh">筆畫</span></td><td><code>1.5–2px</code> <span class="en">consistent</span><span class="zh">一致</span></td></tr>
+    <tr><td><span class="en">Corner radius</span><span class="zh">圓角半徑</span></td><td><code>2px</code> min</td></tr>
+    <tr><td><span class="en">Grid</span><span class="zh">網格</span></td><td><code>24×24px</code>, <code>2px</code> padding</td></tr>
+    <tr><td><span class="en">Color</span><span class="zh">色彩</span></td><td><span class="en">Single-color, <code>currentColor</code></span><span class="zh">單色，<code>currentColor</code></span></td></tr>
+    </tbody></table>
+  </div>
+</div>
 </div>
 
 <!-- ═══ 11 IMAGERY ═══ -->
@@ -897,10 +948,10 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <h3><span class="en">Things to Avoid</span><span class="zh">應避免事項</span></h3>
 <div class="cg c2">
-  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Avoid Staging</div><div class="cd-n">Avoid staged or artificial feel. Prioritize genuine moments reflecting real interactions and scenarios. Do not include people in unnatural or staged poses.</div></div>
-  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Avoid Overproduction</div><div class="cd-n">Balance professionalism and visual appeal, avoiding excessive manipulation or editing. Do not use overly dynamic lighting and excessive lens flare. Do not use oversaturated or high-contrast color grading.</div></div>
-  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Avoid Disconnected Context</div><div class="cd-n">Clarify image context to match intended message and prevent confusion or misinterpretation. Avoid images with excessive post-production effects.</div></div>
-  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Avoid Poor Composition</div><div class="cd-n">Avoid clutter or chaos that diverts from intended focus. Ensure every photo has a clear subject and visual hierarchy.</div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Avoid Staging</div><div class="cd-n"><span class='en'>Avoid staged or artificial feel. Prioritize genuine moments reflecting real interactions and scenarios. Do not include people in unnatural or staged poses.</span><span class='zh'>避免刻意或人工感。優先選擇反映真實互動和場景的真誠瞬間。不要使用不自然或擺拍姿勢。</span></div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Avoid Overproduction</div><div class="cd-n"><span class='en'>Balance professionalism and visual appeal, avoiding excessive manipulation or editing. Do not use overly dynamic lighting and excessive lens flare. Do not use oversaturated or high-contrast color grading.</span><span class='zh'>平衡專業性與視覺吸引力，避免過度後製。不要使用過度戲劇化的燈光和過多鏡頭光暈。不要使用過度飽和或高對比色彩調校。</span></div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Avoid Disconnected Context</div><div class="cd-n"><span class='en'>Clarify image context to match intended message and prevent confusion or misinterpretation. Avoid images with excessive post-production effects.</span><span class='zh'>釐清影像脈絡以符合預期訊息，防止混淆或誤解。避免過度後製效果的影像。</span></div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Avoid Poor Composition</div><div class="cd-n"><span class='en'>Avoid clutter or chaos that diverts from intended focus. Ensure every photo has a clear subject and visual hierarchy.</span><span class='zh'>避免分散焦點的雜亂或混亂。確保每張照片都有清晰的主題和視覺層級。</span></div></div>
 </div>
 </div>
 
@@ -930,7 +981,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <!-- ═══ 13 MOTION ═══ -->
 <div class="S" id="s13">
 <div class="Sh"><div class="Sn">Chapter 13 — Expression</div><div class="St">Motion & Animation</div><div class="Ss">動態與動畫</div><div class="So">Owner: <b>MarCom Team</b></div></div>
-<p>Motion feels like a controlled sweep — purposeful, measured, never frenetic.</p>
+<p class="en">Motion feels like a controlled sweep — purposeful, measured, never frenetic.</p><p class="zh">動態感覺像是一次有控制的掃掠——有目的、有節制、從不急躁。</p>
 <h3><span class="en">Four Signature Motions</span><span class="zh">四種標誌性動態</span></h3>
 <div class="mo">
   <div class="md"><div class="mb pu">Pulse</div><div class="mb sw2">Sweep</div><div class="mb rv">Reveal</div><div class="mb fd">Fade</div></div>
@@ -945,7 +996,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <tr><td><code>--ease-enter</code></td><td>cubic-bezier(0,0,0.2,1)</td><td>Elements entering</td></tr>
 <tr><td><code>--stagger</code></td><td>60ms</td><td>Sibling delay</td></tr>
 </tbody></table>
-<div class="co co-a"><strong>Forbidden:</strong> No bounce/elastic. No spinning (surveillance connotation). No auto-play video BG. No infinite loops on content. No parallax. Respect <code>prefers-reduced-motion</code>.</div>
+<div class="co co-a"><strong><span class='en'>Forbidden:</span><span class='zh'>禁止：</span></strong><span class='en'>No bounce/elastic. No spinning (surveillance connotation). No auto-play video BG. No infinite loops on content. No parallax. Respect <code>prefers-reduced-motion</code>.</span><span class='zh'>不使用彈跳/彈性動效。不使用旋轉（有監控聯想）。不使用自動播放影片背景。不使用內容的無限循環。不使用視差效果。尊重 <code>prefers-reduced-motion</code>。</span>. No spinning (surveillance connotation). No auto-play video BG. No infinite loops on content. No parallax. Respect <code>prefers-reduced-motion</code>.</div>
 </div>
 
 <!-- ═══ 14 STATIONERY ═══ -->
@@ -969,13 +1020,13 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <!-- ═══ 15 POSTER & SIGNAGE ═══ -->
 <div class="S" id="s15">
 <div class="Sh"><div class="Sn">Chapter 15 — Application: Print</div><div class="St">Poster & Environmental Signage</div><div class="Ss">海報與環境標識</div><div class="So">Owner: <b>MarCom Team</b></div></div>
-<p>This template is designed for multi-purpose use — from internal notices and event announcements to thematic campaigns and educational messaging. While the subject matter and visuals may vary, the structure, type system, and overall visual logic help ensure visual consistency across departments.</p>
+<p class="en">This template is designed for multi-purpose use — from internal notices and event announcements to thematic campaigns and educational messaging. While the subject matter and visuals may vary, the structure, type system, and overall visual logic help ensure visual consistency across departments.</p><p class="zh">此模板設計為多用途——從內部公告和活動宣傳到主題宣傳和教育訊息。雖然主題和視覺可能不同，但結構、字體系統和整體視覺邏輯有助於確保跨部門的視覺一致性。</p>
 
 <h3><span class="en">Poster Types & Use Cases 海報類型</span><span class="zh">海報類型與使用場景</span></h3>
 <div class="cg c3">
-  <div class="cd"><div class="cd-l">Type 01</div><div class="cd-v"><span class="en">Image Poster</span><span class="zh">形象海報</span></div><div class="cd-n">Use for visual-led content such as campaign posters, event photos, or brand messaging. Photography or illustration as the dominant visual element.</div></div>
-  <div class="cd"><div class="cd-l">Type 02</div><div class="cd-v"><span class="en">Timeline Poster</span><span class="zh">時間軸海報</span></div><div class="cd-n">Best for showing schedules or agendas for upcoming events or trainings. Date/time hierarchy with supporting imagery.</div></div>
-  <div class="cd"><div class="cd-l">Type 03</div><div class="cd-v"><span class="en">Text Notice Poster</span><span class="zh">文字公告海報</span></div><div class="cd-n">Use for announcements, guidelines, or internal communications with more text content. Numbered sections with icon illustrations.</div></div>
+  <div class="cd"><div class="cd-l">Type 01</div><div class="cd-v"><span class="en">Image Poster</span><span class="zh">形象海報</span></div><div class="cd-n"><span class='en'>Use for visual-led content such as campaign posters, event photos, or brand messaging. Photography or illustration as the dominant visual element.</span><span class='zh'>用於以視覺為主導的內容，如宣傳海報、活動照片或品牌訊息。攝影或插畫作為主要視覺元素。</span></div></div>
+  <div class="cd"><div class="cd-l">Type 02</div><div class="cd-v"><span class="en">Timeline Poster</span><span class="zh">時間軸海報</span></div><div class="cd-n"><span class='en'>Best for showing schedules or agendas for upcoming events or trainings. Date/time hierarchy with supporting imagery.</span><span class='zh'>最適合展示即將舉辦的活動或培訓的時程或議程。日期/時間層級搭配輔助影像。</span></div></div>
+  <div class="cd"><div class="cd-l">Type 03</div><div class="cd-v"><span class="en">Text Notice Poster</span><span class="zh">文字公告海報</span></div><div class="cd-n"><span class='en'>Use for announcements, guidelines, or internal communications with more text content. Numbered sections with icon illustrations.</span><span class='zh'>用於公告、指引或文字內容較多的內部溝通。編號區段搭配圖標插畫。</span></div></div>
 </div>
 
 <h3><span class="en">Three Poster Mockups</span><span class="zh">三種海報示意</span></h3>
@@ -987,9 +1038,9 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <h3><span class="en">Editable Zones</span><span class="zh">可編輯區域</span></h3>
 <div class="cg c3">
-  <div class="cd"><div class="cd-l">Zone 01</div><div class="cd-v"><span class="en">Text Area</span><span class="zh">文字區域</span></div><div class="cd-n">All copy should stay within the defined safe zone. Maintain clear hierarchy and appropriate spacing. Avoid placing text too close to the edges.</div></div>
-  <div class="cd"><div class="cd-l">Zone 02</div><div class="cd-v"><span class="en">Image Area</span><span class="zh">影像區域</span></div><div class="cd-n">Use photography or illustrations that support your topic. Visuals can extend beyond the placeholder, but keep layouts clean and avoid overly complex or off-brand styles.</div></div>
-  <div class="cd"><div class="cd-l">Zone 03</div><div class="cd-v"><span class="en">Logo / Footer Area</span><span class="zh">標誌 / 頁尾區域</span></div><div class="cd-n">Do not move or resize. Ensure text and logo remain readable against background. The footer zone is fixed and should not be modified.</div></div>
+  <div class="cd"><div class="cd-l">Zone 01</div><div class="cd-v"><span class="en">Text Area</span><span class="zh">文字區域</span></div><div class="cd-n"><span class='en'>All copy should stay within the defined safe zone. Maintain clear hierarchy and appropriate spacing. Avoid placing text too close to the edges.</span><span class='zh'>所有文案應保持在定義的安全區域內。維持清晰的層級和適當的間距。避免將文字放置太靠近邊緣。</span></div></div>
+  <div class="cd"><div class="cd-l">Zone 02</div><div class="cd-v"><span class="en">Image Area</span><span class="zh">影像區域</span></div><div class="cd-n"><span class='en'>Use photography or illustrations that support your topic. Visuals can extend beyond the placeholder, but keep layouts clean and avoid overly complex or off-brand styles.</span><span class='zh'>使用支持主題的攝影或插畫。視覺可延伸超出預留位置，但保持版面乾淨，避免過於複雜或偏離品牌的風格。</span></div></div>
+  <div class="cd"><div class="cd-l">Zone 03</div><div class="cd-v"><span class="en">Logo / Footer Area</span><span class="zh">標誌 / 頁尾區域</span></div><div class="cd-n"><span class='en'>Do not move or resize. Ensure text and logo remain readable against background. The footer zone is fixed and should not be modified.</span><span class='zh'>不要移動或調整大小。確保文字和標誌在背景上保持可讀。頁尾區域是固定的，不應修改。</span></div></div>
 </div>
 
 <h3><span class="en">Signage 標識</span><span class="zh">環境標識</span></h3>
@@ -1011,7 +1062,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <tr><td><strong>Hard Hat Sticker</strong></td><td>Mark only, optical at 20px</td><td>White on turquoise circle, 30mm</td></tr>
 <tr><td><strong>Hi-Vis Vest</strong></td><td>Full horizontal, reflective</td><td>Reflective silver on standard hi-vis</td></tr>
 </tbody></table>
-<div class="co co-t"><strong>Contracted security:</strong> Vendor uniforms do not carry the GPS logo. A branded arm patch (50mm × 30mm, embroidered, turquoise on black) is provided for left sleeve.</div>
+<div class="co co-t"><strong><span class='en'>Contracted security:</span><span class='zh'>承攬商保全：</span></strong><span class='en'>Vendor uniforms do not carry the GPS logo. A branded arm patch (50mm × 30mm, embroidered, turquoise on black) is provided for left sleeve.</span><span class='zh'>承攬商制服不使用 GPS 標誌。提供品牌臂章（50mm × 30mm，繡製，黑底青綠色）供左袖佩戴。</span> the GPS logo. A branded arm patch (50mm × 30mm, embroidered, turquoise on black) is provided for left sleeve.</div>
 </div>
 
 <!-- ═══ 17 WEB ═══ -->
@@ -1041,8 +1092,8 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
   <div class="mk"><div class="mk-h">AI & DX Navigator</div><div class="em"><div class="ef"><div class="eh" style="background:var(--copper-50);border-color:var(--copper-200)"><div class="eh-l" style="color:var(--copper-700)">GPS — AI & DX Navigator</div><div class="eh-s">Weekly Digest</div></div><div class="eb" style="background:linear-gradient(135deg,var(--copper-600),var(--purple-500))"><span>AI Fluency Update</span></div><div class="ey"><div class="el"></div><div class="el" style="width:70%"></div><div class="ec" style="background:var(--copper-600)"></div></div><div class="efr"><span>GPS Global Physical Security · Unsubscribe</span></div></div></div></div>
 </div>
 <div class="dd">
-  <div class="do"><b>Outlook-Safe</b>Tables only. System fonts. <code>mso-line-height-rule: exactly</code>. Max 600px. Inline CSS. Hosted images. Under 102KB.</div>
-  <div class="dt"><b>Don't</b>No flexbox/grid. No Google Fonts. No &lt;style&gt; blocks. No base64 images. No CSS variables. No BG-image on td without VML.</div>
+  <div class="do"><b><span class='en'>Outlook-Safe</span><span class='zh'>Outlook 安全格式</span></b><span class='en'>Tables only. System fonts. <code>mso-line-height-rule: exactly</code>. Max 600px. Inline CSS. Hosted images. Under 102KB.</span><span class='zh'>僅使用表格排版。系統字體。<code>mso-line-height-rule: exactly</code>。最大 600px。行內 CSS。託管圖片。低於 102KB。</span> <code>mso-line-height-rule: exactly</code>. Max 600px. Inline CSS. Hosted images. Under 102KB.</div>
+  <div class="dt"><b>禁止</b><span class='en'>No flexbox/grid. No Google Fonts. No &lt;style&gt; blocks. No base64 images. No CSS variables. No BG-image on td without VML.</span><span class='zh'>不使用 flexbox/grid。不使用 Google Fonts。不使用 &lt;style&gt; 區塊。不使用 base64 圖片。不使用 CSS 變數。不在 td 上使用背景圖（除非搭配 VML）。</span> No &lt;style&gt; blocks. No base64 images. No CSS variables. No BG-image on td without VML.</div>
 </div>
 </div>
 
@@ -1074,7 +1125,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <!-- ═══ 21 CAMPAIGN MOODS ═══ -->
 <div class="S" id="s21">
 <div class="Sh"><div class="Sn">Chapter 21 — Creative Variations</div><div class="St">Campaign Moods</div><div class="Ss">主題活動視覺情緒</div><div class="So">Owner: <b>GPS Strategy &amp; DX</b></div></div>
-<p>GPS supports distinct campaign moods while maintaining core identity. Logo, typography, and grid never change — only gradient, photography direction, and accent shift.</p>
+<p class="en">GPS supports distinct campaign moods while maintaining core identity. Logo, typography, and grid never change — only gradient, photography direction, and accent shift.</p><p class="zh">GPS 在維持核心識別的同時支持不同的宣傳情緒。標誌、字體排版和網格永遠不變——僅漸層、攝影方向和點綴色會調整。</p>
 <div class="vg">
   <div class="vc"><div class="vv" style="background:linear-gradient(135deg,#26A7B0,#CAC3D2)"><div style="font-size:11px;font-weight:900;color:#fff;text-align:center;line-height:1.3">Designed<br>Safety</div></div><div class="vi"><h5>Standard — Brand Forward</h5><p>Default. Full turquoise-copper. Calm, professional.</p><div class="vt"><span>Primary Gradient</span><span>Evergreen</span></div></div></div>
   <div class="vc"><div class="vv" style="background:linear-gradient(135deg,#0F4249,#26A7B0)"><div style="font-size:11px;font-weight:900;color:#fff;text-align:center;line-height:1.3">Alert<br>Protocol</div></div><div class="vi"><h5>Urgent — Security Alert</h5><p>Deep turquoise + black. High contrast. Minimal.</p><div class="vt"><span>Deep Turquoise</span><span>Emergency</span></div></div></div>
@@ -1101,7 +1152,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
   <div class="do"><b>Always Preserved</b>GPS logo unmodified. Noto Sans TC + Lato. Poster three-zone structure. Voice attributes. Clearspace. Accessibility.</div>
   <div class="dt"><b>Never Modified</b>Logo color/shape/proportions. Type hierarchy max 3 sizes. Minimum logo sizes. Core turquoise or black tokens. Brand behaviors or voice vocabulary.</div>
 </div>
-<div class="co co-t"><strong>Approval:</strong> Standard mood → MarCom self-approves. Seasonal → GPS Strategy reviews. New event variation → GPS Director approves. Variations unused for 12 months expire.</div>
+<div class="co co-t"><strong><span class='en'>Approval:</span><span class='zh'>核准：</span></strong><span class='en'>Standard mood → MarCom self-approves. Seasonal → GPS Strategy reviews. New event variation → GPS Director approves. Variations unused for 12 months expire.</span><span class='zh'>標準情緒 → MarCom 自行核准。季節性 → GPS 策略審核。新活動變體 → GPS Director 核准。12 個月未使用的變體自動失效。</span> → MarCom self-approves. Seasonal → GPS Strategy reviews. New event variation → GPS Director approves. Variations unused for 12 months expire.</div>
 </div>
 
 <!-- ═══ 23 CO-BRANDING ═══ -->
@@ -1157,7 +1208,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <tr><td><strong>Coordinate</strong></td><td>2–24 hrs</td><td>Cross-functional alignment with Corporate PR (if external exposure), HR (if personnel impact), Legal (if regulatory). GPS provides facts; Corporate PR handles any external statement.</td><td>GPS Director</td></tr>
 <tr><td><strong>Resolve & Debrief</strong></td><td>24–72 hrs</td><td>All-clear communication. After-action summary (internal). Brand voice returns to standard warmth. Lessons learned documented.</td><td>GPS Strategy + MarCom</td></tr>
 </tbody></table>
-<div class="co co-a"><strong>GPS never speaks externally.</strong> All external communication routes through Corporate PR. GPS provides factual briefing materials. The GPS brand voice adapts under pressure but never abandons its core attributes — especially "Human First" and "Calm Authority."</div>
+<div class="co co-a"><strong><span class='en'>GPS never speaks externally.</span><span class='zh'>GPS 從不對外發言。</span></strong><span class='en'>All external communication routes through Corporate PR. GPS provides factual briefing materials. The GPS brand voice adapts under pressure but never abandons its core attributes — especially "Human First" and "Calm Authority."</span><span class='zh'>所有對外溝通經由企業公關部門。GPS 提供事實簡報材料。GPS 品牌聲音在壓力下調整但從不放棄核心屬性——特別是「以人為本」和「沉穩的權威」。</span> All external communication routes through Corporate PR. GPS provides factual briefing materials. The GPS brand voice adapts under pressure but never abandons its core attributes — especially "Human First" and "Calm Authority."</div>
 
 <h3><span class="en">Brand Evolution Governance</span><span class="zh">品牌演進治理</span></h3>
 <p class="en">The GPS brand is a living system. As the organization matures, the brand must evolve with it — but evolution must be governed, not improvised.</p><p class="zh">GPS 品牌是一個活的系統。隨著組織成熟，品牌必須隨之演進——但演進必須被治理，而非即興發揮。</p>
@@ -1167,7 +1218,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <tr><td><strong>Structural change</strong></td><td>New chapter, pillar addition, logo modification</td><td>GPS Strategy</td><td>GPS Director sign-off</td><td>Full version release, all-hands briefing</td></tr>
 <tr><td><strong>Narrative arc transition</strong></td><td>Year 2 → Year 3 messaging shift</td><td>GPS Strategy</td><td>GPS Director + Section Head alignment</td><td>Campaign launch, regional cascade</td></tr>
 </tbody></table>
-<div class="co co-t"><strong>Annual Brand Review:</strong> Every Q4, GPS Strategy conducts a comprehensive brand health review — synthesizing perception data, consistency audits, comms metrics, and behavioral assessments. Findings and proposed evolution items are presented to the GPS Director for approval before the new fiscal year.</div>
+<div class="co co-t"><strong><span class='en'>Annual Brand Review:</span><span class='zh'>年度品牌檢視：</span></strong><span class='en'>Every Q4, GPS Strategy conducts a comprehensive brand health review — synthesizing perception data, consistency audits, comms metrics, and behavioral assessments. Findings and proposed evolution items are presented to the GPS Director for approval before the new fiscal year.</span><span class='zh'>每年 Q4，GPS 策略團隊進行全面品牌健康檢視——綜合認知數據、一致性稽核、溝通指標和行為評估。發現及建議演進項目於新會計年度前呈報 GPS Director 核准。</span> Every Q4, GPS Strategy conducts a comprehensive brand health review — synthesizing perception data, consistency audits, comms metrics, and behavioral assessments. Findings and proposed evolution items are presented to the GPS Director for approval before the new fiscal year.</div>
 </div>
 
 <!-- ═══ 25 TEMPLATES ═══ -->
@@ -1187,28 +1238,28 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <h3><span class="en">Visual Consistency</span><span class="zh">視覺一致性</span></h3>
 <p class="en">Three pillars govern visual consistency across all GPS outputs:</p><p class="zh">三大支柱治理所有 GPS 產出的視覺一致性：</p>
 <div class="cg c3">
-  <div class="cd"><div class="cd-l">Typography</div><div class="cd-v"><span class="en">Brand Fonts Only</span><span class="zh">僅使用品牌字體</span></div><div class="cd-n">Stick with the brand fonts. Use approved heading/subheading/body text sizes for hierarchy. Max 3 font sizes in one sector to maintain readability.</div></div>
-  <div class="cd"><div class="cd-l">Color</div><div class="cd-v"><span class="en">Brand Palette</span><span class="zh">品牌色盤</span></div><div class="cd-n">Begin with neutral or brand-approved colors. Sticking to the brand palette makes it easier to keep things consistent without needing design expertise. You may use topic-specific color themes, but avoid harsh neon tones or visually jarring combinations.</div></div>
-  <div class="cd"><div class="cd-l">Graphics</div><div class="cd-v"><span class="en">Pattern for Highlight</span><span class="zh">圖形用於強調</span></div><div class="cd-n">Use graphic pattern for highlight, not filler. The checkerboard elements should accent and complement, never overwhelm the content.</div></div>
+  <div class="cd"><div class="cd-l">Typography</div><div class="cd-v"><span class="en">Brand Fonts Only</span><span class="zh">僅使用品牌字體</span></div><div class="cd-n"><span class='en'>Stick with the brand fonts. Use approved heading/subheading/body text sizes for hierarchy. Max 3 font sizes in one sector to maintain readability.</span><span class='zh'>堅持使用品牌字體。使用核定的標題/副標題/內文字級維持層級。每區段最多 3 種字級以維持可讀性。</span></div></div>
+  <div class="cd"><div class="cd-l">Color</div><div class="cd-v"><span class="en">Brand Palette</span><span class="zh">品牌色盤</span></div><div class="cd-n"><span class='en'>Begin with neutral or brand-approved colors. Sticking to the brand palette makes it easier to keep things consistent without needing design expertise. You may use topic-specific color themes, but avoid harsh neon tones or visually jarring combinations.</span><span class='zh'>以中性或品牌核准色開始。遵循品牌色盤能更輕鬆地維持一致性，無需設計專業。可使用主題專屬配色，但避免刺眼的霓虹色或視覺不協調的組合。</span></div></div>
+  <div class="cd"><div class="cd-l">Graphics</div><div class="cd-v"><span class="en">Pattern for Highlight</span><span class="zh">圖形用於強調</span></div><div class="cd-n"><span class='en'>Use graphic pattern for highlight, not filler. The checkerboard elements should accent and complement, never overwhelm the content.</span><span class='zh'>使用圖形做強調，而非填充。棋格元素應做點綴和輔助，永遠不要壓過內容。</span></div></div>
 </div>
 
 <h3>Visual Do's & Don'ts 視覺規範</h3>
 <h4><span class="en">Text Hierarchy</span><span class="zh">文字層級</span></h4>
 <div class="dd">
-  <div class="do"><b>Do</b>Use approved heading/subheading/body text sizes. Follow spacing and alignment structure. Use max 3 different font sizes/weights in one sector to keep readability and hierarchy. Rearrange layout based on your need — the structure is flexible.</div>
-  <div class="dt"><b>Don't</b>Do not mix fonts or make everything bold. Do not stretch or shrink text manually. Do not center-align everything by default — left-alignment is the standard for body text.</div>
+  <div class="do"><b>正確</b><span class='en'>Use approved heading/subheading/body text sizes. Follow spacing and alignment structure. Use max 3 different font sizes/weights in one sector to keep readability and hierarchy. Rearrange layout based on your need — the structure is flexible.</span><span class='zh'>使用核定的標題/副標題/內文字級。遵循間距和對齊結構。每區段最多使用 3 種不同字級/字重以維持可讀性和層級。可依需要調整排版——結構是靈活的。</span></div>
+  <div class="dt"><b>禁止</b><span class='en'>Do not mix fonts or make everything bold. Do not stretch or shrink text manually. Do not center-align everything by default — left-alignment is the standard for body text.</span><span class='zh'>不要混用字體或全部加粗。不要手動拉伸或縮小文字。不要預設置中對齊——左對齊是內文的標準。</span></div>
 </div>
 
 <h4><span class="en">Illustration Style</span><span class="zh">插畫風格</span></h4>
 <div class="dd">
-  <div class="do"><b>Do</b>Use minimal, clean, vector-style illustrations. Maintain consistent stroke, perspective, and color. Prefer neutral or brand-accented palettes. Introduce custom topic-specific color accents carefully.</div>
-  <div class="dt"><b>Don't</b>Do not use mismatched clipart or stock cartoon packs. Do not combine different illustration styles with photo or 3D styles randomly. Maintain a single visual language per piece.</div>
+  <div class="do"><b>正確</b><span class='en'>Use minimal, clean, vector-style illustrations. Maintain consistent stroke, perspective, and color. Prefer neutral or brand-accented palettes. Introduce custom topic-specific color accents carefully.</span><span class='zh'>使用簡約、乾淨的向量風格插畫。維持一致的筆畫、透視和色彩。優先使用中性或品牌點綴色盤。謹慎引入自訂主題色彩。</span></div>
+  <div class="dt"><b>禁止</b><span class='en'>Do not use mismatched clipart or stock cartoon packs. Do not combine different illustration styles with photo or 3D styles randomly. Maintain a single visual language per piece.</span><span class='zh'>不要使用不搭配的剪貼圖或素材卡通包。不要隨意混搭不同插畫風格與照片或 3D 風格。每件作品維持單一的視覺語言。</span></div>
 </div>
 
 <h4><span class="en">Color Usage</span><span class="zh">色彩使用</span></h4>
 <div class="dd">
-  <div class="do"><b>Do</b>Start with neutral or brand base. Ensure contrast between background and type. You may introduce custom topic-specific color accents carefully as long as they harmonize with the brand palette.</div>
-  <div class="dt"><b>Don't</b>Do not use harsh neon tones or visually jarring combinations. Do not apply random rainbows or unbalanced color blocks. Do not color logos or type arbitrarily without ensuring sufficient contrast.</div>
+  <div class="do"><b>正確</b><span class='en'>Start with neutral or brand base. Ensure contrast between background and type. You may introduce custom topic-specific color accents carefully as long as they harmonize with the brand palette.</span><span class='zh'>以中性色或品牌色為底。確保背景與文字之間的對比。可謹慎引入自訂主題色彩，只要與品牌色盤協調。</span></div>
+  <div class="dt"><b>禁止</b><span class='en'>Do not use harsh neon tones or visually jarring combinations. Do not apply random rainbows or unbalanced color blocks. Do not color logos or type arbitrarily without ensuring sufficient contrast.</span><span class='zh'>不要使用刺眼的霓虹色或視覺不協調的組合。不要使用隨意的彩虹色或不平衡的色塊。不要任意為標誌或文字上色而未確保充分的對比。</span></div>
 </div>
 
 <h3><span class="en">Brand Violation Remediation</span><span class="zh">品牌違規處理</span></h3>
@@ -1218,7 +1269,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <tr><td><strong>Moderate</strong></td><td>Stretched logo, non-brand color palette, missing clearspace</td><td>GPS Strategy contacts site owner directly. Provides correct template. Logged in audit tracker.</td><td>Corrected within 10 business days</td></tr>
 <tr><td><strong>Severe</strong></td><td>Unauthorized co-branding, logo modification, external exposure of internal materials</td><td>GPS Director notified. Material pulled immediately. Root cause analysis. Section Head briefing.</td><td>Same-day pull, 5-day resolution</td></tr>
 </tbody></table>
-<div class="co co-t"><strong>Remediation philosophy:</strong> The goal is education, not punishment. Most violations happen because people don't have access to the right templates. Fix the system, not the person.</div>
+<div class="co co-t"><strong><span class='en'>Remediation philosophy:</span><span class='zh'>處理哲學：</span></strong><span class='en'>The goal is education, not punishment. Most violations happen because people don't have access to the right templates. Fix the system, not the person.</span><span class='zh'>目標是教育，而非懲罰。多數違規發生是因為人們無法取得正確的模板。修正系統，而非修正人。</span> The goal is education, not punishment. Most violations happen because people don't have access to the right templates. Fix the system, not the person.</div>
 </div>
 
 <!-- ═══ APP A: ACTIVATION ═══ -->
@@ -1278,7 +1329,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <tr><td><strong>v2.0</strong></td><td>2026 Q1</td><td>Brand Bible Supreme — expanded color universe (60+ tokens, 11-step scales), print/digital/motion applications, creative variations (6 campaign moods, 7 seasonal), dark mode, accessibility pairings.</td><td>GPS Strategy</td></tr>
 <tr><td><strong>v1.0</strong></td><td>2026 Q1</td><td>Initial Brand Standards Portal — 13 chapters + Appendix A. Foundation, Visual Identity, Expression, Application, Governance, New Site Activation Playbook, Language Architecture, RACI.</td><td>GPS Strategy</td></tr>
 </tbody></table>
-<div class="co co-t"><strong>Change governance:</strong> Minor corrections (typos, token values) are logged and published by GPS Strategy without approval. Structural changes (new chapters, pillar additions, logo modifications) require GPS Director sign-off. All versions are archived and accessible. Regional teams must verify they reference the current version before producing new materials.</div>
+<div class="co co-t"><strong><span class='en'>Change governance:</span><span class='zh'>變更治理：</span></strong><span class='en'>Minor corrections (typos, token values) are logged and published by GPS Strategy without approval. Structural changes (new chapters, pillar additions, logo modifications) require GPS Director sign-off. All versions are archived and accessible. Regional teams must verify they reference the current version before producing new materials.</span><span class='zh'>小幅修正（錯字、代符值）由 GPS 策略團隊記錄並發布，無需核准。結構性變更（新章節、支柱新增、標誌修改）需 GPS Director 簽核。所有版本皆歸檔並可存取。區域團隊在製作新材料前，必須確認參照的是最新版本。</span> Minor corrections (typos, token values) are logged and published by GPS Strategy without approval. Structural changes (new chapters, pillar additions, logo modifications) require GPS Director sign-off. All versions are archived and accessible. Regional teams must verify they reference the current version before producing new materials.</div>
 </div>
 
 </div></div></div>
