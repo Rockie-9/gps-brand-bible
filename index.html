@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPS Brand Bible — Mega Portal</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Noto+Sans+TC:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap');
+:root {
+  --turquoise:#26A7B0;--turquoise-50:#F0FAFB;--turquoise-100:#D4F1F3;--turquoise-200:#A8E3E8;--turquoise-300:#6DCDD5;--turquoise-400:#3DB9C2;--turquoise-500:#26A7B0;--turquoise-600:#1E8A92;--turquoise-700:#186E75;--turquoise-800:#145860;--turquoise-900:#0F4249;--turquoise-950:#082A30;
+  --copper:#CAC3D2;--copper-50:#F8F7F9;--copper-100:#EDEAF1;--copper-200:#DDD8E5;--copper-300:#CAC3D2;--copper-400:#B3A9C2;--copper-500:#9B8FA8;--copper-600:#857693;--copper-700:#6E5F7C;--copper-800:#574A63;--copper-900:#41374B;--copper-950:#2B2433;
+  --purple:#8C9FCB;--purple-50:#F4F6FB;--purple-100:#E2E7F4;--purple-200:#C5CEE8;--purple-300:#A8B6DD;--purple-400:#8C9FCB;--purple-500:#7086BA;--purple-600:#5B6FA3;--purple-700:#495A85;--purple-800:#3A4768;--purple-900:#2C354E;
+  --green:#8CC897;--green-50:#F3FAF5;--green-100:#E0F2E4;--green-200:#C2E5CB;--green-300:#A4D8B1;--green-400:#8CC897;--green-500:#6BB57E;--green-600:#539A63;--green-700:#437D50;--green-800:#356340;--green-900:#284A30;
+  --orange:#F6AD90;--orange-50:#FEF6F2;--orange-100:#FDE8DE;--orange-200:#FAD1BD;--orange-300:#F6AD90;--orange-400:#F29068;--orange-500:#ED7442;--orange-600:#D45A2A;--orange-700:#AC4722;--orange-800:#87381B;--orange-900:#642A15;
+  --black:#0A1A22;--ink:#1A2A32;--charcoal:#2D3E48;--slate:#4A5E6A;--g500:#6B7B85;--g400:#8E9CA5;--g300:#B0BCC3;--g200:#D2DAE0;--g100:#E8EDF0;--g50:#F4F5F7;--white:#FAFBFC;
+  --success:#2D9F5B;--warning:#E5993E;--danger:#D94F4F;
+  --dm-bg:#0D1B21;--dm-s:#142229;--dm-s2:#1C2F38;--dm-b:#243944;--dm-t:#E2E8EC;--dm-tm:#8A9BA5;
+  --nw:256px;
+  --fd:'DM Serif Display',Georgia,serif;--fe:'Lato','Trebuchet MS',Verdana,sans-serif;--fz:'Noto Sans TC','Microsoft JhengHei',sans-serif;--fm:'SF Mono','Fira Code',Consolas,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--fe);background:var(--g50);color:var(--ink);line-height:1.75;font-size:15px}
+
+/* ═══ NAV ═══ */
+.N{width:var(--nw);position:fixed;top:0;left:0;bottom:0;background:var(--black);color:rgba(255,255,255,.65);overflow-y:auto;z-index:100;font-size:11.5px}
+.N::-webkit-scrollbar{width:3px}.N::-webkit-scrollbar-thumb{background:rgba(255,255,255,.08);border-radius:2px}
+.Nh{padding:20px 16px 12px;border-bottom:1px solid rgba(255,255,255,.06)}
+.Nh h2{font-family:var(--fd);font-size:17px;color:#fff;font-weight:400}
+.Nh small{font-size:9px;color:var(--turquoise);font-family:var(--fm);display:block;margin-top:3px}
+.Ns{padding:10px 0 2px 16px;font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-top:4px}
+.N a{display:flex;align-items:center;gap:6px;padding:5px 16px;text-decoration:none;color:inherit;border-left:2px solid transparent;transition:all .12s;cursor:pointer}
+.N a:hover{background:rgba(255,255,255,.03);color:#fff}
+.N a.on{background:rgba(38,167,176,.1);color:var(--turquoise);border-left-color:var(--turquoise);font-weight:700}
+.N a .n{font-family:var(--fm);font-size:9px;color:rgba(255,255,255,.25);min-width:18px}
+.N a.on .n{color:var(--turquoise)}
+.Nf{padding:10px 16px;border-top:1px solid rgba(255,255,255,.06);font-size:9px;color:rgba(255,255,255,.2);line-height:1.5}
+.Nl{display:flex;gap:3px;margin-top:4px}
+.Nl span{padding:1px 5px;border-radius:2px;font-size:8px;font-weight:700;background:rgba(255,255,255,.05);color:rgba(255,255,255,.35);letter-spacing:.04em}
+.Nl span.p{background:rgba(38,167,176,.18);color:var(--turquoise)}
+
+/* ═══ MAIN ═══ */
+.M{margin-left:var(--nw)}
+.B{height:48px;background:#fff;border-bottom:1px solid var(--g200);display:flex;align-items:center;padding:0 32px;position:sticky;top:0;z-index:50;font-size:11px;color:var(--g500)}
+.B b{color:var(--ink)}
+.C{max-width:1020px;padding:40px 32px 100px}
+
+/* ═══ SECTIONS ═══ */
+.S{display:none}.S.on{display:block}
+.Sh{margin-bottom:36px;padding-bottom:24px;border-bottom:2px solid var(--turquoise)}
+.Sn{font-family:var(--fm);font-size:10px;color:var(--turquoise);letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.St{font-family:var(--fd);font-size:34px;color:var(--black);line-height:1.15;margin:4px 0}
+.Ss{font-family:var(--fz);font-size:15px;color:var(--g500)}
+.So{font-size:11px;color:var(--g500);margin-top:6px}.So b{color:var(--ink)}
+.S p{margin-bottom:16px;max-width:72ch}
+.S h3{font-size:18px;font-weight:900;color:var(--black);margin:36px 0 14px;padding-top:18px;border-top:1px solid var(--g100)}
+.S h3:first-of-type{border-top:none;padding-top:0}
+.S h4{font-size:12px;font-weight:700;color:var(--charcoal);margin:20px 0 6px;letter-spacing:.04em;text-transform:uppercase}
+
+/* ═══ COMPONENTS ═══ */
+/* Swatches */
+.sw-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;margin:10px 0 20px}
+.sw{border-radius:7px;overflow:hidden;border:1px solid var(--g200);background:#fff}
+.sw-c{height:48px}.sw-i{padding:6px 8px}
+.sw-n{font-size:10px;font-weight:700}.sw-v{font-size:9px;font-family:var(--fm);color:var(--g500)}
+.sw-cm{font-size:8px;color:var(--g400);margin-top:1px}
+/* Scale rows */
+.sr{display:flex;border-radius:8px;overflow:hidden;margin:8px 0 16px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.sc{flex:1;padding:22px 4px 6px;text-align:center;min-width:0}
+.sc span{display:block;font-size:8px;font-family:var(--fm);color:rgba(255,255,255,.8);text-shadow:0 1px 2px rgba(0,0,0,.3)}
+.sc .lb{font-weight:700;font-size:9px}
+.sc.lt span{color:rgba(0,0,0,.55);text-shadow:none}
+/* Gradient strips */
+.gs{height:64px;border-radius:8px;margin:8px 0;position:relative;overflow:hidden}
+.gs .gl{position:absolute;bottom:6px;left:12px;font-size:9px;font-weight:700;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.4);letter-spacing:.04em}
+.gs .gc{position:absolute;bottom:6px;right:12px;font-family:var(--fm);font-size:8px;color:rgba(255,255,255,.6)}
+/* Cards */
+.cg{display:grid;gap:12px;margin:14px 0 20px}.c2{grid-template-columns:1fr 1fr}.c3{grid-template-columns:1fr 1fr 1fr}.c4{grid-template-columns:repeat(4,1fr)}.c5{grid-template-columns:repeat(5,1fr)}
+.cd{background:#fff;border:1px solid var(--g200);border-radius:8px;padding:16px}
+.cd-l{font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g500);margin-bottom:6px}
+.cd-v{font-size:15px;font-weight:900;color:var(--black);margin-bottom:4px}
+.cd-n{font-size:12px;color:var(--g500);line-height:1.6}
+/* Tables */
+.T{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+.T th{text-align:left;padding:10px 14px;background:var(--black);color:rgba(255,255,255,.8);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.T td{padding:10px 14px;border-bottom:1px solid var(--g100);vertical-align:top}
+.T tr:hover td{background:rgba(38,167,176,.02)}
+.T code{font-family:var(--fm);font-size:10px;background:var(--g50);padding:1px 5px;border-radius:3px;color:var(--turquoise-700)}
+/* Do/Dont */
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.do,.dt{border-radius:8px;padding:16px;font-size:12px;line-height:1.7}
+.do{background:var(--turquoise-50);border:1px solid var(--turquoise-200)}
+.dt{background:rgba(217,79,79,.04);border:1px solid rgba(217,79,79,.15)}
+.do b{color:var(--turquoise-700);display:block;font-size:9px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.dt b{color:var(--danger);display:block;font-size:9px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+/* Callout */
+.co{border-radius:7px;padding:16px 20px;margin:16px 0;font-size:13px;line-height:1.7}
+.co-t{background:var(--turquoise-50);border-left:3px solid var(--turquoise)}
+.co-a{background:var(--orange-50);border-left:3px solid var(--orange)}
+.co strong{color:var(--ink)}
+/* Pillars */
+.pi-r{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:16px 0}
+.pi{background:#fff;border:1px solid var(--g200);border-radius:7px;padding:12px;text-align:center;transition:all .2s}
+.pi:hover{border-color:var(--turquoise);box-shadow:0 3px 10px rgba(38,167,176,.1)}
+.pi-ic{width:32px;height:32px;margin:0 auto 6px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--turquoise),var(--copper))}
+.pi-nm{font-size:10px;font-weight:700;color:var(--ink);line-height:1.2}
+.pi-ds{font-size:9px;color:var(--g500);margin-top:3px}
+/* Year arc */
+.ya{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+.yc{border-radius:8px;padding:16px;color:#fff}
+.yc.y1{background:var(--black)}.yc.y2{background:var(--turquoise-700)}.yc.y3{background:var(--turquoise)}
+.yb{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.6;margin-bottom:6px;display:block}
+.yc h4{font-size:13px;font-weight:700;margin-bottom:4px;color:#fff;border:none;padding:0;letter-spacing:0;text-transform:none}
+.yc p{font-size:11px;opacity:.7;line-height:1.4;margin:0}
+/* A11y pairs */
+.ag{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:12px 0}
+.ap{background:#fff;border:1px solid var(--g200);border-radius:6px;overflow:hidden}
+.ap-s{height:34px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.ap-i{padding:4px 8px;font-size:9px}
+.ap-i .r{font-weight:700;font-family:var(--fm)}
+.ap-i .ok{color:var(--success)}.ap-i .no{color:var(--danger)}
+/* Dark mode preview */
+.dm{background:var(--dm-bg);border-radius:10px;padding:24px;margin:14px 0}
+.dmc{background:var(--dm-s);border:1px solid var(--dm-b);border-radius:8px;padding:16px;margin-bottom:10px}
+.dmc h5{color:var(--dm-t);font-size:13px;margin-bottom:4px}.dmc p{color:var(--dm-tm);font-size:11px;margin:0}
+.dmc .ac{color:var(--turquoise-400)}
+.dsr{display:flex;gap:6px;margin-top:8px}
+.dsw{width:36px;height:24px;border-radius:3px}
+/* Mockups */
+.mk-r{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+.mk{border-radius:10px;overflow:hidden;border:1px solid var(--g200);background:#fff}
+.mk-h{padding:8px 14px;background:var(--g50);border-bottom:1px solid var(--g200);font-size:9px;font-weight:700;color:var(--g500);letter-spacing:.08em;text-transform:uppercase}
+/* Business card */
+.bc-m{display:flex;gap:14px;padding:20px;justify-content:center;background:var(--g50)}
+.bc{width:180px;height:108px;border-radius:5px;position:relative;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.bc-f{background:#fff;padding:12px;display:flex;flex-direction:column;justify-content:flex-end}
+.bc-f::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--turquoise),var(--copper))}
+.bc-b{background:var(--black);display:flex;align-items:center;justify-content:center}
+.bc-nm{font-size:8px;font-weight:700;color:var(--black)}.bc-tt{font-size:6px;color:var(--g500);margin-top:1px}
+.bc-ct{font-size:5.5px;color:var(--g400);margin-top:5px;line-height:1.5}
+.bc-lw{font-size:7px;font-weight:700;color:rgba(255,255,255,.9);text-align:center;line-height:1.3}
+.bc-lw small{font-size:5px;display:block;color:rgba(255,255,255,.5);letter-spacing:.06em}
+/* Poster */
+.po-m{padding:20px;background:var(--g50);display:flex;gap:14px;justify-content:center}
+.po{width:110px;height:155px;border-radius:4px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.1);position:relative}
+.po.pi2{background:linear-gradient(180deg,var(--turquoise),var(--turquoise-700))}.po.pt{background:var(--black)}.po.px{background:#fff;border:1px solid var(--g200)}
+.po-in{padding:8px;height:100%;display:flex;flex-direction:column}
+.po-tg{font-size:5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.po-ti{font-size:8px;font-weight:900;margin-top:auto;line-height:1.2}
+.po-ft{font-size:4px;margin-top:4px;opacity:.5}
+/* Signage */
+.sg-m{background:var(--g50);padding:18px;display:flex;justify-content:center}
+.sg{width:260px;height:70px;background:var(--black);border-radius:4px;display:flex;align-items:center;padding:0 14px;gap:10px;box-shadow:0 3px 14px rgba(0,0,0,.2);position:relative}
+.sg-mk{width:32px;height:32px;border-radius:6px;background:rgba(38,167,176,.15);display:flex;align-items:center;justify-content:center}
+.sg h5{font-size:9px;color:#fff;font-weight:700;margin:0}.sg p{font-size:6px;color:rgba(255,255,255,.5);margin:2px 0 0}
+.sg-bd{position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--turquoise),var(--copper))}
+/* Web mock */
+.wm{background:var(--g50);padding:16px;display:flex;justify-content:center}
+.wf{width:300px;height:180px;background:#fff;border-radius:6px;box-shadow:0 3px 16px rgba(0,0,0,.06);overflow:hidden}
+.wb{height:16px;background:var(--g100);display:flex;align-items:center;padding:0 6px;gap:3px}
+.wd{width:4px;height:4px;border-radius:50%}
+.wh{height:50px;background:linear-gradient(135deg,var(--turquoise-500),var(--copper-300));display:flex;align-items:center;justify-content:center}
+.wh span{font-size:7px;font-weight:700;color:#fff;text-align:center;line-height:1.3}
+.wc{padding:8px}.wl{height:2px;background:var(--g100);margin-bottom:3px;border-radius:1px}
+/* Mobile mock */
+.mm{background:var(--g50);padding:16px;display:flex;justify-content:center}
+.mf{width:90px;height:180px;background:#fff;border-radius:12px;box-shadow:0 3px 16px rgba(0,0,0,.08);overflow:hidden;border:2px solid var(--g200)}
+.mn{width:36px;height:5px;background:var(--g200);border-radius:3px;margin:5px auto 3px}
+.mh{height:44px;background:linear-gradient(135deg,var(--turquoise),var(--copper));margin:0 5px;border-radius:5px;display:flex;align-items:center;justify-content:center}
+.mh span{font-size:5px;font-weight:700;color:#fff}
+.mc{padding:4px}.mcd{height:16px;background:var(--g50);border-radius:3px;margin-bottom:3px;border:1px solid var(--g100)}
+/* Email mock */
+.em{background:var(--g50);padding:16px;display:flex;justify-content:center}
+.ef{width:240px;background:#fff;border-radius:5px;box-shadow:0 2px 10px rgba(0,0,0,.05);overflow:hidden}
+.eh{padding:8px 12px;border-bottom:1px solid var(--turquoise-100);background:var(--turquoise-50)}
+.eh-l{font-size:6px;font-weight:700;color:var(--turquoise)}.eh-s{font-size:5px;color:var(--g400);margin-top:1px}
+.eb{height:36px;background:linear-gradient(135deg,var(--turquoise),var(--copper-400));display:flex;align-items:center;justify-content:center}
+.eb span{font-size:7px;font-weight:700;color:#fff}
+.ey{padding:8px 12px}.el{height:2px;background:var(--g100);margin-bottom:3px;border-radius:1px}
+.ec{display:block;margin:6px auto;width:50px;height:14px;background:var(--turquoise);border-radius:7px}
+.efr{padding:6px 12px;border-top:1px solid var(--g100);text-align:center}.efr span{font-size:4px;color:var(--g400)}
+/* Motion */
+.mo{background:var(--black);border-radius:10px;padding:28px;margin:14px 0;overflow:hidden}
+.md{display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap}
+.mb{width:56px;height:56px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700;color:#fff;letter-spacing:.04em;text-transform:uppercase}
+.mb.pu{animation:gP 3s ease-in-out infinite;background:var(--turquoise)}
+.mb.sw2{animation:gS 4s ease-in-out infinite;background:var(--copper-600)}
+.mb.rv{animation:gR 3s ease-out infinite;background:var(--purple-500)}
+.mb.fd{animation:gF 4s ease-in-out infinite;background:var(--green-500)}
+@keyframes gP{0%,100%{transform:scale(1);opacity:.8;box-shadow:0 0 0 0 rgba(38,167,176,.4)}50%{transform:scale(1.05);opacity:1;box-shadow:0 0 18px 6px rgba(38,167,176,.15)}}
+@keyframes gS{0%{clip-path:inset(0 100% 0 0)}40%,60%{clip-path:inset(0)}100%{clip-path:inset(0 0 0 100%)}}
+@keyframes gR{0%{transform:translateY(10px);opacity:0}20%,80%{transform:translateY(0);opacity:1}100%{transform:translateY(-10px);opacity:0}}
+@keyframes gF{0%,100%{opacity:.3}50%{opacity:1}}
+.ml{text-align:center;margin-top:12px}.ml span{display:inline-block;padding:2px 8px;background:rgba(255,255,255,.05);border-radius:10px;font-size:9px;color:rgba(255,255,255,.4);margin:0 3px}
+/* Variation cards */
+.vg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+.vc{border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.vv{height:100px;display:flex;align-items:center;justify-content:center;padding:14px}
+.vi{padding:12px;background:#fff}
+.vi h5{font-size:11px;font-weight:900;color:var(--black)}.vi p{font-size:9px;color:var(--g500);margin-top:3px;line-height:1.4}
+.vt{display:flex;gap:3px;margin-top:6px;flex-wrap:wrap}
+.vt span{padding:1px 6px;border-radius:8px;font-size:7px;font-weight:700;background:var(--g50);color:var(--g500)}
+/* RACI */
+.R{width:100%;border-collapse:collapse;margin:12px 0;font-size:11px}
+.R th{padding:6px 8px;background:var(--black);color:#fff;font-size:9px;letter-spacing:.06em;text-transform:uppercase;text-align:center}
+.R th:first-child{text-align:left}
+.R td{padding:6px 8px;border-bottom:1px solid var(--g100);text-align:center}
+.R td:first-child{text-align:left;font-weight:700}
+.rr{color:#D94F4F;font-weight:900}.ra{color:var(--turquoise);font-weight:900}.rc{color:var(--purple);font-weight:700}.ri{color:var(--g500)}
+
+/* Logo displays */
+.logo-gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.logo-box{border-radius:10px;padding:32px;display:flex;align-items:center;justify-content:center;min-height:140px}
+.logo-box.light{background:var(--g50);border:1px solid var(--g200)}
+.logo-box.dark{background:var(--black)}
+.logo-box.full{grid-column:1/-1}
+.logo-lockup{display:flex;align-items:center;gap:14px}
+.logo-lockup-v{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.logo-text-zh{font-family:var(--fz);font-weight:700;font-size:16px;letter-spacing:0.08em}
+.logo-text-en{font-family:var(--fe);font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase}
+.logo-text-zh.c-dark{color:var(--black)}.logo-text-en.c-dark{color:var(--g500)}
+.logo-text-zh.c-white{color:#fff}.logo-text-en.c-white{color:rgba(255,255,255,.6)}
+.logo-label{position:absolute;top:8px;left:12px;font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g400)}
+.logo-box{position:relative}
+.logo-box.dark .logo-label{color:rgba(255,255,255,.3)}
+
+/* Responsive — Tablet */
+@media(max-width:1100px){
+  :root{--nw:220px}
+  .C{max-width:100%;padding:32px 24px 80px}
+}
+/* Responsive — Mobile */
+@media(max-width:900px){
+  .N{position:fixed;left:-280px;width:280px;transition:left .3s ease;z-index:200}
+  .N.open{left:0}
+  .N-overlay{display:none;position:fixed;inset:0;background:rgba(10,26,34,.5);z-index:150}
+  .N-overlay.open{display:block}
+  .M{margin-left:0}
+  .B{padding:0 16px;font-size:10px;justify-content:space-between}
+  .C{padding:20px 16px 80px;max-width:100%}
+  /* Mobile menu button */
+  .mob-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:none;cursor:pointer;padding:0}
+  .mob-btn svg{stroke:var(--ink);stroke-width:2;fill:none}
+  /* Typography */
+  body{font-size:14px;line-height:1.75}
+  .St{font-size:24px}
+  .Ss{font-size:13px}
+  .S h3{font-size:16px;margin:24px 0 10px}
+  .S p{margin-bottom:12px;font-size:14px;line-height:1.8}
+  .Sh{margin-bottom:28px;padding-bottom:18px}
+  /* Grids → stack */
+  .c2,.c3,.c4,.c5,.dd,.mk-r,.vg,.pi-r,.ya,.logo-gallery,.ag{grid-template-columns:1fr}
+  .pi-r{grid-template-columns:1fr 1fr}
+  /* Tables — horizontal scroll */
+  .T{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap;font-size:11px}
+  .T th,.T td{padding:6px 10px}
+  /* Cards */
+  .cd{padding:14px}
+  .cd-v{font-size:14px}
+  .cd-n{font-size:11px}
+  /* Callouts */
+  .co{padding:12px 14px;font-size:11px}
+  /* Swatches */
+  .sw-g{grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:6px}
+  /* Scale rows — show hex on mobile */
+  .sr{flex-wrap:wrap}
+  .sc{min-width:30px;padding:16px 2px 4px}
+  .sc span{font-size:7px}
+  /* Logo boxes */
+  .logo-box{min-height:100px!important;padding:24px 16px}
+  .logo-text-zh{font-size:14px!important}
+  .logo-text-en{font-size:8px!important}
+  /* Posters */
+  .bc-m,.po-m{flex-direction:column;align-items:center}
+  /* Do/Don't */
+  .do,.dt{font-size:11px;padding:12px}
+  /* Year arc */
+  .ya{gap:8px}
+  .yc{padding:14px}
+  .yc h4{font-size:12px}
+  .yc p{font-size:11px}
+}
+/* Responsive — Small phones */
+@media(max-width:420px){
+  body{font-size:13px}
+  .St{font-size:20px}
+  .C{padding:16px 12px 70px}
+  .pi-r{grid-template-columns:1fr}
+  .sw-g{grid-template-columns:repeat(auto-fill,minmax(80px,1fr))}
+  .T{font-size:10px}
+}
+/* Hide mobile button on desktop */
+@media(min-width:901px){
+  .mob-btn,.N-overlay{display:none!important}
+}
+@media print{.N,.B,.mob-btn{display:none}.M{margin-left:0}.S{display:block!important;page-break-before:always}.S:first-child{page-break-before:auto}}
+</style>
+</head>
+<body>
+
+<div class="N-overlay" id="overlay" onclick="closeNav()"></div>
+
+<nav class="N" id="nav">
+<div class="Nh" style="display:flex;align-items:center;gap:10px">
+  <svg width="32" height="32" viewBox="0 0 80 90" fill="none" style="flex-shrink:0"><circle cx="50" cy="5" r="1.5" fill="#8EA0A8"/><circle cx="56" cy="7" r="1.2" fill="#A8B8C0"/><circle cx="44" cy="8" r="1.8" fill="#96A8B2"/><circle cx="61" cy="10" r="1" fill="#B0BCC3"/>
+<rect x="38" y="12" width="4.5" height="3.8" rx=".8" fill="#8EA0A8"/><rect x="44" y="11" width="5" height="4" rx=".8" fill="#3DB9C2"/><rect x="50" y="12.5" width="4" height="3.5" rx=".8" fill="#96A8B2"/><rect x="56" y="14" width="3.5" height="3" rx=".7" fill="#26A7B0" opacity=".6"/>
+<rect x="32" y="19" width="5.5" height="4.5" rx=".8" fill="#7A9098"/><rect x="39" y="18.5" width="5.5" height="4.5" rx=".8" fill="#26A7B0"/><rect x="46" y="19" width="5" height="4.2" rx=".8" fill="#8EA0A8"/><rect x="53" y="20" width="4.5" height="3.8" rx=".8" fill="#3DB9C2"/><rect x="59" y="21" width="3.5" height="3" rx=".7" fill="#96A8B2" opacity=".5"/>
+<rect x="26" y="26" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="34" y="25.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="42" y="26" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="50" y="26.5" width="5.5" height="4.5" rx=".9" fill="#8EA0A8"/><rect x="57" y="27.5" width="4.5" height="3.8" rx=".8" fill="#3DB9C2" opacity=".6"/>
+<rect x="22" y="33.5" width="6.5" height="5.2" rx="1" fill="#7A9098"/><rect x="30" y="33" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="38" y="33.5" width="6.5" height="5.2" rx="1" fill="#7A9098"/><rect x="46" y="34" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="54" y="35" width="5" height="4" rx=".9" fill="#8EA0A8" opacity=".5"/>
+<rect x="18" y="41" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="26" y="40.5" width="6.5" height="5.2" rx="1" fill="#8EA0A8"/><rect x="34" y="41" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="42" y="41.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="50" y="42" width="5" height="4.2" rx=".9" fill="#3DB9C2" opacity=".5"/>
+<rect x="15" y="48.5" width="6" height="5" rx="1" fill="#8EA0A8"/><rect x="23" y="48" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="31" y="48.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="39" y="49" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/>
+<rect x="13" y="56" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/><rect x="20" y="55.5" width="5.5" height="4.5" rx=".9" fill="#8EA0A8"/><rect x="27.5" y="56" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/><rect x="35" y="57" width="4.5" height="3.8" rx=".8" fill="#7A9098" opacity=".6"/>
+<rect x="16" y="63" width="5" height="4" rx=".8" fill="#7A9098"/><rect x="23" y="62.5" width="5" height="4" rx=".8" fill="#26A7B0"/><rect x="30" y="63.5" width="4.5" height="3.8" rx=".8" fill="#8EA0A8" opacity=".6"/>
+<rect x="19" y="69.5" width="4.5" height="3.5" rx=".7" fill="#26A7B0"/><rect x="25.5" y="70" width="4" height="3.2" rx=".7" fill="#7A9098"/>
+<rect x="22" y="76" width="3.5" height="3" rx=".6" fill="#26A7B0" opacity=".7"/></svg>
+  <div><h2>GPS Brand Bible</h2><small>Mega Portal v3.0 — 2026</small></div>
+</div>
+
+<div class="Ns">I · Foundation</div>
+<a class="on" onclick="go('s01')" data-s="s01"><span class="n">01</span>Brand Foundation</a>
+<a onclick="go('s02')" data-s="s02"><span class="n">02</span>Brand Behaviors</a>
+
+<div class="Ns">II · Visual Identity</div>
+<a onclick="go('s03')" data-s="s03"><span class="n">03</span>Logo System</a>
+<a onclick="go('s04')" data-s="s04"><span class="n">04</span>Color Palette</a>
+<a onclick="go('s05')" data-s="s05"><span class="n">05</span>Tint &amp; Shade Scales</a>
+<a onclick="go('s06')" data-s="s06"><span class="n">06</span>Gradient Library</a>
+<a onclick="go('s07')" data-s="s07"><span class="n">07</span>Semantic &amp; Dark Mode</a>
+<a onclick="go('s08')" data-s="s08"><span class="n">08</span>Accessibility Pairings</a>
+<a onclick="go('s09')" data-s="s09"><span class="n">09</span>Typography</a>
+<a onclick="go('s10')" data-s="s10"><span class="n">10</span>Graphic &amp; Iconography</a>
+<a onclick="go('s11')" data-s="s11"><span class="n">11</span>Imagery &amp; Photography</a>
+
+<div class="Ns">III · Expression</div>
+<a onclick="go('s12')" data-s="s12"><span class="n">12</span>Voice &amp; Tone</a>
+<a onclick="go('s13')" data-s="s13"><span class="n">13</span>Motion &amp; Animation</a>
+
+<div class="Ns">IV · Application: Print</div>
+<a onclick="go('s14')" data-s="s14"><span class="n">14</span>Stationery System</a>
+<a onclick="go('s15')" data-s="s15"><span class="n">15</span>Poster &amp; Signage</a>
+<a onclick="go('s16')" data-s="s16"><span class="n">16</span>Uniform &amp; Wearables</a>
+
+<div class="Ns">V · Application: Digital</div>
+<a onclick="go('s17')" data-s="s17"><span class="n">17</span>Web &amp; Landing Page</a>
+<a onclick="go('s18')" data-s="s18"><span class="n">18</span>Email &amp; Newsletter</a>
+<a onclick="go('s19')" data-s="s19"><span class="n">19</span>Mobile &amp; LINE OA</a>
+<a onclick="go('s20')" data-s="s20"><span class="n">20</span>Digital Signage</a>
+
+<div class="Ns">VI · Creative Variations</div>
+<a onclick="go('s21')" data-s="s21"><span class="n">21</span>Campaign Moods</a>
+<a onclick="go('s22')" data-s="s22"><span class="n">22</span>Seasonal &amp; Event</a>
+
+<div class="Ns">VII · Governance</div>
+<a onclick="go('s23')" data-s="s23"><span class="n">23</span>Co-branding</a>
+<a onclick="go('s24')" data-s="s24"><span class="n">24</span>Brand Performance</a>
+<a onclick="go('s25')" data-s="s25"><span class="n">25</span>Templates &amp; Toolkit</a>
+
+<div class="Ns">Appendix</div>
+<a onclick="go('sA')" data-s="sA"><span class="n">A</span>New Site Activation</a>
+<a onclick="go('sL')" data-s="sL"><span class="n">L</span>Language Architecture</a>
+<a onclick="go('sR')" data-s="sR"><span class="n">R</span>RACI Ownership</a>
+<a onclick="go('sV')" data-s="sV"><span class="n">V</span>Version History</a>
+
+<div class="Nf">Confidential — Internal Use Only
+  <div class="Nl"><span class="p">EN</span><span class="p">zh-TW</span><span>SC</span><span>DE</span><span>JP</span><span>ES</span></div>
+</div>
+</nav>
+
+<div class="M">
+<div class="B" id="bar"><button class="mob-btn" onclick="openNav()"><svg width="20" height="20" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button> Brand Bible / <b>Brand Foundation</b></div>
+<div class="C">
+
+<!-- ═══ 01 BRAND FOUNDATION ═══ -->
+<div class="S on" id="s01">
+<div class="Sh"><div class="Sn">Chapter 01 — Foundation</div><div class="St">Brand Foundation</div><div class="Ss">品牌基礎</div><div class="So">Owner: <b>GPS Strategy & DX</b> · Approver: GPS Director</div></div>
+
+<h3>Core Belief 核心信念</h3>
+<div class="co co-t" style="font-size:16px;font-weight:700;line-height:1.6;font-style:italic">"When people feel genuinely safe — not just at work, but across their whole lives — they are free to focus, create, and contribute at their highest level."</div>
+<p>This belief is GPS's commitment — the reason this strategy exists. Everything we communicate, every tool we propose, every change we introduce must trace back to it. It is not a slogan. It is the standard against which every decision is measured.</p>
+
+<h3>Narrative Architecture 敘事架構</h3>
+<p>To honour that commitment, all change streams — AI adoption, brand transformation, operational evolution — must be narrated through a single coherent arc, not run as separate campaigns. A unified narrative reduces cognitive load, builds cumulative meaning, and gives every initiative a clear place in a larger story.</p>
+<p>We define two phases as our near-term direction. Beyond that, the strategy does not end — it iterates. Stakeholder feedback gathered at the close of each phase shapes the next: its priorities, its narrative emphasis, and its channel mix.</p>
+
+<h3>Brand Purpose 品牌目的</h3>
+<p>To transform physical security from a compliance function into a human-centered enabling force — making safety invisible, intuitive, and deeply personal across every site where our people work.</p>
+
+<h3>Brand Mission 品牌使命</h3>
+<p>Protect the world's most advanced semiconductor operations and the people within them by designing security systems that are precise, adaptive, and grounded in care.</p>
+
+<h3>Brand Vision 品牌願景</h3>
+<p>A world where security is not felt as restriction but experienced as freedom — where every person entering our sites carries the confidence that their safety has been designed in advance.</p>
+
+<h3>Five Brand Pillars 五大品牌支柱</h3>
+<div class="pi-r">
+  <div class="pi"><div class="pi-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="#fff" stroke-width="2"/></svg></div><div class="pi-nm">Designed Safety</div><div class="pi-ds">Security by design, not afterthought</div></div>
+  <div class="pi"><div class="pi-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#fff" stroke-width="2"/></svg></div><div class="pi-nm">Journey Protection</div><div class="pi-ds">From home to site to home</div></div>
+  <div class="pi"><div class="pi-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#fff" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="#fff" stroke-width="2"/></svg></div><div class="pi-nm">Family Extension</div><div class="pi-ds">Safety travels home with you</div></div>
+  <div class="pi"><div class="pi-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#fff" stroke-width="2"/><path d="M2 12h20" stroke="#fff" stroke-width="2"/></svg></div><div class="pi-nm">Living Culture</div><div class="pi-ds">Safety as collective identity</div></div>
+  <div class="pi"><div class="pi-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#fff" stroke-width="2"/><path d="M8 21h8M12 17v4" stroke="#fff" stroke-width="2"/></svg></div><div class="pi-nm">Transparent Technology</div><div class="pi-ds">Technology serving people visibly</div></div>
+</div>
+
+<h3>Phased Narrative Arc 敘事弧線</h3>
+<div class="ya" style="grid-template-columns:1fr 1fr">
+  <div class="yc y1" style="padding:20px"><span class="yb">Phase 1 · 2026</span><h4>"We're changing how safety feels"</h4><p style="opacity:.85;font-size:12px;line-height:1.6">Challenge the assumption that security means restriction. Introduce new tools and ideas as expressions of care and support — for staff, for families, for the whole person. Establish a shared language across all sites.</p></div>
+  <div class="yc y2" style="padding:20px"><span class="yb">Phase 2 · 2027</span><h4>"Safety becomes who we are"</h4><p style="opacity:.85;font-size:12px;line-height:1.6">Transition from awareness to identity. GPS values are internalized by managers and reflected in day-to-day decisions — not only in formal communications. Cross-site communities of practice emerge.</p></div>
+</div>
+<div class="co" style="background:var(--turquoise-50);border:1px solid var(--turquoise-200);border-radius:8px;margin-top:10px;display:flex;gap:14px;align-items:flex-start">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;margin-top:2px"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z" stroke="var(--turquoise-600)" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="var(--turquoise-600)" stroke-width="1.5" stroke-linecap="round"/></svg>
+  <div><strong style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--turquoise-700)">Beyond Phase 2 — Continuous Iteration</strong><p style="margin:4px 0 0;font-size:12px;line-height:1.6;color:var(--ink)">Each phase closes with a structured review of stakeholder feedback — from security managers, site operations, partner functions, and contracted personnel. What we learn shapes the next phase: its priorities, its narrative emphasis, and its channel mix. The strategy improves because the people it serves inform it.</p></div>
+</div>
+
+<h3>Philosophical Foundation 哲學基底</h3>
+<p><strong>CPTED — Crime Prevention Through Environmental Design.</strong> GPS's approach is rooted in designing environments that inherently reduce risk rather than relying solely on enforcement. This philosophy informs our visual language: open sightlines, natural surveillance, and environments that feel welcoming because they are secure.</p>
+</div>
+
+<!-- ═══ 02 BRAND BEHAVIORS ═══ -->
+<div class="S" id="s02">
+<div class="Sh"><div class="Sn">Chapter 02 — Foundation</div><div class="St">Brand Behaviors</div><div class="Ss">品牌行為準則</div><div class="So">Owner: <b>GPS Strategy & DX</b> · Approver: GPS Director</div></div>
+<p>Brand behaviors define how GPS people act — observable actions that any colleague or visitor should recognize within the first 10 minutes at a GPS-managed site.</p>
+<div class="cg c2">
+  <div class="cd"><div class="cd-l">Behavior 01</div><div class="cd-v">Explain Before Enforce</div><div class="cd-n">Every security procedure has a reason. We communicate the "why" before enforcing the "what."</div></div>
+  <div class="cd"><div class="cd-l">Behavior 02</div><div class="cd-v">Greet First, Verify Second</div><div class="cd-n">Human acknowledgment precedes security protocol. A greeting before badge verification signals we protect people, not perimeters.</div></div>
+  <div class="cd"><div class="cd-l">Behavior 03</div><div class="cd-v">Design for the Uncomfortable Moment</div><div class="cd-n">Security encounters are asymmetric. We proactively minimize discomfort, wait time, and ambiguity.</div></div>
+  <div class="cd"><div class="cd-l">Behavior 04</div><div class="cd-v">Share What We Know</div><div class="cd-n">Safety knowledge is not proprietary. When GPS learns something that protects someone's family or commute — we share it.</div></div>
+</div>
+<div class="cg" style="grid-template-columns:1fr">
+  <div class="cd" style="border-color:var(--turquoise);border-width:2px"><div class="cd-l" style="color:var(--turquoise)">Behavior 05 — Foundation</div><div class="cd-v">Treat Every Site as Someone's First Day</div><div class="cd-n">New hires, visitors, and transferred employees experience GPS before any other function. We are the first impression. Every interaction should meet the standard we would want for our own first day.</div></div>
+</div>
+<h3>Measurement</h3>
+<p>Quarterly mystery visitor assessments, biannual safety perception survey (5 questions), and front-line supervisor peer reviews during shift handovers. Results feed into Brand Performance Metrics (Section 24).</p>
+</div>
+
+<!-- ═══ 03 LOGO SYSTEM ═══ -->
+<div class="S" id="s03">
+<div class="Sh"><div class="Sn">Chapter 03 — Visual Identity</div><div class="St">Logo System</div><div class="Ss">標誌系統</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<p>The GPS logo mark is a checkerboard-derived pattern of dots arranged in a spherical projection — representing precision, global interconnection, and the grid-based monitoring systems at the core of physical security. Paired with bilingual text (全球實體安全處 / GLOBAL PHYSICAL SECURITY), it forms the primary visual anchor of the brand.</p>
+
+<h3>Logo Mark 標誌圖標</h3>
+<div class="logo-gallery">
+  <div class="logo-box light">
+    <span class="logo-label">Mark — Standard</span>
+    <svg width="80" height="80" viewBox="0 0 80 90" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="5" r="1.5" fill="#8EA0A8"/><circle cx="56" cy="7" r="1.2" fill="#A8B8C0"/><circle cx="44" cy="8" r="1.8" fill="#96A8B2"/><circle cx="61" cy="10" r="1" fill="#B0BCC3"/>
+<rect x="38" y="12" width="4.5" height="3.8" rx=".8" fill="#8EA0A8"/><rect x="44" y="11" width="5" height="4" rx=".8" fill="#3DB9C2"/><rect x="50" y="12.5" width="4" height="3.5" rx=".8" fill="#96A8B2"/><rect x="56" y="14" width="3.5" height="3" rx=".7" fill="#26A7B0" opacity=".6"/>
+<rect x="32" y="19" width="5.5" height="4.5" rx=".8" fill="#7A9098"/><rect x="39" y="18.5" width="5.5" height="4.5" rx=".8" fill="#26A7B0"/><rect x="46" y="19" width="5" height="4.2" rx=".8" fill="#8EA0A8"/><rect x="53" y="20" width="4.5" height="3.8" rx=".8" fill="#3DB9C2"/><rect x="59" y="21" width="3.5" height="3" rx=".7" fill="#96A8B2" opacity=".5"/>
+<rect x="26" y="26" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="34" y="25.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="42" y="26" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="50" y="26.5" width="5.5" height="4.5" rx=".9" fill="#8EA0A8"/><rect x="57" y="27.5" width="4.5" height="3.8" rx=".8" fill="#3DB9C2" opacity=".6"/>
+<rect x="22" y="33.5" width="6.5" height="5.2" rx="1" fill="#7A9098"/><rect x="30" y="33" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="38" y="33.5" width="6.5" height="5.2" rx="1" fill="#7A9098"/><rect x="46" y="34" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="54" y="35" width="5" height="4" rx=".9" fill="#8EA0A8" opacity=".5"/>
+<rect x="18" y="41" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="26" y="40.5" width="6.5" height="5.2" rx="1" fill="#8EA0A8"/><rect x="34" y="41" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="42" y="41.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="50" y="42" width="5" height="4.2" rx=".9" fill="#3DB9C2" opacity=".5"/>
+<rect x="15" y="48.5" width="6" height="5" rx="1" fill="#8EA0A8"/><rect x="23" y="48" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="31" y="48.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="39" y="49" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/>
+<rect x="13" y="56" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/><rect x="20" y="55.5" width="5.5" height="4.5" rx=".9" fill="#8EA0A8"/><rect x="27.5" y="56" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/><rect x="35" y="57" width="4.5" height="3.8" rx=".8" fill="#7A9098" opacity=".6"/>
+<rect x="16" y="63" width="5" height="4" rx=".8" fill="#7A9098"/><rect x="23" y="62.5" width="5" height="4" rx=".8" fill="#26A7B0"/><rect x="30" y="63.5" width="4.5" height="3.8" rx=".8" fill="#8EA0A8" opacity=".6"/>
+<rect x="19" y="69.5" width="4.5" height="3.5" rx=".7" fill="#26A7B0"/><rect x="25.5" y="70" width="4" height="3.2" rx=".7" fill="#7A9098"/>
+<rect x="22" y="76" width="3.5" height="3" rx=".6" fill="#26A7B0" opacity=".7"/></svg>
+  </div>
+  <div class="logo-box dark">
+    <span class="logo-label">Mark — Reversed</span>
+    <svg width="80" height="80" viewBox="0 0 80 90" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="5" r="1.5" fill="#fff" opacity=".35"/><circle cx="56" cy="7" r="1.2" fill="#fff" opacity=".25"/><circle cx="44" cy="8" r="1.8" fill="#fff" opacity=".3"/><circle cx="61" cy="10" r="1" fill="#fff" opacity=".2"/>
+<rect x="38" y="12" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".3"/><rect x="44" y="11" width="5" height="4" rx=".8" fill="#fff" opacity=".7"/><rect x="50" y="12.5" width="4" height="3.5" rx=".8" fill="#fff" opacity=".3"/><rect x="56" y="14" width="3.5" height="3" rx=".7" fill="#fff" opacity=".2"/>
+<rect x="32" y="19" width="5.5" height="4.5" rx=".8" fill="#fff" opacity=".3"/><rect x="39" y="18.5" width="5.5" height="4.5" rx=".8" fill="#fff" opacity=".8"/><rect x="46" y="19" width="5" height="4.2" rx=".8" fill="#fff" opacity=".3"/><rect x="53" y="20" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".7"/><rect x="59" y="21" width="3.5" height="3" rx=".7" fill="#fff" opacity=".15"/>
+<rect x="26" y="26" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="34" y="25.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="42" y="26" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="50" y="26.5" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".3"/><rect x="57" y="27.5" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="22" y="33.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="30" y="33" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="38" y="33.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="46" y="34" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="54" y="35" width="5" height="4" rx=".9" fill="#fff" opacity=".15"/>
+<rect x="18" y="41" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="26" y="40.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="34" y="41" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="42" y="41.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="50" y="42" width="5" height="4.2" rx=".9" fill="#fff" opacity=".15"/>
+<rect x="15" y="48.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="23" y="48" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="31" y="48.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="39" y="49" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/>
+<rect x="13" y="56" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/><rect x="20" y="55.5" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".3"/><rect x="27.5" y="56" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/><rect x="35" y="57" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="16" y="63" width="5" height="4" rx=".8" fill="#fff" opacity=".3"/><rect x="23" y="62.5" width="5" height="4" rx=".8" fill="#fff" opacity=".7"/><rect x="30" y="63.5" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="19" y="69.5" width="4.5" height="3.5" rx=".7" fill="#fff" opacity=".7"/><rect x="25.5" y="70" width="4" height="3.2" rx=".7" fill="#fff" opacity=".3"/>
+<rect x="22" y="76" width="3.5" height="3" rx=".6" fill="#fff" opacity=".5"/></svg>
+  </div>
+</div>
+
+<h3>Horizontal Lockup 水平組合標誌</h3>
+<p>The horizontal lockup is the default and primary choice for most applications.</p>
+<div class="logo-gallery">
+  <!-- Chinese Main Lockup — Light -->
+  <div class="logo-box light" style="min-height:100px">
+    <span class="logo-label">Chinese Main · Light BG</span>
+    <div class="logo-lockup">
+      <svg width="52" height="52" viewBox="0 0 80 90" fill="none"><circle cx="50" cy="5" r="1.5" fill="#8EA0A8"/><circle cx="56" cy="7" r="1.2" fill="#A8B8C0"/><circle cx="44" cy="8" r="1.8" fill="#96A8B2"/><circle cx="61" cy="10" r="1" fill="#B0BCC3"/>
+<rect x="38" y="12" width="4.5" height="3.8" rx=".8" fill="#8EA0A8"/><rect x="44" y="11" width="5" height="4" rx=".8" fill="#3DB9C2"/><rect x="50" y="12.5" width="4" height="3.5" rx=".8" fill="#96A8B2"/><rect x="56" y="14" width="3.5" height="3" rx=".7" fill="#26A7B0" opacity=".6"/>
+<rect x="32" y="19" width="5.5" height="4.5" rx=".8" fill="#7A9098"/><rect x="39" y="18.5" width="5.5" height="4.5" rx=".8" fill="#26A7B0"/><rect x="46" y="19" width="5" height="4.2" rx=".8" fill="#8EA0A8"/><rect x="53" y="20" width="4.5" height="3.8" rx=".8" fill="#3DB9C2"/><rect x="59" y="21" width="3.5" height="3" rx=".7" fill="#96A8B2" opacity=".5"/>
+<rect x="26" y="26" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="34" y="25.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="42" y="26" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="50" y="26.5" width="5.5" height="4.5" rx=".9" fill="#8EA0A8"/><rect x="57" y="27.5" width="4.5" height="3.8" rx=".8" fill="#3DB9C2" opacity=".6"/>
+<rect x="22" y="33.5" width="6.5" height="5.2" rx="1" fill="#7A9098"/><rect x="30" y="33" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="38" y="33.5" width="6.5" height="5.2" rx="1" fill="#7A9098"/><rect x="46" y="34" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="54" y="35" width="5" height="4" rx=".9" fill="#8EA0A8" opacity=".5"/>
+<rect x="18" y="41" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="26" y="40.5" width="6.5" height="5.2" rx="1" fill="#8EA0A8"/><rect x="34" y="41" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="42" y="41.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="50" y="42" width="5" height="4.2" rx=".9" fill="#3DB9C2" opacity=".5"/>
+<rect x="15" y="48.5" width="6" height="5" rx="1" fill="#8EA0A8"/><rect x="23" y="48" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="31" y="48.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="39" y="49" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/>
+<rect x="13" y="56" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/><rect x="20" y="55.5" width="5.5" height="4.5" rx=".9" fill="#8EA0A8"/><rect x="27.5" y="56" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/><rect x="35" y="57" width="4.5" height="3.8" rx=".8" fill="#7A9098" opacity=".6"/>
+<rect x="16" y="63" width="5" height="4" rx=".8" fill="#7A9098"/><rect x="23" y="62.5" width="5" height="4" rx=".8" fill="#26A7B0"/><rect x="30" y="63.5" width="4.5" height="3.8" rx=".8" fill="#8EA0A8" opacity=".6"/>
+<rect x="19" y="69.5" width="4.5" height="3.5" rx=".7" fill="#26A7B0"/><rect x="25.5" y="70" width="4" height="3.2" rx=".7" fill="#7A9098"/>
+<rect x="22" y="76" width="3.5" height="3" rx=".6" fill="#26A7B0" opacity=".7"/></svg>
+      <div><div class="logo-text-zh c-dark">全球實體安全處</div><div class="logo-text-en c-dark">Global Physical Security</div></div>
+    </div>
+  </div>
+  <!-- Chinese Main Lockup — Dark -->
+  <div class="logo-box dark" style="min-height:100px">
+    <span class="logo-label">Chinese Main · Dark BG</span>
+    <div class="logo-lockup">
+      <svg width="52" height="52" viewBox="0 0 80 90" fill="none"><circle cx="50" cy="5" r="1.5" fill="#fff" opacity=".35"/><circle cx="56" cy="7" r="1.2" fill="#fff" opacity=".25"/><circle cx="44" cy="8" r="1.8" fill="#fff" opacity=".3"/><circle cx="61" cy="10" r="1" fill="#fff" opacity=".2"/>
+<rect x="38" y="12" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".3"/><rect x="44" y="11" width="5" height="4" rx=".8" fill="#fff" opacity=".7"/><rect x="50" y="12.5" width="4" height="3.5" rx=".8" fill="#fff" opacity=".3"/><rect x="56" y="14" width="3.5" height="3" rx=".7" fill="#fff" opacity=".2"/>
+<rect x="32" y="19" width="5.5" height="4.5" rx=".8" fill="#fff" opacity=".3"/><rect x="39" y="18.5" width="5.5" height="4.5" rx=".8" fill="#fff" opacity=".8"/><rect x="46" y="19" width="5" height="4.2" rx=".8" fill="#fff" opacity=".3"/><rect x="53" y="20" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".7"/><rect x="59" y="21" width="3.5" height="3" rx=".7" fill="#fff" opacity=".15"/>
+<rect x="26" y="26" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="34" y="25.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="42" y="26" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="50" y="26.5" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".3"/><rect x="57" y="27.5" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="22" y="33.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="30" y="33" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="38" y="33.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="46" y="34" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="54" y="35" width="5" height="4" rx=".9" fill="#fff" opacity=".15"/>
+<rect x="18" y="41" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="26" y="40.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="34" y="41" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="42" y="41.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="50" y="42" width="5" height="4.2" rx=".9" fill="#fff" opacity=".15"/>
+<rect x="15" y="48.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="23" y="48" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="31" y="48.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="39" y="49" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/>
+<rect x="13" y="56" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/><rect x="20" y="55.5" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".3"/><rect x="27.5" y="56" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/><rect x="35" y="57" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="16" y="63" width="5" height="4" rx=".8" fill="#fff" opacity=".3"/><rect x="23" y="62.5" width="5" height="4" rx=".8" fill="#fff" opacity=".7"/><rect x="30" y="63.5" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="19" y="69.5" width="4.5" height="3.5" rx=".7" fill="#fff" opacity=".7"/><rect x="25.5" y="70" width="4" height="3.2" rx=".7" fill="#fff" opacity=".3"/>
+<rect x="22" y="76" width="3.5" height="3" rx=".6" fill="#fff" opacity=".5"/></svg>
+      <div><div class="logo-text-zh c-white">全球實體安全處</div><div class="logo-text-en c-white">Global Physical Security</div></div>
+    </div>
+  </div>
+</div>
+<h4>English Main — Horizontal</h4>
+<div class="logo-gallery">
+  <div class="logo-box light" style="min-height:100px">
+    <span class="logo-label">English Main · Light BG</span>
+    <div class="logo-lockup">
+      <svg width="48" height="48" viewBox="0 0 80 90" fill="none"><circle cx="50" cy="5" r="1.5" fill="#8EA0A8"/><circle cx="56" cy="7" r="1.2" fill="#A8B8C0"/><circle cx="44" cy="8" r="1.8" fill="#96A8B2"/><circle cx="61" cy="10" r="1" fill="#B0BCC3"/>
+<rect x="38" y="12" width="4.5" height="3.8" rx=".8" fill="#8EA0A8"/><rect x="44" y="11" width="5" height="4" rx=".8" fill="#3DB9C2"/><rect x="50" y="12.5" width="4" height="3.5" rx=".8" fill="#96A8B2"/><rect x="56" y="14" width="3.5" height="3" rx=".7" fill="#26A7B0" opacity=".6"/>
+<rect x="32" y="19" width="5.5" height="4.5" rx=".8" fill="#7A9098"/><rect x="39" y="18.5" width="5.5" height="4.5" rx=".8" fill="#26A7B0"/><rect x="46" y="19" width="5" height="4.2" rx=".8" fill="#8EA0A8"/><rect x="53" y="20" width="4.5" height="3.8" rx=".8" fill="#3DB9C2"/><rect x="59" y="21" width="3.5" height="3" rx=".7" fill="#96A8B2" opacity=".5"/>
+<rect x="26" y="26" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="34" y="25.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="42" y="26" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="50" y="26.5" width="5.5" height="4.5" rx=".9" fill="#8EA0A8"/><rect x="57" y="27.5" width="4.5" height="3.8" rx=".8" fill="#3DB9C2" opacity=".6"/>
+<rect x="22" y="33.5" width="6.5" height="5.2" rx="1" fill="#7A9098"/><rect x="30" y="33" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="38" y="33.5" width="6.5" height="5.2" rx="1" fill="#7A9098"/><rect x="46" y="34" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="54" y="35" width="5" height="4" rx=".9" fill="#8EA0A8" opacity=".5"/>
+<rect x="18" y="41" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="26" y="40.5" width="6.5" height="5.2" rx="1" fill="#8EA0A8"/><rect x="34" y="41" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="42" y="41.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="50" y="42" width="5" height="4.2" rx=".9" fill="#3DB9C2" opacity=".5"/>
+<rect x="15" y="48.5" width="6" height="5" rx="1" fill="#8EA0A8"/><rect x="23" y="48" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="31" y="48.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="39" y="49" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/>
+<rect x="13" y="56" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/><rect x="20" y="55.5" width="5.5" height="4.5" rx=".9" fill="#8EA0A8"/><rect x="27.5" y="56" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/><rect x="35" y="57" width="4.5" height="3.8" rx=".8" fill="#7A9098" opacity=".6"/>
+<rect x="16" y="63" width="5" height="4" rx=".8" fill="#7A9098"/><rect x="23" y="62.5" width="5" height="4" rx=".8" fill="#26A7B0"/><rect x="30" y="63.5" width="4.5" height="3.8" rx=".8" fill="#8EA0A8" opacity=".6"/>
+<rect x="19" y="69.5" width="4.5" height="3.5" rx=".7" fill="#26A7B0"/><rect x="25.5" y="70" width="4" height="3.2" rx=".7" fill="#7A9098"/>
+<rect x="22" y="76" width="3.5" height="3" rx=".6" fill="#26A7B0" opacity=".7"/></svg>
+      <div><div style="font-family:var(--fe);font-weight:700;font-size:16px;color:var(--black);letter-spacing:0.02em;line-height:1.15">GLOBAL<br>PHYSICAL<br>SECURITY</div><div style="font-family:var(--fz);font-size:8px;color:var(--g500);margin-top:2px">全球實體安全處</div></div>
+    </div>
+  </div>
+  <div class="logo-box dark" style="min-height:100px">
+    <span class="logo-label">English Main · Dark BG</span>
+    <div class="logo-lockup">
+      <svg width="48" height="48" viewBox="0 0 80 90" fill="none"><circle cx="50" cy="5" r="1.5" fill="#fff" opacity=".35"/><circle cx="56" cy="7" r="1.2" fill="#fff" opacity=".25"/><circle cx="44" cy="8" r="1.8" fill="#fff" opacity=".3"/><circle cx="61" cy="10" r="1" fill="#fff" opacity=".2"/>
+<rect x="38" y="12" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".3"/><rect x="44" y="11" width="5" height="4" rx=".8" fill="#fff" opacity=".7"/><rect x="50" y="12.5" width="4" height="3.5" rx=".8" fill="#fff" opacity=".3"/><rect x="56" y="14" width="3.5" height="3" rx=".7" fill="#fff" opacity=".2"/>
+<rect x="32" y="19" width="5.5" height="4.5" rx=".8" fill="#fff" opacity=".3"/><rect x="39" y="18.5" width="5.5" height="4.5" rx=".8" fill="#fff" opacity=".8"/><rect x="46" y="19" width="5" height="4.2" rx=".8" fill="#fff" opacity=".3"/><rect x="53" y="20" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".7"/><rect x="59" y="21" width="3.5" height="3" rx=".7" fill="#fff" opacity=".15"/>
+<rect x="26" y="26" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="34" y="25.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="42" y="26" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="50" y="26.5" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".3"/><rect x="57" y="27.5" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="22" y="33.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="30" y="33" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="38" y="33.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="46" y="34" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="54" y="35" width="5" height="4" rx=".9" fill="#fff" opacity=".15"/>
+<rect x="18" y="41" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="26" y="40.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="34" y="41" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="42" y="41.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="50" y="42" width="5" height="4.2" rx=".9" fill="#fff" opacity=".15"/>
+<rect x="15" y="48.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="23" y="48" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="31" y="48.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="39" y="49" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/>
+<rect x="13" y="56" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/><rect x="20" y="55.5" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".3"/><rect x="27.5" y="56" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/><rect x="35" y="57" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="16" y="63" width="5" height="4" rx=".8" fill="#fff" opacity=".3"/><rect x="23" y="62.5" width="5" height="4" rx=".8" fill="#fff" opacity=".7"/><rect x="30" y="63.5" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="19" y="69.5" width="4.5" height="3.5" rx=".7" fill="#fff" opacity=".7"/><rect x="25.5" y="70" width="4" height="3.2" rx=".7" fill="#fff" opacity=".3"/>
+<rect x="22" y="76" width="3.5" height="3" rx=".6" fill="#fff" opacity=".5"/></svg>
+      <div><div style="font-family:var(--fe);font-weight:700;font-size:16px;color:#fff;letter-spacing:0.02em;line-height:1.15">GLOBAL<br>PHYSICAL<br>SECURITY</div><div style="font-family:var(--fz);font-size:8px;color:rgba(255,255,255,.5);margin-top:2px">全球實體安全處</div></div>
+    </div>
+  </div>
+</div>
+
+<h3>Vertical Lockup 垂直組合標誌</h3>
+<p>Use when horizontal space is limited. The vertical lockup stacks the mark above the bilingual text.</p>
+<h4>Chinese Main — Vertical</h4>
+<div class="logo-gallery">
+  <div class="logo-box light" style="min-height:140px">
+    <span class="logo-label">Vertical · CN · Light</span>
+    <div class="logo-lockup-v">
+      <svg width="56" height="56" viewBox="0 0 80 90" fill="none"><circle cx="50" cy="5" r="1.5" fill="#8EA0A8"/><circle cx="56" cy="7" r="1.2" fill="#A8B8C0"/><circle cx="44" cy="8" r="1.8" fill="#96A8B2"/><circle cx="61" cy="10" r="1" fill="#B0BCC3"/>
+<rect x="38" y="12" width="4.5" height="3.8" rx=".8" fill="#8EA0A8"/><rect x="44" y="11" width="5" height="4" rx=".8" fill="#3DB9C2"/><rect x="50" y="12.5" width="4" height="3.5" rx=".8" fill="#96A8B2"/><rect x="56" y="14" width="3.5" height="3" rx=".7" fill="#26A7B0" opacity=".6"/>
+<rect x="32" y="19" width="5.5" height="4.5" rx=".8" fill="#7A9098"/><rect x="39" y="18.5" width="5.5" height="4.5" rx=".8" fill="#26A7B0"/><rect x="46" y="19" width="5" height="4.2" rx=".8" fill="#8EA0A8"/><rect x="53" y="20" width="4.5" height="3.8" rx=".8" fill="#3DB9C2"/><rect x="59" y="21" width="3.5" height="3" rx=".7" fill="#96A8B2" opacity=".5"/>
+<rect x="26" y="26" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="34" y="25.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="42" y="26" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="50" y="26.5" width="5.5" height="4.5" rx=".9" fill="#8EA0A8"/><rect x="57" y="27.5" width="4.5" height="3.8" rx=".8" fill="#3DB9C2" opacity=".6"/>
+<rect x="22" y="33.5" width="6.5" height="5.2" rx="1" fill="#7A9098"/><rect x="30" y="33" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="38" y="33.5" width="6.5" height="5.2" rx="1" fill="#7A9098"/><rect x="46" y="34" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="54" y="35" width="5" height="4" rx=".9" fill="#8EA0A8" opacity=".5"/>
+<rect x="18" y="41" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="26" y="40.5" width="6.5" height="5.2" rx="1" fill="#8EA0A8"/><rect x="34" y="41" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="42" y="41.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="50" y="42" width="5" height="4.2" rx=".9" fill="#3DB9C2" opacity=".5"/>
+<rect x="15" y="48.5" width="6" height="5" rx="1" fill="#8EA0A8"/><rect x="23" y="48" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="31" y="48.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="39" y="49" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/>
+<rect x="13" y="56" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/><rect x="20" y="55.5" width="5.5" height="4.5" rx=".9" fill="#8EA0A8"/><rect x="27.5" y="56" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/><rect x="35" y="57" width="4.5" height="3.8" rx=".8" fill="#7A9098" opacity=".6"/>
+<rect x="16" y="63" width="5" height="4" rx=".8" fill="#7A9098"/><rect x="23" y="62.5" width="5" height="4" rx=".8" fill="#26A7B0"/><rect x="30" y="63.5" width="4.5" height="3.8" rx=".8" fill="#8EA0A8" opacity=".6"/>
+<rect x="19" y="69.5" width="4.5" height="3.5" rx=".7" fill="#26A7B0"/><rect x="25.5" y="70" width="4" height="3.2" rx=".7" fill="#7A9098"/>
+<rect x="22" y="76" width="3.5" height="3" rx=".6" fill="#26A7B0" opacity=".7"/></svg>
+      <div><div class="logo-text-zh c-dark" style="font-size:14px">全球實體安全處</div><div class="logo-text-en c-dark">Global Physical Security</div></div>
+    </div>
+  </div>
+  <div class="logo-box dark" style="min-height:140px">
+    <span class="logo-label">Vertical · CN · Dark</span>
+    <div class="logo-lockup-v">
+      <svg width="56" height="56" viewBox="0 0 80 90" fill="none"><circle cx="50" cy="5" r="1.5" fill="#fff" opacity=".35"/><circle cx="56" cy="7" r="1.2" fill="#fff" opacity=".25"/><circle cx="44" cy="8" r="1.8" fill="#fff" opacity=".3"/><circle cx="61" cy="10" r="1" fill="#fff" opacity=".2"/>
+<rect x="38" y="12" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".3"/><rect x="44" y="11" width="5" height="4" rx=".8" fill="#fff" opacity=".7"/><rect x="50" y="12.5" width="4" height="3.5" rx=".8" fill="#fff" opacity=".3"/><rect x="56" y="14" width="3.5" height="3" rx=".7" fill="#fff" opacity=".2"/>
+<rect x="32" y="19" width="5.5" height="4.5" rx=".8" fill="#fff" opacity=".3"/><rect x="39" y="18.5" width="5.5" height="4.5" rx=".8" fill="#fff" opacity=".8"/><rect x="46" y="19" width="5" height="4.2" rx=".8" fill="#fff" opacity=".3"/><rect x="53" y="20" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".7"/><rect x="59" y="21" width="3.5" height="3" rx=".7" fill="#fff" opacity=".15"/>
+<rect x="26" y="26" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="34" y="25.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="42" y="26" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="50" y="26.5" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".3"/><rect x="57" y="27.5" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="22" y="33.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="30" y="33" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="38" y="33.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="46" y="34" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="54" y="35" width="5" height="4" rx=".9" fill="#fff" opacity=".15"/>
+<rect x="18" y="41" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="26" y="40.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="34" y="41" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="42" y="41.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="50" y="42" width="5" height="4.2" rx=".9" fill="#fff" opacity=".15"/>
+<rect x="15" y="48.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="23" y="48" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="31" y="48.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="39" y="49" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/>
+<rect x="13" y="56" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/><rect x="20" y="55.5" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".3"/><rect x="27.5" y="56" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/><rect x="35" y="57" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="16" y="63" width="5" height="4" rx=".8" fill="#fff" opacity=".3"/><rect x="23" y="62.5" width="5" height="4" rx=".8" fill="#fff" opacity=".7"/><rect x="30" y="63.5" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="19" y="69.5" width="4.5" height="3.5" rx=".7" fill="#fff" opacity=".7"/><rect x="25.5" y="70" width="4" height="3.2" rx=".7" fill="#fff" opacity=".3"/>
+<rect x="22" y="76" width="3.5" height="3" rx=".6" fill="#fff" opacity=".5"/></svg>
+      <div><div class="logo-text-zh c-white" style="font-size:14px">全球實體安全處</div><div class="logo-text-en c-white">Global Physical Security</div></div>
+    </div>
+  </div>
+</div>
+<h4>English Main — Vertical</h4>
+<div class="logo-gallery">
+  <div class="logo-box light" style="min-height:140px">
+    <span class="logo-label">Vertical · EN · Light</span>
+    <div class="logo-lockup-v">
+      <svg width="44" height="44" viewBox="0 0 80 90" fill="none"><circle cx="50" cy="5" r="1.5" fill="#8EA0A8"/><circle cx="56" cy="7" r="1.2" fill="#A8B8C0"/><circle cx="44" cy="8" r="1.8" fill="#96A8B2"/><circle cx="61" cy="10" r="1" fill="#B0BCC3"/>
+<rect x="38" y="12" width="4.5" height="3.8" rx=".8" fill="#8EA0A8"/><rect x="44" y="11" width="5" height="4" rx=".8" fill="#3DB9C2"/><rect x="50" y="12.5" width="4" height="3.5" rx=".8" fill="#96A8B2"/><rect x="56" y="14" width="3.5" height="3" rx=".7" fill="#26A7B0" opacity=".6"/>
+<rect x="32" y="19" width="5.5" height="4.5" rx=".8" fill="#7A9098"/><rect x="39" y="18.5" width="5.5" height="4.5" rx=".8" fill="#26A7B0"/><rect x="46" y="19" width="5" height="4.2" rx=".8" fill="#8EA0A8"/><rect x="53" y="20" width="4.5" height="3.8" rx=".8" fill="#3DB9C2"/><rect x="59" y="21" width="3.5" height="3" rx=".7" fill="#96A8B2" opacity=".5"/>
+<rect x="26" y="26" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="34" y="25.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="42" y="26" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="50" y="26.5" width="5.5" height="4.5" rx=".9" fill="#8EA0A8"/><rect x="57" y="27.5" width="4.5" height="3.8" rx=".8" fill="#3DB9C2" opacity=".6"/>
+<rect x="22" y="33.5" width="6.5" height="5.2" rx="1" fill="#7A9098"/><rect x="30" y="33" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="38" y="33.5" width="6.5" height="5.2" rx="1" fill="#7A9098"/><rect x="46" y="34" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="54" y="35" width="5" height="4" rx=".9" fill="#8EA0A8" opacity=".5"/>
+<rect x="18" y="41" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="26" y="40.5" width="6.5" height="5.2" rx="1" fill="#8EA0A8"/><rect x="34" y="41" width="6.5" height="5.2" rx="1" fill="#26A7B0"/><rect x="42" y="41.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="50" y="42" width="5" height="4.2" rx=".9" fill="#3DB9C2" opacity=".5"/>
+<rect x="15" y="48.5" width="6" height="5" rx="1" fill="#8EA0A8"/><rect x="23" y="48" width="6" height="5" rx="1" fill="#26A7B0"/><rect x="31" y="48.5" width="6" height="5" rx="1" fill="#7A9098"/><rect x="39" y="49" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/>
+<rect x="13" y="56" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/><rect x="20" y="55.5" width="5.5" height="4.5" rx=".9" fill="#8EA0A8"/><rect x="27.5" y="56" width="5.5" height="4.5" rx=".9" fill="#26A7B0"/><rect x="35" y="57" width="4.5" height="3.8" rx=".8" fill="#7A9098" opacity=".6"/>
+<rect x="16" y="63" width="5" height="4" rx=".8" fill="#7A9098"/><rect x="23" y="62.5" width="5" height="4" rx=".8" fill="#26A7B0"/><rect x="30" y="63.5" width="4.5" height="3.8" rx=".8" fill="#8EA0A8" opacity=".6"/>
+<rect x="19" y="69.5" width="4.5" height="3.5" rx=".7" fill="#26A7B0"/><rect x="25.5" y="70" width="4" height="3.2" rx=".7" fill="#7A9098"/>
+<rect x="22" y="76" width="3.5" height="3" rx=".6" fill="#26A7B0" opacity=".7"/></svg>
+      <div style="text-align:center"><div style="font-family:var(--fe);font-weight:700;font-size:13px;color:var(--black);letter-spacing:0.02em;line-height:1.15">GLOBAL<br>PHYSICAL<br>SECURITY</div><div style="font-family:var(--fz);font-size:8px;color:var(--g500);margin-top:2px">全球實體安全處</div></div>
+    </div>
+  </div>
+  <div class="logo-box dark" style="min-height:140px">
+    <span class="logo-label">Vertical · EN · Dark</span>
+    <div class="logo-lockup-v">
+      <svg width="44" height="44" viewBox="0 0 80 90" fill="none"><circle cx="50" cy="5" r="1.5" fill="#fff" opacity=".35"/><circle cx="56" cy="7" r="1.2" fill="#fff" opacity=".25"/><circle cx="44" cy="8" r="1.8" fill="#fff" opacity=".3"/><circle cx="61" cy="10" r="1" fill="#fff" opacity=".2"/>
+<rect x="38" y="12" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".3"/><rect x="44" y="11" width="5" height="4" rx=".8" fill="#fff" opacity=".7"/><rect x="50" y="12.5" width="4" height="3.5" rx=".8" fill="#fff" opacity=".3"/><rect x="56" y="14" width="3.5" height="3" rx=".7" fill="#fff" opacity=".2"/>
+<rect x="32" y="19" width="5.5" height="4.5" rx=".8" fill="#fff" opacity=".3"/><rect x="39" y="18.5" width="5.5" height="4.5" rx=".8" fill="#fff" opacity=".8"/><rect x="46" y="19" width="5" height="4.2" rx=".8" fill="#fff" opacity=".3"/><rect x="53" y="20" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".7"/><rect x="59" y="21" width="3.5" height="3" rx=".7" fill="#fff" opacity=".15"/>
+<rect x="26" y="26" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="34" y="25.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="42" y="26" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="50" y="26.5" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".3"/><rect x="57" y="27.5" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="22" y="33.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="30" y="33" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="38" y="33.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="46" y="34" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="54" y="35" width="5" height="4" rx=".9" fill="#fff" opacity=".15"/>
+<rect x="18" y="41" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="26" y="40.5" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".3"/><rect x="34" y="41" width="6.5" height="5.2" rx="1" fill="#fff" opacity=".8"/><rect x="42" y="41.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="50" y="42" width="5" height="4.2" rx=".9" fill="#fff" opacity=".15"/>
+<rect x="15" y="48.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="23" y="48" width="6" height="5" rx="1" fill="#fff" opacity=".8"/><rect x="31" y="48.5" width="6" height="5" rx="1" fill="#fff" opacity=".3"/><rect x="39" y="49" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/>
+<rect x="13" y="56" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/><rect x="20" y="55.5" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".3"/><rect x="27.5" y="56" width="5.5" height="4.5" rx=".9" fill="#fff" opacity=".7"/><rect x="35" y="57" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="16" y="63" width="5" height="4" rx=".8" fill="#fff" opacity=".3"/><rect x="23" y="62.5" width="5" height="4" rx=".8" fill="#fff" opacity=".7"/><rect x="30" y="63.5" width="4.5" height="3.8" rx=".8" fill="#fff" opacity=".2"/>
+<rect x="19" y="69.5" width="4.5" height="3.5" rx=".7" fill="#fff" opacity=".7"/><rect x="25.5" y="70" width="4" height="3.2" rx=".7" fill="#fff" opacity=".3"/>
+<rect x="22" y="76" width="3.5" height="3" rx=".6" fill="#fff" opacity=".5"/></svg>
+      <div style="text-align:center"><div style="font-family:var(--fe);font-weight:700;font-size:13px;color:#fff;letter-spacing:0.02em;line-height:1.15">GLOBAL<br>PHYSICAL<br>SECURITY</div><div style="font-family:var(--fz);font-size:8px;color:rgba(255,255,255,.5);margin-top:2px">全球實體安全處</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="co co-t"><strong>Production note:</strong> The SVG renderings above are structural approximations of the GPS checkerboard globe mark for digital reference. For production use, always source the official vector files (SVG / EPS / AI) from the GPS shared drive. The actual logo mark has precise dot placement, sizing, and opacity values that this reference representation approximates.</div>
+
+<h3>Logo Lockups — Specifications</h3>
+<p>Horizontal Lockup is the default and primary choice for most use cases. If space is limited, use the secondary vertical logos. The logo mark alone can be used where space is very limited, such as web clip or favicon. Each lockup exists in <strong>Chinese Main Lockup</strong> and <strong>English Main Lockup</strong> variants — both are equally valid. Select based on the audience's primary language.</p>
+<table class="T"><thead><tr><th>Lockup</th><th>Usage</th><th>Standard Min Height</th><th>Below Min</th><th>Optical Min</th></tr></thead><tbody>
+<tr><td><strong>Horizontal logo</strong></td><td>Default, primary choice</td><td><code>36px / 10mm</code></td><td>use optical</td><td><code>28px / 8mm</code></td></tr>
+<tr><td><strong>Vertical (tall)</strong></td><td>Limited horizontal space</td><td><code>160px / 40mm</code></td><td>use horizontal optical</td><td>—</td></tr>
+<tr><td><strong>Vertical (wide)</strong></td><td>Wider vertical containers</td><td><code>120px / 35mm</code></td><td>use horizontal optical</td><td>—</td></tr>
+<tr><td><strong>Vertical (compact)</strong></td><td>Minimal footprint</td><td><code>100px / 28mm</code></td><td>use horizontal optical</td><td>—</td></tr>
+<tr><td><strong>Logo Mark</strong></td><td>Favicon, web clip, profile</td><td><code>36px / 10mm</code></td><td>use optical</td><td><code>20px / 5mm</code></td></tr>
+</tbody></table>
+<p style="font-size:11px;color:var(--g500)">mm: for print size / px: for digital size. Minimums ensure no strokes fall below 0.3pt — the threshold below which fine details fail to reproduce reliably.</p>
+
+<h3>Lockup Proportions 比例標注</h3>
+<p>Internal spacing between the mark and text is defined proportionally to the mark dimensions (a = mark width, b = mark height), ensuring consistent appearance at any scale.</p>
+<table class="T"><thead><tr><th>Lockup</th><th>Mark-Text Gap</th><th>Top</th><th>Bottom</th><th>Sides</th></tr></thead><tbody>
+<tr><td><strong>Horizontal — CN/EN</strong></td><td><code>1/7a</code></td><td><code>1/7a</code></td><td><code>1/7a</code></td><td><code>1/7a · 1/6b</code></td></tr>
+<tr><td><strong>Vertical — CN (small)</strong></td><td><code>1/6b</code></td><td><code>a</code></td><td><code>1/6b</code></td><td><code>a</code></td></tr>
+<tr><td><strong>Vertical — EN (wide)</strong></td><td><code>1/6b</code></td><td><code>a</code></td><td><code>1/6b · c</code></td><td><code>11/7a · 2/7a</code></td></tr>
+<tr><td><strong>Vertical — CN (tall)</strong></td><td><code>1/4a</code></td><td><code>a</code></td><td><code>1/2a</code></td><td><code>b · 1/4a</code></td></tr>
+</tbody></table>
+
+<h3>Clearspace 安全空間</h3>
+<p>Always keep a minimum amount of clear space around the logo — free from text, graphics, and other elements. This minimum clearspace scales with the size of the logo mark and should never be reduced.</p>
+<table class="T"><thead><tr><th>Lockup</th><th>Clearspace Rule</th><th>Notation</th></tr></thead><tbody>
+<tr><td><strong>Horizontal logo</strong></td><td>1/4 of the logo mark size on all sides</td><td><code>1/2a</code> top · <code>1/2b</code> bottom · <code>a</code> sides</td></tr>
+<tr><td><strong>Vertical logo</strong></td><td>1/2 of the logo mark width on all sides</td><td><code>1/2a</code> top · <code>b</code> bottom · <code>1/2b</code> sides</td></tr>
+<tr><td><strong>Logo mark</strong></td><td>1/2 of the mark's own width on all sides</td><td><code>1/2a</code> all directions</td></tr>
+</tbody></table>
+
+<h3>Scalability 尺寸規範</h3>
+<p>The logo was designed and tested to work at various sizes. Never use the logo smaller than the minimum sizes defined above. Below the standard minimum, an optical version of the logo is available with adjusted stroke weights and spacing to preserve legibility. Vertical lockups fall back to the horizontal optical logo at smaller scales.</p>
+
+<h3>Logo Misuse 標誌誤用</h3>
+<p>The appearance of the logo must remain consistent. It should not be reinterpreted, modified, or embellished. No attempt should be made to alter the logo in any way.</p>
+<div class="cg c3">
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 01</div><div class="cd-v">Do not resize the mark</div><div class="cd-n">The mark and logotype must always scale together proportionally. Never enlarge or shrink the mark independently of the text.</div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 02</div><div class="cd-v">Do not rotate the logo</div><div class="cd-n">The logo must always appear in its standard upright orientation. No angular rotation is permitted.</div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 03</div><div class="cd-v">Do not change the color of the mark alone</div><div class="cd-n">The mark and text must share the same color treatment. Do not recolor the globe independently.</div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 04</div><div class="cd-v">Do not outline the logo</div><div class="cd-n">The logo uses solid fills. Do not convert to outline, add strokes, or apply border effects.</div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 05</div><div class="cd-v">Do not add gradients to the logotype</div><div class="cd-n">The gradient belongs to brand surfaces, not the logotype itself. Keep the text portion single-color.</div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Misuse 06</div><div class="cd-v">Do not stretch or manipulate</div><div class="cd-n">Never distort, warp, squeeze, or disproportionately scale the logo. Maintain exact aspect ratios at all times.</div></div>
+</div>
+
+<h3>Logo Clarity 標誌清晰度</h3>
+<p>When creating a composition, it is important to have enough contrast between background and logo to maximize legibility.</p>
+<div class="dd">
+  <div class="do"><b>Do</b>Use the standard color logo on clean, light backgrounds. Use the white (reversed) logo on solid dark backgrounds. Ensure the background provides sufficient contrast — light solids, subtle gradients, or clear photographic areas all work.</div>
+  <div class="dt"><b>Don't</b>Do not place the standard logo on same-tone colored backgrounds where contrast is insufficient. Do not place the reversed logo on busy, detailed, or low-contrast photographic backgrounds where the mark becomes illegible.</div>
+</div>
+</div>
+
+<!-- ═══ 04 COLOR PALETTE ═══ -->
+<div class="S" id="s04">
+<div class="Sh"><div class="Sn">Chapter 04 — Visual Identity</div><div class="St">Master Color Palette</div><div class="Ss">主色調系統</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<h3>Primary Colors 主色</h3>
+<p>The turquoise-to-copper gradient is GPS's signature identity. Turquoise conveys trust and modernity; copper adds warmth and composure — together expressing secure, human-centered global operations.</p>
+<div class="sw-g">
+  <div class="sw"><div class="sw-c" style="background:#26A7B0"></div><div class="sw-i"><div class="sw-n">Turquoise</div><div class="sw-v">#26A7B0</div><div class="sw-cm">C75 M23 Y37 K0</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:linear-gradient(135deg,#26A7B0,#CAC3D2)"></div><div class="sw-i"><div class="sw-n">Primary Gradient</div><div class="sw-v">Turquoise → Copper</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:#CAC3D2"></div><div class="sw-i"><div class="sw-n">Copper Tone</div><div class="sw-v">#CAC3D2</div><div class="sw-cm">C25 M24 Y12 K0</div></div></div>
+</div>
+<h3>Secondary Colors 輔助色</h3>
+<div class="sw-g">
+  <div class="sw"><div class="sw-c" style="background:#8C9FCB"></div><div class="sw-i"><div class="sw-n">Purple</div><div class="sw-v">#8C9FCB</div><div class="sw-cm">C30 M23 Y0 K20</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:#8CC897"></div><div class="sw-i"><div class="sw-n">Green</div><div class="sw-v">#8CC897</div><div class="sw-cm">C30 M0 Y25 K22</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:#F6AD90"></div><div class="sw-i"><div class="sw-n">Orange</div><div class="sw-v">#F6AD90</div><div class="sw-cm">C0 M30 Y41 K4</div></div></div>
+</div>
+<h3>Neutral Colors 中性色</h3>
+<div class="sw-g">
+  <div class="sw"><div class="sw-c" style="background:#0A1A22"></div><div class="sw-i"><div class="sw-n">Black</div><div class="sw-v">#0A1A22</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:#1A2A32"></div><div class="sw-i"><div class="sw-n">Ink</div><div class="sw-v">#1A2A32</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:#4A5E6A"></div><div class="sw-i"><div class="sw-n">Slate</div><div class="sw-v">#4A5E6A</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:#6B7B85"></div><div class="sw-i"><div class="sw-n">Grey 500</div><div class="sw-v">#6B7B85</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:#B0BCC3"></div><div class="sw-i"><div class="sw-n">Grey 300</div><div class="sw-v">#B0BCC3</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:#E8EDF0"></div><div class="sw-i"><div class="sw-n">Grey 100</div><div class="sw-v">#E8EDF0</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:#F4F5F7;border-bottom:1px solid #eee"></div><div class="sw-i"><div class="sw-n">Grey 50</div><div class="sw-v">#F4F5F7</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:#fff;border-bottom:1px solid #eee"></div><div class="sw-i"><div class="sw-n">White</div><div class="sw-v">#FFFFFF</div></div></div>
+</div>
+<h3>Color Ratio</h3>
+<table class="T"><thead><tr><th>Role</th><th>Ratio</th><th>Application</th></tr></thead><tbody>
+<tr><td><strong>Primary</strong></td><td><code>30–80%</code></td><td>Hero backgrounds, key visuals, brand surfaces</td></tr>
+<tr><td><strong>Neutral</strong></td><td><code>10–60%</code></td><td>Body backgrounds, card surfaces, text containers</td></tr>
+<tr><td><strong>Secondary</strong></td><td><code>10–60%</code></td><td>Thematic accents, data categories, campaigns</td></tr>
+</tbody></table>
+<h3>Color Application 色彩應用</h3>
+<div class="dd">
+  <div class="do"><b>Do</b>Use neutral colors as base and highlight with the primary gradient. Use primary colors as base and balance with neutral tones. Use secondary colors to create alternative gradients that serve as thematic accents.</div>
+  <div class="dt"><b>Don't</b>Do not overuse colors or skip neutral balance. Do not color logos or type arbitrarily without ensuring contrast between background and type. Do not use harsh neon tones or visually jarring combinations. Do not apply random rainbows or unbalanced color blocks.</div>
+</div>
+</div>
+
+<!-- ═══ 05 TINT SCALES ═══ -->
+<div class="S" id="s05">
+<div class="Sh"><div class="Sn">Chapter 05 — Visual Identity</div><div class="St">Tint & Shade Scales</div><div class="Ss">色調漸變階梯</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<p>Each brand color expands into an 11-step scale (50→950) for consistent UI, charts, and data visualization.</p>
+<h4>Turquoise</h4>
+<div class="sr"><div class="sc lt" style="background:#F0FAFB"><span class="lb">50</span><span>#F0FAFB</span></div><div class="sc lt" style="background:#D4F1F3"><span class="lb">100</span><span>#D4F1F3</span></div><div class="sc lt" style="background:#A8E3E8"><span class="lb">200</span><span>#A8E3E8</span></div><div class="sc" style="background:#6DCDD5"><span class="lb">300</span><span>#6DCDD5</span></div><div class="sc" style="background:#3DB9C2"><span class="lb">400</span><span>#3DB9C2</span></div><div class="sc" style="background:#26A7B0"><span class="lb">500</span><span>#26A7B0</span></div><div class="sc" style="background:#1E8A92"><span class="lb">600</span><span>#1E8A92</span></div><div class="sc" style="background:#186E75"><span class="lb">700</span><span>#186E75</span></div><div class="sc" style="background:#145860"><span class="lb">800</span><span>#145860</span></div><div class="sc" style="background:#0F4249"><span class="lb">900</span><span>#0F4249</span></div><div class="sc" style="background:#082A30"><span class="lb">950</span><span>#082A30</span></div></div>
+<h4>Copper</h4>
+<div class="sr"><div class="sc lt" style="background:#F8F7F9"><span class="lb">50</span><span>#F8F7F9</span></div><div class="sc lt" style="background:#EDEAF1"><span class="lb">100</span><span>#EDEAF1</span></div><div class="sc lt" style="background:#DDD8E5"><span class="lb">200</span><span>#DDD8E5</span></div><div class="sc lt" style="background:#CAC3D2"><span class="lb">300</span><span>#CAC3D2</span></div><div class="sc" style="background:#B3A9C2"><span class="lb">400</span><span>#B3A9C2</span></div><div class="sc" style="background:#9B8FA8"><span class="lb">500</span><span>#9B8FA8</span></div><div class="sc" style="background:#857693"><span class="lb">600</span><span>#857693</span></div><div class="sc" style="background:#6E5F7C"><span class="lb">700</span><span>#6E5F7C</span></div><div class="sc" style="background:#574A63"><span class="lb">800</span><span>#574A63</span></div><div class="sc" style="background:#41374B"><span class="lb">900</span><span>#41374B</span></div><div class="sc" style="background:#2B2433"><span class="lb">950</span><span>#2B2433</span></div></div>
+<h4>Purple</h4>
+<div class="sr"><div class="sc lt" style="background:#F4F6FB"><span class="lb">50</span><span>#F4F6FB</span></div><div class="sc lt" style="background:#E2E7F4"><span class="lb">100</span><span>#E2E7F4</span></div><div class="sc lt" style="background:#C5CEE8"><span class="lb">200</span><span>#C5CEE8</span></div><div class="sc" style="background:#A8B6DD"><span class="lb">300</span><span>#A8B6DD</span></div><div class="sc" style="background:#8C9FCB"><span class="lb">400</span><span>#8C9FCB</span></div><div class="sc" style="background:#7086BA"><span class="lb">500</span><span>#7086BA</span></div><div class="sc" style="background:#5B6FA3"><span class="lb">600</span><span>#5B6FA3</span></div><div class="sc" style="background:#495A85"><span class="lb">700</span><span>#495A85</span></div><div class="sc" style="background:#3A4768"><span class="lb">800</span><span>#3A4768</span></div><div class="sc" style="background:#2C354E"><span class="lb">900</span><span>#2C354E</span></div></div>
+<h4>Green</h4>
+<div class="sr"><div class="sc lt" style="background:#F3FAF5"><span class="lb">50</span><span>#F3FAF5</span></div><div class="sc lt" style="background:#E0F2E4"><span class="lb">100</span><span>#E0F2E4</span></div><div class="sc lt" style="background:#C2E5CB"><span class="lb">200</span><span>#C2E5CB</span></div><div class="sc" style="background:#A4D8B1"><span class="lb">300</span><span>#A4D8B1</span></div><div class="sc" style="background:#8CC897"><span class="lb">400</span><span>#8CC897</span></div><div class="sc" style="background:#6BB57E"><span class="lb">500</span><span>#6BB57E</span></div><div class="sc" style="background:#539A63"><span class="lb">600</span><span>#539A63</span></div><div class="sc" style="background:#437D50"><span class="lb">700</span><span>#437D50</span></div><div class="sc" style="background:#356340"><span class="lb">800</span><span>#356340</span></div><div class="sc" style="background:#284A30"><span class="lb">900</span><span>#284A30</span></div></div>
+<h4>Orange</h4>
+<div class="sr"><div class="sc lt" style="background:#FEF6F2"><span class="lb">50</span><span>#FEF6F2</span></div><div class="sc lt" style="background:#FDE8DE"><span class="lb">100</span><span>#FDE8DE</span></div><div class="sc lt" style="background:#FAD1BD"><span class="lb">200</span><span>#FAD1BD</span></div><div class="sc" style="background:#F6AD90"><span class="lb">300</span><span>#F6AD90</span></div><div class="sc" style="background:#F29068"><span class="lb">400</span><span>#F29068</span></div><div class="sc" style="background:#ED7442"><span class="lb">500</span><span>#ED7442</span></div><div class="sc" style="background:#D45A2A"><span class="lb">600</span><span>#D45A2A</span></div><div class="sc" style="background:#AC4722"><span class="lb">700</span><span>#AC4722</span></div><div class="sc" style="background:#87381B"><span class="lb">800</span><span>#87381B</span></div><div class="sc" style="background:#642A15"><span class="lb">900</span><span>#642A15</span></div></div>
+</div>
+
+<!-- ═══ 06 GRADIENTS ═══ -->
+<div class="S" id="s06">
+<div class="Sh"><div class="Sn">Chapter 06 — Visual Identity</div><div class="St">Gradient Library</div><div class="Ss">漸層色庫</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<h3>Primary</h3>
+<div class="gs" style="background:linear-gradient(135deg,#26A7B0,#CAC3D2)"><span class="gl">Signature</span><span class="gc">135° #26A7B0 → #CAC3D2</span></div>
+<div class="gs" style="background:linear-gradient(90deg,#26A7B0,#CAC3D2)"><span class="gl">Horizontal Flow</span><span class="gc">90°</span></div>
+<div class="gs" style="background:linear-gradient(180deg,#26A7B0,#CAC3D2)"><span class="gl">Vertical Descent</span><span class="gc">180°</span></div>
+<h3>Extended</h3>
+<div class="gs" style="background:linear-gradient(135deg,#0F4249,#26A7B0)"><span class="gl">Deep Turquoise</span><span class="gc">#0F4249 → #26A7B0</span></div>
+<div class="gs" style="background:linear-gradient(135deg,#41374B,#CAC3D2)"><span class="gl">Deep Copper</span><span class="gc">#41374B → #CAC3D2</span></div>
+<div class="gs" style="background:linear-gradient(135deg,#26A7B0,#8C9FCB)"><span class="gl">Turquoise → Purple</span><span class="gc">#26A7B0 → #8C9FCB</span></div>
+<div class="gs" style="background:linear-gradient(135deg,#8CC897,#26A7B0)"><span class="gl">Green → Turquoise</span><span class="gc">#8CC897 → #26A7B0</span></div>
+<div class="gs" style="background:linear-gradient(135deg,#0A1A22,#26A7B0,#CAC3D2)"><span class="gl">Full Spectrum</span><span class="gc">#0A1A22 → #26A7B0 → #CAC3D2</span></div>
+<h3>Atmospheric (Mesh)</h3>
+<div class="gs" style="height:80px;background:radial-gradient(ellipse at 30% 40%,#26A7B0 0%,transparent 60%),radial-gradient(ellipse at 70% 60%,#CAC3D2 0%,transparent 50%),radial-gradient(ellipse at 50% 80%,#8C9FCB 0%,transparent 60%),#F0FAFB"><span class="gl">Atmospheric Light</span><span class="gc">Hero sections, event backgrounds</span></div>
+<div class="gs" style="height:80px;background:radial-gradient(ellipse at 20% 30%,#1E8A92 0%,transparent 50%),radial-gradient(ellipse at 80% 50%,#574A63 0%,transparent 50%),radial-gradient(ellipse at 50% 90%,#26A7B0 0%,transparent 60%),#0A1A22"><span class="gl">Atmospheric Dark</span><span class="gc">Dark mode heroes, video overlays</span></div>
+</div>
+
+<!-- ═══ 07 SEMANTIC & DARK MODE ═══ -->
+<div class="S" id="s07">
+<div class="Sh"><div class="Sn">Chapter 07 — Visual Identity</div><div class="St">Semantic Colors & Dark Mode</div><div class="Ss">語意色與深色模式</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<h3>Semantic Colors</h3>
+<div class="sw-g">
+  <div class="sw"><div class="sw-c" style="background:#2D9F5B"></div><div class="sw-i"><div class="sw-n">Success / Safe</div><div class="sw-v">#2D9F5B</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:#E5993E"></div><div class="sw-i"><div class="sw-n">Warning / Caution</div><div class="sw-v">#E5993E</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:#D94F4F"></div><div class="sw-i"><div class="sw-n">Danger / Alert</div><div class="sw-v">#D94F4F</div></div></div>
+  <div class="sw"><div class="sw-c" style="background:#26A7B0"></div><div class="sw-i"><div class="sw-n">Info / Active</div><div class="sw-v">#26A7B0</div></div></div>
+</div>
+<h3>Pillar Color Mapping</h3>
+<table class="T"><thead><tr><th>Pillar</th><th>Color</th><th>Tint BG</th></tr></thead><tbody>
+<tr><td><strong>Designed Safety</strong></td><td><code>#26A7B0</code> Turquoise</td><td><code>#F0FAFB</code></td></tr>
+<tr><td><strong>Journey Protection</strong></td><td><code>#8C9FCB</code> Purple</td><td><code>#F4F6FB</code></td></tr>
+<tr><td><strong>Family Extension</strong></td><td><code>#F6AD90</code> Orange</td><td><code>#FEF6F2</code></td></tr>
+<tr><td><strong>Living Culture</strong></td><td><code>#8CC897</code> Green</td><td><code>#F3FAF5</code></td></tr>
+<tr><td><strong>Transparent Technology</strong></td><td><code>#CAC3D2</code> Copper</td><td><code>#F8F7F9</code></td></tr>
+</tbody></table>
+<h3>Dark Mode</h3>
+<div class="dm">
+  <div class="dmc"><h5>GPS Dark Mode — <span class="ac">Live Preview</span></h5><p>Soft white on deep blue-black. Turquoise-400 accent provides contrast without glare.</p>
+    <div class="dsr"><div class="dsw" style="background:#0D1B21;border:1px solid #243944"></div><div class="dsw" style="background:#142229;border:1px solid #243944"></div><div class="dsw" style="background:#1C2F38;border:1px solid #243944"></div><div class="dsw" style="background:#243944"></div><div class="dsw" style="background:#3DB9C2"></div><div class="dsw" style="background:#E2E8EC"></div></div>
+  </div>
+</div>
+<table class="T"><thead><tr><th>Token</th><th>Light</th><th>Dark</th><th>Role</th></tr></thead><tbody>
+<tr><td><code>--bg</code></td><td>#F4F5F7</td><td>#0D1B21</td><td>Page background</td></tr>
+<tr><td><code>--surface</code></td><td>#FFFFFF</td><td>#142229</td><td>Cards, panels</td></tr>
+<tr><td><code>--border</code></td><td>#E2E6EA</td><td>#243944</td><td>Dividers</td></tr>
+<tr><td><code>--text</code></td><td>#1A2A32</td><td>#E2E8EC</td><td>Body text</td></tr>
+<tr><td><code>--text-muted</code></td><td>#6B7B85</td><td>#8A9BA5</td><td>Secondary text</td></tr>
+<tr><td><code>--accent</code></td><td>#26A7B0</td><td>#3DB9C2</td><td>Interactive</td></tr>
+</tbody></table>
+</div>
+
+<!-- ═══ 08 ACCESSIBILITY ═══ -->
+<div class="S" id="s08">
+<div class="Sh"><div class="Sn">Chapter 08 — Visual Identity</div><div class="St">Accessibility Pairings</div><div class="Ss">無障礙色彩配對</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<p>Every color combination must meet WCAG 2.1 AA: 4.5:1 for normal text, 3:1 for large text (≥18px bold or ≥24px).</p>
+<h3>Light Mode</h3>
+<div class="ag">
+  <div class="ap"><div class="ap-s" style="background:#FAFBFC;color:#0A1A22">Body on White</div><div class="ap-i"><span class="r ok">16.2:1</span> AAA</div></div>
+  <div class="ap"><div class="ap-s" style="background:#FAFBFC;color:#1E8A92">Turquoise-600</div><div class="ap-i"><span class="r ok">4.8:1</span> AA</div></div>
+  <div class="ap"><div class="ap-s" style="background:#0A1A22;color:#FAFBFC">White on Black</div><div class="ap-i"><span class="r ok">16.2:1</span> AAA</div></div>
+  <div class="ap"><div class="ap-s" style="background:#26A7B0;color:#0A1A22">Black on Turquoise</div><div class="ap-i"><span class="r ok">5.1:1</span> AA</div></div>
+  <div class="ap"><div class="ap-s" style="background:#F0FAFB;color:#186E75">T-700 on T-50</div><div class="ap-i"><span class="r ok">6.4:1</span> AA</div></div>
+</div>
+<h3>Dark Mode</h3>
+<div class="ag">
+  <div class="ap"><div class="ap-s" style="background:#0D1B21;color:#E2E8EC">Body on Dark</div><div class="ap-i"><span class="r ok">12.8:1</span> AAA</div></div>
+  <div class="ap"><div class="ap-s" style="background:#142229;color:#3DB9C2">Accent on Surface</div><div class="ap-i"><span class="r ok">5.6:1</span> AA</div></div>
+</div>
+<div class="co co-a"><strong>Forbidden:</strong> White on Turquoise-500 for body (3.2:1 fails AA). White on Copper-300 (2.1:1 fails all). Purple-400 on White (3.0:1 — use Purple-600).</div>
+</div>
+
+<!-- ═══ 09 TYPOGRAPHY ═══ -->
+<div class="S" id="s09">
+<div class="Sh"><div class="Sn">Chapter 09 — Visual Identity</div><div class="St">Typography</div><div class="Ss">字體排版</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<table class="T"><thead><tr><th>Role</th><th>Typeface</th><th>Weights</th></tr></thead><tbody>
+<tr><td><strong>Chinese</strong></td><td><code>Noto Sans TC</code></td><td>Light 300 · Regular 400 · Medium 500 · Bold 700</td></tr>
+<tr><td><strong>English</strong></td><td><code>Lato</code></td><td>Light 300 · Regular 400 · Bold 700</td></tr>
+<tr><td><strong>Fallback</strong></td><td><code>Trebuchet MS, Verdana</code></td><td>Regular · Bold</td></tr>
+</tbody></table>
+<h3>Type Scale</h3>
+<table class="T"><thead><tr><th>Level</th><th>Size</th><th>Weight</th><th>Line-Height</th></tr></thead><tbody>
+<tr><td>Display</td><td><code>32–48px</code></td><td>Bold 700</td><td>1.15</td></tr>
+<tr><td>Heading</td><td><code>24–28px</code></td><td>Bold 700</td><td>1.25</td></tr>
+<tr><td>Subheading</td><td><code>18–20px</code></td><td>Medium 500</td><td>1.35</td></tr>
+<tr><td>Body</td><td><code>14–16px</code></td><td>Regular 400</td><td>1.65</td></tr>
+<tr><td>Caption</td><td><code>11–12px</code></td><td>Regular 400</td><td>1.5</td></tr>
+</tbody></table>
+<p>Max 3 type sizes per piece. CJK line-height: <code>1.8–2.0</code> (governs when mixed with Latin).</p>
+
+<h3>Type Hierarchy 字體層級</h3>
+<p>In order to keep things simple, no more than three type sizes should be used in one communication piece. Follow spacing and alignment structure. Use approved heading/subheading/body text sizes to maintain readability and hierarchy.</p>
+<div class="cg c2">
+  <div class="cd" style="background:var(--g50)"><div class="cd-l">English Example</div><div style="font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g400)">GLOBAL PHYSICAL SECURITY</div><div style="font-size:18px;font-weight:700;color:var(--black);line-height:1.3;margin:6px 0">Safeguarding TSMC's Global Operations, Site by Site</div><div style="font-size:11px;color:var(--g500);line-height:1.6">Global Physical Security (GPS) is the division responsible for maintaining physical safety, risk control, and operational resilience across TSMC's global sites.</div></div>
+  <div class="cd" style="background:var(--g50)"><div class="cd-l">中文範例</div><div style="font-family:var(--fz);font-size:10px;font-weight:700;color:var(--g400)">全球實體安全處</div><div style="font-family:var(--fz);font-size:18px;font-weight:700;color:var(--black);line-height:1.4;margin:6px 0">守護全球據點，打造零風險營運環境</div><div style="font-family:var(--fz);font-size:11px;color:var(--g500);line-height:1.8">全球實體安全處（GPS）負責維護 TSMC 各營運據點的實體安全、防災風險控管與營運韌性。從門禁管理、監控系統，到緊急應變與 ISO 認證，GPS 確保每個場域皆在高規格防護下穩定運作。</div></div>
+</div>
+
+<h3>Type on Image 文字於影像上</h3>
+<p>Typography can be applied on top of imagery. In these instances, use black typography on lighter images, and white typography on darker images to ensure that there is enough contrast. Never use colored typography on imagery.</p>
+<div class="dd">
+  <div class="do"><b>Do</b>Use white text over subtle dark overlay to ensure readability. Use black text on clean, light backgrounds. Always meet WCAG AA contrast (4.5:1 for body text).</div>
+  <div class="dt"><b>Don't</b>Avoid placing light text on bright or detailed backgrounds. Do not use colored text over photos — it reduces legibility and looks unprofessional. Never sacrifice contrast for aesthetic preference.</div>
+</div>
+</div>
+
+<!-- ═══ 10 GRAPHIC ═══ -->
+<div class="S" id="s10">
+<div class="Sh"><div class="Sn">Chapter 10 — Visual Identity</div><div class="St">Graphic System & Iconography</div><div class="Ss">圖形系統與圖標學</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<p>GPS's graphic elements are derived from the logo mark's grid structure and curved form, echoing the brand's themes of protection, flow, and precision. These elements are designed to be used in conjunction with the brand logo, color, typography, and imagery. They can be applied in both sharp and blurred styles to introduce depth, motion, or emphasis, and are intended to complement layouts.</p>
+
+<h3>Graphic Elements — Core Visual</h3>
+<p>The primary graphic element is the checkerboard pattern derived from the logo mark, rendered on brand gradient backgrounds. These elements tie together the identity components — logo, typography, and imagery — into a cohesive visual system.</p>
+
+<h3>Three Element Styles 三種元素風格</h3>
+<p>Visual elements derived from the GPS logomark's grid structure and curved form can be applied in three distinct styles.</p>
+<div class="cg c3">
+  <div class="cd"><div class="cd-l">Style 01</div><div class="cd-v">Blurred Organic</div><div class="cd-n">Soft, atmospheric renderings of the checkerboard dots with gaussian blur and transparency. Used for background textures, hero sections, and brand-building materials where a subtle, modern feel is desired.</div></div>
+  <div class="cd"><div class="cd-l">Style 02</div><div class="cd-v">Flowing Organic</div><div class="cd-n">Curved, dynamic arrangements of dots and shapes suggesting movement and protection. Used for event materials, campaign visuals, and content where energy and motion are desired.</div></div>
+  <div class="cd"><div class="cd-l">Style 03</div><div class="cd-v">Sharp Geometric</div><div class="cd-n">Crisp, grid-aligned checkerboard patterns with clear edges. Used for data-driven content, technical documents, signage, and materials requiring precision and structure.</div></div>
+</div>
+
+<h3>Graphic Application 圖形應用</h3>
+<div class="dd">
+  <div class="do"><b>Do</b>Use graphic elements for general layout enhancement on brand gradient backgrounds. Use as appropriate repeated patterns for texture and depth. Use for highlight moments — accent corners, section dividers, and focal points alongside photography.</div>
+  <div class="dt"><b>Don't</b>Do not overuse the graphics — excessive pattern coverage overwhelms content and reduces readability. Elements should complement, never compete with, the content they accompany. Maintain visual breathing room.</div>
+</div>
+
+<h3>Icon System</h3>
+<p>All icons must be custom SVG — no icon libraries (FontAwesome, Material, etc.).</p>
+<table class="T"><thead><tr><th>Icon Property</th><th>Spec</th></tr></thead><tbody>
+<tr><td>Stroke</td><td><code>1.5–2px</code> consistent</td></tr>
+<tr><td>Corner radius</td><td><code>2px</code> min</td></tr>
+<tr><td>Grid</td><td><code>24×24px</code>, <code>2px</code> padding</td></tr>
+<tr><td>Color</td><td>Single-color, <code>currentColor</code></td></tr>
+</tbody></table>
+</div>
+
+<!-- ═══ 11 IMAGERY ═══ -->
+<div class="S" id="s11">
+<div class="Sh"><div class="Sn">Chapter 11 — Visual Identity</div><div class="St">Imagery & Photography</div><div class="Ss">影像與攝影</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<h3>Imagery Guide</h3>
+<p>Imagery should reflect GPS's core values of security, resilience, and human impact. Use authentic, professional photos that feature people in real environments — such as security checkpoints, or secure facilities — to convey trust and clarity. Supporting imagery may include architectural shots, surveillance technology, or abstract compositions that suggest protection and precision.</p>
+<div class="cg c4">
+  <div class="cd"><div class="cd-l">Lighting</div><div class="cd-v">Natural & Even</div><div class="cd-n">No dramatic shadows or excessive lens flare</div></div>
+  <div class="cd"><div class="cd-l">Composition</div><div class="cd-v">Clear & Intentional</div><div class="cd-n">Strong focal point, clean backgrounds</div></div>
+  <div class="cd"><div class="cd-l">People</div><div class="cd-v">Authentic</div><div class="cd-n">Real interactions, no staging or artificial feel</div></div>
+  <div class="cd"><div class="cd-l">Color</div><div class="cd-v">Neutral</div><div class="cd-n">No oversaturation or high-contrast grading</div></div>
+</div>
+<p>All imagery is <strong>internal use only</strong>. Photos with identifiable individuals require signed release forms. The images are not authorized for external use.</p>
+
+<h3>Things to Avoid 應避免事項</h3>
+<div class="cg c2">
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Avoid Staging</div><div class="cd-n">Avoid staged or artificial feel. Prioritize genuine moments reflecting real interactions and scenarios. Do not include people in unnatural or staged poses.</div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Avoid Overproduction</div><div class="cd-n">Balance professionalism and visual appeal, avoiding excessive manipulation or editing. Do not use overly dynamic lighting and excessive lens flare. Do not use oversaturated or high-contrast color grading.</div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Avoid Disconnected Context</div><div class="cd-n">Clarify image context to match intended message and prevent confusion or misinterpretation. Avoid images with excessive post-production effects.</div></div>
+  <div class="cd" style="border-color:var(--danger)"><div class="cd-l" style="color:var(--danger)">Avoid Poor Composition</div><div class="cd-n">Avoid clutter or chaos that diverts from intended focus. Ensure every photo has a clear subject and visual hierarchy.</div></div>
+</div>
+</div>
+
+<!-- ═══ 12 VOICE & TONE ═══ -->
+<div class="S" id="s12">
+<div class="Sh"><div class="Sn">Chapter 12 — Expression</div><div class="St">Brand Voice & Tone</div><div class="Ss">品牌語調</div><div class="So">Owner: <b>GPS Strategy & DX</b></div></div>
+<p>Voice is who we are. Tone is how we adjust for context. GPS has one voice — calm, clear, and caring.</p>
+<div class="cg c2">
+  <div class="cd"><div class="cd-l">Attribute 01</div><div class="cd-v">Calm Authority</div><div class="cd-n">Confidence from competence, not volume. In a crisis, our voice gets calmer.</div></div>
+  <div class="cd"><div class="cd-l">Attribute 02</div><div class="cd-v">Clear Before Clever</div><div class="cd-n">Plain language, short sentences, concrete examples.</div></div>
+  <div class="cd"><div class="cd-l">Attribute 03</div><div class="cd-v">Human First</div><div class="cd-n">People as people — not "resources" or "headcount."</div></div>
+  <div class="cd"><div class="cd-l">Attribute 04</div><div class="cd-v">Precise & Accountable</div><div class="cd-n">Specific numbers, dates, owners. "By Q3" not "soon."</div></div>
+</div>
+<h3>Tone by Context</h3>
+<table class="T"><thead><tr><th>Context</th><th>Tone</th><th>Example</th></tr></thead><tbody>
+<tr><td><strong>Emergency</strong></td><td>Direct, zero ambiguity</td><td>"Evacuate to Assembly B now. Do not use elevators."</td></tr>
+<tr><td><strong>Policy</strong></td><td>Firm but respectful</td><td>"Tailgating compromises safety. Badge individually — 2 seconds."</td></tr>
+<tr><td><strong>Training</strong></td><td>Encouraging, step-by-step</td><td>"Start with Tier 1 — about 3 minutes."</td></tr>
+<tr><td><strong>Brand</strong></td><td>Warm, aspirational</td><td>"That confidence travels home with you."</td></tr>
+</tbody></table>
+<div class="dd">
+  <div class="do"><b>GPS Vocabulary</b>protect · support · enable · design · collaborate · care · guide · empower · together · trust · adapt · serve</div>
+  <div class="dt"><b>Avoid</b>enforce · mandate · police · surveil · comply (imperative) · resources (people) · headcount · zero tolerance</div>
+</div>
+</div>
+
+<!-- ═══ 13 MOTION ═══ -->
+<div class="S" id="s13">
+<div class="Sh"><div class="Sn">Chapter 13 — Expression</div><div class="St">Motion & Animation</div><div class="Ss">動態與動畫</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<p>Motion feels like a controlled sweep — purposeful, measured, never frenetic.</p>
+<h3>Four Signature Motions</h3>
+<div class="mo">
+  <div class="md"><div class="mb pu">Pulse</div><div class="mb sw2">Sweep</div><div class="mb rv">Reveal</div><div class="mb fd">Fade</div></div>
+  <div class="ml"><span>Status</span><span>Entry</span><span>Data</span><span>Ambient</span></div>
+</div>
+<h3>Tokens</h3>
+<table class="T"><thead><tr><th>Token</th><th>Value</th><th>Use</th></tr></thead><tbody>
+<tr><td><code>--dur-fast</code></td><td>150ms</td><td>Hover, toggle</td></tr>
+<tr><td><code>--dur-normal</code></td><td>300ms</td><td>Panel slide, card reveal</td></tr>
+<tr><td><code>--dur-slow</code></td><td>600ms</td><td>Page transition, hero</td></tr>
+<tr><td><code>--ease-default</code></td><td>cubic-bezier(0.25,0.1,0.25,1)</td><td>Standard</td></tr>
+<tr><td><code>--ease-enter</code></td><td>cubic-bezier(0,0,0.2,1)</td><td>Elements entering</td></tr>
+<tr><td><code>--stagger</code></td><td>60ms</td><td>Sibling delay</td></tr>
+</tbody></table>
+<div class="co co-a"><strong>Forbidden:</strong> No bounce/elastic. No spinning (surveillance connotation). No auto-play video BG. No infinite loops on content. No parallax. Respect <code>prefers-reduced-motion</code>.</div>
+</div>
+
+<!-- ═══ 14 STATIONERY ═══ -->
+<div class="S" id="s14">
+<div class="Sh"><div class="Sn">Chapter 14 — Application: Print</div><div class="St">Stationery System</div><div class="Ss">文具系統</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<h3>Business Card</h3>
+<div class="mk"><div class="mk-h">90×55mm — Front / Back</div>
+<div class="bc-m">
+  <div class="bc bc-f"><div class="bc-nm">Security Manager Name</div><div class="bc-tt">Global Physical Security</div><div class="bc-ct">name@company.com<br>+886 3 563 6688<br>HsinChu, Taiwan</div></div>
+  <div class="bc bc-b"><div class="bc-lw">全球實體安全處<small>GLOBAL PHYSICAL SECURITY</small></div></div>
+</div></div>
+<h3>Print Specs</h3>
+<table class="T"><thead><tr><th>Item</th><th>Paper</th><th>Finish</th><th>Special</th></tr></thead><tbody>
+<tr><td>Business Card</td><td>350gsm matte</td><td>Soft-touch lamination</td><td>Gradient band: spot UV</td></tr>
+<tr><td>Letterhead</td><td>120gsm offset</td><td>Uncoated</td><td>Header gradient print</td></tr>
+<tr><td>Envelope</td><td>120gsm offset</td><td>Uncoated</td><td>Footer gradient band</td></tr>
+<tr><td>Folder</td><td>300gsm coated</td><td>Matte lamination</td><td>Interior: turquoise-50</td></tr>
+</tbody></table>
+</div>
+
+<!-- ═══ 15 POSTER & SIGNAGE ═══ -->
+<div class="S" id="s15">
+<div class="Sh"><div class="Sn">Chapter 15 — Application: Print</div><div class="St">Poster & Environmental Signage</div><div class="Ss">海報與環境標識</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<p>This template is designed for multi-purpose use — from internal notices and event announcements to thematic campaigns and educational messaging. While the subject matter and visuals may vary, the structure, type system, and overall visual logic help ensure visual consistency across departments.</p>
+
+<h3>Poster Types & Use Cases 海報類型</h3>
+<div class="cg c3">
+  <div class="cd"><div class="cd-l">Type 01</div><div class="cd-v">Image Poster</div><div class="cd-n">Use for visual-led content such as campaign posters, event photos, or brand messaging. Photography or illustration as the dominant visual element.</div></div>
+  <div class="cd"><div class="cd-l">Type 02</div><div class="cd-v">Timeline Poster</div><div class="cd-n">Best for showing schedules or agendas for upcoming events or trainings. Date/time hierarchy with supporting imagery.</div></div>
+  <div class="cd"><div class="cd-l">Type 03</div><div class="cd-v">Text Notice Poster</div><div class="cd-n">Use for announcements, guidelines, or internal communications with more text content. Numbered sections with icon illustrations.</div></div>
+</div>
+
+<h3>Three Poster Mockups</h3>
+<div class="po-m">
+  <div class="po pi2"><div class="po-in"><div class="po-tg" style="color:rgba(255,255,255,.6)">Campaign</div><div class="po-ti" style="color:#fff">Safety is designed into every corner</div><div class="po-ft" style="color:rgba(255,255,255,.5)">GPS</div></div></div>
+  <div class="po pt"><div class="po-in"><div class="po-tg" style="color:var(--turquoise)">Event</div><div style="margin-top:auto"><div style="font-size:20px;font-weight:900;color:#fff;line-height:1">08</div><div style="font-size:9px;color:var(--turquoise);font-weight:700">12</div></div><div class="po-ti" style="color:#fff;font-size:6px;margin-top:6px">Security Training</div></div></div>
+  <div class="po px"><div class="po-in"><div class="po-tg" style="color:var(--turquoise)">Notice</div><div style="margin-top:6px"><div style="font-size:7px;font-weight:900;color:var(--black);line-height:1.2">Updated badge procedure</div></div><div class="po-ft" style="color:var(--g400)">GPS · 2026.04</div></div></div>
+</div>
+
+<h3>Editable Zones 可編輯區域</h3>
+<div class="cg c3">
+  <div class="cd"><div class="cd-l">Zone 01</div><div class="cd-v">Text Area</div><div class="cd-n">All copy should stay within the defined safe zone. Maintain clear hierarchy and appropriate spacing. Avoid placing text too close to the edges.</div></div>
+  <div class="cd"><div class="cd-l">Zone 02</div><div class="cd-v">Image Area</div><div class="cd-n">Use photography or illustrations that support your topic. Visuals can extend beyond the placeholder, but keep layouts clean and avoid overly complex or off-brand styles.</div></div>
+  <div class="cd"><div class="cd-l">Zone 03</div><div class="cd-v">Logo / Footer Area</div><div class="cd-n">Do not move or resize. Ensure text and logo remain readable against background. The footer zone is fixed and should not be modified.</div></div>
+</div>
+
+<h3>Signage 標識</h3>
+<div class="mk"><div class="mk-h">Entrance — Branded Wayfinding</div>
+<div class="sg-m"><div class="sg">
+  <div class="sg-mk"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="5" height="5" rx="1" fill="#26A7B0" opacity=".9"/><rect x="9" y="3" width="5" height="5" rx="1" fill="#26A7B0" opacity=".5"/><rect x="3" y="9" width="5" height="5" rx="1" fill="#26A7B0" opacity=".5"/><rect x="9" y="9" width="5" height="5" rx="1" fill="#26A7B0" opacity=".8"/><rect x="15" y="9" width="5" height="5" rx="1" fill="#26A7B0" opacity=".3"/><rect x="9" y="15" width="5" height="5" rx="1" fill="#CAC3D2" opacity=".4"/><rect x="15" y="15" width="5" height="5" rx="1" fill="#26A7B0" opacity=".5"/></svg></div>
+  <div><h5>Global Physical Security</h5><p>全球實體安全處 · Visitor Check-in →</p></div>
+  <div class="sg-bd"></div>
+</div></div></div>
+</div>
+
+<!-- ═══ 16 UNIFORM ═══ -->
+<div class="S" id="s16">
+<div class="Sh"><div class="Sn">Chapter 16 — Application: Print</div><div class="St">Uniform & Wearables</div><div class="Ss">制服與穿戴識別</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<table class="T"><thead><tr><th>Item</th><th>Logo</th><th>Color</th></tr></thead><tbody>
+<tr><td><strong>Polo Shirt</strong></td><td>Left chest, 50mm max, white on dark</td><td>Black fabric, turquoise piping</td></tr>
+<tr><td><strong>ID Lanyard</strong></td><td>Mark repeated at 20mm</td><td>Turquoise-copper gradient sublimation</td></tr>
+<tr><td><strong>Visitor Badge</strong></td><td>Mark, 15mm, top center</td><td>White card, turquoise header, category edge</td></tr>
+<tr><td><strong>Hard Hat Sticker</strong></td><td>Mark only, optical at 20px</td><td>White on turquoise circle, 30mm</td></tr>
+<tr><td><strong>Hi-Vis Vest</strong></td><td>Full horizontal, reflective</td><td>Reflective silver on standard hi-vis</td></tr>
+</tbody></table>
+<div class="co co-t"><strong>Contracted security:</strong> Vendor uniforms do not carry the GPS logo. A branded arm patch (50mm × 30mm, embroidered, turquoise on black) is provided for left sleeve.</div>
+</div>
+
+<!-- ═══ 17 WEB ═══ -->
+<div class="S" id="s17">
+<div class="Sh"><div class="Sn">Chapter 17 — Application: Digital</div><div class="St">Web & Landing Page</div><div class="Ss">網頁與入口頁面</div><div class="So">Owner: <b>GPS Strategy &amp; DX</b></div></div>
+<div class="mk-r">
+  <div class="mk"><div class="mk-h">Desktop</div><div class="wm"><div class="wf"><div class="wb"><div class="wd" style="background:#FF5F57"></div><div class="wd" style="background:#FEBC2E"></div><div class="wd" style="background:#28C840"></div></div><div class="wh"><span>Global Physical Security<br><small style="font-size:5px;font-weight:400;opacity:.7">全球實體安全處</small></span></div><div class="wc"><div class="wl"></div><div class="wl" style="width:80%"></div><div class="wl" style="width:60%"></div><div style="display:flex;gap:4px;margin-top:6px"><div style="flex:1;height:32px;background:var(--turquoise-50);border-radius:3px;border:1px solid var(--turquoise-100)"></div><div style="flex:1;height:32px;background:var(--copper-50);border-radius:3px;border:1px solid var(--copper-100)"></div><div style="flex:1;height:32px;background:var(--purple-50);border-radius:3px;border:1px solid var(--purple-100)"></div></div></div></div></div></div>
+  <div class="mk"><div class="mk-h">Mobile</div><div class="mm"><div class="mf"><div class="mn"></div><div class="mh"><span>GPS</span></div><div class="mc"><div class="mcd"></div><div class="mcd"></div><div class="mcd"></div><div class="mcd"></div></div></div></div></div>
+</div>
+<h3>Design Tokens</h3>
+<table class="T"><thead><tr><th>Token</th><th>Value</th></tr></thead><tbody>
+<tr><td>Max width</td><td><code>1200px</code> (960px prose)</td></tr>
+<tr><td>Grid</td><td>12-col, <code>24px</code> gutter</td></tr>
+<tr><td>Breakpoints</td><td><code>375</code> · <code>768</code> · <code>1024</code> · <code>1440</code></td></tr>
+<tr><td>Border radius</td><td><code>4</code> · <code>8</code> · <code>12</code> · <code>9999px</code></td></tr>
+<tr><td>Shadow L1</td><td><code>0 1px 3px rgba(10,26,34,.06)</code></td></tr>
+<tr><td>Shadow L2</td><td><code>0 4px 12px rgba(10,26,34,.08)</code></td></tr>
+<tr><td>Touch target</td><td><code>44×44px</code> min</td></tr>
+</tbody></table>
+</div>
+
+<!-- ═══ 18 EMAIL ═══ -->
+<div class="S" id="s18">
+<div class="Sh"><div class="Sn">Chapter 18 — Application: Digital</div><div class="St">Email & Newsletter</div><div class="Ss">電子郵件與電子報</div><div class="So">Owner: <b>GPS Strategy &amp; DX</b></div></div>
+<div class="mk-r">
+  <div class="mk"><div class="mk-h">Supply Chain Security</div><div class="em"><div class="ef"><div class="eh"><div class="eh-l">GPS — Supply Chain Security</div><div class="eh-s">Monthly Intelligence Brief</div></div><div class="eb"><span>Supply Chain Security Update</span></div><div class="ey"><div class="el"></div><div class="el" style="width:80%"></div><div class="el" style="width:90%"></div><div class="ec"></div><div class="el" style="width:70%"></div></div><div class="efr"><span>GPS Global Physical Security · Unsubscribe</span></div></div></div></div>
+  <div class="mk"><div class="mk-h">AI & DX Navigator</div><div class="em"><div class="ef"><div class="eh" style="background:var(--copper-50);border-color:var(--copper-200)"><div class="eh-l" style="color:var(--copper-700)">GPS — AI & DX Navigator</div><div class="eh-s">Weekly Digest</div></div><div class="eb" style="background:linear-gradient(135deg,var(--copper-600),var(--purple-500))"><span>AI Fluency Update</span></div><div class="ey"><div class="el"></div><div class="el" style="width:70%"></div><div class="ec" style="background:var(--copper-600)"></div></div><div class="efr"><span>GPS Global Physical Security · Unsubscribe</span></div></div></div></div>
+</div>
+<div class="dd">
+  <div class="do"><b>Outlook-Safe</b>Tables only. System fonts. <code>mso-line-height-rule: exactly</code>. Max 600px. Inline CSS. Hosted images. Under 102KB.</div>
+  <div class="dt"><b>Don't</b>No flexbox/grid. No Google Fonts. No &lt;style&gt; blocks. No base64 images. No CSS variables. No BG-image on td without VML.</div>
+</div>
+</div>
+
+<!-- ═══ 19 MOBILE ═══ -->
+<div class="S" id="s19">
+<div class="Sh"><div class="Sn">Chapter 19 — Application: Digital</div><div class="St">Mobile & LINE OA</div><div class="Ss">行動裝置與 LINE 官方帳號</div><div class="So">Owner: <b>GPS Strategy &amp; DX</b></div></div>
+<table class="T"><thead><tr><th>Element</th><th>Spec</th></tr></thead><tbody>
+<tr><td>Profile Image</td><td>Logo mark on turquoise-50, 640×640px</td></tr>
+<tr><td>Rich Menu</td><td>2500×1686px, 6-cell, turquoise-700 BG, white vectors</td></tr>
+<tr><td>Flex Messages</td><td>Brand hex codes. System sans body. Bold headers. Turquoise-500 CTA.</td></tr>
+<tr><td>Push Notifications</td><td>Calm authority voice. No ALL CAPS. No excessive punctuation.</td></tr>
+<tr><td>Greeting</td><td>Bilingual zh-TW/EN. Warm tone. Quick-start buttons.</td></tr>
+</tbody></table>
+</div>
+
+<!-- ═══ 20 DIGITAL SIGNAGE ═══ -->
+<div class="S" id="s20">
+<div class="Sh"><div class="Sn">Chapter 20 — Application: Digital</div><div class="St">Digital Signage</div><div class="Ss">數位看板</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<table class="T"><thead><tr><th>Property</th><th>Value</th></tr></thead><tbody>
+<tr><td>Resolution</td><td>1920×1080 (landscape) or 1080×1920 (portrait)</td></tr>
+<tr><td>Safe area</td><td>5% margin all edges</td></tr>
+<tr><td>Min text</td><td>48px body, 72px headlines (at 1080p)</td></tr>
+<tr><td>Animation</td><td>Slide transitions, 8s min dwell, no auto-video</td></tr>
+<tr><td>Logo</td><td>Bottom-right or top-left, horizontal, min 120px h</td></tr>
+<tr><td>Rotation</td><td>6-screen starter kit, monthly refresh</td></tr>
+</tbody></table>
+</div>
+
+<!-- ═══ 21 CAMPAIGN MOODS ═══ -->
+<div class="S" id="s21">
+<div class="Sh"><div class="Sn">Chapter 21 — Creative Variations</div><div class="St">Campaign Moods</div><div class="Ss">主題活動視覺情緒</div><div class="So">Owner: <b>GPS Strategy &amp; DX</b></div></div>
+<p>GPS supports distinct campaign moods while maintaining core identity. Logo, typography, and grid never change — only gradient, photography direction, and accent shift.</p>
+<div class="vg">
+  <div class="vc"><div class="vv" style="background:linear-gradient(135deg,#26A7B0,#CAC3D2)"><div style="font-size:11px;font-weight:900;color:#fff;text-align:center;line-height:1.3">Designed<br>Safety</div></div><div class="vi"><h5>Standard — Brand Forward</h5><p>Default. Full turquoise-copper. Calm, professional.</p><div class="vt"><span>Primary Gradient</span><span>Evergreen</span></div></div></div>
+  <div class="vc"><div class="vv" style="background:linear-gradient(135deg,#0F4249,#26A7B0)"><div style="font-size:11px;font-weight:900;color:#fff;text-align:center;line-height:1.3">Alert<br>Protocol</div></div><div class="vi"><h5>Urgent — Security Alert</h5><p>Deep turquoise + black. High contrast. Minimal.</p><div class="vt"><span>Deep Turquoise</span><span>Emergency</span></div></div></div>
+  <div class="vc"><div class="vv" style="background:linear-gradient(135deg,#8CC897,#26A7B0)"><div style="font-size:11px;font-weight:900;color:#fff;text-align:center;line-height:1.3">Living<br>Culture</div></div><div class="vi"><h5>Warm — Community</h5><p>Green-turquoise. People-first photography.</p><div class="vt"><span>Green Shift</span><span>Wellness</span></div></div></div>
+  <div class="vc"><div class="vv" style="background:linear-gradient(135deg,#574A63,#8C9FCB)"><div style="font-size:11px;font-weight:900;color:#fff;text-align:center;line-height:1.3">AI &<br>Innovation</div></div><div class="vi"><h5>Forward — Technology</h5><p>Copper-purple. Technical, precise.</p><div class="vt"><span>Purple Shift</span><span>DX Content</span></div></div></div>
+  <div class="vc"><div class="vv" style="background:linear-gradient(135deg,#F6AD90,#CAC3D2)"><div style="font-size:11px;font-weight:900;color:var(--black);text-align:center;line-height:1.3">Family<br>Extension</div></div><div class="vi"><h5>Soft — Family & Wellbeing</h5><p>Orange-copper. Warm, inviting, personal.</p><div class="vt"><span>Orange Shift</span><span>Home Safety</span></div></div></div>
+  <div class="vc"><div class="vv" style="background:linear-gradient(135deg,#0A1A22,#1E8A92)"><div style="font-size:11px;font-weight:900;color:var(--turquoise-300);text-align:center;line-height:1.3">Operations<br>Command</div></div><div class="vi"><h5>Dark — Monitoring</h5><p>Black-turquoise. Vigilant, precise.</p><div class="vt"><span>Dark Mode</span><span>Dashboards</span></div></div></div>
+</div>
+</div>
+
+<!-- ═══ 22 SEASONAL ═══ -->
+<div class="S" id="s22">
+<div class="Sh"><div class="Sn">Chapter 22 — Creative Variations</div><div class="St">Seasonal & Event Adaptations</div><div class="Ss">季節與活動視覺變體</div><div class="So">Owner: <b>GPS Strategy &amp; DX</b></div></div>
+<table class="T"><thead><tr><th>Season / Event</th><th>Gradient</th><th>Photography</th><th>Accent</th></tr></thead><tbody>
+<tr><td><strong>Spring / New Year</strong></td><td>Green-turquoise</td><td>Nature + architecture</td><td>Green-400</td></tr>
+<tr><td><strong>Summer / Safety Month</strong></td><td>Standard</td><td>Outdoor safety, hydration</td><td>Turquoise-400</td></tr>
+<tr><td><strong>Autumn / Fire Safety</strong></td><td>Orange-copper</td><td>Fire equipment, drills</td><td>Orange-500</td></tr>
+<tr><td><strong>Winter / Year-End</strong></td><td>Deep turquoise-black</td><td>Night-shift, winter safety</td><td>Turquoise-300</td></tr>
+<tr><td><strong>New Site Launch</strong></td><td>Full spectrum</td><td>Construction → completion</td><td>All secondaries</td></tr>
+<tr><td><strong>Global Safety Day</strong></td><td>Standard + white</td><td>Cross-site montage</td><td>Pure white</td></tr>
+<tr><td><strong>Award / Recognition</strong></td><td>Copper-purple</td><td>Portraits, achievement</td><td>Copper-500</td></tr>
+</tbody></table>
+<div class="dd">
+  <div class="do"><b>Always Preserved</b>GPS logo unmodified. Noto Sans TC + Lato. Poster three-zone structure. Voice attributes. Clearspace. Accessibility.</div>
+  <div class="dt"><b>Never Modified</b>Logo color/shape/proportions. Type hierarchy max 3 sizes. Minimum logo sizes. Core turquoise or black tokens. Brand behaviors or voice vocabulary.</div>
+</div>
+<div class="co co-t"><strong>Approval:</strong> Standard mood → MarCom self-approves. Seasonal → GPS Strategy reviews. New event variation → GPS Director approves. Variations unused for 12 months expire.</div>
+</div>
+
+<!-- ═══ 23 CO-BRANDING ═══ -->
+<div class="S" id="s23">
+<div class="Sh"><div class="Sn">Chapter 23 — Governance</div><div class="St">Co-branding & Partnership</div><div class="Ss">聯合品牌與合作</div><div class="So">Owner: <b>GPS Strategy</b> · Approver: GPS Director</div></div>
+
+<h3>Organizational Logo Architecture</h3>
+<p>GSM (Global Security Management) maintains its own logo as the parent organization. Three divisions — <strong>GPS</strong> (Global Physical Security), <strong>ITS</strong> (Information Technology Security), and <strong>PIP</strong> (Personal Information Protection) — each operate their own distinct logos under the GSM umbrella. This brand bible governs the GPS logo exclusively. GPS's brand identity covers all 9 regions and 16+ legal entities. Regional supplements adapt language — they do not create sub-brands or alternative visual identities.</p>
+
+<h3>Brand Architecture Relationships</h3>
+<table class="T"><thead><tr><th>Relationship</th><th>Visual Treatment</th><th>Approval</th></tr></thead><tbody>
+<tr><td><strong>GPS ↔ GSM (Parent)</strong></td><td>When co-displayed, GSM logo takes parent position (left or top). GPS logo in subordinate position. 1px divider in <code>var(--g200)</code> separates entities. Minimum separation = GPS clearspace rule.</td><td>GSM Director</td></tr>
+<tr><td><strong>GPS ↔ ITS / PIP (Siblings)</strong></td><td>Equal visual weight. Each division uses its own logo. Shared header/footer permitted with division identifier. Do not merge or blend division logos into composite marks.</td><td>GSM Director for joint comms</td></tr>
+<tr><td><strong>GPS ↔ Corporate</strong></td><td>GPS logo always subordinate to corporate mark. Must remain visually consistent with corporate guidelines at all times.</td><td>Corporate PR for external use</td></tr>
+<tr><td><strong>GPS ↔ External Vendors</strong></td><td>GPS brand leads. Vendor logo in "supported by" secondary position. Vendor branding ≤ 20% of visual area.</td><td>GPS Strategy</td></tr>
+<tr><td><strong>GPS ↔ Government / Regulatory</strong></td><td>Government seal takes protocol precedence. GPS in secondary position. Neutral background — no GPS gradient.</td><td>GPS Director + Legal</td></tr>
+</tbody></table>
+</div>
+
+<!-- ═══ 24 BRAND PERFORMANCE ═══ -->
+<div class="S" id="s24">
+<div class="Sh"><div class="Sn">Chapter 24 — Governance</div><div class="St">Brand Performance Metrics</div><div class="Ss">品牌績效指標</div><div class="So">Owner: <b>GPS Strategy & DX</b> · Approver: GPS Director</div></div>
+<p>A brand standard without measurement is a preference document.</p>
+<div class="cg c3">
+  <div class="cd"><div class="cd-l">Pillar 01</div><div class="cd-v">Perception</div><div class="cd-n">Do people understand GPS's role? Unaided recall, sentiment, language analysis.</div></div>
+  <div class="cd"><div class="cd-l">Pillar 02</div><div class="cd-v">Consistency</div><div class="cd-n">Are all outputs on-brand? Quarterly audit of 20 random samples.</div></div>
+  <div class="cd"><div class="cd-l">Pillar 03</div><div class="cd-v">Reach</div><div class="cd-n">Are messages landing? Open rates, cascade completion, geo coverage.</div></div>
+</div>
+<h4>Brand Metrics</h4>
+<table class="T"><thead><tr><th>Metric</th><th>Method</th><th>Freq</th><th>Target</th></tr></thead><tbody>
+<tr><td>Brand Sentiment</td><td>5-question pulse survey</td><td>Quarterly</td><td>+15% vs baseline, Year 1</td></tr>
+<tr><td>Visual Consistency</td><td>20 outputs/quarter audit</td><td>Quarterly</td><td>≥85% compliance</td></tr>
+<tr><td>Behavioral Alignment</td><td>Mystery visitor</td><td>Quarterly</td><td>4/5 behaviors observed</td></tr>
+<tr><td>AI Fluency</td><td>Micro-Learning tiers</td><td>Monthly</td><td>30% Builder in 6 months</td></tr>
+<tr><td>Geo Coverage</td><td>Active feedback loops</td><td>Quarterly</td><td>7/9 sites by Q3</td></tr>
+</tbody></table>
+
+<h4>Communications Infrastructure Metrics 溝通基礎設施指標</h4>
+<table class="T"><thead><tr><th>Metric</th><th>Method</th><th>Freq</th><th>Target</th></tr></thead><tbody>
+<tr><td>Message Delivery Latency</td><td>Time from HQ publish to last-site receipt</td><td>Per message</td><td>≤48 hours for all 9 regions</td></tr>
+<tr><td>Cascade Completion Rate</td><td>Section Head confirmation of relay</td><td>Monthly</td><td>≥90% confirmation</td></tr>
+<tr><td>Email Open Rate</td><td>Newsletter analytics</td><td>Per send</td><td>≥45% average across 3 streams</td></tr>
+<tr><td>Translation Turnaround</td><td>Time from EN master to supplement delivery</td><td>Per piece</td><td>≤5 business days (JP/DE/SC/ES)</td></tr>
+<tr><td>Digital Signage Currency</td><td>Spot checks — is displayed content current?</td><td>Monthly</td><td>≥90% screens showing ≤30-day content</td></tr>
+<tr><td>Contracted Security Reach</td><td>Supervisor confirmation of shift briefing delivery</td><td>Monthly</td><td>≥80% briefings delivered on schedule</td></tr>
+</tbody></table>
+
+<h3>Crisis Communication Protocol 危機溝通協議</h3>
+<p>When a security incident occurs at a GPS-managed site, brand voice must remain consistent while adapting to urgency. The GPS "Calm Authority" voice attribute becomes the governing principle — our voice gets calmer as the situation gets more serious.</p>
+<table class="T"><thead><tr><th>Phase</th><th>Timeline</th><th>Action</th><th>Owner</th></tr></thead><tbody>
+<tr><td><strong>Acknowledge</strong></td><td>0–30 min</td><td>Internal holding statement to affected site leadership. "We are aware of [incident type] at [site]. Response teams are activated. Updates will follow at [time]." No speculation. No blame. Facts only.</td><td>Site Security Mgr</td></tr>
+<tr><td><strong>Inform</strong></td><td>30 min–2 hrs</td><td>Structured update to GPS Director, Section Heads, and affected site all-staff. Channels: email + digital signage for affected site, email for global leadership.</td><td>GPS Strategy</td></tr>
+<tr><td><strong>Coordinate</strong></td><td>2–24 hrs</td><td>Cross-functional alignment with Corporate PR (if external exposure), HR (if personnel impact), Legal (if regulatory). GPS provides facts; Corporate PR handles any external statement.</td><td>GPS Director</td></tr>
+<tr><td><strong>Resolve & Debrief</strong></td><td>24–72 hrs</td><td>All-clear communication. After-action summary (internal). Brand voice returns to standard warmth. Lessons learned documented.</td><td>GPS Strategy + MarCom</td></tr>
+</tbody></table>
+<div class="co co-a"><strong>GPS never speaks externally.</strong> All external communication routes through Corporate PR. GPS provides factual briefing materials. The GPS brand voice adapts under pressure but never abandons its core attributes — especially "Human First" and "Calm Authority."</div>
+
+<h3>Brand Evolution Governance 品牌演進治理</h3>
+<p>The GPS brand is a living system. As the organization matures, the brand must evolve with it — but evolution must be governed, not improvised.</p>
+<table class="T"><thead><tr><th>Change Type</th><th>Example</th><th>Proposer</th><th>Approval</th><th>Communication</th></tr></thead><tbody>
+<tr><td><strong>Token adjustment</strong></td><td>Hex value correction, weight update</td><td>MarCom / Strategy</td><td>Self-approved, logged in Appendix V</td><td>Changelog update</td></tr>
+<tr><td><strong>Chapter revision</strong></td><td>New do/don't examples, expanded specs</td><td>GPS Strategy</td><td>GPS Strategy review</td><td>Version bump, email to brand owners</td></tr>
+<tr><td><strong>Structural change</strong></td><td>New chapter, pillar addition, logo modification</td><td>GPS Strategy</td><td>GPS Director sign-off</td><td>Full version release, all-hands briefing</td></tr>
+<tr><td><strong>Narrative arc transition</strong></td><td>Year 2 → Year 3 messaging shift</td><td>GPS Strategy</td><td>GPS Director + Section Head alignment</td><td>Campaign launch, regional cascade</td></tr>
+</tbody></table>
+<div class="co co-t"><strong>Annual Brand Review:</strong> Every Q4, GPS Strategy conducts a comprehensive brand health review — synthesizing perception data, consistency audits, comms metrics, and behavioral assessments. Findings and proposed evolution items are presented to the GPS Director for approval before the new fiscal year.</div>
+</div>
+
+<!-- ═══ 25 TEMPLATES ═══ -->
+<div class="S" id="s25">
+<div class="Sh"><div class="Sn">Chapter 25 — Governance</div><div class="St">Templates & Toolkit</div><div class="Ss">模板與工具包</div><div class="So">Owner: <b>MarCom Team</b></div></div>
+<table class="T"><thead><tr><th>Template</th><th>Format</th><th>Use Case</th></tr></thead><tbody>
+<tr><td>Image Poster</td><td>Figma + Canva</td><td>Campaigns, event promotion</td></tr>
+<tr><td>Timeline Poster</td><td>Figma + Canva</td><td>Schedules, agendas, training</td></tr>
+<tr><td>Text Notice Poster</td><td>Figma + Canva</td><td>Announcements, policy updates</td></tr>
+<tr><td>Email — All-Staff</td><td>MJML / HTML</td><td>Division-wide announcements</td></tr>
+<tr><td>Email — Newsletter</td><td>MJML / HTML</td><td>3 newsletter streams</td></tr>
+<tr><td>Presentation Deck</td><td>PPTX</td><td>Director briefings, training</td></tr>
+<tr><td>One-Pager</td><td>DOCX / HTML</td><td>Quick reference, shift briefing cards</td></tr>
+<tr><td>Digital Signage</td><td>Figma</td><td>Internal screens, displays</td></tr>
+</tbody></table>
+
+<h3>Visual Consistency 視覺一致性</h3>
+<p>Three pillars govern visual consistency across all GPS outputs:</p>
+<div class="cg c3">
+  <div class="cd"><div class="cd-l">Typography</div><div class="cd-v">Brand Fonts Only</div><div class="cd-n">Stick with the brand fonts. Use approved heading/subheading/body text sizes for hierarchy. Max 3 font sizes in one sector to maintain readability.</div></div>
+  <div class="cd"><div class="cd-l">Color</div><div class="cd-v">Brand Palette</div><div class="cd-n">Begin with neutral or brand-approved colors. Sticking to the brand palette makes it easier to keep things consistent without needing design expertise. You may use topic-specific color themes, but avoid harsh neon tones or visually jarring combinations.</div></div>
+  <div class="cd"><div class="cd-l">Graphics</div><div class="cd-v">Pattern for Highlight</div><div class="cd-n">Use graphic pattern for highlight, not filler. The checkerboard elements should accent and complement, never overwhelm the content.</div></div>
+</div>
+
+<h3>Visual Do's & Don'ts 視覺規範</h3>
+<h4>Text Hierarchy</h4>
+<div class="dd">
+  <div class="do"><b>Do</b>Use approved heading/subheading/body text sizes. Follow spacing and alignment structure. Use max 3 different font sizes/weights in one sector to keep readability and hierarchy. Rearrange layout based on your need — the structure is flexible.</div>
+  <div class="dt"><b>Don't</b>Do not mix fonts or make everything bold. Do not stretch or shrink text manually. Do not center-align everything by default — left-alignment is the standard for body text.</div>
+</div>
+
+<h4>Illustration Style</h4>
+<div class="dd">
+  <div class="do"><b>Do</b>Use minimal, clean, vector-style illustrations. Maintain consistent stroke, perspective, and color. Prefer neutral or brand-accented palettes. Introduce custom topic-specific color accents carefully.</div>
+  <div class="dt"><b>Don't</b>Do not use mismatched clipart or stock cartoon packs. Do not combine different illustration styles with photo or 3D styles randomly. Maintain a single visual language per piece.</div>
+</div>
+
+<h4>Color Usage</h4>
+<div class="dd">
+  <div class="do"><b>Do</b>Start with neutral or brand base. Ensure contrast between background and type. You may introduce custom topic-specific color accents carefully as long as they harmonize with the brand palette.</div>
+  <div class="dt"><b>Don't</b>Do not use harsh neon tones or visually jarring combinations. Do not apply random rainbows or unbalanced color blocks. Do not color logos or type arbitrarily without ensuring sufficient contrast.</div>
+</div>
+
+<h3>Brand Violation Remediation 品牌違規處理</h3>
+<p>When a quarterly brand audit or ad-hoc review identifies a violation, follow this remediation pathway:</p>
+<table class="T"><thead><tr><th>Severity</th><th>Example</th><th>Action</th><th>Timeline</th></tr></thead><tbody>
+<tr><td><strong>Minor</strong></td><td>Wrong font weight, slightly off color</td><td>MarCom sends correction email with correct asset attached. No escalation.</td><td>Corrected within 5 business days</td></tr>
+<tr><td><strong>Moderate</strong></td><td>Stretched logo, non-brand color palette, missing clearspace</td><td>GPS Strategy contacts site owner directly. Provides correct template. Logged in audit tracker.</td><td>Corrected within 10 business days</td></tr>
+<tr><td><strong>Severe</strong></td><td>Unauthorized co-branding, logo modification, external exposure of internal materials</td><td>GPS Director notified. Material pulled immediately. Root cause analysis. Section Head briefing.</td><td>Same-day pull, 5-day resolution</td></tr>
+</tbody></table>
+<div class="co co-t"><strong>Remediation philosophy:</strong> The goal is education, not punishment. Most violations happen because people don't have access to the right templates. Fix the system, not the person.</div>
+</div>
+
+<!-- ═══ APP A: ACTIVATION ═══ -->
+<div class="S" id="sA">
+<div class="Sh"><div class="Sn">Appendix A</div><div class="St">New Site Brand Activation Playbook</div><div class="Ss">新廠區品牌啟動手冊</div><div class="So">Owner: <b>GPS Strategy &amp; DX</b></div></div>
+<p>When a new site enters GPS — greenfield (JASM Kumamoto, ESMC Dresden) or acquisition — brand activation follows a 90-day playbook.</p>
+<table class="T"><thead><tr><th>Phase</th><th>Timeline</th><th>Deliverables</th><th>Owner</th></tr></thead><tbody>
+<tr><td><strong>0: Pre-Arrival</strong></td><td>Day −30 to 0</td><td>Brand kit shipped. Local owner identified. Language supplement confirmed. Wayfinding designed.</td><td>GPS Strategy + MarCom</td></tr>
+<tr><td><strong>1: Foundation</strong></td><td>Day 1–30</td><td>Signage installed. Access points branded. Welcome materials. Orientation session.</td><td>Regional Owner + Site Mgr</td></tr>
+<tr><td><strong>2: Integration</strong></td><td>Day 31–60</td><td>Poster rotation. Digital signage connected. Feedback loop activated. First brand check.</td><td>MarCom + Regional Owner</td></tr>
+<tr><td><strong>3: Calibration</strong></td><td>Day 61–90</td><td>Behavioral assessment. Perception baseline. Cultural adjustments. Site declared "brand-active."</td><td>GPS Strategy</td></tr>
+</tbody></table>
+<div class="co co-a"><strong>ESMC Dresden:</strong> Works Council (Betriebsrat) briefing required in Phase 0. German supplement for all employee materials. +2 weeks approval cycle.<br><br><strong>JASM Kumamoto:</strong> Greenfield — building culture from scratch. Describe changes as 改善 (kaizen). Nemawashi pre-alignment required. Japanese supplement. LINE Works as primary channel.</div>
+</div>
+
+<!-- ═══ APP L: LANGUAGE ═══ -->
+<div class="S" id="sL">
+<div class="Sh"><div class="Sn">Appendix L</div><div class="St">Language Architecture</div><div class="Ss">語言架構</div><div class="So">Owner: <b>GPS Strategy &amp; DX</b></div></div>
+<table class="T"><thead><tr><th>Tier</th><th>Language</th><th>Code</th><th>Scope</th><th>Font</th></tr></thead><tbody>
+<tr><td><strong>Co-Primary</strong></td><td>English</td><td><code>EN</code></td><td>All global, master document</td><td>Lato</td></tr>
+<tr><td><strong>Co-Primary</strong></td><td>Traditional Chinese</td><td><code>zh-TW</code></td><td>HQ-TW, all bilingual comms</td><td>Noto Sans TC</td></tr>
+<tr><td><strong>Supplement</strong></td><td>Simplified Chinese</td><td><code>SC</code></td><td>Shanghai & Nanjing entities</td><td>Noto Sans SC</td></tr>
+<tr><td><strong>Supplement</strong></td><td>German</td><td><code>DE</code></td><td>ESMC Dresden</td><td>Noto Sans</td></tr>
+<tr><td><strong>Supplement</strong></td><td>Japanese</td><td><code>JP</code></td><td>JASM + Japan entities</td><td>Noto Sans JP</td></tr>
+<tr><td><strong>Supplement</strong></td><td>Spanish</td><td><code>ES</code></td><td>Arizona workforce (OSHA)</td><td>Noto Sans</td></tr>
+</tbody></table>
+<p>Supplements cover employee-facing safety comms, training, wayfinding, emergency procedures, and shift briefing cards. They do not cover strategy docs, Director-level comms, cross-regional newsletters, or this portal.</p>
+</div>
+
+<!-- ═══ APP R: RACI ═══ -->
+<div class="S" id="sR">
+<div class="Sh"><div class="Sn">Appendix R</div><div class="St">RACI Ownership Matrix</div><div class="Ss">RACI 權責矩陣</div><div class="So">Owner: <b>GPS Strategy &amp; DX</b></div></div>
+<p><strong>R</strong> = Responsible · <strong>A</strong> = Accountable · <strong>C</strong> = Consulted · <strong>I</strong> = Informed</p>
+<table class="R"><thead><tr><th style="width:28%">Activity</th><th>Director</th><th>Strategy</th><th>MarCom</th><th>Section Hd</th><th>Regional</th></tr></thead><tbody>
+<tr><td>Brand Foundation</td><td class="ra">A</td><td class="rr">R</td><td class="rc">C</td><td class="ri">I</td><td class="ri">I</td></tr>
+<tr><td>Brand Behaviors</td><td class="ra">A</td><td class="rr">R</td><td class="ri">I</td><td class="rc">C</td><td class="rc">C</td></tr>
+<tr><td>Visual Identity (03–11)</td><td class="ri">I</td><td class="rc">C</td><td class="rr">R</td><td class="ri">I</td><td class="ri">I</td></tr>
+<tr><td>Voice & Tone</td><td class="ra">A</td><td class="rr">R</td><td class="rc">C</td><td class="rc">C</td><td class="rc">C</td></tr>
+<tr><td>Motion</td><td class="ri">I</td><td class="rc">C</td><td class="rr">R</td><td class="ri">I</td><td class="ri">I</td></tr>
+<tr><td>Print Applications</td><td class="ri">I</td><td class="rc">C</td><td class="rr">R</td><td class="ri">I</td><td class="rc">C</td></tr>
+<tr><td>Digital Applications</td><td class="ri">I</td><td class="rr">R</td><td class="rr">R</td><td class="ri">I</td><td class="rc">C</td></tr>
+<tr><td>Creative Variations</td><td class="ra">A</td><td class="rr">R</td><td class="rc">C</td><td class="ri">I</td><td class="ri">I</td></tr>
+<tr><td>Co-branding</td><td class="ra">A</td><td class="rr">R</td><td class="rc">C</td><td class="ri">I</td><td class="rc">C</td></tr>
+<tr><td>Brand Performance</td><td class="ra">A</td><td class="rr">R</td><td class="rc">C</td><td class="rc">C</td><td class="rc">C</td></tr>
+<tr><td>Templates</td><td class="ri">I</td><td class="rc">C</td><td class="rr">R</td><td class="ri">I</td><td class="ri">I</td></tr>
+<tr><td>New Site Activation</td><td class="ra">A</td><td class="rr">R</td><td class="rr">R</td><td class="rc">C</td><td class="rr">R</td></tr>
+<tr><td>Language Supplements</td><td class="ri">I</td><td class="ra">A</td><td class="rr">R</td><td class="ri">I</td><td class="rr">R</td></tr>
+<tr><td>Quarterly Brand Audit</td><td class="ri">I</td><td class="rr">R</td><td class="rc">C</td><td class="rc">C</td><td class="rc">C</td></tr>
+</tbody></table>
+</div>
+
+<!-- ═══ APP V: VERSION HISTORY ═══ -->
+<div class="S" id="sV">
+<div class="Sh"><div class="Sn">Appendix V</div><div class="St">Version History & Changelog</div><div class="Ss">版本紀錄與變更日誌</div><div class="So">Owner: <b>GPS Strategy & DX</b></div></div>
+<table class="T"><thead><tr><th>Version</th><th>Date</th><th>Changes</th><th>Approved By</th></tr></thead><tbody>
+<tr><td><strong>v3.0</strong></td><td>2026 Q2</td><td>Mega Portal merge — combined Brand Standards (v1.0) + Brand Bible Supreme (v2.0) into single portal. Added: Crisis Comms protocol, Brand Evolution governance, Bilingual canonical example, Brand Violation remediation pathway, Version History. Corrected: RACI row (03–11), Lato weight spec, owner tags on all chapters.</td><td>GPS Director</td></tr>
+<tr><td><strong>v2.0</strong></td><td>2026 Q1</td><td>Brand Bible Supreme — expanded color universe (60+ tokens, 11-step scales), print/digital/motion applications, creative variations (6 campaign moods, 7 seasonal), dark mode, accessibility pairings.</td><td>GPS Strategy</td></tr>
+<tr><td><strong>v1.0</strong></td><td>2026 Q1</td><td>Initial Brand Standards Portal — 13 chapters + Appendix A. Foundation, Visual Identity, Expression, Application, Governance, New Site Activation Playbook, Language Architecture, RACI.</td><td>GPS Strategy</td></tr>
+</tbody></table>
+<div class="co co-t"><strong>Change governance:</strong> Minor corrections (typos, token values) are logged and published by GPS Strategy without approval. Structural changes (new chapters, pillar additions, logo modifications) require GPS Director sign-off. All versions are archived and accessible. Regional teams must verify they reference the current version before producing new materials.</div>
+</div>
+
+</div></div></div>
+
+<script>
+function openNav(){document.getElementById('nav').classList.add('open');document.getElementById('overlay').classList.add('open')}
+function closeNav(){document.getElementById('nav').classList.remove('open');document.getElementById('overlay').classList.remove('open')}
+function go(id){
+  document.querySelectorAll('.S').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.N a').forEach(a=>a.classList.remove('on'));
+  const s=document.getElementById(id);
+  if(s){s.classList.add('on');s.scrollIntoView({behavior:'smooth',block:'start'})}
+  const a=document.querySelector(`.N a[data-s="${id}"]`);
+  if(a)a.classList.add('on');
+  const t=s?.querySelector('.St')?.textContent||'';
+  document.getElementById('bar').innerHTML=`<button class="mob-btn" onclick="openNav()"><svg width="20" height="20" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button> Brand Bible / <b>${t}</b>`;
+  closeNav();
+}
+</script>
+</body>
+</html>
