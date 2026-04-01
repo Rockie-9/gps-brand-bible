@@ -307,6 +307,14 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
   .mob-btn,.N-overlay{display:none!important}
 }
 @media print{.N,.B,.mob-btn{display:none}.M{margin-left:0}.S{display:block!important;page-break-before:always}.S:first-child{page-break-before:auto}}
+
+/* F3: Quick-copy */
+code{cursor:pointer;position:relative;transition:background .2s}
+code:hover{background:var(--turquoise-100)}
+code.copied{background:var(--success);color:#fff}
+code.copied::after{content:'✓';margin-left:4px}
+/* F1: AI prompt button glow */
+@keyframes glow{0%,100%{box-shadow:0 0 4px var(--turquoise)}50%{box-shadow:0 0 12px var(--turquoise)}}
 </style>
 </head>
 <body class="lang-en">
@@ -379,6 +387,9 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 <div class="Nf"><span class="en">Confidential — Internal Use Only</span><span class="zh">機密 — 僅供內部使用</span>
   <div class="Nl"><span class="p">EN</span><span class="p">zh-TW</span><span>SC</span><span>DE</span><span>JP</span><span>ES</span></div>
 </div>
+<div style="padding:12px 16px;border-top:1px solid var(--g200);margin-top:8px">
+  <button onclick="document.getElementById('ai-prompt-panel').style.display='block';closeNav()" style="width:100%;padding:10px;background:var(--turquoise);color:#fff;border:none;border-radius:6px;font-weight:700;cursor:pointer;font-size:12px;letter-spacing:.04em">&#x1F916; <span class="en">AI Brand Prompt</span><span class="zh">AI 品牌提示詞</span></button>
+</div>
 </nav>
 
 <div class="M">
@@ -443,7 +454,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
   <div class="cd" style="border-color:var(--turquoise);border-width:2px"><div class="cd-l" style="color:var(--turquoise)"><span class="en">Behavior 05 — Foundation</span><span class="zh">行為 05——基礎</span></div><div class="cd-v"><span class="en">Treat Every Site as Someone's First Day</span><span class="zh">視每個場域為某人的第一天</span></div><div class="cd-n"><span class="en">New hires, visitors, and transferred employees experience GPS before any other function. We are the first impression. Every interaction should meet the standard we would want for our own first day.</span><span class="zh">新進人員、訪客和調派員工在接觸其他任何部門之前，最先體驗到的就是 GPS。我們是第一印象。每一次互動都應符合我們對自己第一天的期望標準。</span></div></div>
 </div>
 <h3><span class="en">Measurement</span><span class="zh">衡量方式</span></h3>
-<p class="en">Quarterly mystery visitor assessments, biannual safety perception survey (5 questions), and front-line supervisor peer reviews during shift handovers. Results feed into Brand Performance Metrics (Section 24).</p><p class="zh">季度神秘訪客評估、半年度安全感知調查（5 題）、以及換班交接時的第一線主管同儕評鑑。結果回饋至品牌績效指標（第 24 章）。</p>
+<p class="en">Quarterly mystery visitor assessments, biannual safety perception survey (5 questions), and front-line supervisor peer reviews during shift handovers. Results feed into Brand Performance Metrics (<a onclick="go('s24')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Section 24</a>).</p><p class="zh">季度神秘訪客評估、半年度安全感知調查（5 題）、以及換班交接時的第一線主管同儕評鑑。結果回饋至品牌績效指標（第 24 章）。</p>
 </div>
 
 <!-- ═══ 03 LOGO SYSTEM ═══ -->
@@ -1032,7 +1043,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 10 GRAPHIC ═══ -->
 <div class="S" id="s10">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 10 — Visual Identity</span><span class="zh">第 10 章——視覺識別</span></div><div class="St"><span class="en">Graphic System & Iconography</span><span class="zh">圖形系統與圖標學</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s10')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 10</a> — Visual Identity</span><span class="zh">第 10 章——視覺識別</span></div><div class="St"><span class="en">Graphic System & Iconography</span><span class="zh">圖形系統與圖標學</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
 <p class="en">GPS's graphic elements are derived from the logo mark's grid structure and curved form, echoing the brand's themes of protection, flow, and precision. These elements are designed to be used in conjunction with the brand logo, color, typography, and imagery. They can be applied in both sharp and blurred styles to introduce depth, motion, or emphasis, and are intended to complement layouts.</p><p class="zh">GPS 的圖形元素源自標誌圖標的網格結構和曲線造型，呼應品牌保護、流動和精確的主題。這些元素設計為與品牌標誌、色彩、字體排版和影像搭配使用。它們可以鋒利和模糊兩種風格呈現，用以引入深度、動感或強調，並旨在作為版面配置的補充。</p>
 
 <h3><span class="en">Graphic Elements — Core Visual</span><span class="zh">圖形元素——核心視覺</span></h3>
@@ -1089,7 +1100,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 11 IMAGERY ═══ -->
 <div class="S" id="s11">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 11 — Visual Identity</span><span class="zh">第 11 章——視覺識別</span></div><div class="St"><span class="en">Imagery & Photography</span><span class="zh">影像與攝影</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s11')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 11</a> — Visual Identity</span><span class="zh">第 11 章——視覺識別</span></div><div class="St"><span class="en">Imagery & Photography</span><span class="zh">影像與攝影</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
 <h3><span class="en">Imagery Guide</span><span class="zh">影像指南</span></h3>
 <p class="en">Imagery should reflect GPS's core values of security, resilience, and human impact. Use authentic, professional photos that feature people in real environments — such as security checkpoints, or secure facilities — to convey trust and clarity. Supporting imagery may include architectural shots, surveillance technology, or abstract compositions that suggest protection and precision.</p><p class="zh">影像應反映 GPS 的核心價值——安全、韌性和人文關懷。使用在真實環境中呈現人們的專業、真實照片——如安全檢查站或安全設施——以傳達信任和清晰感。輔助影像可包括建築攝影、監控技術，或暗示保護與精確的抽象構圖。</p>
 <div class="cg c4">
@@ -1142,7 +1153,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 12 VOICE & TONE ═══ -->
 <div class="S" id="s12">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 12 — Expression</span><span class="zh">第 12 章——表達</span></div><div class="St"><span class="en">Brand Voice & Tone</span><span class="zh">品牌語調</span></div><div class="So">Owner: <b>GPS Strategy & DX</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s12')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 12</a> — Expression</span><span class="zh">第 12 章——表達</span></div><div class="St"><span class="en">Brand Voice & Tone</span><span class="zh">品牌語調</span></div><div class="So">Owner: <b>GPS Strategy & DX</b></div></div>
 <p class="en">Voice is who we are. Tone is how we adjust for context. GPS has one voice — calm, clear, and caring.</p><p class="zh">語調是我們的身份。語氣是我們因應情境的調整。GPS 擁有一個聲音——沉穩、清晰、有溫度。</p>
 <div class="cg c2">
   <div class="cd"><div class="cd-l"><span class="en">Attribute 01</span><span class="zh">屬性 01</span></div><div class="cd-v"><span class="en">Calm Authority</span><span class="zh">沉穩的權威</span></div><div class="cd-n"><span class="en">Confidence from competence, not volume. In a crisis, our voice gets calmer.</span><span class="zh">來自能力的自信，而非音量。在危機中，我們的聲音更加沉穩。</span></div></div>
@@ -1165,7 +1176,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 13 MOTION ═══ -->
 <div class="S" id="s13">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 13 — Expression</span><span class="zh">第 13 章——表達</span></div><div class="St"><span class="en">Motion & Animation</span><span class="zh">動態與動畫</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s13')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 13</a> — Expression</span><span class="zh">第 13 章——表達</span></div><div class="St"><span class="en">Motion & Animation</span><span class="zh">動態與動畫</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
 <p class="en">Motion feels like a controlled sweep — purposeful, measured, never frenetic.</p><p class="zh">動態感覺像是一次有控制的掃掠——有目的、有節制、從不急躁。</p>
 <h3><span class="en">Four Signature Motions</span><span class="zh">四種標誌性動態</span></h3>
 <div class="mo">
@@ -1264,7 +1275,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 14 STATIONERY ═══ -->
 <div class="S" id="s14">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 14 — Application: Print</span><span class="zh">第 14 章——應用：印刷</span></div><div class="St"><span class="en">Stationery System</span><span class="zh">文具系統</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s14')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 14</a> — Application: Print</span><span class="zh">第 14 章——應用：印刷</span></div><div class="St"><span class="en">Stationery System</span><span class="zh">文具系統</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
 
 <h3><span class="en">Print Production Specs</span><span class="zh">印刷製作規格</span></h3>
 <table class="T"><thead><tr><th><span class="en">Format</span><span class="zh">格式</span></th><th><span class="en">Trim Size</span><span class="zh">裁切尺寸</span></th><th><span class="en">Bleed</span><span class="zh">出血</span></th><th><span class="en">Safe Zone</span><span class="zh">安全區域</span></th><th><span class="en">Resolution</span><span class="zh">解析度</span></th><th><span class="en">Color Mode</span><span class="zh">色彩模式</span></th></tr></thead><tbody>
@@ -1296,7 +1307,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 15 POSTER & SIGNAGE ═══ -->
 <div class="S" id="s15">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 15 — Application: Print</span><span class="zh">第 15 章——應用：印刷</span></div><div class="St"><span class="en">Poster & Environmental Signage</span><span class="zh">海報與環境標識</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s15')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 15</a> — Application: Print</span><span class="zh">第 15 章——應用：印刷</span></div><div class="St"><span class="en">Poster & Environmental Signage</span><span class="zh">海報與環境標識</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
 <p class="en">This template is designed for multi-purpose use — from internal notices and event announcements to thematic campaigns and educational messaging. While the subject matter and visuals may vary, the structure, type system, and overall visual logic help ensure visual consistency across departments.</p><p class="zh">此模板設計為多用途——從內部公告和活動宣傳到主題宣傳和教育訊息。雖然主題和視覺可能不同，但結構、字體系統和整體視覺邏輯有助於確保跨部門的視覺一致性。</p>
 
 
@@ -1409,7 +1420,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 16 UNIFORM ═══ -->
 <div class="S" id="s16">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 16 — Application: Print</span><span class="zh">第 16 章——應用：印刷</span></div><div class="St"><span class="en">Uniform & Wearables</span><span class="zh">制服與穿戴識別</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s16')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 16</a> — Application: Print</span><span class="zh">第 16 章——應用：印刷</span></div><div class="St"><span class="en">Uniform & Wearables</span><span class="zh">制服與穿戴識別</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
 <table class="T"><thead><tr><th><span class="en">Item</span><span class="zh">項目</span></th><th><span class="en">Logo</span><span class="zh">標誌</span></th><th><span class="en">Color</span><span class="zh">色彩</span></th></tr></thead><tbody>
 <tr><td><strong>Polo Shirt</strong></td><td><span class="en">Left chest, 50mm max, white on dark</span><span class="zh">左胸，最大 50mm，深色底白色標誌</span></td><td><span class="en">Black fabric, turquoise piping</span><span class="zh">黑色布料，青綠色滾邊</span></td></tr>
 <tr><td><strong>ID Lanyard</strong></td><td><span class="en">Mark repeated at 20mm</span><span class="zh">圖標 20mm 重複排列</span></td><td><span class="en">Turquoise-copper gradient sublimation</span><span class="zh">青綠-銅色漸層熱昇華</span></td></tr>
@@ -1433,7 +1444,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 17 WEB ═══ -->
 <div class="S" id="s17">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 17 — Application: Digital</span><span class="zh">第 17 章——應用：數位</span></div><div class="St"><span class="en">Web & Landing Page</span><span class="zh">網頁與入口頁面</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>GPS Strategy &amp; DX</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s17')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 17</a> — Application: Digital</span><span class="zh">第 17 章——應用：數位</span></div><div class="St"><span class="en">Web & Landing Page</span><span class="zh">網頁與入口頁面</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>GPS Strategy &amp; DX</b></div></div>
 <div class="mk-r">
   <div class="mk"><div class="mk-h">Desktop</div><div class="wm"><div class="wf"><div class="wb"><div class="wd" style="background:#FF5F57"></div><div class="wd" style="background:#FEBC2E"></div><div class="wd" style="background:#28C840"></div></div><div class="wh"><span>Global Physical Security<br><small style="font-size:5px;font-weight:400;opacity:.7">全球實體安全處</small></span></div><div class="wc"><div class="wl"></div><div class="wl" style="width:80%"></div><div class="wl" style="width:60%"></div><div style="display:flex;gap:4px;margin-top:6px"><div style="flex:1;height:32px;background:var(--turquoise-50);border-radius:3px;border:1px solid var(--turquoise-100)"></div><div style="flex:1;height:32px;background:var(--copper-50);border-radius:3px;border:1px solid var(--copper-100)"></div><div style="flex:1;height:32px;background:var(--purple-50);border-radius:3px;border:1px solid var(--purple-100)"></div></div></div></div></div></div>
   <div class="mk"><div class="mk-h">Mobile</div><div class="mm"><div class="mf"><div class="mn"></div><div class="mh"><span>GPS</span></div><div class="mc"><div class="mcd"></div><div class="mcd"></div><div class="mcd"></div><div class="mcd"></div></div></div></div></div>
@@ -1544,7 +1555,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 18 EMAIL ═══ -->
 <div class="S" id="s18">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 18 — Application: Digital</span><span class="zh">第 18 章——應用：數位</span></div><div class="St"><span class="en">Email & Newsletter</span><span class="zh">電子郵件與電子報</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>GPS Strategy &amp; DX</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s18')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 18</a> — Application: Digital</span><span class="zh">第 18 章——應用：數位</span></div><div class="St"><span class="en">Email & Newsletter</span><span class="zh">電子郵件與電子報</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>GPS Strategy &amp; DX</b></div></div>
 <div class="mk-r">
   <div class="mk"><div class="mk-h">Supply Chain Security</div><div class="em"><div class="ef"><div class="eh"><div class="eh-l">GPS — Supply Chain Security</div><div class="eh-s">Monthly Intelligence Brief</div></div><div class="eb"><span>Supply Chain Security Update</span></div><div class="ey"><div class="el"></div><div class="el" style="width:80%"></div><div class="el" style="width:90%"></div><div class="ec"></div><div class="el" style="width:70%"></div></div><div class="efr"><span>GPS Global Physical Security · Unsubscribe</span></div></div></div></div>
   <div class="mk"><div class="mk-h">AI & DX Navigator</div><div class="em"><div class="ef"><div class="eh" style="background:var(--copper-50);border-color:var(--copper-200)"><div class="eh-l" style="color:var(--copper-700)">GPS — AI & DX Navigator</div><div class="eh-s">Weekly Digest</div></div><div class="eb" style="background:linear-gradient(135deg,var(--copper-600),var(--purple-500))"><span>AI Fluency Update</span></div><div class="ey"><div class="el"></div><div class="el" style="width:70%"></div><div class="ec" style="background:var(--copper-600)"></div></div><div class="efr"><span>GPS Global Physical Security · Unsubscribe</span></div></div></div></div>
@@ -1629,7 +1640,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 19 MOBILE ═══ -->
 <div class="S" id="s19">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 19 — Application: Digital</span><span class="zh">第 19 章——應用：數位</span></div><div class="St"><span class="en">Mobile & LINE OA</span><span class="zh">行動裝置與 LINE 官方帳號</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>GPS Strategy &amp; DX</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s19')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 19</a> — Application: Digital</span><span class="zh">第 19 章——應用：數位</span></div><div class="St"><span class="en">Mobile & LINE OA</span><span class="zh">行動裝置與 LINE 官方帳號</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>GPS Strategy &amp; DX</b></div></div>
 <table class="T"><thead><tr><th><span class="en">Element</span><span class="zh">元素</span></th><th><span class="en">Spec</span><span class="zh">規格</span></th></tr></thead><tbody>
 <tr><td>Profile Image</td><td><span class="en">Logo mark on turquoise-50, 640×640px</span><span class="zh">標誌圖標置於 turquoise-50 底色，640×640px</span></td></tr>
 <tr><td>Rich Menu</td><td><span class="en">2500×1686px, 6-cell, turquoise-700 BG, white vectors</span><span class="zh">2500×1686px，6 格，turquoise-700 背景，白色向量圖</span></td></tr>
@@ -1688,7 +1699,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 20 DIGITAL SIGNAGE ═══ -->
 <div class="S" id="s20">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 20 — Application: Digital</span><span class="zh">第 20 章——應用：數位</span></div><div class="St"><span class="en">Digital Signage</span><span class="zh">數位看板</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s20')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 20</a> — Application: Digital</span><span class="zh">第 20 章——應用：數位</span></div><div class="St"><span class="en">Digital Signage</span><span class="zh">數位看板</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
 <table class="T"><thead><tr><th><span class="en">Property</span><span class="zh">屬性</span></th><th><span class="en">Value</span><span class="zh">值</span></th></tr></thead><tbody>
 <tr><td>Resolution</td><td>1920×1080 (landscape) or 1080×1920 (portrait)</td></tr>
 <tr><td>Safe area</td><td><span class="en">5% margin all edges</span><span class="zh">四邊 5% 邊距</span></td></tr>
@@ -1732,7 +1743,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 21 CAMPAIGN MOODS ═══ -->
 <div class="S" id="s21">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 21 — Creative Variations</span><span class="zh">第 21 章——創意變體</span></div><div class="St"><span class="en">Campaign Moods</span><span class="zh">主題活動視覺情緒</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>GPS Strategy &amp; DX</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s21')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 21</a> — Creative Variations</span><span class="zh">第 21 章——創意變體</span></div><div class="St"><span class="en">Campaign Moods</span><span class="zh">主題活動視覺情緒</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>GPS Strategy &amp; DX</b></div></div>
 <p class="en">GPS supports distinct campaign moods while maintaining core identity. Logo, typography, and grid never change — only gradient, photography direction, and accent shift.</p><p class="zh">GPS 在維持核心識別的同時支持不同的宣傳情緒。標誌、字體排版和網格永遠不變——僅漸層、攝影方向和點綴色會調整。</p>
 <div class="vg">
   <div class="vc"><div class="vv" style="background:linear-gradient(135deg,#26A7B0,#CAC3D2)"><div style="font-size:11px;font-weight:900;color:#fff;text-align:center;line-height:1.3">Designed<br>Safety</div></div><div class="vi"><h5><span class="en">Standard — Brand Forward</span><span class="zh">標準——品牌導向</span></h5><p><span class="en">Default. Full turquoise-copper. Calm, professional.</span><span class="zh">預設。完整青綠-銅色。沉穩、專業。</span></p><div class="vt"><span>Primary Gradient</span><span>Evergreen</span></div></div></div>
@@ -1840,7 +1851,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 22 SEASONAL ═══ -->
 <div class="S" id="s22">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 22 — Creative Variations</span><span class="zh">第 22 章——創意變體</span></div><div class="St"><span class="en">Seasonal & Event Adaptations</span><span class="zh">季節與活動視覺變體</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>GPS Strategy &amp; DX</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s22')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 22</a> — Creative Variations</span><span class="zh">第 22 章——創意變體</span></div><div class="St"><span class="en">Seasonal & Event Adaptations</span><span class="zh">季節與活動視覺變體</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>GPS Strategy &amp; DX</b></div></div>
 <table class="T"><thead><tr><th><span class="en">Season / Event</span><span class="zh">季節 / 活動</span></th><th><span class="en">Gradient</span><span class="zh">漸層</span></th><th><span class="en">Photography</span><span class="zh">攝影</span></th><th><span class="en">Accent</span><span class="zh">點綴色</span></th></tr></thead><tbody>
 <tr><td><strong>Spring / New Year</strong></td><td>Green-turquoise</td><td>Nature + architecture</td><td>Green-400</td></tr>
 <tr><td><strong>Summer / Safety Month</strong></td><td>Standard</td><td>Outdoor safety, hydration</td><td>Turquoise-400</td></tr>
@@ -1859,7 +1870,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 23 CO-BRANDING ═══ -->
 <div class="S" id="s23">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 23 — Governance</span><span class="zh">第 23 章——治理</span></div><div class="St"><span class="en">Co-branding & Partnership</span><span class="zh">聯合品牌與合作</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>GPS Strategy</b> · <span class="en">Approver: GPS Director</span><span class="zh">核准：GPS Director</span></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s23')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 23</a> — Governance</span><span class="zh">第 23 章——治理</span></div><div class="St"><span class="en">Co-branding & Partnership</span><span class="zh">聯合品牌與合作</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>GPS Strategy</b> · <span class="en">Approver: GPS Director</span><span class="zh">核准：GPS Director</span></div></div>
 
 <h3><span class="en">Organizational Logo Architecture</span><span class="zh">組織標誌架構</span></h3>
 <p class="en">GSM (Global Security Management) maintains its own logo as the parent organization. Three divisions — <strong>GPS</strong> (Global Physical Security), <strong>ITS</strong> (Information Technology Security), and <strong>PIP</strong> (Personal Information Protection) — each operate their own distinct logos under the GSM umbrella. This brand bible governs the GPS logo exclusively. GPS's brand identity covers all 9 regions and 16+ legal entities. Regional supplements adapt language — they do not create sub-brands or alternative visual identities.</p><p class="zh">GSM（全球安全管理處）以母組織身份維護自有標誌。三個部門——<strong>GPS</strong>（全球實體安全處）、<strong>ITS</strong>（資訊技術安全處）和 <strong>PIP</strong>（個人資料保護處）——各自在 GSM 旗下運營獨立標誌。本品牌聖經僅規範 GPS 標誌。GPS 的品牌識別涵蓋所有 9 個區域和 16+ 法律實體。區域補充僅調整語言——不創建子品牌或替代視覺識別。</p>
@@ -1908,7 +1919,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 24 BRAND PERFORMANCE ═══ -->
 <div class="S" id="s24">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 24 — Governance</span><span class="zh">第 24 章——治理</span></div><div class="St"><span class="en">Brand Performance Metrics</span><span class="zh">品牌績效指標</span></div><div class="So">Owner: <b>GPS Strategy & DX</b> · <span class="en">Approver: GPS Director</span><span class="zh">核准：GPS Director</span></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s24')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 24</a> — Governance</span><span class="zh">第 24 章——治理</span></div><div class="St"><span class="en">Brand Performance Metrics</span><span class="zh">品牌績效指標</span></div><div class="So">Owner: <b>GPS Strategy & DX</b> · <span class="en">Approver: GPS Director</span><span class="zh">核准：GPS Director</span></div></div>
 <p class="en">A brand standard without measurement is a preference document.</p><p class="zh">沒有衡量指標的品牌標準只是一份偏好文件。</p>
 <div class="cg c3">
   <div class="cd"><div class="cd-l"><span class="en">Pillar 01</span><span class="zh">支柱 01</span></div><div class="cd-v"><span class="en">Perception</span><span class="zh">認知度</span></div><div class="cd-n"><span class="en">Do people understand GPS's role? Unaided recall, sentiment, language analysis.</span><span class="zh">人們了解 GPS 的角色嗎？無提示回想、情感分析、語言分析。</span></div></div>
@@ -1957,7 +1968,7 @@ body.lang-zh{font-family:var(--fz),var(--fe);line-height:1.85}
 
 <!-- ═══ 25 TEMPLATES ═══ -->
 <div class="S" id="s25">
-<div class="Sh"><div class="Sn"><span class="en">Chapter 25 — Governance</span><span class="zh">第 25 章——治理</span></div><div class="St"><span class="en">Templates & Toolkit</span><span class="zh">模板與工具包</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
+<div class="Sh"><div class="Sn"><span class="en"><a onclick="go('s25')" style="color:var(--turquoise);cursor:pointer;text-decoration:underline;text-decoration-style:dotted">Chapter 25</a> — Governance</span><span class="zh">第 25 章——治理</span></div><div class="St"><span class="en">Templates & Toolkit</span><span class="zh">模板與工具包</span></div><div class="So"><span class="en">Owner:</span><span class="zh">負責：</span> <b>MarCom Team</b></div></div>
 <table class="T"><thead><tr><th><span class="en">Template</span><span class="zh">模板</span></th><th><span class="en">Format</span><span class="zh">格式</span></th><th><span class="en">Use Case</span><span class="zh">使用場景</span></th></tr></thead><tbody>
 <tr><td>Image Poster</td><td>Figma + Canva</td><td>Campaigns, event promotion</td></tr>
 <tr><td>Timeline Poster</td><td>Figma + Canva</td><td>Schedules, agendas, training</td></tr>
@@ -2354,6 +2365,66 @@ function go(id){
 }
 // Restore saved language
 (function(){const saved=localStorage.getItem('gps-lang');if(saved)setLang(saved)})();
+
+// F3: Click any <code> to copy its text
+document.addEventListener('click',function(e){
+  if(e.target.tagName==='CODE'){
+    const t=e.target.textContent.trim();
+    navigator.clipboard.writeText(t).then(()=>{
+      e.target.classList.add('copied');
+      setTimeout(()=>e.target.classList.remove('copied'),1200);
+    });
+  }
+});
 </script>
+
+<div id="ai-prompt-panel" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background:rgba(10,26,34,.7);padding:24px;overflow-y:auto" onclick="if(event.target===this)this.style.display='none'">
+  <div style="max-width:700px;margin:40px auto;background:#fff;border-radius:12px;padding:24px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.3)">
+    <button onclick="document.getElementById('ai-prompt-panel').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:24px;cursor:pointer;color:var(--g400)">&times;</button>
+    <div style="font-size:11px;font-weight:700;color:var(--turquoise);letter-spacing:.08em;margin-bottom:4px">AI BRAND CONTEXT</div>
+    <div style="font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px"><span class="en">Copy GPS Brand Prompt</span><span class="zh">複製 GPS 品牌提示詞</span></div>
+    <p style="font-size:12px;color:var(--g500);margin-bottom:12px"><span class="en">Paste this into Claude, ChatGPT, or any AI tool to get on-brand output instantly. Contains all colors, fonts, voice rules, and layout specs.</span><span class="zh">將此貼入 Claude、ChatGPT 或任何 AI 工具，即可立即獲得符合品牌的輸出。包含所有色彩、字體、語調規則和版面規格。</span></p>
+    <textarea id="ai-prompt-text" readonly style="width:100%;height:320px;font-family:var(--fm);font-size:10px;line-height:1.6;padding:12px;border:1px solid var(--g200);border-radius:6px;background:var(--g50);color:var(--ink);resize:vertical">You are designing materials for GPS (Global Physical Security), a division of TSMC's Global Security Management (GSM). Follow these brand rules strictly.
+
+COLORS:
+- Primary: Turquoise #26A7B0, Copper #CAC3D2
+- Secondary: Purple #8C9FCB, Green #8CC897, Orange #F6AD90
+- Neutral: Black #0A1A22, White #FAFBFC
+- Ratio: Primary 30-80%, Neutral 10-60%, Secondary 10-60%
+- Semantic: Success #2D9F5B, Warning #E5993E, Danger #D94F4F
+
+TYPOGRAPHY:
+- English: Lato (Light 300, Regular 400, Bold 700)
+- Chinese: Noto Sans TC (Light 300, Regular 400, Medium 500, Bold 700)
+- Fallback: Trebuchet MS, Verdana
+- CJK line-height: 1.85. EN line-height: 1.6
+
+VOICE & TONE:
+- Warm, protective, human-centered. Never authoritarian or surveillance-language.
+- Use: protect, support, enable, design, collaborate, care, guide, empower, trust
+- Avoid: enforce, mandate, police, surveil, comply (imperative), zero tolerance
+- Core belief: "When people feel genuinely safe — not just at work, but across their whole lives — they are free to focus, create, and contribute at their highest level."
+
+POSTER LAYOUT:
+- Three zones: Image (top) / Text (middle) / Footer (bottom)
+- Ratio options: 60/25/15 or 30/50/20 or 20/60/20
+- 12-column grid, 16px gutters, 24px margins
+- Max 3 font sizes per poster. Left-align body text.
+
+LOGO:
+- Checkerboard swoosh mark + bilingual text lockup
+- Clearspace: minimum 1x mark height on all sides
+- Minimum size: 36px height (digital), 10mm (print)
+- Never stretch, rotate, recolor, outline, or apply gradient to logo
+
+EMAIL (Outlook-safe):
+- Max width 600px. Tables only, no flexbox/grid. Inline CSS only.
+- System fonts (Trebuchet MS, Verdana). No base64 images.
+- Under 102KB total. VML fallback for buttons.
+
+FIVE BRAND PILLARS: Designed Safety, Journey Protection, Family Extension, Living Culture, Transparent Technology</textarea>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('ai-prompt-text').value);this.textContent=curLang==='zh'?'✓ 已複製':'✓ Copied';setTimeout(()=>this.textContent=curLang==='zh'?'複製提示詞':'Copy Prompt',2000)" style="margin-top:10px;padding:10px 24px;background:var(--turquoise);color:#fff;border:none;border-radius:6px;font-weight:700;cursor:pointer;font-size:13px"><span class="en">Copy Prompt</span><span class="zh">複製提示詞</span></button>
+  </div>
+</div>
 </body>
 </html>
