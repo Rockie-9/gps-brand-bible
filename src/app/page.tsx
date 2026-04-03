@@ -5,6 +5,7 @@ import Sidebar from '@/components/Sidebar';
 import TopBar from '@/components/TopBar';
 import AIPromptPanel from '@/components/AIPromptPanel';
 import AIComplianceChecker from '@/components/AIComplianceChecker';
+import AIBrandAssistant from '@/components/AIBrandAssistant';
 import { sectionIdToSlug } from '@/lib/navigation';
 
 const contentComponents: Record<string, () => Promise<{ default: ComponentType }>> = {
@@ -142,6 +143,7 @@ export default function Home() {
 
       <AIPromptPanel isOpen={promptOpen} onClose={() => setPromptOpen(false)} />
       <AIComplianceChecker isOpen={complianceOpen} onClose={() => setComplianceOpen(false)} />
+      <AIBrandAssistant isOpen={assistantOpen} onClose={() => setAssistantOpen(false)} />
 
       <div
         className="fixed bottom-4 right-4 px-3 py-1.5 rounded-md text-[10px] pointer-events-none z-50"
