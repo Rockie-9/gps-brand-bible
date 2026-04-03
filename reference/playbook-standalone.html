@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPS Brand Quality Playbook</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+:root{
+  --turquoise:#26A7B0;--copper:#CAC3D2;--purple:#8C9FCB;--green:#8CC897;--orange:#F6AD90;
+  --ink:#0A1A22;--white:#fff;--bg:#F8F9FA;--g50:#F0F4F5;--g200:#E2E8EB;--g400:#8A969B;--g600:#4A5C62;
+  --fe:'Lato','Trebuchet MS',Verdana,sans-serif;--fz:'Noto Sans TC','Microsoft JhengHei',sans-serif;
+  --success:#2D8F5E;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--fe);background:var(--bg);color:var(--ink);line-height:1.7;font-size:14px}
+.page{max-width:880px;margin:0 auto;padding:40px 24px}
+
+/* Cover */
+.cover{background:var(--ink);border-radius:16px;padding:48px 40px;margin-bottom:40px;position:relative;overflow:hidden}
+.cover::after{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;background:linear-gradient(135deg,var(--turquoise),var(--copper));border-radius:50%;opacity:.08}
+.cover .label{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--turquoise);margin-bottom:16px}
+.cover h1{font-size:28px;font-weight:900;color:var(--white);line-height:1.2;margin-bottom:8px}
+.cover .sub{font-size:14px;color:rgba(255,255,255,.5);max-width:560px;margin-bottom:24px}
+.cover .team{display:flex;gap:12px;flex-wrap:wrap}
+.cover .tm{display:flex;align-items:center;gap:8px;padding:8px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03)}
+.tm-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.tm-info{font-size:11px;color:rgba(255,255,255,.7)}
+.tm-info strong{color:var(--white);display:block;font-size:12px}
+.dot-dh{background:#E88070}.dot-st{background:var(--turquoise)}.dot-pm{background:var(--purple)}
+
+/* Section */
+.sec{margin-bottom:36px}
+.sec h2{font-size:20px;font-weight:900;margin-bottom:4px;display:flex;align-items:baseline;gap:8px}
+.sec h2 .num{font-size:12px;font-weight:700;color:var(--turquoise);letter-spacing:.08em}
+.sec h2 .zh{font-family:var(--fz);font-size:14px;font-weight:500;color:var(--g400)}
+.sec p{color:var(--g600);margin-bottom:12px;max-width:680px}
+.sec h3{font-size:15px;font-weight:700;margin:20px 0 8px}
+
+/* Cards */
+.cards{display:grid;gap:12px;margin:16px 0}
+.c2{grid-template-columns:repeat(2,1fr)}
+.c3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--white);border:1px solid var(--g200);border-radius:10px;padding:20px}
+.card .card-tag{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.card h4{font-size:14px;font-weight:700;margin-bottom:6px}
+.card p{font-size:12px;color:var(--g600);margin:0;line-height:1.6}
+.card .card-ex{margin-top:10px;padding-top:10px;border-top:1px solid var(--g200);font-size:11px;color:var(--g400)}
+.card .card-ex strong{color:var(--g600)}
+.tag-dh{color:#E88070}.tag-st{color:var(--turquoise)}.tag-pm{color:var(--purple)}
+
+/* Flow — simplified */
+.flow{margin:16px 0}
+.flow-step{display:flex;align-items:flex-start;gap:16px;padding:14px 0;border-bottom:1px solid var(--g200)}
+.flow-step:last-child{border-bottom:none}
+.flow-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;flex-shrink:0;color:var(--white)}
+.flow-body{flex:1}
+.flow-body .fb-title{font-size:13px;font-weight:700;margin-bottom:2px}
+.flow-body .fb-who{font-size:10px;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:100px;display:inline-block;margin-bottom:4px}
+.flow-body .fb-desc{font-size:12px;color:var(--g600)}
+.who-st{background:rgba(38,167,176,.1);color:var(--turquoise)}
+.who-pm{background:rgba(140,159,203,.1);color:var(--purple)}
+.who-dh{background:rgba(232,128,112,.1);color:#C05040}
+
+/* Quick check */
+.qc{background:var(--white);border:1px solid var(--g200);border-radius:10px;padding:20px;margin:12px 0}
+.qc .qc-title{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;color:var(--turquoise)}
+.qc-items{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+.qi{display:flex;align-items:flex-start;gap:6px;font-size:12px;color:var(--g600)}
+.qi::before{content:'○';color:var(--turquoise);flex-shrink:0}
+.qi .ref{font-size:9px;color:var(--turquoise);font-weight:700;margin-left:2px}
+
+/* Tip box */
+.tip{background:rgba(38,167,176,.05);border-left:3px solid var(--turquoise);border-radius:0 8px 8px 0;padding:14px 18px;margin:12px 0;font-size:12px;color:var(--g600)}
+.tip strong{color:var(--ink)}
+.tip-warm{background:rgba(246,173,144,.06);border-color:var(--orange)}
+.tip-warm strong{color:#C07A5C}
+
+/* Table */
+.T{width:100%;border-collapse:collapse;font-size:12px;margin:12px 0}
+.T th{text-align:left;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--g400);padding:8px 10px;border-bottom:2px solid var(--g200);background:var(--g50)}
+.T td{padding:8px 10px;border-bottom:1px solid var(--g200);color:var(--g600);vertical-align:top}
+.T td:first-child{font-weight:600;color:var(--ink)}
+.T code{font-family:'Courier New',monospace;font-size:11px;background:var(--g50);padding:1px 5px;border-radius:3px}
+
+/* Fix-it */
+.fix-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.fix{background:var(--white);border:1px solid var(--g200);border-radius:10px;padding:16px;text-align:center}
+.fix .fix-emoji{font-size:24px;margin-bottom:8px}
+.fix h4{font-size:13px;font-weight:700;margin-bottom:4px}
+.fix p{font-size:11px;color:var(--g600);margin:0}
+.fix .fix-action{font-size:10px;font-weight:700;color:var(--ink);margin-top:8px;padding-top:8px;border-top:1px solid var(--g200)}
+
+/* Print */
+@media print{
+  body{font-size:11pt;background:#fff}
+  .cover{background:#0A1A22!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{padding:0}
+  .sec{page-break-inside:avoid}
+  @page{margin:18mm;size:A4}
+}
+@media(max-width:768px){
+  .c2,.c3,.fix-cards{grid-template-columns:1fr}
+  .qc-items{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- COVER -->
+<div class="cover">
+  <div class="label">GPS Brand Bible v3.1 — Team Playbook</div>
+  <h1>How We Keep Our<br>Brand On Track</h1>
+  <div class="sub">A simple guide for our three-person team. Who does what, how we check our work, and how we fix things when they're off.</div>
+  <div class="team">
+    <div class="tm"><div class="tm-dot dot-dh"></div><div class="tm-info"><strong>Division Head</strong>Strategic direction & sign-off</div></div>
+    <div class="tm"><div class="tm-dot dot-st"></div><div class="tm-info"><strong>Strategy & Transformation</strong>Briefs, reviews & brand standards</div></div>
+    <div class="tm"><div class="tm-dot dot-pm"></div><div class="tm-info"><strong>Promotion</strong>Design, production & publishing</div></div>
+  </div>
+</div>
+
+<!-- 01 HOW WE WORK -->
+<div class="sec">
+  <h2><span class="num">01</span> How We Work Together <span class="zh">我們怎麼合作</span></h2>
+  <p>Three simple rules:</p>
+  <div class="cards c3">
+    <div class="card" style="border-top:3px solid var(--turquoise)">
+      <h4>Sort first, then start</h4>
+      <p>Before making anything, decide how important it is. Big decisions go to the Division Head. Regular work stays between Strategy and Promotion.</p>
+    </div>
+    <div class="card" style="border-top:3px solid var(--purple)">
+      <h4>Use the checklist, not guesswork</h4>
+      <p>The Brand Bible tells us what's right and wrong. When checking work, refer to the specific chapter — not personal preference.</p>
+    </div>
+    <div class="card" style="border-top:3px solid var(--orange)">
+      <h4>Protect the Director's time</h4>
+      <p>Only strategic items need the Division Head. Routine work flows between Strategy and Promotion. If in doubt, ask Strategy first.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 02 WHO DOES WHAT -->
+<div class="sec">
+  <h2><span class="num">02</span> Who Does What <span class="zh">誰負責什麼</span></h2>
+  <div class="cards" style="grid-template-columns:1fr">
+    <div class="card">
+      <div class="card-tag tag-dh">Division Head 處長</div>
+      <h4>Sets the direction</h4>
+      <p>Approves big-picture decisions: brand messaging changes, co-branding partnerships, new site brand launch, Director-level messages. Reviews the annual brand health report in Q4.</p>
+      <div class="card-ex"><strong>In practice:</strong> You'll see strategic briefs from Strategy a few times per quarter. One round of feedback, then it ships.</div>
+    </div>
+    <div class="card">
+      <div class="card-tag tag-st">Strategy & Transformation 策略轉型</div>
+      <h4>Writes the brief, guards the standard</h4>
+      <p>Writes content briefs. Reviews all campaign-level work for message alignment. Maintains the Brand Bible. Runs quarterly check-ups. Decides which tier a request belongs to.</p>
+      <div class="card-ex"><strong>In practice:</strong> Every campaign or new content piece starts with your brief. You review Promotion's work against the Brand Bible before it goes live.</div>
+    </div>
+    <div class="card">
+      <div class="card-tag tag-pm">Promotion 推廣</div>
+      <h4>Makes it real</h4>
+      <p>Designs and produces all visual materials. Manages templates. Publishes to platforms. For routine items (posters from templates, standard emails), self-checks against the Brand Bible and publishes directly.</p>
+      <div class="card-ex"><strong>In practice:</strong> You bring the brand to life. For everyday items, the Brand Bible checklist is your approval. For campaigns, Strategy reviews before you publish.</div>
+    </div>
+  </div>
+</div>
+
+<!-- 03 THREE TYPES OF WORK -->
+<div class="sec">
+  <h2><span class="num">03</span> Three Types of Work <span class="zh">三種工作類型</span></h2>
+  <p>Not everything needs the same process. Sort each request into one of these:</p>
+  <div class="cards c3">
+    <div class="card" style="border-top:3px solid #E88070">
+      <div class="card-tag tag-dh">Big Decisions</div>
+      <h4>Division Head reviews</h4>
+      <p>Brand messaging changes, Director messages, co-branding, new site launch, crisis response.</p>
+      <div class="card-ex"><strong>Timeline:</strong> ~10 working days<br><strong>Flow:</strong> Strategy briefs → Division Head approves direction → Promotion produces → Strategy checks → Division Head signs off → publish</div>
+    </div>
+    <div class="card" style="border-top:3px solid var(--turquoise)">
+      <div class="card-tag tag-st">Campaigns & Content</div>
+      <h4>Strategy reviews</h4>
+      <p>Newsletters, awareness campaigns, new poster designs, landing page updates, training decks, digital signage, LINE OA learning & news pushes.</p>
+      <div class="card-ex"><strong>Timeline:</strong> ~5 working days<br><strong>Flow:</strong> Strategy briefs → Promotion produces → Promotion self-checks visuals → Strategy reviews message → publish</div>
+    </div>
+    <div class="card" style="border-top:3px solid var(--purple)">
+      <div class="card-tag tag-pm">Everyday Items</div>
+      <h4>Promotion self-checks</h4>
+      <p>Posters from approved templates, routine emails, shift briefing cards, minor text updates, asset re-exports.</p>
+      <div class="card-ex"><strong>Timeline:</strong> ~2 working days<br><strong>Flow:</strong> Promotion produces → checks against Brand Bible → publish</div>
+    </div>
+  </div>
+  <div class="tip"><strong>Not sure which type?</strong> Default to the higher one. If you're unsure whether something is "Everyday" or "Campaign" — treat it as a Campaign. Strategy will re-classify if needed.</div>
+  <div class="tip tip-warm"><strong>About LINE OA (@918rtiju):</strong> LINE is not an official company channel — it operates outside the firewall. We use it only to push learning content and news to colleagues (non-corporate information). Because it represents GPS brand externally, LINE content always goes through Strategy review before sending. No corporate-sensitive or policy-level content via LINE.</div>
+</div>
+
+<!-- 04 STEP BY STEP -->
+<div class="sec">
+  <h2><span class="num">04</span> Step by Step <span class="zh">步驟流程</span></h2>
+
+  <h3>Big Decisions (Division Head reviews)</h3>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num" style="background:var(--turquoise)">1</div><div class="flow-body"><span class="fb-who who-st">Strategy</span><div class="fb-title">Write the brief</div><div class="fb-desc">What's the goal? Who's the audience? What should the message say? Which brand pillar does it connect to?</div></div></div>
+    <div class="flow-step"><div class="flow-num" style="background:#E88070">2</div><div class="flow-body"><span class="fb-who who-dh">Division Head</span><div class="fb-title">Approve the direction</div><div class="fb-desc">Review the brief. Green-light the approach. Flag anything sensitive.</div></div></div>
+    <div class="flow-step"><div class="flow-num" style="background:var(--purple)">3</div><div class="flow-body"><span class="fb-who who-pm">Promotion</span><div class="fb-title">Design & build</div><div class="fb-desc">Create the deliverable following the approved brief and Brand Bible guidelines.</div></div></div>
+    <div class="flow-step"><div class="flow-num" style="background:var(--turquoise)">4</div><div class="flow-body"><span class="fb-who who-st">Strategy</span><div class="fb-title">Check the message</div><div class="fb-desc">Does the message match the brief? Right tone? Right vocabulary? Run the message checklist.</div></div></div>
+    <div class="flow-step"><div class="flow-num" style="background:#E88070">5</div><div class="flow-body"><span class="fb-who who-dh">Division Head</span><div class="fb-title">Final sign-off</div><div class="fb-desc">One round of feedback. Then it's approved to publish.</div></div></div>
+    <div class="flow-step"><div class="flow-num" style="background:var(--purple)">6</div><div class="flow-body"><span class="fb-who who-pm">Promotion</span><div class="fb-title">Publish & archive</div><div class="fb-desc">Deploy to channels. Save source files.</div></div></div>
+  </div>
+
+  <h3>Campaigns & Content (Strategy reviews)</h3>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num" style="background:var(--turquoise)">1</div><div class="flow-body"><span class="fb-who who-st">Strategy</span><div class="fb-title">Write the brief</div><div class="fb-desc">Campaign context, audience, timeline, and which Brand Bible chapters to follow.</div></div></div>
+    <div class="flow-step"><div class="flow-num" style="background:var(--purple)">2</div><div class="flow-body"><span class="fb-who who-pm">Promotion</span><div class="fb-title">Design & build</div><div class="fb-desc">Create the deliverable. Run the visual checklist before submitting.</div></div></div>
+    <div class="flow-step"><div class="flow-num" style="background:var(--turquoise)">3</div><div class="flow-body"><span class="fb-who who-st">Strategy</span><div class="fb-title">Review</div><div class="fb-desc">Check message alignment. Approve or send back with specific notes (max 2 rounds).</div></div></div>
+    <div class="flow-step"><div class="flow-num" style="background:var(--purple)">4</div><div class="flow-body"><span class="fb-who who-pm">Promotion</span><div class="fb-title">Publish & log</div><div class="fb-desc">Deploy. Record in content tracker.</div></div></div>
+  </div>
+
+  <h3>Everyday Items (Promotion self-checks)</h3>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num" style="background:var(--purple)">1</div><div class="flow-body"><span class="fb-who who-pm">Promotion</span><div class="fb-title">Produce</div><div class="fb-desc">Use an approved template. Follow the Brand Bible.</div></div></div>
+    <div class="flow-step"><div class="flow-num" style="background:var(--purple)">2</div><div class="flow-body"><span class="fb-who who-pm">Promotion</span><div class="fb-title">Self-check & publish</div><div class="fb-desc">Run the visual checklist. If everything checks out, publish directly.</div></div></div>
+  </div>
+</div>
+
+<!-- 05 TWO SIMPLE CHECKLISTS -->
+<div class="sec">
+  <h2><span class="num">05</span> Two Simple Checklists <span class="zh">兩個簡單檢查表</span></h2>
+  <p>Every piece of work gets checked against one or both of these. Each item points to the Brand Bible chapter where you can find the detailed rule.</p>
+
+  <div class="qc">
+    <div class="qc-title">Message Check (Strategy runs this)</div>
+    <div class="qc-items">
+      <div class="qi">Connects to our Core Belief or a Brand Pillar <span class="ref">Ch 01</span></div>
+      <div class="qi">Tone fits the situation <span class="ref">Ch 12</span></div>
+      <div class="qi">Language suits the audience <span class="ref">Ch 12</span></div>
+      <div class="qi">Uses GPS vocabulary, avoids banned words <span class="ref">Ch 12</span></div>
+      <div class="qi">Fits the current narrative phase <span class="ref">Ch 01</span></div>
+      <div class="qi">Right language version for the region <span class="ref">App L</span></div>
+    </div>
+  </div>
+
+  <div class="qc">
+    <div class="qc-title">Visual Check (Promotion runs this)</div>
+    <div class="qc-items">
+      <div class="qi">Correct logo version with enough clear space <span class="ref">Ch 03</span></div>
+      <div class="qi">Colors from the approved palette <span class="ref">Ch 04</span></div>
+      <div class="qi">Right fonts: Noto Sans TC + Lato, max 3 sizes <span class="ref">Ch 09</span></div>
+      <div class="qi">Graphics from brand library, not overloaded <span class="ref">Ch 10</span></div>
+      <div class="qi">Photos follow our style guide <span class="ref">Ch 11</span></div>
+      <div class="qi">Text is readable (contrast OK) <span class="ref">Ch 08</span></div>
+      <div class="qi">Works on the target platform <span class="ref">Ch 14–20</span></div>
+      <div class="qi">Bilingual: EN + zh-TW at minimum <span class="ref">App L</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 06 WHEN SOMETHING'S OFF -->
+<div class="sec">
+  <h2><span class="num">06</span> When Something's Off <span class="zh">需要修正的時候</span></h2>
+  <p>Mistakes happen — especially when we're moving fast. The goal isn't blame; it's fixing it quickly and learning from it.</p>
+  <div class="fix-cards">
+    <div class="fix" style="border-top:3px solid var(--green)">
+      <div class="fix-emoji">🔧</div>
+      <h4>Small Fix</h4>
+      <p>Wrong font weight, color slightly off, spacing issue</p>
+      <div class="fix-action">Promotion fixes it within 2 days. Done.</div>
+    </div>
+    <div class="fix" style="border-top:3px solid var(--orange)">
+      <div class="fix-emoji">🔄</div>
+      <h4>Needs a Redo</h4>
+      <p>Wrong logo version, missing bilingual text, tone doesn't match</p>
+      <div class="fix-action">Promotion revises within 5 days. Strategy notes it for the quarterly review.</div>
+    </div>
+    <div class="fix" style="border-top:3px solid #E88070">
+      <div class="fix-emoji">⏸️</div>
+      <h4>Pause & Discuss</h4>
+      <p>Unauthorized co-branding, off-message content, regulatory risk (e.g. missing OSHA-required ES text)</p>
+      <div class="fix-action">Pull it down. Strategy + Division Head discuss within 48 hours. Figure out why, then fix the process so it doesn't recur.</div>
+    </div>
+  </div>
+  <div class="tip"><strong>The pattern to watch for:</strong> If the same type of issue shows up 3+ times in a quarter, it's not a people problem — it's a process problem. Strategy should update the template, the checklist, or the Brand Bible section to prevent it.</div>
+</div>
+
+<!-- 07 REGULAR CHECK-UPS -->
+<div class="sec">
+  <h2><span class="num">07</span> Regular Check-Ups <span class="zh">定期檢查</span></h2>
+  <table class="T">
+    <thead><tr><th>What</th><th>When</th><th>Who</th><th>Output</th></tr></thead>
+    <tbody>
+      <tr><td>Self-check before publishing</td><td>Every item</td><td>Promotion</td><td>Visual checklist completed</td></tr>
+      <tr><td>Campaign review</td><td>Each campaign</td><td>Strategy</td><td>Message + visual check signed off</td></tr>
+      <tr><td>Quarterly check-up</td><td>Every quarter</td><td>Strategy</td><td>Sample 20 recent items. Score them. Share "Top 3 things to improve" with the team.</td></tr>
+      <tr><td>Annual brand health review</td><td>Q4</td><td>Strategy → Division Head</td><td>Full report: How are people perceiving GPS? Are we consistent? What should evolve next year?</td></tr>
+      <tr><td>Brand Bible updates</td><td>As needed</td><td>Strategy</td><td>Small fixes: Strategy updates directly. Big changes: Division Head approves first.</td></tr>
+    </tbody>
+  </table>
+  <div class="tip"><strong>The quarterly "Top 3" is the most important output.</strong> It turns patterns into fixes. If posters keep using the wrong color, update the template. If newsletters drift off-tone, refine the brief template. Close the loop before next quarter.</div>
+</div>
+
+<!-- 08 QUICK LOOKUP -->
+<div class="sec">
+  <h2><span class="num">08</span> Quick Lookup <span class="zh">快速查詢</span></h2>
+  <p>Not sure what type something is? Find it here.</p>
+  <table class="T">
+    <thead><tr><th>I need to...</th><th>Type</th><th>Who starts it</th><th>Who approves</th><th>Time</th></tr></thead>
+    <tbody>
+      <tr><td>Draft a Director message</td><td><code>Big</code></td><td>Strategy</td><td>Division Head</td><td>~10d</td></tr>
+      <tr><td>Launch a new site's brand</td><td><code>Big</code></td><td>Strategy</td><td>Division Head</td><td>~10d</td></tr>
+      <tr><td>Co-brand with a partner</td><td><code>Big</code></td><td>Strategy</td><td>Division Head</td><td>~10d</td></tr>
+      <tr><td>Change brand messaging</td><td><code>Big</code></td><td>Strategy</td><td>Division Head</td><td>~10d</td></tr>
+      <tr><td>Create a newsletter issue</td><td><code>Campaign</code></td><td>Strategy</td><td>Strategy</td><td>~5d</td></tr>
+      <tr><td>Run an awareness campaign</td><td><code>Campaign</code></td><td>Strategy</td><td>Strategy</td><td>~5d</td></tr>
+      <tr><td>Design a new poster series</td><td><code>Campaign</code></td><td>Strategy</td><td>Strategy</td><td>~5d</td></tr>
+      <tr><td>Update the landing page</td><td><code>Campaign</code></td><td>Strategy</td><td>Strategy</td><td>~5d</td></tr>
+      <tr><td>Create a training deck</td><td><code>Campaign</code></td><td>Strategy</td><td>Strategy</td><td>~5d</td></tr>
+      <tr><td>Push content via LINE OA</td><td><code>Campaign</code></td><td>Strategy</td><td>Strategy</td><td>~5d</td></tr>
+      <tr><td>Refresh digital signage</td><td><code>Campaign</code></td><td>Strategy</td><td>Strategy</td><td>~5d</td></tr>
+      <tr><td>Make a poster from a template</td><td><code>Everyday</code></td><td>Promotion</td><td>Promotion (self)</td><td>~2d</td></tr>
+      <tr><td>Send a routine email</td><td><code>Everyday</code></td><td>Promotion</td><td>Promotion (self)</td><td>~2d</td></tr>
+      <tr><td>Prepare shift briefing cards</td><td><code>Everyday</code></td><td>Promotion</td><td>Promotion (self)</td><td>~2d</td></tr>
+      <tr><td>Fix a Brand Bible typo</td><td><code>—</code></td><td>Strategy</td><td>Strategy (self)</td><td>—</td></tr>
+      <tr><td>Add a new Brand Bible chapter</td><td><code>Big</code></td><td>Strategy</td><td>Division Head</td><td>~10d</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- FOOTER -->
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid var(--g200);font-size:11px;color:var(--g400);text-align:center">
+  GPS Brand Quality Playbook · v1.0 · April 2026<br>
+  Companion to <strong>GPS Brand Bible v3.1</strong> · Confidential — Internal Use Only
+</div>
+
+</div>
+</body>
+</html>
