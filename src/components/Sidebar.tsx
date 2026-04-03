@@ -10,6 +10,9 @@ interface SidebarProps {
   onNavigate: (sectionId: string) => void;
   onLangToggle: (lang: string) => void;
   onClose: () => void;
+  onComplianceCheck: () => void;
+  onBrandAssistant: () => void;
+  onAIPrompt: () => void;
 }
 
 const logoSvg = (
@@ -66,6 +69,9 @@ export default function Sidebar({
   onNavigate,
   onLangToggle,
   onClose,
+  onComplianceCheck,
+  onBrandAssistant,
+  onAIPrompt,
 }: SidebarProps) {
   return (
     <>
@@ -156,6 +162,45 @@ export default function Sidebar({
               </span>
             ))}
           </div>
+        </div>
+
+        <div style={{ padding: '8px 16px 12px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+          <button
+            onClick={onComplianceCheck}
+            style={{
+              width: '100%', padding: '9px', marginBottom: '6px',
+              background: 'var(--color-turquoise-500)', color: '#fff',
+              border: 'none', borderRadius: '6px', fontWeight: 700,
+              cursor: 'pointer', fontSize: '11px', letterSpacing: '0.04em',
+            }}
+          >
+            <span className="en">AI Compliance Check</span>
+            <span className="zh">AI 合規檢查</span>
+          </button>
+          <button
+            onClick={onBrandAssistant}
+            style={{
+              width: '100%', padding: '9px', marginBottom: '6px',
+              background: 'transparent', color: 'var(--color-turquoise-400)',
+              border: '1px solid var(--color-turquoise-700)', borderRadius: '6px',
+              fontWeight: 700, cursor: 'pointer', fontSize: '11px', letterSpacing: '0.04em',
+            }}
+          >
+            <span className="en">AI Brand Assistant</span>
+            <span className="zh">AI 品牌助手</span>
+          </button>
+          <button
+            onClick={onAIPrompt}
+            style={{
+              width: '100%', padding: '9px',
+              background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.5)',
+              border: '1px solid rgba(255,255,255,0.1)', borderRadius: '6px',
+              fontWeight: 700, cursor: 'pointer', fontSize: '11px', letterSpacing: '0.04em',
+            }}
+          >
+            <span className="en">AI Brand Prompt</span>
+            <span className="zh">AI 品牌提示詞</span>
+          </button>
         </div>
       </nav>
     </>

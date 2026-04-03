@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, Suspense, lazy, ComponentType } from 
 import Sidebar from '@/components/Sidebar';
 import TopBar from '@/components/TopBar';
 import AIPromptPanel from '@/components/AIPromptPanel';
+import AIComplianceChecker from '@/components/AIComplianceChecker';
 import { sectionIdToSlug } from '@/lib/navigation';
 
 const contentComponents: Record<string, () => Promise<{ default: ComponentType }>> = {
@@ -58,6 +59,8 @@ export default function Home() {
   const [lang, setLang] = useState('en');
   const [navOpen, setNavOpen] = useState(false);
   const [promptOpen, setPromptOpen] = useState(false);
+  const [complianceOpen, setComplianceOpen] = useState(false);
+  const [assistantOpen, setAssistantOpen] = useState(false);
 
   // Restore saved language
   useEffect(() => {
@@ -121,6 +124,9 @@ export default function Home() {
         onNavigate={handleNavigate}
         onLangToggle={handleLangToggle}
         onClose={() => setNavOpen(false)}
+        onComplianceCheck={() => { setComplianceOpen(true); setNavOpen(false); }}
+        onBrandAssistant={() => { setAssistantOpen(true); setNavOpen(false); }}
+        onAIPrompt={() => { setPromptOpen(true); setNavOpen(false); }}
       />
       <div className="main-content">
         <TopBar
@@ -135,6 +141,7 @@ export default function Home() {
       </div>
 
       <AIPromptPanel isOpen={promptOpen} onClose={() => setPromptOpen(false)} />
+      <AIComplianceChecker isOpen={complianceOpen} onClose={() => setComplianceOpen(false)} />
 
       <div
         className="fixed bottom-4 right-4 px-3 py-1.5 rounded-md text-[10px] pointer-events-none z-50"
