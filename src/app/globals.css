@@ -553,7 +553,9 @@ code.copied::after { content: '\2713'; margin-left: 4px; }
   .main-content { margin-left: 0 !important; }
   .section { display: block !important; page-break-before: always; }
   .section:first-child { page-break-before: auto; }
-  .gps-table, .do-card, .dont-card, .card, .swatch { break-inside: avoid; }
+  .gps-table, .do-card, .dont-card, .card, .swatch, .a11y-pair, .dark-preview, svg { break-inside: avoid; }
+  .gradient-strip, .scale-row, .logo-gallery, .pillar-row, .year-arc { break-inside: avoid; }
+  img[src*="unsplash"] { break-inside: avoid; max-height: 120px; }
   @page { margin: 20mm 18mm; size: A4; }
 }
 

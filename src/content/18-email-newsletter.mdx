@@ -2,6 +2,7 @@ import ChapterHeader from '@/components/ChapterHeader'
 import ModuleTracker from '@/components/ModuleTracker'
 import DoExample from '@/components/DoExample'
 import CrossRef from '@/components/CrossRef'
+import Callout from '@/components/Callout'
 
 <ChapterHeader
   number={18}
@@ -89,3 +90,43 @@ import CrossRef from '@/components/CrossRef'
 
 <table className="gps-table" style={{fontSize:'10px'}}><thead><tr><th><span className="en">Check</span><span className="zh">檢查項目</span></th><th><span className="en">Requirement</span><span className="zh">要求</span></th></tr></thead><tbody><tr><td><span className="en">Total file size</span><span className="zh">檔案總大小</span></td><td>&lt; 102KB (<span className="en">Gmail clips at 102KB</span><span className="zh">Gmail 在 102KB 截斷</span>)</td></tr><tr><td><span className="en">Image hosting</span><span className="zh">圖片託管</span></td><td><span className="en">External HTTPS URLs only — no base64, no CID</span><span className="zh">僅外部 HTTPS URL——不用 base64，不用 CID</span></td></tr><tr><td><span className="en">CSS method</span><span className="zh">CSS 方式</span></td><td><span className="en">Inline only — no &lt;style&gt; blocks (Outlook strips them)</span><span className="zh">僅行內——不用 &lt;style&gt; 區塊（Outlook 會移除）</span></td></tr><tr><td><span className="en">Layout method</span><span className="zh">排版方式</span></td><td><span className="en">Nested &lt;table&gt; only — no flexbox, no grid, no float</span><span className="zh">僅巢狀 &lt;table&gt;——不用 flexbox、不用 grid、不用 float</span></td></tr><tr><td><span className="en">Line height</span><span className="zh">行高</span></td><td><code>mso-line-height-rule: exactly</code></td></tr><tr><td><span className="en">CTA button</span><span className="zh">行動按鈕</span></td><td><span className="en">VML fallback for Outlook, padding fallback for others</span><span className="zh">Outlook 用 VML 備用，其他用 padding 備用</span></td></tr><tr><td><span className="en">Dark mode</span><span className="zh">深色模式</span></td><td><span className="en">Test with <code>[data-ogsc]</code> and <code>[data-ogsb]</code> Outlook overrides</span><span className="zh">使用 <code>[data-ogsc]</code> 和 <code>[data-ogsb]</code> Outlook 覆蓋進行測試</span></td></tr><tr><td><span className="en">Testing</span><span className="zh">測試</span></td><td><span className="en">Litmus / Email on Acid — minimum: Outlook 2019, Gmail, Apple Mail, Outlook.com</span><span className="zh">Litmus / Email on Acid——最低：Outlook 2019、Gmail、Apple Mail、Outlook.com</span></td></tr></tbody></table>
 
+### <span className="en">Canonical Bilingual Layout</span><span className="zh">標準雙語排版</span>
+
+<p className="en">Email templates must enforce co-equal display of EN and zh-TW — not EN-primary with zh-TW as a footnote. Two approved layouts exist:</p>
+<p className="zh">電子郵件模板必須強制 EN 和 zh-TW 的共同等權顯示——而非以英文為主、中文為註腳。有兩種核准的排版方式：</p>
+
+#### <span className="en">Layout 1: Paragraph-Aligned</span><span className="zh">排版一：段落對齊</span>
+
+<p className="en">EN paragraph followed immediately by zh-TW paragraph. Same font size, same font weight. Separated by <code>8px</code> (<code>--sp-2</code>) vertical gap. Each language block uses its respective font stack.</p>
+<p className="zh">英文段落緊接中文段落。相同字級、相同字重。以 <code>8px</code>（<code>--sp-2</code>）垂直間距分隔。每個語言區塊使用各自的字體堆疊。</p>
+
+<div style={{border:'1px solid var(--g200)',borderRadius:'8px',padding:'16px',margin:'12px 0',maxWidth:'400px'}}>
+  <div style={{background:'var(--turquoise-50)',padding:'8px',borderRadius:'4px',marginBottom:'8px',fontSize:'11px',lineHeight:1.6}}>
+    <span style={{fontWeight:700}}>EN:</span> Security is not a limitation — it is the foundation that enables every person to focus, create, and contribute at their highest level.
+  </div>
+  <div style={{background:'var(--copper-50)',padding:'8px',borderRadius:'4px',fontSize:'11px',lineHeight:1.6}}>
+    <span style={{fontWeight:700}}>ZH:</span> 安全不是限制——它是讓每個人能夠專注、創造和發揮最高水準的基礎。
+  </div>
+  <div style={{textAlign:'center',fontSize:'9px',color:'var(--g400)',marginTop:'6px'}}><span className="en">8px gap between language blocks</span><span className="zh">語言區塊間 8px 間距</span></div>
+</div>
+
+#### <span className="en">Layout 2: Side-by-Side</span><span className="zh">排版二：並列雙欄</span>
+
+<p className="en">Two-column table layout: EN on the left, zh-TW on the right. Equal column width (50/50). Both columns use the same font size and vertical alignment. Suitable for shorter content blocks.</p>
+<p className="zh">雙欄表格排版：英文在左、中文在右。等寬欄位（50/50）。兩欄使用相同字級和垂直對齊。適合較短的內容區塊。</p>
+
+<div style={{border:'1px solid var(--g200)',borderRadius:'8px',padding:'16px',margin:'12px 0',maxWidth:'400px'}}>
+  <div style={{display:'flex',gap:'8px'}}>
+    <div style={{flex:1,background:'var(--turquoise-50)',padding:'8px',borderRadius:'4px',fontSize:'11px',lineHeight:1.6}}>
+      <span style={{fontWeight:700}}>EN</span><br/>Security is designed into every corner of our environment.
+    </div>
+    <div style={{flex:1,background:'var(--copper-50)',padding:'8px',borderRadius:'4px',fontSize:'11px',lineHeight:1.6}}>
+      <span style={{fontWeight:700}}>ZH</span><br/>安全被設計進我們環境的每個角落。
+    </div>
+  </div>
+  <div style={{textAlign:'center',fontSize:'9px',color:'var(--g400)',marginTop:'6px'}}><span className="en">Equal-width columns, same font size</span><span className="zh">等寬欄位、相同字級</span></div>
+</div>
+
+<Callout type="warning">
+<span className="en">The zh-TW version is never smaller font, lighter color, or placed in a footer section. Both languages receive identical visual weight and placement priority. Reviewers must reject any template where one language is visually subordinate to the other.</span><span className="zh">中文版本絕不使用較小字級、較淺顏色或放置在頁尾區段。兩種語言獲得相同的視覺權重和排版優先級。審查者必須退回任何一種語言在視覺上從屬於另一種的模板。</span>
+</Callout>

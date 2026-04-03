@@ -32,3 +32,71 @@ import Callout from '@/components/Callout';
 </table>
 
 <Callout type="tip"><span className="en"><strong>Vendor note:</strong> Confirm thread color match with physical swatch before bulk production. Minimum order: 50 units per item. Allow 4–6 weeks lead time for embroidered items.</span><span className="zh"><strong>供應商備註：</strong>大量生產前請以實體色票確認繡線色彩。最低訂量：每品項 50 件。繡製品項需 4–6 週前置時間。</span></Callout>
+
+### <span className="en">Visual Mockups</span><span className="zh">視覺模擬</span>
+
+<div style={{display:'flex',flexWrap:'wrap',gap:'24px',background:'var(--color-g50, #f5f5f5)',padding:'24px',borderRadius:'8px',breakInside:'avoid'}}>
+
+<div style={{textAlign:'center'}}>
+<p style={{fontWeight:700,marginBottom:'8px'}}><span className="en">Visitor Badge</span><span className="zh">訪客識別證</span></p>
+<svg viewBox="0 0 120 180" width="120" height="180" style={{border:'1px solid #ddd',borderRadius:'6px',background:'#fff'}}>
+  <rect x="0" y="0" width="120" height="180" rx="6" fill="#fff"/>
+  <rect x="0" y="0" width="120" height="32" rx="6" fill="#26A7B0"/>
+  <rect x="0" y="20" width="120" height="12" fill="#26A7B0"/>
+  <circle cx="60" cy="16" r="10" fill="none" stroke="#fff" strokeWidth="0.8" opacity="0.6"/>
+  <text x="60" y="19" fontSize="7" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff" textAnchor="middle">GPS</text>
+  <rect x="0" y="0" width="4" height="180" rx="2" fill="#26A7B0"/>
+  <text x="60" y="52" fontSize="11" fontFamily="Lato,sans-serif" fontWeight="700" fill="#0A1A22" textAnchor="middle">VISITOR</text>
+  <text x="60" y="64" fontSize="7" fontFamily="Noto Sans TC,sans-serif" fontWeight="400" fill="#0A1A22" opacity="0.6" textAnchor="middle">訪客</text>
+  <line x1="24" y1="82" x2="96" y2="82" stroke="#0A1A22" strokeWidth="0.5" opacity="0.2"/>
+  <text x="60" y="78" fontSize="6" fontFamily="Lato,sans-serif" fill="#0A1A22" opacity="0.4" textAnchor="middle">Name / 姓名</text>
+  <line x1="24" y1="102" x2="96" y2="102" stroke="#0A1A22" strokeWidth="0.5" opacity="0.2"/>
+  <text x="60" y="98" fontSize="6" fontFamily="Lato,sans-serif" fill="#0A1A22" opacity="0.4" textAnchor="middle">Company / 公司</text>
+  <line x1="24" y1="122" x2="96" y2="122" stroke="#0A1A22" strokeWidth="0.5" opacity="0.2"/>
+  <text x="60" y="118" fontSize="6" fontFamily="Lato,sans-serif" fill="#0A1A22" opacity="0.4" textAnchor="middle">Date / 日期</text>
+  <rect x="24" y="140" width="72" height="16" rx="3" fill="#26A7B0" opacity="0.1"/>
+  <text x="60" y="151" fontSize="6" fontFamily="Lato,sans-serif" fontWeight="700" fill="#26A7B0" textAnchor="middle">ESCORT REQUIRED</text>
+  <text x="60" y="170" fontSize="5" fontFamily="Noto Sans TC,sans-serif" fill="#0A1A22" opacity="0.3" textAnchor="middle">Global Physical Security</text>
+</svg>
+</div>
+
+<div style={{textAlign:'center'}}>
+<p style={{fontWeight:700,marginBottom:'8px'}}><span className="en">Arm Patch</span><span className="zh">臂章</span></p>
+<svg viewBox="0 0 100 60" width="150" height="90" style={{border:'1px solid #ddd',borderRadius:'6px'}}>
+  <rect x="0" y="0" width="100" height="60" rx="6" fill="#0A1A22"/>
+  <rect x="2" y="2" width="96" height="56" rx="5" fill="none" stroke="#26A7B0" strokeWidth="0.8" opacity="0.5" strokeDasharray="2,1"/>
+  <circle cx="50" cy="22" r="10" fill="none" stroke="#26A7B0" strokeWidth="1"/>
+  <text x="50" y="25" fontSize="7" fontFamily="Lato,sans-serif" fontWeight="700" fill="#26A7B0" textAnchor="middle">GPS</text>
+  <text x="50" y="42" fontSize="6" fontFamily="Lato,sans-serif" fontWeight="400" fill="#CAC3D2" textAnchor="middle" letterSpacing="2">GPS</text>
+  <text x="50" y="52" fontSize="4" fontFamily="Noto Sans TC,sans-serif" fontWeight="300" fill="#CAC3D2" textAnchor="middle" opacity="0.7">全球實體安全</text>
+</svg>
+</div>
+
+<div style={{textAlign:'center'}}>
+<p style={{fontWeight:700,marginBottom:'8px'}}><span className="en">ID Lanyard</span><span className="zh">識別帶</span></p>
+<svg viewBox="0 0 60 200" width="60" height="200" style={{border:'1px solid #ddd',borderRadius:'6px',background:'#f9f9f9'}}>
+  <defs>
+    <linearGradient id="lanyard-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#26A7B0"/>
+      <stop offset="100%" stopColor="#CAC3D2"/>
+    </linearGradient>
+    <pattern id="gps-repeat" patternUnits="userSpaceOnUse" width="60" height="30">
+      <circle cx="30" cy="15" r="5" fill="none" stroke="#fff" strokeWidth="0.5" opacity="0.4"/>
+      <text x="30" y="17.5" fontSize="4" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff" textAnchor="middle" opacity="0.5">GPS</text>
+    </pattern>
+  </defs>
+  <rect x="18" y="0" width="24" height="140" fill="url(#lanyard-grad)"/>
+  <rect x="18" y="0" width="24" height="140" fill="url(#gps-repeat)"/>
+  <circle cx="30" cy="140" r="6" fill="#C0C0C0" stroke="#999" strokeWidth="0.5"/>
+  <circle cx="30" cy="140" r="2" fill="#999"/>
+  <rect x="6" y="150" width="48" height="46" rx="4" fill="#fff" stroke="#ddd" strokeWidth="0.8"/>
+  <rect x="6" y="150" width="48" height="12" rx="4" fill="#26A7B0"/>
+  <rect x="6" y="158" width="48" height="4" fill="#26A7B0"/>
+  <text x="30" y="159" fontSize="5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff" textAnchor="middle">GPS</text>
+  <rect x="18" y="168" width="24" height="16" rx="2" fill="#eee"/>
+  <text x="30" y="178" fontSize="4" fontFamily="Lato,sans-serif" fill="#999" textAnchor="middle">PHOTO</text>
+  <text x="30" y="192" fontSize="4" fontFamily="Lato,sans-serif" fill="#0A1A22" opacity="0.5" textAnchor="middle">Name / 姓名</text>
+</svg>
+</div>
+
+</div>

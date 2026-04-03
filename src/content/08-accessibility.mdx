@@ -1,27 +1,37 @@
 import ChapterHeader from '@/components/ChapterHeader';
 import ModuleTracker from '@/components/ModuleTracker';
 import Callout from '@/components/Callout';
+import ContrastCard from '@/components/ContrastCard';
 
 <ChapterHeader number="08" groupEn="Visual Identity" groupZh="視覺識別" titleEn="Accessibility Pairings" titleZh="無障礙色彩配對" ownerEn="MarCom Team" ownerZh="MarCom Team" />
-<ModuleTracker modules={[{name:'Pairing Table',status:'done'},{name:'Test Examples',status:'done'}]} />
+<ModuleTracker modules={[{name:'Pairing Table',status:'done'},{name:'Test Examples',status:'done'},{name:'Pass/Fail Cards',status:'done'}]} />
 
-<p><span className="en">Every color combination must meet WCAG 2.1 AA: 4.5:1 for normal text, 3:1 for large text (≥18px bold or ≥24px).</span><span className="zh">每種色彩組合必須符合 WCAG 2.1 AA：一般文字 4.5:1，大型文字（≥18px 粗體或 ≥24px）3:1。</span></p>
+<p><span className="en">Every color combination must meet WCAG 2.1 AA: 4.5:1 for normal text, 3:1 for large text (≥18px bold or ≥24px). Cards below show pass/fail with exact contrast ratios.</span><span className="zh">每種色彩組合必須符合 WCAG 2.1 AA：一般文字 4.5:1，大型文字（≥18px 粗體或 ≥24px）3:1。以下卡片顯示通過/不通過及精確對比值。</span></p>
 
-### <span className="en">Light Mode</span><span className="zh">淺色模式</span>
+### <span className="en">Light Mode — Approved Pairings</span><span className="zh">淺色模式——核准配對</span>
 
-<div className="a11y-grid">
-  <div className="a11y-pair"><div style={{height:'34px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',fontWeight:700,background:'#FAFBFC',color:'#0A1A22'}}>Body on White</div><div style={{padding:'4px 8px',fontSize:'9px'}}><span style={{fontWeight:700,fontFamily:'var(--font-mono)',color:'var(--color-success)'}}>16.2:1</span> AAA</div></div>
-  <div className="a11y-pair"><div style={{height:'34px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',fontWeight:700,background:'#FAFBFC',color:'#1E8A92'}}>Turquoise-600</div><div style={{padding:'4px 8px',fontSize:'9px'}}><span style={{fontWeight:700,fontFamily:'var(--font-mono)',color:'var(--color-success)'}}>4.8:1</span> AA</div></div>
-  <div className="a11y-pair"><div style={{height:'34px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',fontWeight:700,background:'#0A1A22',color:'#FAFBFC'}}>White on Black</div><div style={{padding:'4px 8px',fontSize:'9px'}}><span style={{fontWeight:700,fontFamily:'var(--font-mono)',color:'var(--color-success)'}}>16.2:1</span> AAA</div></div>
-  <div className="a11y-pair"><div style={{height:'34px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',fontWeight:700,background:'#26A7B0',color:'#0A1A22'}}>Black on Turquoise</div><div style={{padding:'4px 8px',fontSize:'9px'}}><span style={{fontWeight:700,fontFamily:'var(--font-mono)',color:'var(--color-success)'}}>5.1:1</span> AA</div></div>
-  <div className="a11y-pair"><div style={{height:'34px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',fontWeight:700,background:'#F0FAFB',color:'#186E75'}}>T-700 on T-50</div><div style={{padding:'4px 8px',fontSize:'9px'}}><span style={{fontWeight:700,fontFamily:'var(--font-mono)',color:'var(--color-success)'}}>6.4:1</span> AA</div></div>
+<div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))',gap:'10px',margin:'14px 0'}}>
+  <ContrastCard fg="#0A1A22" bg="#FAFBFC" label="Body on White" ratio="16.2:1" level="AAA" />
+  <ContrastCard fg="#1E8A92" bg="#FAFBFC" label="Turquoise-600" ratio="4.8:1" level="AA" />
+  <ContrastCard fg="#FAFBFC" bg="#0A1A22" label="White on Black" ratio="16.2:1" level="AAA" />
+  <ContrastCard fg="#0A1A22" bg="#26A7B0" label="Black on Turquoise" ratio="5.1:1" level="AA" />
+  <ContrastCard fg="#186E75" bg="#F0FAFB" label="T-700 on T-50" ratio="6.4:1" level="AA" />
+  <ContrastCard fg="#5B6FA3" bg="#FAFBFC" label="Purple-600 on White" ratio="4.8:1" level="AA" />
 </div>
 
-### <span className="en">Dark Mode</span><span className="zh">深色模式</span>
+### <span className="en">Dark Mode — Approved Pairings</span><span className="zh">深色模式——核准配對</span>
 
-<div className="a11y-grid">
-  <div className="a11y-pair"><div style={{height:'34px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',fontWeight:700,background:'#0D1B21',color:'#E2E8EC'}}>Body on Dark</div><div style={{padding:'4px 8px',fontSize:'9px'}}><span style={{fontWeight:700,fontFamily:'var(--font-mono)',color:'var(--color-success)'}}>12.8:1</span> AAA</div></div>
-  <div className="a11y-pair"><div style={{height:'34px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',fontWeight:700,background:'#142229',color:'#3DB9C2'}}>Accent on Surface</div><div style={{padding:'4px 8px',fontSize:'9px'}}><span style={{fontWeight:700,fontFamily:'var(--font-mono)',color:'var(--color-success)'}}>5.6:1</span> AA</div></div>
+<div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))',gap:'10px',margin:'14px 0'}}>
+  <ContrastCard fg="#E2E8EC" bg="#0D1B21" label="Body on Dark" ratio="12.8:1" level="AAA" />
+  <ContrastCard fg="#3DB9C2" bg="#142229" label="Accent on Surface" ratio="5.6:1" level="AA" />
+</div>
+
+### <span className="en">Forbidden Combinations</span><span className="zh">禁止組合</span>
+
+<div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))',gap:'10px',margin:'14px 0'}}>
+  <ContrastCard fg="#FFFFFF" bg="#26A7B0" label="White on Turquoise-500" ratio="3.2:1" level="Fail" />
+  <ContrastCard fg="#FFFFFF" bg="#CAC3D2" label="White on Copper-300" ratio="2.1:1" level="Fail" />
+  <ContrastCard fg="#8C9FCB" bg="#FFFFFF" label="Purple-400 on White" ratio="3.0:1" level="Fail" />
 </div>
 
 <Callout type="warning"><strong><span className="en">Forbidden:</span><span className="zh">禁止：</span></strong><span className="en"> White on Turquoise-500 for body (3.2:1 fails AA). White on Copper-300 (2.1:1 fails all). Purple-400 on White (3.0:1 — use Purple-600).</span><span className="zh"> Turquoise-500 上的白色內文（3.2:1 不符合 AA）。Copper-300 上的白色（2.1:1 全不符合）。白色上的 Purple-400（3.0:1——改用 Purple-600）。</span></Callout>

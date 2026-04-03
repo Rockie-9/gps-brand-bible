@@ -59,6 +59,51 @@ import CrossRef from '@/components/CrossRef'
   </tbody>
 </table>
 
+### <span className="en">Activation Timeline</span><span className="zh">啟動時程視覺化</span>
+
+<div style={{breakInside:'avoid',margin:'16px 0'}}>
+<svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',maxWidth:'500px',height:'auto'}}>
+  {/* Gradient connection line */}
+  <defs>
+    <linearGradient id="timeline-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#93d5d9"/>
+      <stop offset="35%" stopColor="#26A7B0"/>
+      <stop offset="65%" stopColor="#5bbcc3"/>
+      <stop offset="100%" stopColor="#CAC3D2"/>
+    </linearGradient>
+  </defs>
+  <line x1="65" y1="40" x2="435" y2="40" stroke="url(#timeline-grad)" strokeWidth="4" strokeLinecap="round"/>
+
+  {/* Phase 0: Pre-Arrival */}
+  <circle cx="65" cy="40" r="18" fill="#93d5d9" stroke="#fff" strokeWidth="2"/>
+  <text x="65" y="44" textAnchor="middle" fill="#0A1A22" fontSize="11" fontFamily="Lato, sans-serif" fontWeight="700">0</text>
+  <text x="65" y="72" textAnchor="middle" fill="#0A1A22" fontSize="8" fontFamily="Lato, sans-serif" fontWeight="700">Pre-Arrival</text>
+  <text x="65" y="82" textAnchor="middle" fill="#8C9FCB" fontSize="7" fontFamily="Noto Sans TC, sans-serif">到場前</text>
+  <text x="65" y="95" textAnchor="middle" fill="#CAC3D2" fontSize="7" fontFamily="Lato, sans-serif">Day -30 to 0</text>
+
+  {/* Phase 1: Foundation — highlighted */}
+  <circle cx="188" cy="40" r="22" fill="#26A7B0" stroke="#fff" strokeWidth="3"/>
+  <text x="188" y="44" textAnchor="middle" fill="#fff" fontSize="12" fontFamily="Lato, sans-serif" fontWeight="900">1</text>
+  <text x="188" y="72" textAnchor="middle" fill="#0A1A22" fontSize="8" fontFamily="Lato, sans-serif" fontWeight="700">Foundation</text>
+  <text x="188" y="82" textAnchor="middle" fill="#8C9FCB" fontSize="7" fontFamily="Noto Sans TC, sans-serif">基礎</text>
+  <text x="188" y="95" textAnchor="middle" fill="#CAC3D2" fontSize="7" fontFamily="Lato, sans-serif">Day 1-30</text>
+
+  {/* Phase 2: Integration */}
+  <circle cx="312" cy="40" r="18" fill="#5bbcc3" stroke="#fff" strokeWidth="2"/>
+  <text x="312" y="44" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="Lato, sans-serif" fontWeight="700">2</text>
+  <text x="312" y="72" textAnchor="middle" fill="#0A1A22" fontSize="8" fontFamily="Lato, sans-serif" fontWeight="700">Integration</text>
+  <text x="312" y="82" textAnchor="middle" fill="#8C9FCB" fontSize="7" fontFamily="Noto Sans TC, sans-serif">整合</text>
+  <text x="312" y="95" textAnchor="middle" fill="#CAC3D2" fontSize="7" fontFamily="Lato, sans-serif">Day 31-60</text>
+
+  {/* Phase 3: Calibration */}
+  <circle cx="435" cy="40" r="18" fill="#CAC3D2" stroke="#fff" strokeWidth="2"/>
+  <text x="435" y="44" textAnchor="middle" fill="#0A1A22" fontSize="11" fontFamily="Lato, sans-serif" fontWeight="700">3</text>
+  <text x="435" y="72" textAnchor="middle" fill="#0A1A22" fontSize="8" fontFamily="Lato, sans-serif" fontWeight="700">Calibration</text>
+  <text x="435" y="82" textAnchor="middle" fill="#8C9FCB" fontSize="7" fontFamily="Noto Sans TC, sans-serif">校準</text>
+  <text x="435" y="95" textAnchor="middle" fill="#CAC3D2" fontSize="7" fontFamily="Lato, sans-serif">Day 61-90</text>
+</svg>
+</div>
+
 <Callout type="warning">
 <strong>ESMC Dresden:</strong><span className="en"> Works Council (Betriebsrat) briefing required in Phase 0. German supplement for all employee materials. +2 weeks approval cycle.</span><span className="zh"> 工會 (Betriebsrat) 簡報於第 0 階段必須完成。所有員工材料需德語補充版。審批流程加 2 週。</span>
 
@@ -102,3 +147,15 @@ import CrossRef from '@/components/CrossRef'
     </div>
   </div>
 </div>
+
+### <span className="en">Security-in-Architectural-Design</span><span className="zh">建築設計中的安全整合</span>
+
+<p className="en">Safety specifications — including CPTED principles, lighting color temperature zones, and branded material finishes — must be integrated into the architectural planning phase for new sites. These requirements are not add-ons after construction; they are design inputs at the same stage as structural, electrical, and HVAC specifications.</p>
+<p className="zh">安全規格——包括 CPTED 原則、照明色溫區域和品牌材質飾面——必須在新廠區的建築規劃階段就整合進去。這些要求不是建造後的附加項目；它們是與結構、電氣和 HVAC 規格同階段的設計輸入。</p>
+
+<p className="en">Refer to <CrossRef section="s10">Chapter 10</CrossRef> for full material and lighting specifications, and <CrossRef section="s01">Chapter 01</CrossRef> for the CPTED philosophical foundation that underpins GPS's environmental design approach.</p>
+<p className="zh">參見<CrossRef section="s10">第 10 章</CrossRef>了解完整的材質和照明規格，以及<CrossRef section="s01">第 01 章</CrossRef>了解支撐 GPS 環境設計方法的 CPTED 哲學基礎。</p>
+
+<Callout type="warning">
+<span className="en">Security-in-design is a Phase 0 requirement. If safety specs are not included in the architectural brief before construction begins, retrofitting is 3–5x more expensive and produces inferior results. The GPS Strategy team must be included in the architectural review committee for all new site projects.</span><span className="zh">安全設計是第 0 階段的要求。如果安全規格未在施工前納入建築簡報，改裝成本將高出 3–5 倍且效果較差。GPS 策略團隊必須加入所有新廠區專案的建築審查委員會。</span>
+</Callout>

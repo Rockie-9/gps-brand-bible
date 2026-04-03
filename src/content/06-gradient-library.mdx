@@ -1,61 +1,34 @@
 import ChapterHeader from '@/components/ChapterHeader';
 import ModuleTracker from '@/components/ModuleTracker';
+import GradientSwatch from '@/components/GradientSwatch';
 
 <ChapterHeader number="06" groupEn="Visual Identity" groupZh="視覺識別" titleEn="Gradient Library" titleZh="漸層色庫" ownerEn="MarCom Team" ownerZh="MarCom Team" />
-<ModuleTracker modules={[{name:'Library',status:'done'},{name:'Brand Gradient',status:'done'},{name:'Dark Variant',status:'done'}]} />
+<ModuleTracker modules={[{name:'Library',status:'done'},{name:'Brand Gradient',status:'done'},{name:'Dark Variant',status:'done'},{name:'Interactive Demo',status:'done'}]} />
+
+<p><span className="en">Hover to reveal the CSS value, click to copy. All gradients are production-ready CSS.</span><span className="zh">懸停以顯示 CSS 值，點擊以複製。所有漸層皆為可直接使用的 CSS。</span></p>
 
 ### <span className="en">Primary</span><span className="zh">主要漸層</span>
 
-<div className="gradient-strip" style={{background:'linear-gradient(135deg,#26A7B0,#CAC3D2)'}}>
-  <span style={{position:'absolute',bottom:6,left:12,fontSize:'9px',fontWeight:700,color:'#fff',textShadow:'0 1px 3px rgba(0,0,0,.4)',letterSpacing:'0.04em'}}><span className="en">Signature</span><span className="zh">標誌漸層</span></span>
-  <span style={{position:'absolute',bottom:6,right:12,fontFamily:'var(--font-mono)',fontSize:'8px',color:'rgba(255,255,255,.6)'}}>135° #26A7B0 → #CAC3D2</span>
-</div>
+<GradientSwatch nameEn="Signature" nameZh="標誌漸層" css="linear-gradient(135deg, #26A7B0, #CAC3D2)" gradient="linear-gradient(135deg,#26A7B0,#CAC3D2)" />
 
-<div className="gradient-strip" style={{background:'linear-gradient(90deg,#26A7B0,#CAC3D2)'}}>
-  <span style={{position:'absolute',bottom:6,left:12,fontSize:'9px',fontWeight:700,color:'#fff',textShadow:'0 1px 3px rgba(0,0,0,.4)',letterSpacing:'0.04em'}}><span className="en">Horizontal Flow</span><span className="zh">水平流動</span></span>
-  <span style={{position:'absolute',bottom:6,right:12,fontFamily:'var(--font-mono)',fontSize:'8px',color:'rgba(255,255,255,.6)'}}>90°</span>
-</div>
+<GradientSwatch nameEn="Horizontal Flow" nameZh="水平流動" css="linear-gradient(90deg, #26A7B0, #CAC3D2)" gradient="linear-gradient(90deg,#26A7B0,#CAC3D2)" />
 
-<div className="gradient-strip" style={{background:'linear-gradient(180deg,#26A7B0,#CAC3D2)'}}>
-  <span style={{position:'absolute',bottom:6,left:12,fontSize:'9px',fontWeight:700,color:'#fff',textShadow:'0 1px 3px rgba(0,0,0,.4)',letterSpacing:'0.04em'}}><span className="en">Vertical Descent</span><span className="zh">垂直下降</span></span>
-  <span style={{position:'absolute',bottom:6,right:12,fontFamily:'var(--font-mono)',fontSize:'8px',color:'rgba(255,255,255,.6)'}}>180°</span>
-</div>
+<GradientSwatch nameEn="Vertical Descent" nameZh="垂直下降" css="linear-gradient(180deg, #26A7B0, #CAC3D2)" gradient="linear-gradient(180deg,#26A7B0,#CAC3D2)" />
 
 ### <span className="en">Extended</span><span className="zh">延伸漸層</span>
 
-<div className="gradient-strip" style={{background:'linear-gradient(135deg,#0F4249,#26A7B0)'}}>
-  <span style={{position:'absolute',bottom:6,left:12,fontSize:'9px',fontWeight:700,color:'#fff',textShadow:'0 1px 3px rgba(0,0,0,.4)',letterSpacing:'0.04em'}}><span className="en">Deep Turquoise</span><span className="zh">深青綠</span></span>
-  <span style={{position:'absolute',bottom:6,right:12,fontFamily:'var(--font-mono)',fontSize:'8px',color:'rgba(255,255,255,.6)'}}>#0F4249 → #26A7B0</span>
-</div>
+<GradientSwatch nameEn="Deep Turquoise" nameZh="深青綠" css="linear-gradient(135deg, #0F4249, #26A7B0)" gradient="linear-gradient(135deg,#0F4249,#26A7B0)" />
 
-<div className="gradient-strip" style={{background:'linear-gradient(135deg,#41374B,#CAC3D2)'}}>
-  <span style={{position:'absolute',bottom:6,left:12,fontSize:'9px',fontWeight:700,color:'#fff',textShadow:'0 1px 3px rgba(0,0,0,.4)',letterSpacing:'0.04em'}}><span className="en">Deep Copper</span><span className="zh">深銅色</span></span>
-  <span style={{position:'absolute',bottom:6,right:12,fontFamily:'var(--font-mono)',fontSize:'8px',color:'rgba(255,255,255,.6)'}}>#41374B → #CAC3D2</span>
-</div>
+<GradientSwatch nameEn="Deep Copper" nameZh="深銅色" css="linear-gradient(135deg, #41374B, #CAC3D2)" gradient="linear-gradient(135deg,#41374B,#CAC3D2)" />
 
-<div className="gradient-strip" style={{background:'linear-gradient(135deg,#26A7B0,#8C9FCB)'}}>
-  <span style={{position:'absolute',bottom:6,left:12,fontSize:'9px',fontWeight:700,color:'#fff',textShadow:'0 1px 3px rgba(0,0,0,.4)',letterSpacing:'0.04em'}}><span className="en">Turquoise → Purple</span><span className="zh">青綠 → 紫</span></span>
-  <span style={{position:'absolute',bottom:6,right:12,fontFamily:'var(--font-mono)',fontSize:'8px',color:'rgba(255,255,255,.6)'}}>#26A7B0 → #8C9FCB</span>
-</div>
+<GradientSwatch nameEn="Turquoise → Purple" nameZh="青綠 → 紫" css="linear-gradient(135deg, #26A7B0, #8C9FCB)" gradient="linear-gradient(135deg,#26A7B0,#8C9FCB)" />
 
-<div className="gradient-strip" style={{background:'linear-gradient(135deg,#8CC897,#26A7B0)'}}>
-  <span style={{position:'absolute',bottom:6,left:12,fontSize:'9px',fontWeight:700,color:'#fff',textShadow:'0 1px 3px rgba(0,0,0,.4)',letterSpacing:'0.04em'}}><span className="en">Green → Turquoise</span><span className="zh">綠 → 青綠</span></span>
-  <span style={{position:'absolute',bottom:6,right:12,fontFamily:'var(--font-mono)',fontSize:'8px',color:'rgba(255,255,255,.6)'}}>#8CC897 → #26A7B0</span>
-</div>
+<GradientSwatch nameEn="Green → Turquoise" nameZh="綠 → 青綠" css="linear-gradient(135deg, #8CC897, #26A7B0)" gradient="linear-gradient(135deg,#8CC897,#26A7B0)" />
 
-<div className="gradient-strip" style={{background:'linear-gradient(135deg,#0A1A22,#26A7B0,#CAC3D2)'}}>
-  <span style={{position:'absolute',bottom:6,left:12,fontSize:'9px',fontWeight:700,color:'#fff',textShadow:'0 1px 3px rgba(0,0,0,.4)',letterSpacing:'0.04em'}}><span className="en">Full Spectrum</span><span className="zh">全光譜</span></span>
-  <span style={{position:'absolute',bottom:6,right:12,fontFamily:'var(--font-mono)',fontSize:'8px',color:'rgba(255,255,255,.6)'}}>#0A1A22 → #26A7B0 → #CAC3D2</span>
-</div>
+<GradientSwatch nameEn="Full Spectrum" nameZh="全光譜" css="linear-gradient(135deg, #0A1A22, #26A7B0, #CAC3D2)" gradient="linear-gradient(135deg,#0A1A22,#26A7B0,#CAC3D2)" />
 
 ### <span className="en">Atmospheric (Mesh)</span><span className="zh">氛圍（Mesh）漸層</span>
 
-<div className="gradient-strip" style={{height:'80px',background:'radial-gradient(ellipse at 30% 40%,#26A7B0 0%,transparent 60%),radial-gradient(ellipse at 70% 60%,#CAC3D2 0%,transparent 50%),radial-gradient(ellipse at 50% 80%,#8C9FCB 0%,transparent 60%),#F0FAFB'}}>
-  <span style={{position:'absolute',bottom:6,left:12,fontSize:'9px',fontWeight:700,color:'#fff',textShadow:'0 1px 3px rgba(0,0,0,.4)',letterSpacing:'0.04em'}}><span className="en">Atmospheric Light</span><span className="zh">氛圍淺色</span></span>
-  <span style={{position:'absolute',bottom:6,right:12,fontFamily:'var(--font-mono)',fontSize:'8px',color:'rgba(255,255,255,.6)'}}>Hero sections, event backgrounds</span>
-</div>
+<GradientSwatch nameEn="Atmospheric Light" nameZh="氛圍淺色" css="radial-gradient(ellipse at 30% 40%, #26A7B0 0%, transparent 60%), radial-gradient(ellipse at 70% 60%, #CAC3D2 0%, transparent 50%), radial-gradient(ellipse at 50% 80%, #8C9FCB 0%, transparent 60%), #F0FAFB" gradient="radial-gradient(ellipse at 30% 40%,#26A7B0 0%,transparent 60%),radial-gradient(ellipse at 70% 60%,#CAC3D2 0%,transparent 50%),radial-gradient(ellipse at 50% 80%,#8C9FCB 0%,transparent 60%),#F0FAFB" height={80} />
 
-<div className="gradient-strip" style={{height:'80px',background:'radial-gradient(ellipse at 20% 30%,#1E8A92 0%,transparent 50%),radial-gradient(ellipse at 80% 50%,#574A63 0%,transparent 50%),radial-gradient(ellipse at 50% 90%,#26A7B0 0%,transparent 60%),#0A1A22'}}>
-  <span style={{position:'absolute',bottom:6,left:12,fontSize:'9px',fontWeight:700,color:'#fff',textShadow:'0 1px 3px rgba(0,0,0,.4)',letterSpacing:'0.04em'}}><span className="en">Atmospheric Dark</span><span className="zh">氛圍深色</span></span>
-  <span style={{position:'absolute',bottom:6,right:12,fontFamily:'var(--font-mono)',fontSize:'8px',color:'rgba(255,255,255,.6)'}}>Dark mode heroes, video overlays</span>
-</div>
+<GradientSwatch nameEn="Atmospheric Dark" nameZh="氛圍深色" css="radial-gradient(ellipse at 20% 30%, #1E8A92 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, #574A63 0%, transparent 50%), radial-gradient(ellipse at 50% 90%, #26A7B0 0%, transparent 60%), #0A1A22" gradient="radial-gradient(ellipse at 20% 30%,#1E8A92 0%,transparent 50%),radial-gradient(ellipse at 80% 50%,#574A63 0%,transparent 50%),radial-gradient(ellipse at 50% 90%,#26A7B0 0%,transparent 60%),#0A1A22" height={80} />

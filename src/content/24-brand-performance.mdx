@@ -62,6 +62,103 @@ import CrossRef from '@/components/CrossRef'
 <table className="gps-table"><thead><tr><th><span className="en">Change Type</span><span className="zh">變更類型</span></th><th><span className="en">Example</span><span className="zh">範例</span></th><th><span className="en">Proposer</span><span className="zh">提案者</span></th><th><span className="en">Approval</span><span className="zh">核准</span></th><th><span className="en">Communication</span><span className="zh">溝通方式</span></th></tr></thead><tbody><tr><td><strong>Token adjustment</strong></td><td><span className="en">Hex value correction, weight update</span><span className="zh">色碼值修正、字重更新</span></td><td>MarCom / Strategy</td><td><span className="en">Self-approved, logged in <CrossRef section="sV">Appendix V</CrossRef></span><span className="zh">自行核准，記錄於<CrossRef section="sV">附錄 V</CrossRef></span></td><td>Changelog update</td></tr><tr><td><strong>Chapter revision</strong></td><td><span className="en">New do/don't examples, expanded specs</span><span className="zh">新增規範範例、擴展規格</span></td><td>GPS Strategy</td><td>GPS Strategy review</td><td><span className="en">Version bump, email to brand owners</span><span className="zh">版本升級，郵件通知品牌負責人</span></td></tr><tr><td><strong>Structural change</strong></td><td><span className="en">New chapter, pillar addition, logo modification</span><span className="zh">新章節、支柱新增、標誌修改</span></td><td>GPS Strategy</td><td>GPS Director sign-off</td><td><span className="en">Full version release, all-hands briefing</span><span className="zh">完整版本發布，全員簡報</span></td></tr><tr><td><strong>Narrative arc transition</strong></td><td><span className="en">Year 2 → Year 3 messaging shift</span><span className="zh">第二年 → 第三年訊息轉換</span></td><td>GPS Strategy</td><td><span className="en">GPS Director + Section Head alignment</span><span className="zh">GPS Director + Section Head 對齊</span></td><td><span className="en">Campaign launch, regional cascade</span><span className="zh">宣傳啟動，區域層級傳達</span></td></tr></tbody></table>
 
 
+### <span className="en">Dashboard Wireframe</span><span className="zh">儀表板線框</span>
+
+<p className="en">A conceptual wireframe showing how GPS brand performance metrics could be visualized in a unified dashboard, featuring the Safety Feeling Index (SFI) gauge and Brand Adoption Rate trend.</p>
+<p className="zh">概念線框圖，展示 GPS 品牌績效指標如何在統一儀表板中視覺化，包含安全感受指數 (SFI) 儀表和品牌採用率趨勢。</p>
+
+<div style={{breakInside:'avoid',margin:'16px 0'}}>
+<svg viewBox="0 0 500 280" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',maxWidth:'500px',height:'auto',background:'#fff',borderRadius:'8px',border:'1px solid #e2e8f0'}}>
+  {/* Title bar */}
+  <rect x="0" y="0" width="500" height="36" rx="8" fill="#0A1A22"/>
+  <rect x="0" y="20" width="500" height="16" fill="#0A1A22"/>
+  <text x="16" y="23" fill="#ffffff" fontSize="11" fontFamily="Lato, sans-serif" fontWeight="700">GPS Brand Performance Dashboard</text>
+  <text x="370" y="23" fill="#CAC3D2" fontSize="9" fontFamily="Lato, sans-serif">Q4 2026 · All Sites</text>
+
+  {/* SFI Gauge — left column */}
+  <text x="30" y="60" fill="#0A1A22" fontSize="9" fontFamily="Lato, sans-serif" fontWeight="700">Safety Feeling Index (SFI)</text>
+  <text x="30" y="70" fill="#8C9FCB" fontSize="7" fontFamily="Noto Sans TC, sans-serif">安全感受指數</text>
+  {/* Gauge background arc */}
+  <path d="M 80 180 A 65 65 0 0 1 210 180" fill="none" stroke="#e2e8f0" strokeWidth="12" strokeLinecap="round"/>
+  {/* Gauge filled arc — ~78% of 180deg */}
+  <path d="M 80 180 A 65 65 0 0 1 96.5 98.5" fill="none" stroke="#26A7B0" strokeWidth="12" strokeLinecap="round"/>
+  {/* Gauge value */}
+  <text x="145" y="165" fill="#0A1A22" fontSize="28" fontFamily="Lato, sans-serif" fontWeight="900" textAnchor="middle">78</text>
+  <text x="145" y="178" fill="#8C9FCB" fontSize="8" fontFamily="Lato, sans-serif" textAnchor="middle">/100</text>
+  {/* Target indicator */}
+  <text x="80" y="198" fill="#CAC3D2" fontSize="7" fontFamily="Lato, sans-serif">Target: 75</text>
+  <rect x="80" y="202" width="130" height="3" rx="1" fill="#e2e8f0"/>
+  <rect x="80" y="202" width="98" height="3" rx="1" fill="#26A7B0"/>
+
+  {/* Brand Adoption Rate — right column */}
+  <text x="270" y="60" fill="#0A1A22" fontSize="9" fontFamily="Lato, sans-serif" fontWeight="700">Brand Adoption Rate</text>
+  <text x="270" y="70" fill="#8C9FCB" fontSize="7" fontFamily="Noto Sans TC, sans-serif">品牌採用率</text>
+  {/* Bar chart */}
+  <rect x="280" y="160" width="35" height="40" rx="2" fill="#CAC3D2" opacity="0.6"/>
+  <text x="297" y="155" fill="#0A1A22" fontSize="7" fontFamily="Lato, sans-serif" textAnchor="middle">62%</text>
+  <text x="297" y="208" fill="#8C9FCB" fontSize="7" fontFamily="Lato, sans-serif" textAnchor="middle">Q1</text>
+
+  <rect x="325" y="140" width="35" height="60" rx="2" fill="#CAC3D2" opacity="0.75"/>
+  <text x="342" y="135" fill="#0A1A22" fontSize="7" fontFamily="Lato, sans-serif" textAnchor="middle">71%</text>
+  <text x="342" y="208" fill="#8C9FCB" fontSize="7" fontFamily="Lato, sans-serif" textAnchor="middle">Q2</text>
+
+  <rect x="370" y="120" width="35" height="80" rx="2" fill="#26A7B0" opacity="0.8"/>
+  <text x="387" y="115" fill="#0A1A22" fontSize="7" fontFamily="Lato, sans-serif" textAnchor="middle">79%</text>
+  <text x="387" y="208" fill="#8C9FCB" fontSize="7" fontFamily="Lato, sans-serif" textAnchor="middle">Q3</text>
+
+  <rect x="415" y="100" width="35" height="100" rx="2" fill="#26A7B0"/>
+  <text x="432" y="95" fill="#0A1A22" fontSize="7" fontFamily="Lato, sans-serif" textAnchor="middle">86%</text>
+  <text x="432" y="208" fill="#8C9FCB" fontSize="7" fontFamily="Lato, sans-serif" textAnchor="middle">Q4</text>
+
+  {/* Target line */}
+  <line x1="275" y1="115" x2="455" y2="115" stroke="#CAC3D2" strokeWidth="1" strokeDasharray="4,3"/>
+  <text x="458" y="118" fill="#CAC3D2" fontSize="6" fontFamily="Lato, sans-serif">Target 85%</text>
+
+  {/* Bottom KPI cards */}
+  <rect x="16" y="225" width="148" height="40" rx="4" fill="#f7f9fb" stroke="#e2e8f0" strokeWidth="1"/>
+  <text x="26" y="241" fill="#8C9FCB" fontSize="7" fontFamily="Lato, sans-serif">Visual Consistency</text>
+  <text x="26" y="241" fill="#8C9FCB" fontSize="7" fontFamily="Noto Sans TC, sans-serif" dx="88">視覺一致性</text>
+  <text x="26" y="256" fill="#26A7B0" fontSize="14" fontFamily="Lato, sans-serif" fontWeight="900">87%</text>
+  <text x="60" y="256" fill="#8C9FCB" fontSize="7" fontFamily="Lato, sans-serif">/ 85% target</text>
+
+  <rect x="176" y="225" width="148" height="40" rx="4" fill="#f7f9fb" stroke="#e2e8f0" strokeWidth="1"/>
+  <text x="186" y="241" fill="#8C9FCB" fontSize="7" fontFamily="Lato, sans-serif">Geo Coverage</text>
+  <text x="186" y="241" fill="#8C9FCB" fontSize="7" fontFamily="Noto Sans TC, sans-serif" dx="68">地域覆蓋</text>
+  <text x="186" y="256" fill="#26A7B0" fontSize="14" fontFamily="Lato, sans-serif" fontWeight="900">7/9</text>
+  <text x="214" y="256" fill="#8C9FCB" fontSize="7" fontFamily="Lato, sans-serif">sites active</text>
+
+  <rect x="336" y="225" width="148" height="40" rx="4" fill="#f7f9fb" stroke="#e2e8f0" strokeWidth="1"/>
+  <text x="346" y="241" fill="#8C9FCB" fontSize="7" fontFamily="Lato, sans-serif">Email Open Rate</text>
+  <text x="346" y="241" fill="#8C9FCB" fontSize="7" fontFamily="Noto Sans TC, sans-serif" dx="78">開信率</text>
+  <text x="346" y="256" fill="#26A7B0" fontSize="14" fontFamily="Lato, sans-serif" fontWeight="900">48%</text>
+  <text x="380" y="256" fill="#8C9FCB" fontSize="7" fontFamily="Lato, sans-serif">/ 45% target</text>
+</svg>
+</div>
+
 <Callout type="tip">
 <strong><span className='en'>Annual Brand Review:</span><span className='zh'>年度品牌檢視：</span></strong><span className='en'>Every Q4, GPS Strategy conducts a comprehensive brand health review — synthesizing perception data, consistency audits, comms metrics, and behavioral assessments. Findings and proposed evolution items are presented to the GPS Director for approval before the new fiscal year.</span><span className='zh'>每年 Q4，GPS 策略團隊進行全面品牌健康檢視——綜合認知數據、一致性稽核、溝通指標和行為評估。發現及建議演進項目於新會計年度前呈報 GPS Director 核准。</span>
 </Callout>
+
+### <span className="en">Safety Feeling Index (SFI)</span><span className="zh">安全感受指數 (SFI)</span>
+
+<p className="en">The SFI is a quarterly survey measuring perceived freedom to focus, create, and contribute across 800+ global employees. It is a named index — not a generic perception survey — anchored to GPS's core belief that genuine safety enables peak performance.</p>
+<p className="zh">SFI 是一項季度調查，衡量 800 名以上全球員工所感受到的專注、創造和貢獻的自由度。這是一個具名指數——而非一般性的認知調查——錨定於 GPS 的核心信念：真正的安全感能釋放最高績效。</p>
+
+#### <span className="en">SFI Methodology</span><span className="zh">SFI 方法論</span>
+
+<table className="gps-table"><thead><tr><th><span className="en">Dimension</span><span className="zh">維度</span></th><th><span className="en">Survey Question</span><span className="zh">調查問題</span></th><th><span className="en">Weight</span><span className="zh">權重</span></th></tr></thead><tbody><tr><td><span className="en">Freedom to Focus</span><span className="zh">專注的自由</span></td><td><span className="en">"I can focus on my work without safety concerns."</span><span className="zh">「我可以專注於工作，不受安全疑慮困擾。」</span></td><td>25%</td></tr><tr><td><span className="en">Freedom to Create</span><span className="zh">創造的自由</span></td><td><span className="en">"I feel safe proposing new ideas."</span><span className="zh">「我覺得提出新想法是安全的。」</span></td><td>25%</td></tr><tr><td><span className="en">Freedom to Contribute</span><span className="zh">貢獻的自由</span></td><td><span className="en">"Safety systems support rather than restrict my contributions."</span><span className="zh">「安全系統支持而非限制我的貢獻。」</span></td><td>25%</td></tr><tr><td><span className="en">Whole-Person Safety</span><span className="zh">全人安全</span></td><td><span className="en">"GPS's safety culture extends to my commute and family awareness."</span><span className="zh">「GPS 的安全文化延伸到我的通勤和家庭意識。」</span></td><td>25%</td></tr></tbody></table>
+
+<p className="en"><strong>Target:</strong> SFI ≥ 75 by end of Phase 1 (Year 1). SFI ≥ 85 by end of Phase 2 (Year 2).</p>
+<p className="zh"><strong>目標：</strong>第一階段（第一年）結束前 SFI ≥ 75。第二階段（第二年）結束前 SFI ≥ 85。</p>
+
+### <span className="en">Brand Adoption Rate</span><span className="zh">品牌採用率</span>
+
+<p className="en">The Brand Adoption Rate measures what percentage of site-produced materials use Brand Bible templates and design tokens. It answers the operational question: is the Brand Bible actually being used?</p>
+<p className="zh">品牌採用率衡量各廠區製作的材料中有多少比例使用品牌聖經模板和設計代符。它回答了一個營運層面的問題：品牌聖經是否真的被使用？</p>
+
+#### <span className="en">Measurement Framework</span><span className="zh">衡量架構</span>
+
+<table className="gps-table"><thead><tr><th><span className="en">Category</span><span className="zh">類別</span></th><th><span className="en">Measurement</span><span className="zh">衡量方式</span></th><th><span className="en">Source</span><span className="zh">資料來源</span></th></tr></thead><tbody><tr><td><span className="en">Email templates</span><span className="zh">電子郵件模板</span></td><td><span className="en">% using approved templates</span><span className="zh">使用核准模板的百分比</span></td><td><span className="en">Email platform analytics</span><span className="zh">電子郵件平台分析</span></td></tr><tr><td><span className="en">Presentation decks</span><span className="zh">簡報投影片</span></td><td><span className="en">% using GPS template</span><span className="zh">使用 GPS 模板的百分比</span></td><td><span className="en">SharePoint metadata</span><span className="zh">SharePoint 中繼資料</span></td></tr><tr><td><span className="en">Signage / print</span><span className="zh">標識 / 印刷品</span></td><td><span className="en">% referencing design tokens</span><span className="zh">引用設計代符的百分比</span></td><td><span className="en">Site audit (quarterly)</span><span className="zh">場域稽核（每季）</span></td></tr><tr><td><span className="en">Digital content</span><span className="zh">數位內容</span></td><td><span className="en">% using Tailwind GPS config</span><span className="zh">使用 Tailwind GPS 設定的百分比</span></td><td><span className="en">Repository scan</span><span className="zh">程式碼庫掃描</span></td></tr></tbody></table>
+
+<p className="en"><strong>Target:</strong> ≥60% adoption by end of Phase 1 (Year 1). ≥85% adoption by end of Phase 2 (Year 2).</p>
+<p className="zh"><strong>目標：</strong>第一階段（第一年）結束前採用率 ≥60%。第二階段（第二年）結束前採用率 ≥85%。</p>

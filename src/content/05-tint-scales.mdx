@@ -1,83 +1,22 @@
 import ChapterHeader from '@/components/ChapterHeader';
 import ModuleTracker from '@/components/ModuleTracker';
 import Callout from '@/components/Callout';
+import TintStrip from '@/components/TintStrip';
 
 <ChapterHeader number="05" groupEn="Visual Identity" groupZh="視覺識別" titleEn="Tint & Shade Scales" titleZh="色調漸變階梯" ownerEn="MarCom Team" ownerZh="MarCom Team" />
-<ModuleTracker modules={[{name:'Tint System',status:'done'},{name:'Shade System',status:'done'}]} />
+<ModuleTracker modules={[{name:'Tint System',status:'done'},{name:'Shade System',status:'done'},{name:'Live Demo',status:'done'}]} />
 
-<p><span className="en">Each brand color expands into an 11-step scale (50→950) for consistent UI, charts, and data visualization.</span><span className="zh">每種品牌色彩擴展為 11 階色階（50→950），用於一致的 UI、圖表和數據視覺化。</span></p>
+<p><span className="en">Each brand color expands into an 11-step scale (50→950) for consistent UI, charts, and data visualization. Click any swatch to copy its hex value.</span><span className="zh">每種品牌色彩擴展為 11 階色階（50→950），用於一致的 UI、圖表和數據視覺化。點擊任何色塊即可複製其 hex 值。</span></p>
 
-#### Turquoise
-<div className="scale-row">
-  <div className="scale-cell light-text" style={{background:'#F0FAFB'}}><span className="lb">50</span><span>#F0FAFB</span></div>
-  <div className="scale-cell light-text" style={{background:'#D4F1F3'}}><span className="lb">100</span><span>#D4F1F3</span></div>
-  <div className="scale-cell light-text" style={{background:'#A8E3E8'}}><span className="lb">200</span><span>#A8E3E8</span></div>
-  <div className="scale-cell" style={{background:'#6DCDD5'}}><span className="lb">300</span><span>#6DCDD5</span></div>
-  <div className="scale-cell" style={{background:'#3DB9C2'}}><span className="lb">400</span><span>#3DB9C2</span></div>
-  <div className="scale-cell" style={{background:'#26A7B0'}}><span className="lb">500</span><span>#26A7B0</span></div>
-  <div className="scale-cell" style={{background:'#1E8A92'}}><span className="lb">600</span><span>#1E8A92</span></div>
-  <div className="scale-cell" style={{background:'#186E75'}}><span className="lb">700</span><span>#186E75</span></div>
-  <div className="scale-cell" style={{background:'#145860'}}><span className="lb">800</span><span>#145860</span></div>
-  <div className="scale-cell" style={{background:'#0F4249'}}><span className="lb">900</span><span>#0F4249</span></div>
-  <div className="scale-cell" style={{background:'#082A30'}}><span className="lb">950</span><span>#082A30</span></div>
-</div>
+<TintStrip name="Turquoise" steps={[{step:'50',hex:'#F0FAFB',lightText:true},{step:'100',hex:'#D4F1F3',lightText:true},{step:'200',hex:'#A8E3E8',lightText:true},{step:'300',hex:'#6DCDD5'},{step:'400',hex:'#3DB9C2'},{step:'500',hex:'#26A7B0'},{step:'600',hex:'#1E8A92'},{step:'700',hex:'#186E75'},{step:'800',hex:'#145860'},{step:'900',hex:'#0F4249'},{step:'950',hex:'#082A30'}]} />
 
-#### Copper
-<div className="scale-row">
-  <div className="scale-cell light-text" style={{background:'#F8F7F9'}}><span className="lb">50</span><span>#F8F7F9</span></div>
-  <div className="scale-cell light-text" style={{background:'#EDEAF1'}}><span className="lb">100</span><span>#EDEAF1</span></div>
-  <div className="scale-cell light-text" style={{background:'#DDD8E5'}}><span className="lb">200</span><span>#DDD8E5</span></div>
-  <div className="scale-cell light-text" style={{background:'#CAC3D2'}}><span className="lb">300</span><span>#CAC3D2</span></div>
-  <div className="scale-cell" style={{background:'#B3A9C2'}}><span className="lb">400</span><span>#B3A9C2</span></div>
-  <div className="scale-cell" style={{background:'#9B8FA8'}}><span className="lb">500</span><span>#9B8FA8</span></div>
-  <div className="scale-cell" style={{background:'#857693'}}><span className="lb">600</span><span>#857693</span></div>
-  <div className="scale-cell" style={{background:'#6E5F7C'}}><span className="lb">700</span><span>#6E5F7C</span></div>
-  <div className="scale-cell" style={{background:'#574A63'}}><span className="lb">800</span><span>#574A63</span></div>
-  <div className="scale-cell" style={{background:'#41374B'}}><span className="lb">900</span><span>#41374B</span></div>
-  <div className="scale-cell" style={{background:'#2B2433'}}><span className="lb">950</span><span>#2B2433</span></div>
-</div>
+<TintStrip name="Copper" steps={[{step:'50',hex:'#F8F7F9',lightText:true},{step:'100',hex:'#EDEAF1',lightText:true},{step:'200',hex:'#DDD8E5',lightText:true},{step:'300',hex:'#CAC3D2',lightText:true},{step:'400',hex:'#B3A9C2'},{step:'500',hex:'#9B8FA8'},{step:'600',hex:'#857693'},{step:'700',hex:'#6E5F7C'},{step:'800',hex:'#574A63'},{step:'900',hex:'#41374B'},{step:'950',hex:'#2B2433'}]} />
 
-#### Purple
-<div className="scale-row">
-  <div className="scale-cell light-text" style={{background:'#F4F6FB'}}><span className="lb">50</span><span>#F4F6FB</span></div>
-  <div className="scale-cell light-text" style={{background:'#E2E7F4'}}><span className="lb">100</span><span>#E2E7F4</span></div>
-  <div className="scale-cell light-text" style={{background:'#C5CEE8'}}><span className="lb">200</span><span>#C5CEE8</span></div>
-  <div className="scale-cell" style={{background:'#A8B6DD'}}><span className="lb">300</span><span>#A8B6DD</span></div>
-  <div className="scale-cell" style={{background:'#8C9FCB'}}><span className="lb">400</span><span>#8C9FCB</span></div>
-  <div className="scale-cell" style={{background:'#7086BA'}}><span className="lb">500</span><span>#7086BA</span></div>
-  <div className="scale-cell" style={{background:'#5B6FA3'}}><span className="lb">600</span><span>#5B6FA3</span></div>
-  <div className="scale-cell" style={{background:'#495A85'}}><span className="lb">700</span><span>#495A85</span></div>
-  <div className="scale-cell" style={{background:'#3A4768'}}><span className="lb">800</span><span>#3A4768</span></div>
-  <div className="scale-cell" style={{background:'#2C354E'}}><span className="lb">900</span><span>#2C354E</span></div>
-</div>
+<TintStrip name="Purple" steps={[{step:'50',hex:'#F4F6FB',lightText:true},{step:'100',hex:'#E2E7F4',lightText:true},{step:'200',hex:'#C5CEE8',lightText:true},{step:'300',hex:'#A8B6DD'},{step:'400',hex:'#8C9FCB'},{step:'500',hex:'#7086BA'},{step:'600',hex:'#5B6FA3'},{step:'700',hex:'#495A85'},{step:'800',hex:'#3A4768'},{step:'900',hex:'#2C354E'}]} />
 
-#### Green
-<div className="scale-row">
-  <div className="scale-cell light-text" style={{background:'#F3FAF5'}}><span className="lb">50</span><span>#F3FAF5</span></div>
-  <div className="scale-cell light-text" style={{background:'#E0F2E4'}}><span className="lb">100</span><span>#E0F2E4</span></div>
-  <div className="scale-cell light-text" style={{background:'#C2E5CB'}}><span className="lb">200</span><span>#C2E5CB</span></div>
-  <div className="scale-cell" style={{background:'#A4D8B1'}}><span className="lb">300</span><span>#A4D8B1</span></div>
-  <div className="scale-cell" style={{background:'#8CC897'}}><span className="lb">400</span><span>#8CC897</span></div>
-  <div className="scale-cell" style={{background:'#6BB57E'}}><span className="lb">500</span><span>#6BB57E</span></div>
-  <div className="scale-cell" style={{background:'#539A63'}}><span className="lb">600</span><span>#539A63</span></div>
-  <div className="scale-cell" style={{background:'#437D50'}}><span className="lb">700</span><span>#437D50</span></div>
-  <div className="scale-cell" style={{background:'#356340'}}><span className="lb">800</span><span>#356340</span></div>
-  <div className="scale-cell" style={{background:'#284A30'}}><span className="lb">900</span><span>#284A30</span></div>
-</div>
+<TintStrip name="Green" steps={[{step:'50',hex:'#F3FAF5',lightText:true},{step:'100',hex:'#E0F2E4',lightText:true},{step:'200',hex:'#C2E5CB',lightText:true},{step:'300',hex:'#A4D8B1'},{step:'400',hex:'#8CC897'},{step:'500',hex:'#6BB57E'},{step:'600',hex:'#539A63'},{step:'700',hex:'#437D50'},{step:'800',hex:'#356340'},{step:'900',hex:'#284A30'}]} />
 
-#### Orange
-<div className="scale-row">
-  <div className="scale-cell light-text" style={{background:'#FEF6F2'}}><span className="lb">50</span><span>#FEF6F2</span></div>
-  <div className="scale-cell light-text" style={{background:'#FDE8DE'}}><span className="lb">100</span><span>#FDE8DE</span></div>
-  <div className="scale-cell light-text" style={{background:'#FAD1BD'}}><span className="lb">200</span><span>#FAD1BD</span></div>
-  <div className="scale-cell" style={{background:'#F6AD90'}}><span className="lb">300</span><span>#F6AD90</span></div>
-  <div className="scale-cell" style={{background:'#F29068'}}><span className="lb">400</span><span>#F29068</span></div>
-  <div className="scale-cell" style={{background:'#ED7442'}}><span className="lb">500</span><span>#ED7442</span></div>
-  <div className="scale-cell" style={{background:'#D45A2A'}}><span className="lb">600</span><span>#D45A2A</span></div>
-  <div className="scale-cell" style={{background:'#AC4722'}}><span className="lb">700</span><span>#AC4722</span></div>
-  <div className="scale-cell" style={{background:'#87381B'}}><span className="lb">800</span><span>#87381B</span></div>
-  <div className="scale-cell" style={{background:'#642A15'}}><span className="lb">900</span><span>#642A15</span></div>
-</div>
+<TintStrip name="Orange" steps={[{step:'50',hex:'#FEF6F2',lightText:true},{step:'100',hex:'#FDE8DE',lightText:true},{step:'200',hex:'#FAD1BD',lightText:true},{step:'300',hex:'#F6AD90'},{step:'400',hex:'#F29068'},{step:'500',hex:'#ED7442'},{step:'600',hex:'#D45A2A'},{step:'700',hex:'#AC4722'},{step:'800',hex:'#87381B'},{step:'900',hex:'#642A15'}]} />
 
 ### <span className="en">Scale Usage Guide</span><span className="zh">色階使用指南</span>
 

@@ -1,9 +1,10 @@
 import ChapterHeader from '@/components/ChapterHeader';
 import ModuleTracker from '@/components/ModuleTracker';
 import ColorSwatch from '@/components/ColorSwatch';
+import DarkModeToggle from '@/components/DarkModeToggle';
 
 <ChapterHeader number="07" groupEn="Visual Identity" groupZh="視覺識別" titleEn="Semantic Colors & Dark Mode" titleZh="語意色與深色模式" ownerEn="MarCom Team" ownerZh="MarCom Team" />
-<ModuleTracker modules={[{name:'Semantic',status:'done'},{name:'Dark Mode',status:'done'},{name:'Mapping',status:'done'}]} />
+<ModuleTracker modules={[{name:'Semantic',status:'done'},{name:'Dark Mode',status:'done'},{name:'Mapping',status:'done'},{name:'Live Toggle',status:'done'}]} />
 
 ### <span className="en">Semantic Colors</span><span className="zh">語意色彩</span>
 
@@ -27,22 +28,11 @@ import ColorSwatch from '@/components/ColorSwatch';
 </tbody>
 </table>
 
-### <span className="en">Dark Mode</span><span className="zh">深色模式</span>
+### <span className="en">Dark Mode — Interactive Preview</span><span className="zh">深色模式——互動預覽</span>
 
-<div className="dark-preview">
-  <div style={{background:'var(--color-dm-surface)',border:'1px solid var(--color-dm-border)',borderRadius:'8px',padding:'16px',marginBottom:'10px'}}>
-    <h5 style={{color:'var(--color-dm-text)',fontSize:'13px',marginBottom:'4px'}}>GPS Dark Mode — <span style={{color:'var(--color-turquoise-400)'}}>Live Preview</span></h5>
-    <p style={{margin:0}}><span className="en" style={{color:'var(--color-dm-muted)',fontSize:'11px'}}>Soft white on deep blue-black. Turquoise-400 accent provides contrast without glare.</span><span className="zh" style={{color:'var(--color-dm-muted)',fontSize:'11px'}}>深藍黑底上的柔和白色。Turquoise-400 點綴色提供對比而不刺眼。</span></p>
-    <div style={{display:'flex',gap:'6px',marginTop:'8px'}}>
-      <div style={{width:'36px',height:'24px',borderRadius:'3px',background:'#0D1B21',border:'1px solid #243944'}} />
-      <div style={{width:'36px',height:'24px',borderRadius:'3px',background:'#142229',border:'1px solid #243944'}} />
-      <div style={{width:'36px',height:'24px',borderRadius:'3px',background:'#1C2F38',border:'1px solid #243944'}} />
-      <div style={{width:'36px',height:'24px',borderRadius:'3px',background:'#243944'}} />
-      <div style={{width:'36px',height:'24px',borderRadius:'3px',background:'#3DB9C2'}} />
-      <div style={{width:'36px',height:'24px',borderRadius:'3px',background:'#E2E8EC'}} />
-    </div>
-  </div>
-</div>
+<p><span className="en">Toggle between light and dark to see how GPS tokens adapt. The left panel shows a live UI mockup; the right shows active token values.</span><span className="zh">切換淺色與深色模式，查看 GPS 代符如何適應。左側面板為即時 UI 模擬；右側顯示作用中的代符值。</span></p>
+
+<DarkModeToggle />
 
 <table className="gps-table">
 <thead><tr><th><span className="en">Token</span><span className="zh">代符</span></th><th><span className="en">Light</span><span className="zh">淺色</span></th><th><span className="en">Dark</span><span className="zh">深色</span></th><th><span className="en">Role</span><span className="zh">角色</span></th></tr></thead>
