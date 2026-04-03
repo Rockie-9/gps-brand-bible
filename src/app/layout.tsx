@@ -19,7 +19,16 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="lang-en">{children}</body>
+      <body className="lang-en">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-white focus:text-turquoise-600 focus:rounded-md focus:shadow-lg"
+          style={{ fontSize: '12px', fontWeight: 700 }}
+        >
+          Skip to content
+        </a>
+        {children}
+      </body>
     </html>
   );
 }

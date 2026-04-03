@@ -79,7 +79,7 @@ export default function Sidebar({
         className={`nav-overlay${isOpen ? ' open' : ''}`}
         onClick={onClose}
       />
-      <nav className={`nav-sidebar${isOpen ? ' open' : ''}`}>
+      <nav className={`nav-sidebar${isOpen ? ' open' : ''}`} role="navigation" aria-label="Brand Bible sections">
         <div
           className="flex items-center gap-2.5 px-4 pt-5 pb-3"
           style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}

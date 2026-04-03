@@ -77,6 +77,20 @@ export default function Home() {
     localStorage.setItem('gps-lang', lang);
   }, [lang]);
 
+  // Escape key closes all panels
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setPromptOpen(false);
+        setComplianceOpen(false);
+        setAssistantOpen(false);
+        setNavOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
+
   // Listen for cross-reference navigation events
   useEffect(() => {
     const handler = (e: Event) => {
@@ -129,7 +143,7 @@ export default function Home() {
         onBrandAssistant={() => { setAssistantOpen(true); setNavOpen(false); }}
         onAIPrompt={() => { setPromptOpen(true); setNavOpen(false); }}
       />
-      <div className="main-content">
+      <div className="main-content" role="main" id="main-content">
         <TopBar
           activeSection={activeSection}
           lang={lang}
