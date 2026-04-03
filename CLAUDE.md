@@ -336,5 +336,37 @@ gps-brand-bible/
 2. Print stylesheet verification with all new content
 3. Full bilingual QA pass
 4. Performance: lazy-load images, optimize SVGs
+
+
+## Build Queue (execute in order)
+
+### Phase 3: AI Compliance Checker
+Build AIComplianceChecker.tsx component:
+- UI: text input area + "Check Compliance" button + results panel
+- Calls Anthropic Claude API (claude-sonnet-4-20250514) via server-side API route (/api/compliance-check)
+- Four checks: vocabulary scan (banned → approved word replacement), tone classification (5 contexts), Grade 8 readability scoring, bilingual completeness verification
+- Results: pass/fail per check with chapter cross-references (Ch 01, Ch 12, App L) linking to portal sections
+- No API key hardcoded — use environment variable ANTHROPIC_API_KEY via API route
+- All UI text bilingual EN + zh-TW
+
+### Phase 4: AI Brand Assistant + Vision
+Build AIBrandAssistant.tsx as slide-out chat panel:
+- System prompt includes full Brand Bible context (core belief, pillars, tone rules, vocabulary)
+- Stakeholder-specific generation: JASM welcome (kaizen framing, Grade 8, bilingual), ESMC Works Council brief (Betriebsrat format), AZ OSHA signage (ES + EN)
+- Image upload capabilities via Claude vision:
+  - Logo clearspace detection (1/4 mark for horizontal, 1/2 width for vertical) → pass/fail with overlay
+  - 12-column grid compliance check
+  - Color accuracy: extract dominant colors → compare against approved palette → flag off-brand
+  - Accessibility contrast: measure ratios → flag below WCAG AA (4.5:1 text, 3:1 large)
+- Same API route pattern as Phase 3
+- All UI text bilingual
+
+### Phase 5: Polish
+- Accessibility audit: alt text on all images/SVGs, ARIA labels, keyboard navigation for all interactive components
+- Print stylesheet: verify all new components (AI panels, visual demos) handled correctly
+- Bilingual QA: every user-facing string has EN + zh-TW
+- Performance: lazy-load Unsplash images, optimize SVGs, check bundle size
+- Update App V version history: bump to v4.0 with comprehensive changelog covering all phases
+- Final Vercel deploy
 5. Version bump to v4.0 with comprehensive changelog
 6. Final deploy
