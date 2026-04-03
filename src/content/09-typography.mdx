@@ -1,0 +1,157 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+import CodeBlock from '@/components/CodeBlock'
+
+<ChapterHeader
+  number={9}
+  groupEn="Visual Identity"
+  groupZh="視覺識別"
+  titleEn="Typography"
+  titleZh="字體排版"
+  ownerEn="MarCom Team"
+  ownerZh="MarCom Team"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Typefaces', status: 'done' },
+  { name: 'Scale', status: 'done' },
+  { name: 'Hierarchy', status: 'done' },
+  { name: 'Type on Image', status: 'done' },
+  { name: 'CJK Guide', status: 'wip' },
+]} />
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Role</span><span className="zh">角色</span></th>
+      <th><span className="en">Typeface</span><span className="zh">字體</span></th>
+      <th><span className="en">Weights</span><span className="zh">字重</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Chinese</strong></td><td><code>Noto Sans TC</code></td><td>Light 300 · Regular 400 · Medium 500 · Bold 700</td></tr>
+    <tr><td><strong>English</strong></td><td><code>Lato</code></td><td>Light 300 · Regular 400 · Bold 700</td></tr>
+    <tr><td><strong>Fallback</strong></td><td><code>Trebuchet MS, Verdana</code></td><td>Regular · Bold</td></tr>
+  </tbody>
+</table>
+
+### <span className="en">Type Specimen</span><span className="zh">字體樣本頁</span>
+
+<div style={{padding:'24px',background:'#fff',border:'1px solid var(--g200)',borderRadius:'8px',margin:'16px 0'}}>
+  <div style={{fontFamily:'var(--fe)',fontWeight:700,fontSize:'28px',color:'var(--ink)',lineHeight:1.3,marginBottom:'4px'}}>Designed for people, not just perimeters</div>
+  <div style={{fontFamily:'var(--fz)',fontWeight:700,fontSize:'28px',color:'var(--ink)',lineHeight:1.5,marginBottom:'16px'}}>為人而設計，不只是為界線</div>
+  <div style={{fontFamily:'var(--fe)',fontWeight:700,fontSize:'20px',color:'var(--turquoise-700)',lineHeight:1.4,marginBottom:'4px'}}>H2 · Section Heading · Lato Bold 20px</div>
+  <div style={{fontFamily:'var(--fz)',fontWeight:700,fontSize:'20px',color:'var(--turquoise-700)',lineHeight:1.6,marginBottom:'12px'}}>H2 · 區段標題 · Noto Sans TC Bold 20px</div>
+  <div style={{fontFamily:'var(--fe)',fontWeight:700,fontSize:'15px',color:'var(--charcoal)',marginBottom:'4px'}}>H3 · Subsection · Lato Bold 15px</div>
+  <div style={{fontFamily:'var(--fz)',fontWeight:500,fontSize:'15px',color:'var(--charcoal)',marginBottom:'12px'}}>H3 · 子標題 · Noto Sans TC Medium 15px</div>
+  <div style={{fontFamily:'var(--fe)',fontSize:'14px',color:'var(--ink)',lineHeight:1.75,marginBottom:'4px',maxWidth:'65ch'}}>Body text in Lato Regular 14px. Security is not about restriction — it is about creating the conditions for people to focus, create, and contribute at their highest level.</div>
+  <div style={{fontFamily:'var(--fz)',fontSize:'14px',color:'var(--ink)',lineHeight:1.85,marginBottom:'12px',maxWidth:'65ch'}}>內文使用 Noto Sans TC Regular 14px。安全不是限制——而是為人創造專注、創造和發揮最高水準的條件。CJK 行高 1.85。</div>
+  <div style={{fontFamily:'var(--fe)',fontSize:'11px',color:'var(--g500)',lineHeight:1.6,marginBottom:'4px'}}>Caption · Lato Regular 11px · Grey 500 · metadata, labels, supporting text</div>
+  <div style={{fontFamily:'var(--fz)',fontSize:'11px',color:'var(--g500)',lineHeight:1.7}}>說明文字 · Noto Sans TC Regular 11px · Grey 500 · 後設資料、標籤、輔助文字</div>
+</div>
+
+### <span className="en">Type Specimen — Dark Mode</span><span className="zh">字體樣本頁——深色模式</span>
+
+<div style={{padding:'24px',background:'var(--dm-bg)',border:'1px solid var(--dm-b)',borderRadius:'8px',margin:'16px 0'}}>
+  <div style={{fontFamily:'var(--fe)',fontWeight:700,fontSize:'28px',color:'var(--dm-t)',lineHeight:1.3,marginBottom:'4px'}}>Safety designed into every surface</div>
+  <div style={{fontFamily:'var(--fz)',fontWeight:700,fontSize:'28px',color:'var(--dm-t)',lineHeight:1.5,marginBottom:'16px'}}>安全設計融入每一個介面</div>
+  <div style={{fontFamily:'var(--fe)',fontWeight:700,fontSize:'20px',color:'var(--turquoise-300)',lineHeight:1.4,marginBottom:'4px'}}>H2 · Section Heading · Turquoise-300 on DM-BG</div>
+  <div style={{fontFamily:'var(--fz)',fontWeight:700,fontSize:'20px',color:'var(--turquoise-300)',lineHeight:1.6,marginBottom:'12px'}}>H2 · 區段標題 · Turquoise-300 深色模式</div>
+  <div style={{fontFamily:'var(--fe)',fontSize:'14px',color:'var(--dm-t)',lineHeight:1.75,marginBottom:'4px',maxWidth:'65ch',opacity:0.9}}>Body text in Lato Regular on dark background. Use DM-Text (#E2E8EC) for primary text and DM-TextMuted (#8A9BA5) for secondary content. Never use pure white — it creates excessive contrast.</div>
+  <div style={{fontFamily:'var(--fz)',fontSize:'14px',color:'var(--dm-t)',lineHeight:1.85,marginBottom:'12px',maxWidth:'65ch',opacity:0.9}}>深色背景上的 Noto Sans TC 內文。主要文字使用 DM-Text (#E2E8EC)，次要內容使用 DM-TextMuted (#8A9BA5)。永不使用純白——會造成過度對比。</div>
+  <div style={{fontFamily:'var(--fe)',fontSize:'11px',color:'var(--dm-tm)',lineHeight:1.6}}>Caption · DM-TextMuted (#8A9BA5) · metadata, timestamps, secondary labels</div>
+</div>
+
+### <span className="en">Type Scale</span><span className="zh">字級系統</span>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Level</span><span className="zh">層級</span></th>
+      <th><span className="en">Size</span><span className="zh">尺寸</span></th>
+      <th><span className="en">Weight</span><span className="zh">字重</span></th>
+      <th><span className="en">Line-Height</span><span className="zh">行高</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Display</td><td><code>32–48px</code></td><td>Bold 700</td><td>1.15</td></tr>
+    <tr><td>Heading</td><td><code>24–28px</code></td><td>Bold 700</td><td>1.25</td></tr>
+    <tr><td>Subheading</td><td><code>18–20px</code></td><td>Medium 500</td><td>1.35</td></tr>
+    <tr><td>Body</td><td><code>14–16px</code></td><td>Regular 400</td><td>1.65</td></tr>
+    <tr><td>Caption</td><td><code>11–12px</code></td><td>Regular 400</td><td>1.5</td></tr>
+  </tbody>
+</table>
+
+<p className="en">Max 3 type sizes per piece. CJK line-height: <code>1.8–2.0</code> (governs when mixed with Latin).</p>
+<p className="zh">每件作品最多使用 3 種字級。中文行高：<code>1.8–2.0</code>（中英文混排時以此為準）。</p>
+
+### <span className="en">Type Hierarchy</span><span className="zh">字體層級</span>
+
+<p className="en">In order to keep things simple, no more than three type sizes should be used in one communication piece. Follow spacing and alignment structure. Use approved heading/subheading/body text sizes to maintain readability and hierarchy.</p>
+<p className="zh">為保持簡潔，每件通訊作品不應使用超過三種字級。遵循間距和對齊結構，使用核定的標題/副標題/內文字級以維持可讀性和層級。</p>
+
+<div className="card-grid card-grid-2">
+  <div className="card" style={{background:'var(--g50)'}}>
+    <div className="card-label"><span className="en">English Example</span><span className="zh">英文範例</span></div>
+    <div style={{fontSize:'8px',fontWeight:700,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--g400)'}}>GLOBAL PHYSICAL SECURITY</div>
+    <div style={{fontSize:'18px',fontWeight:700,color:'var(--black)',lineHeight:1.3,margin:'6px 0'}}>Safeguarding TSMC's Global Operations, Site by Site</div>
+    <div style={{fontSize:'11px',color:'var(--g500)',lineHeight:1.6}}>Global Physical Security (GPS) is the division responsible for maintaining physical safety, risk control, and operational resilience across TSMC's global sites.</div>
+  </div>
+  <div className="card" style={{background:'var(--g50)'}}>
+    <div className="card-label">中文範例</div>
+    <div style={{fontFamily:'var(--fz)',fontSize:'10px',fontWeight:700,color:'var(--g400)'}}>全球實體安全處</div>
+    <div style={{fontFamily:'var(--fz)',fontSize:'18px',fontWeight:700,color:'var(--black)',lineHeight:1.4,margin:'6px 0'}}>守護全球據點，打造零風險營運環境</div>
+    <div style={{fontFamily:'var(--fz)',fontSize:'11px',color:'var(--g500)',lineHeight:1.8}}>全球實體安全處（GPS）負責維護 TSMC 各營運據點的實體安全、防災風險控管與營運韌性。從門禁管理、監控系統，到緊急應變與 ISO 認證，GPS 確保每個場域皆在高規格防護下穩定運作。</div>
+  </div>
+</div>
+
+### <span className="en">Type on Image</span><span className="zh">影像上的文字</span>
+
+<p className="en">Typography can be applied on top of imagery. In these instances, use black typography on lighter images, and white typography on darker images to ensure that there is enough contrast. Never use colored typography on imagery.</p>
+<p className="zh">文字可以置於影像之上。在這些情況下，淺色影像上使用黑色文字，深色影像上使用白色文字，以確保有足夠的對比度。永遠不要在影像上使用彩色文字。</p>
+
+<DoExample
+  doContent={<><span className="en">Use white text over subtle dark overlay to ensure readability. Use black text on clean, light backgrounds. Always meet WCAG AA contrast (4.5:1 for body text).</span><span className="zh">在深色覆蓋層上使用白色文字以確保可讀性。在乾淨的淺色背景上使用黑色文字。始終達到 WCAG AA 對比標準（內文 4.5:1）。</span></>}
+  dontContent={<><span className="en">Avoid placing light text on bright or detailed backgrounds. Do not use colored text over photos — it reduces legibility and looks unprofessional. Never sacrifice contrast for aesthetic preference.</span><span className="zh">避免在明亮或細節繁多的背景上使用淺色文字。不要在照片上使用彩色文字——會降低可讀性且顯得不專業。永遠不要為了美觀偏好而犧牲對比度。</span></>}
+/>
+
+### <span className="en">Spacing Scale</span><span className="zh">間距系統</span>
+
+<p className="en">All spacing derives from a <code>4px</code> base unit. Use only these values for margins, padding, and gaps. Consistent spacing is the single biggest factor in perceived design quality.</p>
+<p className="zh">所有間距源自 <code>4px</code> 基礎單位。僅使用這些數值作為邊距、內距和間隔。一致的間距是影響設計質感的最大單一因素。</p>
+
+<div style={{display:'flex',gap:'3px',alignItems:'flex-end',margin:'16px 0',padding:'16px',background:'var(--g50)',borderRadius:'8px',flexWrap:'wrap'}}>
+  <div style={{textAlign:'center'}}><div style={{width:'4px',height:'4px',background:'var(--turquoise)',borderRadius:'1px'}}></div><div style={{fontSize:'7px',color:'var(--g500)',marginTop:'4px'}}>4</div><div style={{fontSize:'6px',color:'var(--g400)'}}>--sp-1</div></div>
+  <div style={{textAlign:'center'}}><div style={{width:'8px',height:'8px',background:'var(--turquoise)',borderRadius:'1px'}}></div><div style={{fontSize:'7px',color:'var(--g500)',marginTop:'4px'}}>8</div><div style={{fontSize:'6px',color:'var(--g400)'}}>--sp-2</div></div>
+  <div style={{textAlign:'center'}}><div style={{width:'12px',height:'12px',background:'var(--turquoise)',borderRadius:'1px'}}></div><div style={{fontSize:'7px',color:'var(--g500)',marginTop:'4px'}}>12</div><div style={{fontSize:'6px',color:'var(--g400)'}}>--sp-3</div></div>
+  <div style={{textAlign:'center'}}><div style={{width:'16px',height:'16px',background:'var(--turquoise)',borderRadius:'1px'}}></div><div style={{fontSize:'7px',color:'var(--g500)',marginTop:'4px'}}>16</div><div style={{fontSize:'6px',color:'var(--g400)'}}>--sp-4</div></div>
+  <div style={{textAlign:'center'}}><div style={{width:'24px',height:'24px',background:'var(--turquoise-400)',borderRadius:'2px'}}></div><div style={{fontSize:'7px',color:'var(--g500)',marginTop:'4px'}}>24</div><div style={{fontSize:'6px',color:'var(--g400)'}}>--sp-6</div></div>
+  <div style={{textAlign:'center'}}><div style={{width:'32px',height:'32px',background:'var(--turquoise-400)',borderRadius:'2px'}}></div><div style={{fontSize:'7px',color:'var(--g500)',marginTop:'4px'}}>32</div><div style={{fontSize:'6px',color:'var(--g400)'}}>--sp-8</div></div>
+  <div style={{textAlign:'center'}}><div style={{width:'48px',height:'48px',background:'var(--turquoise-300)',borderRadius:'2px'}}></div><div style={{fontSize:'7px',color:'var(--g500)',marginTop:'4px'}}>48</div><div style={{fontSize:'6px',color:'var(--g400)'}}>--sp-12</div></div>
+  <div style={{textAlign:'center'}}><div style={{width:'64px',height:'64px',background:'var(--turquoise-200)',borderRadius:'3px'}}></div><div style={{fontSize:'7px',color:'var(--g500)',marginTop:'4px'}}>64</div><div style={{fontSize:'6px',color:'var(--g400)'}}>--sp-16</div></div>
+  <div style={{textAlign:'center'}}><div style={{width:'96px',height:'96px',background:'var(--turquoise-100)',borderRadius:'4px'}}></div><div style={{fontSize:'7px',color:'var(--g500)',marginTop:'4px'}}>96</div><div style={{fontSize:'6px',color:'var(--g400)'}}>--sp-24</div></div>
+</div>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>px</th>
+      <th><span className="en">Usage</span><span className="zh">用途</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>--sp-1</code></td><td>4</td><td><span className="en">Icon-text gap, inline element spacing</span><span className="zh">圖標與文字間距、行內元素間距</span></td></tr>
+    <tr><td><code>--sp-2</code></td><td>8</td><td><span className="en">Compact card padding, badge padding</span><span className="zh">緊湊卡片內距、徽章內距</span></td></tr>
+    <tr><td><code>--sp-3</code></td><td>12</td><td><span className="en">Form field internal padding</span><span className="zh">表單欄位內部間距</span></td></tr>
+    <tr><td><code>--sp-4</code></td><td>16</td><td><span className="en">Standard card padding, paragraph gap</span><span className="zh">標準卡片內距、段落間距</span></td></tr>
+    <tr><td><code>--sp-6</code></td><td>24</td><td><span className="en">Section sub-spacing, card gap in grids</span><span className="zh">區段子間距、網格中卡片間隔</span></td></tr>
+    <tr><td><code>--sp-8</code></td><td>32</td><td><span className="en">Section heading top margin</span><span className="zh">區段標題頂部邊距</span></td></tr>
+    <tr><td><code>--sp-12</code></td><td>48</td><td><span className="en">Major section dividers</span><span className="zh">主要區段分隔</span></td></tr>
+    <tr><td><code>--sp-16</code></td><td>64</td><td><span className="en">Page section padding</span><span className="zh">頁面區段內距</span></td></tr>
+    <tr><td><code>--sp-24</code></td><td>96</td><td><span className="en">Hero section vertical padding</span><span className="zh">主視覺區段垂直內距</span></td></tr>
+  </tbody>
+</table>

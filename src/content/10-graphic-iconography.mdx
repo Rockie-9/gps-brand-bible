@@ -1,0 +1,99 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+import CodeBlock from '@/components/CodeBlock'
+
+<ChapterHeader
+  number={10}
+  groupEn="Visual Identity"
+  groupZh="視覺識別"
+  titleEn="Graphic System & Iconography"
+  titleZh="圖形系統與圖標學"
+  ownerEn="MarCom Team"
+  ownerZh="MarCom Team"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Elements', status: 'done' },
+  { name: 'Application', status: 'done' },
+  { name: 'Do/Don\'t', status: 'done' },
+  { name: 'Icon Library', status: 'todo' },
+]} />
+
+<p className="en">GPS's graphic elements are derived from the logo mark's grid structure and curved form, echoing the brand's themes of protection, flow, and precision. These elements are designed to be used in conjunction with the brand logo, color, typography, and imagery. They can be applied in both sharp and blurred styles to introduce depth, motion, or emphasis, and are intended to complement layouts.</p>
+<p className="zh">GPS 的圖形元素源自標誌圖標的網格結構和曲線造型，呼應品牌保護、流動和精確的主題。這些元素設計為與品牌標誌、色彩、字體排版和影像搭配使用。它們可以鋒利和模糊兩種風格呈現，用以引入深度、動感或強調，並旨在作為版面配置的補充。</p>
+
+### <span className="en">Graphic Elements — Core Visual</span><span className="zh">圖形元素——核心視覺</span>
+
+<p className="en">The primary graphic element is the checkerboard pattern derived from the logo mark, rendered on brand gradient backgrounds. These elements tie together the identity components — logo, typography, and imagery — into a cohesive visual system.</p>
+<p className="zh">主要圖形元素是源自標誌圖標的棋格圖案，在品牌漸層背景上呈現。這些元素將識別元件——標誌、字體排版和影像——串聯成一個統一的視覺系統。</p>
+
+{/* Reference image: GPS Graphic System — Core visual element on brand gradient */}
+
+### <span className="en">Three Element Styles</span><span className="zh">三種元素風格</span>
+
+<p className="en">Visual elements derived from the GPS logomark's grid structure and curved form can be applied in three distinct styles.</p>
+<p className="zh">源自 GPS 標誌圖標的網格結構和曲線造型的視覺元素，可以三種不同風格呈現。</p>
+
+<div className="card-grid card-grid-3">
+  <div className="card">
+    <div className="card-label"><span className="en">Style 01</span><span className="zh">風格 01</span></div>
+    <div className="card-value"><span className="en">Blurred Organic</span><span className="zh">模糊有機風格</span></div>
+    <div className="card-note"><span className="en">Soft, atmospheric renderings of the checkerboard dots with gaussian blur and transparency. Used for background textures, hero sections, and brand-building materials where a subtle, modern feel is desired.</span><span className="zh">以高斯模糊和透明度呈現的柔和、氛圍感棋格點陣。用於背景紋理、主視覺區段和需要微妙現代感的品牌建設材料。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Style 02</span><span className="zh">風格 02</span></div>
+    <div className="card-value"><span className="en">Flowing Organic</span><span className="zh">流動有機風格</span></div>
+    <div className="card-note"><span className="en">Curved, dynamic arrangements of dots and shapes suggesting movement and protection. Used for event materials, campaign visuals, and content where energy and motion are desired.</span><span className="zh">暗示運動和保護的曲線、動態圓點與形狀排列。用於活動材料、宣傳視覺和需要能量感與動態感的內容。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Style 03</span><span className="zh">風格 03</span></div>
+    <div className="card-value"><span className="en">Sharp Geometric</span><span className="zh">銳利幾何風格</span></div>
+    <div className="card-note"><span className="en">Crisp, grid-aligned checkerboard patterns with clear edges. Used for data-driven content, technical documents, signage, and materials requiring precision and structure.</span><span className="zh">邊緣清晰的網格對齊棋格圖案。用於數據驅動內容、技術文件、標識和需要精確與結構感的材料。</span></div>
+  </div>
+</div>
+
+{/* Reference image: GPS Three Element Styles — Blurred Organic, Flowing Organic, Sharp Geometric */}
+
+### <span className="en">Graphic Application</span><span className="zh">圖形應用</span>
+
+<DoExample
+  doContent={<><span className="en">Use graphic elements for general layout enhancement on brand gradient backgrounds. Use as appropriate repeated patterns for texture and depth. Use for highlight moments — accent corners, section dividers, and focal points alongside photography.</span><span className="zh">在品牌漸層背景上使用圖形元素做版面強化。適當使用重複圖案增添紋理和深度。用於強調時刻——裝飾角落、區段分隔線和攝影旁的焦點。</span></>}
+  dontContent={<><span className="en">Do not overuse the graphics — excessive pattern coverage overwhelms content and reduces readability. Elements should complement, never compete with, the content they accompany. Maintain visual breathing room.</span><span className="zh">不要過度使用圖形——過多的圖案覆蓋會壓過內容並降低可讀性。元素應輔助、而非與其伴隨的內容競爭。維持視覺呼吸空間。</span></>}
+/>
+
+{/* Reference image: GPS Graphic Application — Do and Dont examples */}
+
+### <span className="en">Icon System</span><span className="zh">圖標系統</span>
+
+<p className="en">All icons must be custom SVG — no icon libraries (FontAwesome, Material, etc.).</p>
+<p className="zh">所有圖標必須為自製 SVG——不使用圖標庫（FontAwesome、Material 等）。</p>
+
+<div style={{display:'flex',gap:'16px',margin:'12px 0',flexWrap:'wrap',alignItems:'flex-start'}}>
+  <svg width="120" height="120" viewBox="0 0 120 120" style={{background:'var(--g50)',borderRadius:'8px',border:'1px solid var(--g200)'}}>
+    <rect x="10" y="10" width="100" height="100" fill="none" stroke="var(--g300)" strokeWidth=".5" strokeDasharray="2,2"/>
+    <rect x="18" y="18" width="84" height="84" fill="none" stroke="var(--turquoise)" strokeWidth="1" strokeDasharray="3,2"/>
+    <text x="60" y="8" textAnchor="middle" fontSize="6" fill="var(--g400)" fontFamily="Consolas,monospace">24px</text>
+    <text x="60" y="114" textAnchor="middle" fontSize="5" fill="var(--turquoise)" fontFamily="Consolas,monospace">2px pad</text>
+    <path d="M42 42 L78 42 L78 78 L42 78 Z" fill="none" stroke="var(--ink)" strokeWidth="2.5" rx="3"/>
+    <path d="M52 58 L58 64 L70 52" fill="none" stroke="var(--turquoise)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+  <div>
+    <table className="gps-table">
+      <thead>
+        <tr>
+          <th><span className="en">Icon Property</span><span className="zh">圖標屬性</span></th>
+          <th><span className="en">Spec</span><span className="zh">規格</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><span className="en">Stroke</span><span className="zh">筆畫</span></td><td><code>1.5–2px</code> <span className="en">consistent</span><span className="zh">一致</span></td></tr>
+        <tr><td><span className="en">Corner radius</span><span className="zh">圓角半徑</span></td><td><code>2px</code> min</td></tr>
+        <tr><td><span className="en">Grid</span><span className="zh">網格</span></td><td><code>24×24px</code>, <code>2px</code> padding</td></tr>
+        <tr><td><span className="en">Color</span><span className="zh">色彩</span></td><td><span className="en">Single-color, <code>currentColor</code></span><span className="zh">單色，<code>currentColor</code></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+import CodeBlock from '@/components/CodeBlock'
+
+<ChapterHeader
+  number={14}
+  groupEn="Application: Print"
+  groupZh="應用：印刷"
+  titleEn="Stationery System"
+  titleZh="文具系統"
+  ownerEn="MarCom Team"
+  ownerZh="MarCom Team"
+/>
+
+<ModuleTracker modules={[
+  { name: 'ID Card', status: 'done' },
+  { name: 'Letterhead', status: 'done' },
+  { name: 'Envelope', status: 'done' },
+]} />
+
+### <span className="en">Print Production Specs</span><span className="zh">印刷製作規格</span>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Format</span><span className="zh">格式</span></th>
+      <th><span className="en">Trim Size</span><span className="zh">裁切尺寸</span></th>
+      <th><span className="en">Bleed</span><span className="zh">出血</span></th>
+      <th><span className="en">Safe Zone</span><span className="zh">安全區域</span></th>
+      <th><span className="en">Resolution</span><span className="zh">解析度</span></th>
+      <th><span className="en">Color Mode</span><span className="zh">色彩模式</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><span className="en">Business Card</span><span className="zh">名片</span></td><td>90 × 54mm</td><td>3mm</td><td>5mm</td><td>300dpi</td><td>CMYK</td></tr>
+    <tr><td><span className="en">A4 Letterhead</span><span className="zh">A4 信紙</span></td><td>210 × 297mm</td><td>3mm</td><td>15mm</td><td>300dpi</td><td>CMYK</td></tr>
+    <tr><td><span className="en">A3 Poster</span><span className="zh">A3 海報</span></td><td>297 × 420mm</td><td>3mm</td><td>10mm</td><td>300dpi</td><td>CMYK</td></tr>
+    <tr><td><span className="en">A1 Poster</span><span className="zh">A1 海報</span></td><td>594 × 841mm</td><td>5mm</td><td>15mm</td><td>150dpi</td><td>CMYK</td></tr>
+    <tr><td><span className="en">Large-format Banner</span><span className="zh">大型橫幅</span></td><td><span className="en">Custom (up to 3000mm)</span><span className="zh">自訂（最大 3000mm）</span></td><td>5mm</td><td>30mm</td><td>100–150dpi</td><td>CMYK</td></tr>
+    <tr><td><span className="en">Fabric Backdrop</span><span className="zh">布幕背板</span></td><td><span className="en">Custom (up to 5000mm)</span><span className="zh">自訂（最大 5000mm）</span></td><td>10mm</td><td>50mm</td><td>72–100dpi</td><td>sRGB</td></tr>
+    <tr><td><span className="en">Roll-up Banner</span><span className="zh">易拉展架</span></td><td>850 × 2000mm</td><td>3mm</td><td>15mm</td><td>150dpi</td><td>CMYK</td></tr>
+    <tr><td><span className="en">Signage Panel</span><span className="zh">標識面板</span></td><td><span className="en">Custom</span><span className="zh">自訂</span></td><td>5mm</td><td>20mm</td><td>150dpi</td><td>CMYK / PMS</td></tr>
+  </tbody>
+</table>
+
+### <span className="en">Business Card</span><span className="zh">名片</span>
+
+<div className="mockup">
+  <div className="mockup-header">90×55mm — Front / Back</div>
+  <div className="business-card-mockup">
+    <div className="business-card business-card-front">
+      <div className="bc-name">Security Manager Name</div>
+      <div className="bc-title">Global Physical Security</div>
+      <div className="bc-contact">name@company.com<br/>+886 3 563 6688<br/>HsinChu, Taiwan</div>
+    </div>
+    <div className="business-card business-card-back">
+      <div className="bc-logo-wordmark">全球實體安全處<small>GLOBAL PHYSICAL SECURITY</small></div>
+    </div>
+  </div>
+</div>
+
+### <span className="en">Print Specs</span><span className="zh">印刷規格</span>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Item</span><span className="zh">項目</span></th>
+      <th><span className="en">Paper</span><span className="zh">紙張</span></th>
+      <th><span className="en">Finish</span><span className="zh">表面處理</span></th>
+      <th><span className="en">Special</span><span className="zh">特殊工藝</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Business Card</td><td>350gsm matte</td><td>Soft-touch lamination</td><td>Gradient band: spot UV</td></tr>
+    <tr><td>Letterhead</td><td>120gsm offset</td><td>Uncoated</td><td>Header gradient print</td></tr>
+    <tr><td>Envelope</td><td>120gsm offset</td><td>Uncoated</td><td>Footer gradient band</td></tr>
+    <tr><td>Folder</td><td>300gsm coated</td><td>Matte lamination</td><td>Interior: turquoise-50</td></tr>
+  </tbody>
+</table>

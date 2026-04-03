@@ -1,0 +1,91 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import CrossRef from '@/components/CrossRef'
+
+<ChapterHeader
+  number={18}
+  groupEn="Application: Digital"
+  groupZh="應用：數位"
+  titleEn="Email & Newsletter"
+  titleZh="電子郵件與電子報"
+  ownerEn="GPS Strategy & DX"
+  ownerZh="GPS Strategy & DX"
+/>
+
+<ModuleTracker modules={[
+  { name: 'MJML', status: 'done' },
+  { name: 'Outlook', status: 'done' },
+  { name: 'CJK Stack', status: 'wip' }
+]} />
+
+<div className="mk-r">
+  <div className="mk"><div className="mk-h">Supply Chain Security</div><div className="em"><div className="ef"><div className="eh"><div className="eh-l">GPS — Supply Chain Security</div><div className="eh-s">Monthly Intelligence Brief</div></div><div className="eb"><span>Supply Chain Security Update</span></div><div className="ey"><div className="el"></div><div className="el" style={{width:'80%'}}></div><div className="el" style={{width:'90%'}}></div><div className="ec"></div><div className="el" style={{width:'70%'}}></div></div><div className="efr"><span>GPS Global Physical Security · Unsubscribe</span></div></div></div></div>
+  <div className="mk"><div className="mk-h">AI &amp; DX Navigator</div><div className="em"><div className="ef"><div className="eh" style={{background:'var(--copper-50)',borderColor:'var(--copper-200)'}}><div className="eh-l" style={{color:'var(--copper-700)'}}>GPS — AI &amp; DX Navigator</div><div className="eh-s">Weekly Digest</div></div><div className="eb" style={{background:'linear-gradient(135deg,var(--copper-600),var(--purple-500))'}}><span>AI Fluency Update</span></div><div className="ey"><div className="el"></div><div className="el" style={{width:'70%'}}></div><div className="ec" style={{background:'var(--copper-600)'}}></div></div><div className="efr"><span>GPS Global Physical Security · Unsubscribe</span></div></div></div></div>
+</div>
+
+<DoExample
+  doContent={<><b><span className='en'>Outlook-Safe</span><span className='zh'>Outlook 安全格式</span></b><span className='en'>Tables only. System fonts. <code>mso-line-height-rule: exactly</code>. Max 600px. Inline CSS. Hosted images. Under 102KB.</span><span className='zh'>僅使用表格排版。系統字體。<code>mso-line-height-rule: exactly</code>。最大 600px。行內 CSS。託管圖片。低於 102KB。</span></>}
+  dontContent={<><b>禁止</b><span className='en'>No flexbox/grid. No Google Fonts. No &lt;style&gt; blocks. No base64 images. No CSS variables. No BG-image on td without VML.</span><span className='zh'>不使用 flexbox/grid。不使用 Google Fonts。不使用 &lt;style&gt; 區塊。不使用 base64 圖片。不使用 CSS 變數。不在 td 上使用背景圖（除非搭配 VML）。</span></>}
+/>
+
+### <span className="en">Newsletter Design System</span><span className="zh">電子報設計系統</span>
+
+<p className="en">GPS operates three distinct newsletter streams, each with its own visual identity within the brand framework. All share the same structural grid and Outlook-safe constraints.</p>
+<p className="zh">GPS 營運三個不同的電子報系列，各自在品牌框架內擁有獨立的視覺識別。全部共享相同的結構網格和 Outlook 安全約束。</p>
+
+### <span className="en">Email Structure Grid</span><span className="zh">電子郵件結構網格</span>
+
+<div style={{display:'flex',gap:'12px',flexWrap:'wrap',margin:'12px 0'}}>
+  <svg width="220" height="300" viewBox="0 0 220 300" style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'8px'}}>
+    <rect x="10" y="10" width="200" height="280" fill="none" stroke="var(--g300)" strokeWidth=".5" strokeDasharray="2,2"/>
+    <text x="110" y="8" textAnchor="middle" fontSize="6" fill="var(--g400)">600px max-width</text>
+    {/* Header zone */}
+    <rect x="15" y="15" width="190" height="45" rx="2" fill="var(--turquoise)" opacity=".15" stroke="var(--turquoise)" strokeWidth=".5"/>
+    <rect x="20" y="20" width="40" height="12" rx="1" fill="var(--turquoise)" opacity=".3"/><text x="42" y="28" textAnchor="middle" fontSize="5" fill="var(--turquoise-700)">LOGO</text>
+    <text x="185" y="28" textAnchor="end" fontSize="5" fill="var(--turquoise-600)"><tspan className="en">Edition · Date</tspan><tspan className="zh">期數 · 日期</tspan></text>
+    <rect x="20" y="38" width="120" height="6" rx="1" fill="var(--turquoise)" opacity=".2"/><text x="80" y="44" textAnchor="middle" fontSize="4" fill="var(--turquoise-600)"><tspan className="en">Newsletter Title</tspan><tspan className="zh">電子報標題</tspan></text>
+    <rect x="20" y="48" width="80" height="4" rx="1" fill="var(--turquoise)" opacity=".1"/>
+    {/* Hero zone */}
+    <rect x="15" y="65" width="190" height="50" rx="2" fill="var(--copper-100)" stroke="var(--copper-300)" strokeWidth=".5"/>
+    <text x="110" y="93" textAnchor="middle" fontSize="7" fill="var(--copper-600)"><tspan className="en">HERO IMAGE / GRADIENT</tspan><tspan className="zh">主視覺 / 漸層</tspan></text>
+    {/* Content blocks */}
+    <rect x="15" y="120" width="190" height="90" rx="2" fill="var(--g50)" stroke="var(--g200)" strokeWidth=".5"/>
+    <rect x="20" y="125" width="90" height="4" rx="1" fill="var(--g300)"/><rect x="20" y="133" width="180" height="3" rx="1" fill="var(--g200)"/><rect x="20" y="139" width="160" height="3" rx="1" fill="var(--g200)"/><rect x="20" y="145" width="170" height="3" rx="1" fill="var(--g200)"/>
+    <rect x="20" y="156" width="85" height="4" rx="1" fill="var(--g300)"/><rect x="20" y="164" width="180" height="3" rx="1" fill="var(--g200)"/><rect x="20" y="170" width="140" height="3" rx="1" fill="var(--g200)"/>
+    <rect x="20" y="181" width="70" height="4" rx="1" fill="var(--g300)"/><rect x="20" y="189" width="180" height="3" rx="1" fill="var(--g200)"/><rect x="20" y="195" width="155" height="3" rx="1" fill="var(--g200)"/>
+    <text x="110" y="207" textAnchor="middle" fontSize="5" fill="var(--g400)"><tspan className="en">CONTENT BLOCKS (table layout)</tspan><tspan className="zh">內容區塊（表格排版）</tspan></text>
+    {/* CTA */}
+    <rect x="60" y="218" width="100" height="18" rx="3" fill="var(--turquoise)" opacity=".2" stroke="var(--turquoise)" strokeWidth=".5"/>
+    <text x="110" y="230" textAnchor="middle" fontSize="6" fill="var(--turquoise-700)">CTA Button</text>
+    {/* Footer */}
+    <rect x="15" y="245" width="190" height="40" rx="2" fill="var(--g100)" stroke="var(--g200)" strokeWidth=".5"/>
+    <text x="110" y="262" textAnchor="middle" fontSize="5" fill="var(--g400)"><tspan className="en">FOOTER — Logo, Address, Unsubscribe</tspan><tspan className="zh">頁尾——標誌、地址、取消訂閱</tspan></text>
+    <text x="110" y="272" textAnchor="middle" fontSize="4" fill="var(--g400)"><tspan className="en">GPS Global Physical Security · Privacy · Unsubscribe</tspan><tspan className="zh">GPS 全球實體安全處 · 隱私 · 取消訂閱</tspan></text>
+  </svg>
+  <div style={{fontSize:'11px',lineHeight:1.7,maxWidth:'280px'}}>
+    <table className="gps-table" style={{fontSize:'10px'}}><thead><tr><th><span className="en">Zone</span><span className="zh">區域</span></th><th><span className="en">Height</span><span className="zh">高度</span></th><th><span className="en">Spec</span><span className="zh">規格</span></th></tr></thead><tbody><tr><td><span className="en">Header</span><span className="zh">標頭</span></td><td>80–100px</td><td><span className="en">Logo left, meta right. Brand gradient or solid turquoise BG.</span><span className="zh">標誌靠左，中繼資料靠右。品牌漸層或純青綠色背景。</span></td></tr><tr><td><span className="en">Hero</span><span className="zh">主視覺</span></td><td>200–300px</td><td><span className="en">Hosted image or gradient. Alt text required. Max 200KB.</span><span className="zh">託管圖片或漸層。必須有替代文字。最大 200KB。</span></td></tr><tr><td><span className="en">Content</span><span className="zh">內容</span></td><td><span className="en">Variable</span><span className="zh">可變</span></td><td><span className="en">Table-based 1 or 2 column. H2: Bold 18px. Body: Regular 14px. Links: turquoise-600.</span><span className="zh">表格排版 1 或 2 欄。H2：Bold 18px。內文：Regular 14px。連結：turquoise-600。</span></td></tr><tr><td>CTA</td><td>44px</td><td><span className="en">Turquoise-500 BG, white text, 16px padding, 4px radius. Bulletproof button (VML + padding fallback).</span><span className="zh">Turquoise-500 背景，白色文字，16px 內距，4px 圓角。防彈按鈕（VML + padding 備用）。</span></td></tr><tr><td><span className="en">Footer</span><span className="zh">頁尾</span></td><td>60–80px</td><td><span className="en">Grey-100 BG. Logo mark (optical 20px). Legal text 10px. Unsubscribe link required.</span><span className="zh">Grey-100 背景。標誌圖標（光學 20px）。法律文字 10px。必須有取消訂閱連結。</span></td></tr></tbody></table>
+
+  </div>
+</div>
+
+### <span className="en">Three Newsletter Identities</span><span className="zh">三份電子報視覺識別</span>
+
+
+<table className="gps-table"><thead><tr><th><span className="en">Newsletter</span><span className="zh">電子報</span></th><th><span className="en">Header Gradient</span><span className="zh">標頭漸層</span></th><th><span className="en">Accent</span><span className="zh">點綴色</span></th><th><span className="en">Frequency</span><span className="zh">頻率</span></th><th><span className="en">Audience</span><span className="zh">受眾</span></th></tr></thead><tbody><tr><td>Supply Chain Security</td><td>Turquoise → Copper (135°)</td><td>Turquoise-600</td><td><span className="en">Monthly</span><span className="zh">月刊</span></td><td><span className="en">Security managers, Section Heads</span><span className="zh">安全管理人員、Section Head</span></td></tr><tr><td>AI &amp; DX Navigator</td><td>Copper → Purple (135°)</td><td>Copper-600</td><td><span className="en">Biweekly</span><span className="zh">雙週刊</span></td><td><span className="en">All GPS staff</span><span className="zh">全體 GPS 人員</span></td></tr><tr><td>GPS Rebranding Update</td><td>Deep Turquoise → Turquoise (135°)</td><td>Turquoise-500</td><td><span className="en">Quarterly</span><span className="zh">季刊</span></td><td><span className="en">GPS Director, Section Heads, MarCom</span><span className="zh">GPS Director、Section Head、MarCom</span></td></tr></tbody></table>
+
+
+### <span className="en">Email Typography Stack</span><span className="zh">電子郵件字體堆疊</span>
+
+<p className="en">Outlook and legacy clients ignore web fonts. Use system stacks only. The CJK fallback chain ensures proper rendering across Windows, macOS, and mobile.</p>
+<p className="zh">Outlook 和舊版用戶端忽略網頁字體。僅使用系統字體堆疊。CJK 備用鏈確保在 Windows、macOS 和行動裝置上正確渲染。</p>
+
+
+<table className="gps-table" style={{fontSize:'10px'}}><thead><tr><th><span className="en">Context</span><span className="zh">情境</span></th><th><span className="en">Font Stack</span><span className="zh">字體堆疊</span></th></tr></thead><tbody><tr><td><span className="en">EN body</span><span className="zh">EN 內文</span></td><td><code>Trebuchet MS, Verdana, Arial, sans-serif</code></td></tr><tr><td><span className="en">CJK body</span><span className="zh">CJK 內文</span></td><td><code>'Microsoft JhengHei', 'PingFang TC', 'Hiragino Sans', sans-serif</code></td></tr><tr><td><span className="en">Monospace</span><span className="zh">等寬</span></td><td><code>Consolas, 'Courier New', monospace</code></td></tr></tbody></table>
+
+
+### <span className="en">Outlook Rendering Checklist</span><span className="zh">Outlook 渲染檢查清單</span>
+
+
+<table className="gps-table" style={{fontSize:'10px'}}><thead><tr><th><span className="en">Check</span><span className="zh">檢查項目</span></th><th><span className="en">Requirement</span><span className="zh">要求</span></th></tr></thead><tbody><tr><td><span className="en">Total file size</span><span className="zh">檔案總大小</span></td><td>&lt; 102KB (<span className="en">Gmail clips at 102KB</span><span className="zh">Gmail 在 102KB 截斷</span>)</td></tr><tr><td><span className="en">Image hosting</span><span className="zh">圖片託管</span></td><td><span className="en">External HTTPS URLs only — no base64, no CID</span><span className="zh">僅外部 HTTPS URL——不用 base64，不用 CID</span></td></tr><tr><td><span className="en">CSS method</span><span className="zh">CSS 方式</span></td><td><span className="en">Inline only — no &lt;style&gt; blocks (Outlook strips them)</span><span className="zh">僅行內——不用 &lt;style&gt; 區塊（Outlook 會移除）</span></td></tr><tr><td><span className="en">Layout method</span><span className="zh">排版方式</span></td><td><span className="en">Nested &lt;table&gt; only — no flexbox, no grid, no float</span><span className="zh">僅巢狀 &lt;table&gt;——不用 flexbox、不用 grid、不用 float</span></td></tr><tr><td><span className="en">Line height</span><span className="zh">行高</span></td><td><code>mso-line-height-rule: exactly</code></td></tr><tr><td><span className="en">CTA button</span><span className="zh">行動按鈕</span></td><td><span className="en">VML fallback for Outlook, padding fallback for others</span><span className="zh">Outlook 用 VML 備用，其他用 padding 備用</span></td></tr><tr><td><span className="en">Dark mode</span><span className="zh">深色模式</span></td><td><span className="en">Test with <code>[data-ogsc]</code> and <code>[data-ogsb]</code> Outlook overrides</span><span className="zh">使用 <code>[data-ogsc]</code> 和 <code>[data-ogsb]</code> Outlook 覆蓋進行測試</span></td></tr><tr><td><span className="en">Testing</span><span className="zh">測試</span></td><td><span className="en">Litmus / Email on Acid — minimum: Outlook 2019, Gmail, Apple Mail, Outlook.com</span><span className="zh">Litmus / Email on Acid——最低：Outlook 2019、Gmail、Apple Mail、Outlook.com</span></td></tr></tbody></table>
+

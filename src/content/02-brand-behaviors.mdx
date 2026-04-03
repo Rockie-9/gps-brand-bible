@@ -1,0 +1,103 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import CrossRef from '@/components/CrossRef'
+
+<ChapterHeader
+  number="02"
+  groupEn="Foundation"
+  groupZh="基礎"
+  titleEn="Brand Behaviors"
+  titleZh="品牌行為準則"
+  ownerEn="GPS Strategy & DX · Approver: GPS Director"
+  ownerZh="GPS Strategy & DX · 核准：GPS Director"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Principles', status: 'done' },
+  { name: 'Standards', status: 'done' },
+  { name: 'Measurement', status: 'done' },
+]} />
+
+<p className="en">Brand behaviors define how GPS people act — observable actions that any colleague or visitor should recognize within the first 10 minutes at a GPS-managed site.</p><p className="zh">品牌行為定義了 GPS 人如何行動——這些是可觀察的行為，任何同事或訪客應該在進入 GPS 管理場域的最初 10 分鐘內就能識別出來。</p>
+
+<div className="card-grid card-grid-2">
+  <div className="card">
+    <div className="card-label"><span className="en">Behavior 01</span><span className="zh">行為 01</span></div>
+    <div className="card-value"><span className="en">Explain Before Enforce</span><span className="zh">先說明，後執行</span></div>
+    <div className="card-note"><span className="en">Every security procedure has a reason. We communicate the "why" before enforcing the "what."</span><span className="zh">每一項安全程序都有其理由。我們在執行「做什麼」之前，先溝通「為什麼」。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Behavior 02</span><span className="zh">行為 02</span></div>
+    <div className="card-value"><span className="en">Greet First, Verify Second</span><span className="zh">先問候，再驗證</span></div>
+    <div className="card-note"><span className="en">Human acknowledgment precedes security protocol. A greeting before badge verification signals we protect people, not perimeters.</span><span className="zh">先以人的方式致意，再進行安全協議。在查驗門禁前先問候，表明我們保護的是人，不是圍牆。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Behavior 03</span><span className="zh">行為 03</span></div>
+    <div className="card-value"><span className="en">Design for the Uncomfortable Moment</span><span className="zh">為不適時刻而設計</span></div>
+    <div className="card-note"><span className="en">Security encounters are asymmetric. We proactively minimize discomfort, wait time, and ambiguity.</span><span className="zh">安全互動本質上是不對等的。我們主動最小化不適感、等待時間和模糊感。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Behavior 04</span><span className="zh">行為 04</span></div>
+    <div className="card-value"><span className="en">Share What We Know</span><span className="zh">分享所知</span></div>
+    <div className="card-note"><span className="en">Safety knowledge is not proprietary. When GPS learns something that protects someone's family or commute — we share it.</span><span className="zh">安全知識不是專屬情報。當 GPS 學到能保護某人家庭或通勤安全的知識——我們分享它。</span></div>
+  </div>
+</div>
+
+<div className="card-grid" style={{gridTemplateColumns: '1fr'}}>
+  <div className="card" style={{borderColor: 'var(--turquoise)', borderWidth: '2px'}}>
+    <div className="card-label" style={{color: 'var(--turquoise)'}}><span className="en">Behavior 05 — Foundation</span><span className="zh">行為 05——基礎</span></div>
+    <div className="card-value"><span className="en">Treat Every Site as Someone's First Day</span><span className="zh">視每個場域為某人的第一天</span></div>
+    <div className="card-note"><span className="en">New hires, visitors, and transferred employees experience GPS before any other function. We are the first impression. Every interaction should meet the standard we would want for our own first day.</span><span className="zh">新進人員、訪客和調派員工在接觸其他任何部門之前，最先體驗到的就是 GPS。我們是第一印象。每一次互動都應符合我們對自己第一天的期望標準。</span></div>
+  </div>
+</div>
+
+<div className="card-grid card-grid-2">
+  <div className="card">
+    <div className="card-label"><span className="en">Behavior 06</span><span className="zh">行為 06</span></div>
+    <div className="card-value"><span className="en">Transparent About Technology</span><span className="zh">科技使用透明</span></div>
+    <div className="card-note"><span className="en">When GPS deploys surveillance, access control, or AI tools, the purpose and scope are communicated clearly. No hidden monitoring. People trust systems they understand.</span><span className="zh">當 GPS 部署監控、門禁或 AI 工具時，其目的和範圍都會清楚溝通。沒有隱蔽監控。人們信任他們理解的系統。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Behavior 07</span><span className="zh">行為 07</span></div>
+    <div className="card-value"><span className="en">Dignity in Every Scenario</span><span className="zh">每個場景都維護尊嚴</span></div>
+    <div className="card-note"><span className="en">Even in enforcement — denied access, incident response, emergency evacuation — the person's dignity is preserved. Firmness without humiliation. Security is a service, not a punishment.</span><span className="zh">即使在執法時——拒絕通行、事件回應、緊急疏散——也要維護當事人的尊嚴。堅定但不羞辱。安全是服務，不是懲罰。</span></div>
+  </div>
+</div>
+
+### <span className="en">Behavioral Standards by Audience</span><span className="zh">依受眾分類的行為標準</span>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Audience</span><span className="zh">受眾</span></th>
+      <th><span className="en">Behavioral Standard</span><span className="zh">行為標準</span></th>
+      <th><span className="en">Observable Indicator</span><span className="zh">可觀察指標</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><span className="en">Employees (all-staff)</span><span className="zh">員工（全體）</span></strong></td>
+      <td><span className="en">GPS is helpful, approachable, and informative</span><span className="zh">GPS 是友善、親切且富資訊的</span></td>
+      <td><span className="en">Staff describe security as "supportive" not "controlling" in pulse surveys</span><span className="zh">員工在脈動調查中將安全描述為「支持性的」而非「管控性的」</span></td>
+    </tr>
+    <tr>
+      <td><strong><span className="en">Visitors / Customers</span><span className="zh">訪客 / 客戶</span></strong></td>
+      <td><span className="en">GPS is professional, efficient, and welcoming</span><span className="zh">GPS 是專業、高效且親切的</span></td>
+      <td><span className="en">Visitor check-in completed within 3 minutes; first words are a greeting</span><span className="zh">訪客報到於 3 分鐘內完成；第一句話是問候</span></td>
+    </tr>
+    <tr>
+      <td><strong><span className="en">Contracted Security</span><span className="zh">承攬商保全</span></strong></td>
+      <td><span className="en">GPS contractors embody the same 7 behavioral principles</span><span className="zh">GPS 承攬商體現同樣的 7 項行為準則</span></td>
+      <td><span className="en">Mystery evaluations score ≥85% on behavioral criteria</span><span className="zh">神秘評估在行為標準上得分 ≥85%</span></td>
+    </tr>
+    <tr>
+      <td><strong><span className="en">Government Inspectors</span><span className="zh">政府稽查人員</span></strong></td>
+      <td><span className="en">GPS is transparent, prepared, and collaborative</span><span className="zh">GPS 是透明、有準備且合作的</span></td>
+      <td><span className="en">Audit documentation ready within 2 hours of request</span><span className="zh">稽核文件在請求後 2 小時內備齊</span></td>
+    </tr>
+  </tbody>
+</table>
+
+### <span className="en">Measurement</span><span className="zh">衡量方式</span>
+
+<p className="en">Quarterly mystery visitor assessments, biannual safety perception survey (5 questions), and front-line supervisor peer reviews during shift handovers. Results feed into Brand Performance Metrics (<CrossRef section="s24">Section 24</CrossRef>).</p><p className="zh">季度神秘訪客評估、半年度安全感知調查（5 題）、以及換班交接時的第一線主管同儕評鑑。結果回饋至品牌績效指標（<CrossRef section="s24">第 24 章</CrossRef>）。</p>

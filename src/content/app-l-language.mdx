@@ -1,0 +1,264 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+
+<ChapterHeader
+  number="L"
+  groupEn="Appendix"
+  groupZh="附錄"
+  titleEn="Language Architecture"
+  titleZh="語言架構"
+  ownerEn="GPS Strategy & DX"
+  ownerZh="GPS Strategy & DX"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Matrix', status: 'done' },
+  { name: 'Supplements', status: 'done' }
+]} />
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Tier</span><span className="zh">層級</span></th>
+      <th><span className="en">Language</span><span className="zh">語言</span></th>
+      <th><span className="en">Code</span><span className="zh">代碼</span></th>
+      <th><span className="en">Scope</span><span className="zh">範圍</span></th>
+      <th><span className="en">Font</span><span className="zh">字體</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Co-Primary</strong></td>
+      <td>English</td>
+      <td><code>EN</code></td>
+      <td><span className="en">All global, master document</span><span className="zh">全球通用，主文件</span></td>
+      <td>Lato</td>
+    </tr>
+    <tr>
+      <td><strong>Co-Primary</strong></td>
+      <td>Traditional Chinese</td>
+      <td><code>zh-TW</code></td>
+      <td><span className="en">HQ-TW, all bilingual comms</span><span className="zh">台灣總部，所有雙語通訊</span></td>
+      <td>Noto Sans TC</td>
+    </tr>
+    <tr>
+      <td><strong>Supplement</strong></td>
+      <td>Simplified Chinese</td>
+      <td><code>SC</code></td>
+      <td>Shanghai &amp; Nanjing entities</td>
+      <td>Noto Sans SC</td>
+    </tr>
+    <tr>
+      <td><strong>Supplement</strong></td>
+      <td>German</td>
+      <td><code>DE</code></td>
+      <td>ESMC Dresden</td>
+      <td>Noto Sans</td>
+    </tr>
+    <tr>
+      <td><strong>Supplement</strong></td>
+      <td>Japanese</td>
+      <td><code>JP</code></td>
+      <td>JASM + Japan entities</td>
+      <td>Noto Sans JP</td>
+    </tr>
+    <tr>
+      <td><strong>Supplement</strong></td>
+      <td>Spanish</td>
+      <td><code>ES</code></td>
+      <td>Arizona workforce (OSHA)</td>
+      <td>Noto Sans</td>
+    </tr>
+  </tbody>
+</table>
+
+<p className="en">Supplements cover employee-facing safety comms, training, wayfinding, emergency procedures, and shift briefing cards. They do not cover strategy docs, Director-level comms, cross-regional newsletters, or this portal.</p>
+<p className="zh">補充版涵蓋面向員工的安全通訊、培訓、指引導引、緊急程序和換班簡報卡。不涵蓋策略文件、Director 層級通訊、跨區電子報或本入口網站。</p>
+
+### <span className="en">Bilingual Layout Rules</span><span className="zh">雙語排版規則</span>
+
+<p className="en">When both languages appear simultaneously on a single layout — the default in Taiwan, Japan (JP/EN), and Germany (DE/EN) — follow these composition rules.</p>
+<p className="zh">當兩種語言同時出現在同一版面——台灣、日本（JP/EN）和德國（DE/EN）的預設情況——遵循以下排版規則。</p>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Rule</span><span className="zh">規則</span></th>
+      <th><span className="en">Value</span><span className="zh">值</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span className="en">CJK headline size</span><span className="zh">CJK 標題字級</span></td>
+      <td>100% (<span className="en">primary</span><span className="zh">主要</span>)</td>
+    </tr>
+    <tr>
+      <td><span className="en">EN headline size</span><span className="zh">EN 標題字級</span></td>
+      <td>85–90% of CJK</td>
+    </tr>
+    <tr>
+      <td><span className="en">CJK body line-height</span><span className="zh">CJK 內文行高</span></td>
+      <td><code>1.85</code></td>
+    </tr>
+    <tr>
+      <td><span className="en">EN body line-height</span><span className="zh">EN 內文行高</span></td>
+      <td><code>1.75</code></td>
+    </tr>
+    <tr>
+      <td><span className="en">Stacking order</span><span className="zh">堆疊順序</span></td>
+      <td><span className="en">Primary language on top, secondary below</span><span className="zh">主要語言在上，次要語言在下</span></td>
+    </tr>
+    <tr>
+      <td><span className="en">Paragraph spacing</span><span className="zh">段落間距</span></td>
+      <td><span className="en">1.5× normal between language blocks</span><span className="zh">語言區塊間為正常值的 1.5 倍</span></td>
+    </tr>
+  </tbody>
+</table>
+
+### <span className="en">Multilingual Signage</span><span className="zh">多語言標識</span>
+
+<p className="en">Environmental signage at each region follows a strict language hierarchy. Primary language at 140% size, secondary at 100%. Always stacked vertically, never side-by-side on door/wall signs.</p>
+<p className="zh">各區域環境標識遵循嚴格的語言層級。主要語言為 140% 字級，次要語言為 100%。始終垂直堆疊，門牌/壁面標識永不並排。</p>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Region</span><span className="zh">區域</span></th>
+      <th><span className="en">Primary</span><span className="zh">主要</span></th>
+      <th><span className="en">Secondary</span><span className="zh">次要</span></th>
+      <th><span className="en">Size Ratio</span><span className="zh">字級比例</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>HQ-TW</td><td>zh-TW</td><td>EN</td><td>140% / 100%</td></tr>
+    <tr><td>JASM (JP)</td><td>JP</td><td>EN</td><td>140% / 100%</td></tr>
+    <tr><td>ESMC (DE)</td><td>DE</td><td>EN</td><td>140% / 100%</td></tr>
+    <tr><td>AZ (US)</td><td>EN</td><td>ES <span className="en">(where required)</span><span className="zh">（依需求）</span></td><td>140% / 100%</td></tr>
+    <tr><td>CN (SH/NJ)</td><td>zh-CN</td><td>EN</td><td>140% / 100%</td></tr>
+  </tbody>
+</table>
+
+### <span className="en">Regional Supplement Specimen</span><span className="zh">區域補充版樣本</span>
+
+<p className="en">Below is an annotated specimen of a German-language safety poster (ESMC Dresden) showing how regional supplements map to the EN master.</p>
+<p className="zh">以下為德語安全海報（ESMC 德勒斯登）的標注樣本，展示區域補充版如何對應英文主版。</p>
+
+<div className="bg-white border border-gray-200 rounded-lg p-5 my-4 max-w-sm">
+  <div className="text-xs text-turquoise-500 font-bold tracking-wider uppercase mb-2">ESMC Dresden — Supplement Specimen</div>
+  <div className="bg-turquoise-500 text-white p-3 rounded-t font-bold">
+    <div className="text-base leading-snug">Sicherheitsschulung</div>
+    <div className="text-xs opacity-80 mt-1">Safety Training — Lato Bold 11px</div>
+  </div>
+  <div className="bg-gray-50 p-3 border border-gray-200 border-t-0 text-sm leading-relaxed">
+    <div className="text-gray-900">Alle Mitarbeiter sind verpflichtet, die vierteljährliche Schulung bis zum 15. März abzuschließen.</div>
+    <div className="text-gray-500 text-xs mt-1 italic">↑ System sans-serif 11px · DE body</div>
+    <div className="text-gray-400 text-xs mt-2 pt-2 border-t border-gray-200">All employees must complete quarterly training by March 15.</div>
+    <div className="text-gray-500 text-xs mt-1 italic">↑ Lato Regular 9px · EN reference subline</div>
+  </div>
+  <div className="bg-gps-black p-2 px-3 rounded-b flex justify-between items-center">
+    <div className="text-white text-[7px] font-bold tracking-wide">GLOBAL PHYSICAL SECURITY</div>
+    <div className="text-turquoise-300 text-[7px]">ESMC · Dresden</div>
+  </div>
+</div>
+
+### <span className="en">JP Regional Specimen — JASM Kumamoto</span><span className="zh">JP 區域樣本——JASM 熊本</span>
+
+<p className="en">Japanese supplement uses three scripts (hiragana, katakana, kanji). Honorific register must be appropriate for context. Vertical writing (tategaki) is <strong>not permitted</strong> in GPS materials — all text remains horizontal.</p>
+<p className="zh">日語補充版使用三種文字（平假名、片假名、漢字）。敬語層級須因應情境適當使用。GPS 材料中<strong>不允許</strong>直書（縱書き）——所有文字維持橫書。</p>
+
+<div className="bg-white border border-gray-200 rounded-lg p-5 my-4 max-w-sm">
+  <div className="text-xs text-turquoise-500 font-bold tracking-wider uppercase mb-2">JASM Kumamoto — Supplement Specimen</div>
+  <div className="bg-turquoise-500 text-white p-3 rounded-t font-bold">
+    <div className="text-base leading-snug font-zh">安全研修のご案内</div>
+    <div className="text-xs opacity-80 mt-1">Safety Training Notice — Lato Bold 11px</div>
+  </div>
+  <div className="bg-gray-50 p-3 border border-gray-200 border-t-0 text-sm leading-relaxed">
+    <div className="text-gray-900 font-zh">全従業員は3月15日までに四半期研修を完了していただく必要がございます。</div>
+    <div className="text-gray-500 text-xs mt-1 italic">↑ Noto Sans JP 11px · 丁寧語 (polite form)</div>
+    <div className="text-gray-400 text-xs mt-2 pt-2 border-t border-gray-200">All employees must complete quarterly training by March 15.</div>
+    <div className="text-gray-500 text-xs mt-1 italic">↑ Lato Regular 9px · EN reference subline</div>
+  </div>
+  <div className="bg-gps-black p-2 px-3 rounded-b flex justify-between items-center">
+    <div className="text-white text-[7px] font-bold tracking-wide">GLOBAL PHYSICAL SECURITY</div>
+    <div className="text-turquoise-300 text-[7px]">JASM · 熊本</div>
+  </div>
+</div>
+
+<table className="gps-table text-sm">
+  <thead>
+    <tr>
+      <th><span className="en">JP Spec</span><span className="zh">JP 規格</span></th>
+      <th><span className="en">Value</span><span className="zh">值</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span className="en">Primary font</span><span className="zh">主要字體</span></td>
+      <td>Noto Sans JP (Regular/Medium/Bold)</td>
+    </tr>
+    <tr>
+      <td><span className="en">Fallback</span><span className="zh">備用字體</span></td>
+      <td>Hiragino Kaku Gothic ProN, Yu Gothic</td>
+    </tr>
+    <tr>
+      <td><span className="en">Honorific register</span><span className="zh">敬語層級</span></td>
+      <td><span className="en">丁寧語 (polite) for all-staff; 謙譲語 for Director-level</span><span className="zh">全員通訊用丁寧語；Director 層級用謙譲語</span></td>
+    </tr>
+    <tr>
+      <td><span className="en">Vertical text</span><span className="zh">直書</span></td>
+      <td><span className="en">Not permitted in GPS materials</span><span className="zh">GPS 材料中不允許使用</span></td>
+    </tr>
+    <tr>
+      <td><span className="en">Primary channel</span><span className="zh">主要通路</span></td>
+      <td>LINE Works</td>
+    </tr>
+  </tbody>
+</table>
+
+### <span className="en">zh-CN Supplement — Shanghai &amp; Nanjing</span><span className="zh">zh-CN 補充版——上海與南京</span>
+
+<p className="en">Simplified Chinese supplements serve Shanghai and Nanjing entities. Key differences from zh-TW materials:</p>
+<p className="zh">簡體中文補充版服務上海和南京實體。與 zh-TW 材料的主要差異：</p>
+
+<table className="gps-table text-sm">
+  <thead>
+    <tr>
+      <th><span className="en">Attribute</span><span className="zh">屬性</span></th>
+      <th>zh-TW</th>
+      <th>zh-CN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span className="en">Font stack</span><span className="zh">字體堆疊</span></td>
+      <td>Noto Sans TC, Microsoft JhengHei</td>
+      <td>Noto Sans SC, Microsoft YaHei</td>
+    </tr>
+    <tr>
+      <td><span className="en">Encoding</span><span className="zh">編碼</span></td>
+      <td>UTF-8 (Big5 legacy)</td>
+      <td>UTF-8 (GB2312 legacy)</td>
+    </tr>
+    <tr>
+      <td><span className="en">Punctuation</span><span className="zh">標點符號</span></td>
+      <td>「」、。</td>
+      <td>""、。</td>
+    </tr>
+    <tr>
+      <td><span className="en">Terminology</span><span className="zh">術語</span></td>
+      <td>資訊安全 / 實體安全</td>
+      <td>信息安全 / 实体安全</td>
+    </tr>
+    <tr>
+      <td><span className="en">Regulatory context</span><span className="zh">法規脈絡</span></td>
+      <td>—</td>
+      <td><span className="en">CSL compliance, data localization</span><span className="zh">CSL 合規、數據在地化</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<Callout type="warning">
+<span className="en"><strong>Important:</strong> zh-CN entities operate with greater regulatory autonomy. All materials must be reviewed by the CN regional owner for regulatory compliance before distribution. Do not auto-convert zh-TW to zh-CN — terminology and nuance differ significantly.</span><span className="zh"><strong>重要：</strong>zh-CN 實體擁有更大的法規自主權。所有材料在分發前必須經 CN 區域負責人審查法規合規性。不要自動將 zh-TW 轉換為 zh-CN——術語和語境差異顯著。</span>
+</Callout>

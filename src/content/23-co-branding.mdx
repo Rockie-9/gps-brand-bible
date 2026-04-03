@@ -1,0 +1,74 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import CrossRef from '@/components/CrossRef'
+
+<ChapterHeader
+  number={23}
+  groupEn="Governance"
+  groupZh="治理"
+  titleEn="Co-branding & Partnership"
+  titleZh="聯合品牌與合作"
+  ownerEn="GPS Strategy · Approver: GPS Director"
+  ownerZh="GPS Strategy · 核准：GPS Director"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Hierarchy', status: 'done' },
+  { name: 'Lock-ups', status: 'wip' },
+  { name: 'Partner Kit', status: 'todo' }
+]} />
+
+### <span className="en">Organizational Logo Architecture</span><span className="zh">組織標誌架構</span>
+
+<p className="en">GSM (Global Security Management) maintains its own logo as the parent organization. Three divisions — <strong>GPS</strong> (Global Physical Security), <strong>ITS</strong> (Information Technology Security), and <strong>PIP</strong> (Personal Information Protection) — each operate their own distinct logos under the GSM umbrella. This brand bible governs the GPS logo exclusively. GPS's brand identity covers all 9 regions and 16+ legal entities. Regional supplements adapt language — they do not create sub-brands or alternative visual identities.</p>
+<p className="zh">GSM（全球安全管理處）以母組織身份維護自有標誌。三個部門——<strong>GPS</strong>（全球實體安全處）、<strong>ITS</strong>（資訊技術安全處）和 <strong>PIP</strong>（個人資料保護處）——各自在 GSM 旗下運營獨立標誌。本品牌聖經僅規範 GPS 標誌。GPS 的品牌識別涵蓋所有 9 個區域和 16+ 法律實體。區域補充僅調整語言——不創建子品牌或替代視覺識別。</p>
+
+### <span className="en">Visual Architecture</span><span className="zh">視覺架構</span>
+
+<div style={{margin:'12px 0',textAlign:'center'}}>
+  <svg width="360" height="200" viewBox="0 0 360 200" style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'8px'}}>
+    {/* GSM parent */}
+    <rect x="130" y="10" width="100" height="36" rx="4" fill="var(--charcoal)"/>
+    <text x="180" y="32" textAnchor="middle" fontSize="11" fill="#fff" fontWeight="700">GSM</text>
+    {/* Connection lines */}
+    <line x1="180" y1="46" x2="180" y2="65" stroke="var(--g400)" strokeWidth="1.5"/>
+    <line x1="60" y1="65" x2="300" y2="65" stroke="var(--g400)" strokeWidth="1.5"/>
+    <line x1="60" y1="65" x2="60" y2="80" stroke="var(--g400)" strokeWidth="1.5"/>
+    <line x1="180" y1="65" x2="180" y2="80" stroke="var(--g400)" strokeWidth="1.5"/>
+    <line x1="300" y1="65" x2="300" y2="80" stroke="var(--g400)" strokeWidth="1.5"/>
+    {/* GPS */}
+    <rect x="10" y="80" width="100" height="36" rx="4" fill="var(--turquoise)"/>
+    <text x="60" y="102" textAnchor="middle" fontSize="11" fill="#fff" fontWeight="700">GPS</text>
+    {/* ITS */}
+    <rect x="130" y="80" width="100" height="36" rx="4" fill="var(--purple)"/>
+    <text x="180" y="102" textAnchor="middle" fontSize="11" fill="#fff" fontWeight="700">ITS</text>
+    {/* PIP */}
+    <rect x="250" y="80" width="100" height="36" rx="4" fill="var(--green)"/>
+    <text x="300" y="102" textAnchor="middle" fontSize="11" fill="#fff" fontWeight="700">PIP</text>
+    {/* Labels */}
+    <text x="60" y="133" textAnchor="middle" fontSize="7" fill="var(--turquoise-700)"><tspan className="en">Global Physical Security</tspan><tspan className="zh">全球實體安全處</tspan></text>
+    <text x="180" y="133" textAnchor="middle" fontSize="7" fill="var(--purple-700)"><tspan className="en">IT Security</tspan><tspan className="zh">資訊技術安全處</tspan></text>
+    <text x="300" y="133" textAnchor="middle" fontSize="7" fill="var(--green-700)"><tspan className="en">Personal Info Protection</tspan><tspan className="zh">個人資料保護處</tspan></text>
+    {/* Architecture note */}
+    <rect x="30" y="150" width="300" height="40" rx="4" fill="var(--g50)" stroke="var(--g200)" strokeWidth=".5"/>
+    <text x="180" y="166" textAnchor="middle" fontSize="8" fill="var(--g500)"><tspan className="en">Siblings under GSM · Equal visual weight · Independent logos</tspan><tspan className="zh">GSM 旗下同級 · 同等視覺權重 · 獨立標誌</tspan></text>
+    <text x="180" y="180" textAnchor="middle" fontSize="7" fill="var(--turquoise-600)"><tspan className="en">This Brand Bible governs GPS only</tspan><tspan className="zh">本品牌聖經僅規範 GPS</tspan></text>
+  </svg>
+</div>
+
+### <span className="en">Brand Architecture Relationships</span><span className="zh">品牌架構關係</span>
+
+
+<table className="gps-table">
+<thead>
+<tr><th><span className="en">Relationship</span><span className="zh">關係</span></th><th><span className="en">Visual Treatment</span><span className="zh">視覺處理</span></th><th><span className="en">Approval</span><span className="zh">核准</span></th></tr>
+</thead>
+<tbody>
+<tr><td><strong>GPS ↔ GSM (Parent)</strong></td><td><span className="en">When co-displayed, GSM logo takes parent position (left or top). GPS logo in subordinate position. 1px divider in <code>var(--g200)</code> separates entities. Minimum separation = GPS clearspace rule.</span><span className="zh">同時展示時，GSM 標誌取上級位置（左側或頂部）。GPS 標誌居下級位置。<code>var(--g200)</code> 的 1px 分隔線區隔實體。最小間距 = GPS 安全空間規則。</span></td><td>GSM Director</td></tr>
+<tr><td><strong>GPS ↔ ITS / PIP (Siblings)</strong></td><td><span className="en">Equal visual weight. Each division uses its own logo. Shared header/footer permitted with division identifier. Do not merge or blend division logos into composite marks.</span><span className="zh">同等視覺權重。各部門使用自己的標誌。允許共用頁首/頁尾加部門識別。不可合併或混搭部門標誌成複合圖標。</span></td><td>GSM Director for joint comms</td></tr>
+<tr><td><strong>GPS ↔ Corporate</strong></td><td><span className="en">GPS logo always subordinate to corporate mark. Must remain visually consistent with corporate guidelines at all times.</span><span className="zh">GPS 標誌始終從屬於企業標誌。必須隨時與企業規範保持視覺一致。</span></td><td>Corporate PR for external use</td></tr>
+<tr><td><strong>GPS ↔ External Vendors</strong></td><td><span className="en">GPS brand leads. Vendor logo in "supported by" secondary position. Vendor branding ≤ 20% of visual area.</span><span className="zh">GPS 品牌主導。供應商標誌置於「supported by」次要位置。供應商品牌元素 ≤ 20% 視覺面積。</span></td><td>GPS Strategy</td></tr>
+<tr><td><strong>GPS ↔ Government / Regulatory</strong></td><td><span className="en">Government seal takes protocol precedence. GPS in secondary position. Neutral background — no GPS gradient.</span><span className="zh">政府徽章依協議優先。GPS 居次要位置。中性背景——不使用 GPS 漸層。</span></td><td>GPS Director + Legal</td></tr>
+</tbody>
+</table>
+

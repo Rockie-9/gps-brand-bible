@@ -1,0 +1,93 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import CrossRef from '@/components/CrossRef'
+
+<ChapterHeader
+  number={19}
+  groupEn="Application: Digital"
+  groupZh="應用：數位"
+  titleEn="Mobile & LINE OA"
+  titleZh="行動裝置與 LINE 官方帳號"
+  ownerEn="GPS Strategy & DX"
+  ownerZh="GPS Strategy & DX"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Rich Menu', status: 'done' },
+  { name: 'Flex Messages', status: 'wip' }
+]} />
+
+
+<table className="gps-table">
+<thead>
+<tr><th><span className="en">Element</span><span className="zh">元素</span></th><th><span className="en">Spec</span><span className="zh">規格</span></th></tr>
+</thead>
+<tbody>
+<tr><td>Profile Image</td><td><span className="en">Logo mark on turquoise-50, 640×640px</span><span className="zh">標誌圖標置於 turquoise-50 底色，640×640px</span></td></tr>
+<tr><td>Rich Menu</td><td><span className="en">2500×1686px, 6-cell, turquoise-700 BG, white vectors</span><span className="zh">2500×1686px，6 格，turquoise-700 背景，白色向量圖</span></td></tr>
+<tr><td>Flex Messages</td><td><span className="en">Brand hex codes. System sans body. Bold headers. Turquoise-500 CTA.</span><span className="zh">品牌色碼。系統無襯線內文。粗體標題。Turquoise-500 行動按鈕。</span></td></tr>
+<tr><td>Push Notifications</td><td><span className="en">Calm authority voice. No ALL CAPS. No excessive punctuation.</span><span className="zh">沉穩權威語調。不全部大寫。不過度使用標點符號。</span></td></tr>
+<tr><td>Greeting</td><td><span className="en">Bilingual zh-TW/EN. Warm tone. Quick-start buttons.</span><span className="zh">雙語 zh-TW/EN。溫暖語調。快速啟動按鈕。</span></td></tr>
+</tbody>
+</table>
+
+
+### <span className="en">LINE OA Visual Identity</span><span className="zh">LINE 官方帳號視覺識別</span>
+
+<p className="en">The GPS LINE Official Account (@918rtiju) is the primary mobile touchpoint for the AI Micro-Learning System and direct push communications. All visual elements must maintain brand consistency within LINE's constraints.</p>
+<p className="zh">GPS LINE 官方帳號（@918rtiju）是 AI 微型學習系統和直接推播通訊的主要行動觸點。所有視覺元素必須在 LINE 的限制條件下維持品牌一致性。</p>
+
+### <span className="en">Rich Menu Design</span><span className="zh">Rich Menu 設計</span>
+
+<div style={{margin:'12px 0',maxWidth:'400px'}}>
+  <svg width="100%" viewBox="0 0 400 270" style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'8px'}}>
+    {/* Rich menu grid */}
+    <rect x="0" y="0" width="400" height="270" rx="4" fill="var(--turquoise-800)"/>
+    <rect x="2" y="2" width="130" height="131" rx="2" fill="var(--turquoise-700)" stroke="var(--turquoise-600)" strokeWidth=".5"/>
+    <rect x="136" y="2" width="128" height="131" rx="2" fill="var(--turquoise-700)" stroke="var(--turquoise-600)" strokeWidth=".5"/>
+    <rect x="268" y="2" width="130" height="131" rx="2" fill="var(--turquoise-700)" stroke="var(--turquoise-600)" strokeWidth=".5"/>
+    <rect x="2" y="137" width="130" height="131" rx="2" fill="var(--turquoise-700)" stroke="var(--turquoise-600)" strokeWidth=".5"/>
+    <rect x="136" y="137" width="128" height="131" rx="2" fill="var(--turquoise-700)" stroke="var(--turquoise-600)" strokeWidth=".5"/>
+    <rect x="268" y="137" width="130" height="131" rx="2" fill="var(--turquoise-700)" stroke="var(--turquoise-600)" strokeWidth=".5"/>
+    {/* Icons and labels */}
+    <text x="67" y="60" textAnchor="middle" fontSize="18" fill="#fff">&#x1F4DA;</text>
+    <text x="67" y="85" textAnchor="middle" fontSize="10" fill="#fff" fontWeight="700"><tspan className="en">Learn</tspan><tspan className="zh">學習</tspan></text>
+    <text x="200" y="60" textAnchor="middle" fontSize="18" fill="#fff">&#x1F3C6;</text>
+    <text x="200" y="85" textAnchor="middle" fontSize="10" fill="#fff" fontWeight="700"><tspan className="en">Progress</tspan><tspan className="zh">進度</tspan></text>
+    <text x="333" y="60" textAnchor="middle" fontSize="18" fill="#fff">&#x1F514;</text>
+    <text x="333" y="85" textAnchor="middle" fontSize="10" fill="#fff" fontWeight="700"><tspan className="en">Alerts</tspan><tspan className="zh">通知</tspan></text>
+    <text x="67" y="195" textAnchor="middle" fontSize="18" fill="#fff">&#x1F4CB;</text>
+    <text x="67" y="220" textAnchor="middle" fontSize="10" fill="#fff" fontWeight="700"><tspan className="en">Resources</tspan><tspan className="zh">資源</tspan></text>
+    <text x="200" y="195" textAnchor="middle" fontSize="18" fill="#fff">&#x1F4AC;</text>
+    <text x="200" y="220" textAnchor="middle" fontSize="10" fill="#fff" fontWeight="700"><tspan className="en">Feedback</tspan><tspan className="zh">回饋</tspan></text>
+    <text x="333" y="195" textAnchor="middle" fontSize="18" fill="#fff">&#x2139;&#xFE0F;</text>
+    <text x="333" y="220" textAnchor="middle" fontSize="10" fill="#fff" fontWeight="700"><tspan className="en">About GPS</tspan><tspan className="zh">關於 GPS</tspan></text>
+  </svg>
+  <div style={{fontSize:'9px',color:'var(--g500)',marginTop:'4px',textAlign:'center'}}>2500 × 1686px · 6-cell · turquoise-700 BG · white icons &amp; text</div>
+</div>
+
+### <span className="en">Flex Message Design Tokens</span><span className="zh">Flex Message 設計代符</span>
+
+
+<table className="gps-table">
+<thead>
+<tr><th><span className="en">Element</span><span className="zh">元素</span></th><th><span className="en">Spec</span><span className="zh">規格</span></th></tr>
+</thead>
+<tbody>
+<tr><td><span className="en">Header BG</span><span className="zh">標頭背景</span></td><td>Turquoise-500 <span className="en">or</span><span className="zh">或</span> Copper-500</td></tr>
+<tr><td><span className="en">Body font</span><span className="zh">內文字體</span></td><td><span className="en">System sans-serif, 14px, line-height 1.6</span><span className="zh">系統無襯線，14px，行高 1.6</span></td></tr>
+<tr><td><span className="en">CTA button</span><span className="zh">行動按鈕</span></td><td>Turquoise-500 BG, #fff text, 12px radius</td></tr>
+<tr><td><span className="en">Card padding</span><span className="zh">卡片內距</span></td><td>16px</td></tr>
+<tr><td><span className="en">Max bubble width</span><span className="zh">最大氣泡寬度</span></td><td>300px (<span className="en">LINE constraint</span><span className="zh">LINE 限制</span>)</td></tr>
+<tr><td><span className="en">Image ratio</span><span className="zh">影像比例</span></td><td>1:1 <span className="en">or</span><span className="zh">或</span> 16:9</td></tr>
+</tbody>
+</table>
+
+
+### <span className="en">Push Notification Guidelines</span><span className="zh">推播通知指南</span>
+
+<DoExample
+  doContent={<><b>正確</b><span className="en">Lead with the benefit or action. Keep under 100 characters. Use warm, human tone. Include one clear CTA. Respect quiet hours (no push between 22:00–07:00 local time).</span><span className="zh">以好處或行動開頭。控制在 100 字元內。使用溫暖、人性化的語調。包含一個明確的行動呼籲。尊重安靜時段（當地時間 22:00–07:00 不推播）。</span></>}
+  dontContent={<><b>禁止</b><span className="en">No ALL CAPS. No excessive punctuation (!!!). No fear-based language. No more than 3 pushes per week per user. Never send test messages to production audience.</span><span className="zh">不使用全大寫。不過度使用標點符號（!!!）。不使用恐懼式語言。每用戶每週不超過 3 則推播。絕不將測試訊息發送給正式受眾。</span></>}
+/>

@@ -1,0 +1,112 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+import CodeBlock from '@/components/CodeBlock'
+
+<ChapterHeader
+  number={12}
+  groupEn="Expression"
+  groupZh="表達"
+  titleEn="Brand Voice & Tone"
+  titleZh="品牌語調"
+  ownerEn="GPS Strategy & DX"
+  ownerZh="GPS Strategy & DX"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Voice', status: 'done' },
+  { name: 'Spectrum', status: 'done' },
+  { name: 'Audience', status: 'done' },
+  { name: 'Writing Examples', status: 'wip' },
+]} />
+
+<p className="en">Voice is who we are. Tone is how we adjust for context. GPS has one voice — calm, clear, and caring.</p>
+<p className="zh">語調是我們的身份。語氣是我們因應情境的調整。GPS 擁有一個聲音——沉穩、清晰、有溫度。</p>
+
+<div className="card-grid card-grid-2">
+  <div className="card">
+    <div className="card-label"><span className="en">Attribute 01</span><span className="zh">屬性 01</span></div>
+    <div className="card-value"><span className="en">Calm Authority</span><span className="zh">沉穩的權威</span></div>
+    <div className="card-note"><span className="en">Confidence from competence, not volume. In a crisis, our voice gets calmer.</span><span className="zh">來自能力的自信，而非音量。在危機中，我們的聲音更加沉穩。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Attribute 02</span><span className="zh">屬性 02</span></div>
+    <div className="card-value"><span className="en">Clear Before Clever</span><span className="zh">清晰優先於巧妙</span></div>
+    <div className="card-note"><span className="en">Plain language, short sentences, concrete examples.</span><span className="zh">淺顯的語言、短句、具體的例子。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Attribute 03</span><span className="zh">屬性 03</span></div>
+    <div className="card-value"><span className="en">Human First</span><span className="zh">以人為本</span></div>
+    <div className="card-note"><span className="en">People as people — not "resources" or "headcount."</span><span className="zh">將人視為人——不是「資源」或「員額」。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Attribute 04</span><span className="zh">屬性 04</span></div>
+    <div className="card-value"><span className="en">Precise & Accountable</span><span className="zh">精確且負責</span></div>
+    <div className="card-note"><span className="en">Specific numbers, dates, owners. "By Q3" not "soon."</span><span className="zh">具體的數字、日期、負責人。「Q3 前完成」而非「近期」。</span></div>
+  </div>
+</div>
+
+### <span className="en">Tone by Context</span><span className="zh">依情境調整語氣</span>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Context</span><span className="zh">情境</span></th>
+      <th><span className="en">Tone</span><span className="zh">語氣</span></th>
+      <th><span className="en">Example</span><span className="zh">範例</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Emergency</strong></td>
+      <td><span className="en">Direct, zero ambiguity</span><span className="zh">直接、零模糊</span></td>
+      <td><span className="en">"Evacuate to Assembly B now. Do not use elevators."</span><span className="zh">「立即疏散至集合點 B。不要使用電梯。」</span></td>
+    </tr>
+    <tr>
+      <td><strong>Policy</strong></td>
+      <td><span className="en">Firm but respectful</span><span className="zh">堅定但尊重</span></td>
+      <td><span className="en">"Tailgating compromises safety. Badge individually — 2 seconds."</span><span className="zh">「尾隨通行危及安全。逐一刷卡——2 秒鐘。」</span></td>
+    </tr>
+    <tr>
+      <td><strong>Training</strong></td>
+      <td><span className="en">Encouraging, step-by-step</span><span className="zh">鼓勵性、循序漸進</span></td>
+      <td><span className="en">"Start with Tier 1 — about 3 minutes."</span><span className="zh">「從第一階開始——大約 3 分鐘。」</span></td>
+    </tr>
+    <tr>
+      <td><strong>Brand</strong></td>
+      <td><span className="en">Warm, aspirational</span><span className="zh">溫暖、有願景</span></td>
+      <td><span className="en">"That confidence travels home with you."</span><span className="zh">「那份安心，跟你一起回家。」</span></td>
+    </tr>
+    <tr>
+      <td><strong><span className="en">Leadership</span><span className="zh">主管訊息</span></strong></td>
+      <td><span className="en">Visionary, personal, accountable</span><span className="zh">有遠見、個人化、負責任</span></td>
+      <td><span className="en">"I've seen how this team responds under pressure. That's why I'm confident in what comes next."</span><span className="zh">「我見過這個團隊在壓力下的應對。這就是我對未來有信心的原因。」</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<DoExample
+  doContent={<><b><span className="en">GPS Vocabulary</span><span className="zh">GPS 用語</span></b><br/><span className="en">protect · support · enable · design · collaborate · care · guide · empower · together · trust · adapt · serve</span><span className="zh">保護 · 支持 · 賦能 · 設計 · 協作 · 關懷 · 引導 · 賦權 · 共同 · 信任 · 適應 · 服務</span></>}
+  dontContent={<><b><span className="en">Avoid</span><span className="zh">避免用語</span></b><br/><span className="en">enforce · mandate · police · surveil · comply (imperative) · resources (people) · headcount · zero tolerance</span><span className="zh">執法 · 命令 · 監視 · 偵察 · 服從（命令式）· 資源（指人）· 員額 · 零容忍</span></>}
+/>
+
+### <span className="en">Audience-Specific Writing Rules</span><span className="zh">依受眾調整的寫作規則</span>
+
+<div className="card-grid card-grid-2">
+  <div className="card" style={{borderLeft:'3px solid var(--turquoise)'}}>
+    <div className="card-label"><b><span className="en">For Frontline Staff / All-Staff 員工層</span></b></div>
+    <div className="card-note">
+      <span className="en">Simple language. Every concept paired with a concrete work or life example. Instructions framed as "you can do this" steps. Maximum reading level: Grade 8 equivalent. Avoid management jargon. Step-by-step format lowers the barrier to action.</span>
+      <span className="zh">語言淺顯易懂。每個概念配一個具體的工作或生活場景例子。指引以「你可以這樣做」句型呈現。閱讀程度上限：國中二年級。避免管理學術語。步驟化格式降低行動門檻。</span>
+    </div>
+  </div>
+  <div className="card" style={{borderLeft:'3px solid var(--turquoise)'}}>
+    <div className="card-label"><b><span className="en">For Section Heads / Directors 主管層</span></b></div>
+    <div className="card-note">
+      <span className="en">Inverted pyramid: conclusion first, then evidence. Cite methodology or external sources with institution name, report year, or original link. Every strategy recommendation maps to a measurable indicator or concrete action. No vague assertions.</span>
+      <span className="zh">倒金字塔結構：結論先行，再提供依據。引用方法學或外部資料時，附上具體佐證來源（機構名稱、報告年份或原始連結）。每個策略建議對應可衡量的指標或具體行動。避免空泛論述。</span>
+    </div>
+  </div>
+</div>

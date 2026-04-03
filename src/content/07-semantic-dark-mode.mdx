@@ -1,0 +1,57 @@
+import ChapterHeader from '@/components/ChapterHeader';
+import ModuleTracker from '@/components/ModuleTracker';
+import ColorSwatch from '@/components/ColorSwatch';
+
+<ChapterHeader number="07" groupEn="Visual Identity" groupZh="視覺識別" titleEn="Semantic Colors & Dark Mode" titleZh="語意色與深色模式" ownerEn="MarCom Team" ownerZh="MarCom Team" />
+<ModuleTracker modules={[{name:'Semantic',status:'done'},{name:'Dark Mode',status:'done'},{name:'Mapping',status:'done'}]} />
+
+### <span className="en">Semantic Colors</span><span className="zh">語意色彩</span>
+
+<div className="swatch-grid">
+  <ColorSwatch color="#2D9F5B" name="Success / Safe" hex="#2D9F5B" />
+  <ColorSwatch color="#E5993E" name="Warning / Caution" hex="#E5993E" />
+  <ColorSwatch color="#D94F4F" name="Danger / Alert" hex="#D94F4F" />
+  <ColorSwatch color="#26A7B0" name="Info / Active" hex="#26A7B0" />
+</div>
+
+### <span className="en">Pillar Color Mapping</span><span className="zh">支柱色彩對應</span>
+
+<table className="gps-table">
+<thead><tr><th><span className="en">Pillar</span><span className="zh">支柱</span></th><th><span className="en">Color</span><span className="zh">色彩</span></th><th><span className="en">Tint BG</span><span className="zh">淡色背景</span></th></tr></thead>
+<tbody>
+<tr><td><strong>Designed Safety</strong></td><td><code>#26A7B0</code> Turquoise</td><td><code>#F0FAFB</code></td></tr>
+<tr><td><strong>Journey Protection</strong></td><td><code>#8C9FCB</code> Purple</td><td><code>#F4F6FB</code></td></tr>
+<tr><td><strong>Family Extension</strong></td><td><code>#F6AD90</code> Orange</td><td><code>#FEF6F2</code></td></tr>
+<tr><td><strong>Living Culture</strong></td><td><code>#8CC897</code> Green</td><td><code>#F3FAF5</code></td></tr>
+<tr><td><strong>Transparent Technology</strong></td><td><code>#CAC3D2</code> Copper</td><td><code>#F8F7F9</code></td></tr>
+</tbody>
+</table>
+
+### <span className="en">Dark Mode</span><span className="zh">深色模式</span>
+
+<div className="dark-preview">
+  <div style={{background:'var(--color-dm-surface)',border:'1px solid var(--color-dm-border)',borderRadius:'8px',padding:'16px',marginBottom:'10px'}}>
+    <h5 style={{color:'var(--color-dm-text)',fontSize:'13px',marginBottom:'4px'}}>GPS Dark Mode — <span style={{color:'var(--color-turquoise-400)'}}>Live Preview</span></h5>
+    <p style={{margin:0}}><span className="en" style={{color:'var(--color-dm-muted)',fontSize:'11px'}}>Soft white on deep blue-black. Turquoise-400 accent provides contrast without glare.</span><span className="zh" style={{color:'var(--color-dm-muted)',fontSize:'11px'}}>深藍黑底上的柔和白色。Turquoise-400 點綴色提供對比而不刺眼。</span></p>
+    <div style={{display:'flex',gap:'6px',marginTop:'8px'}}>
+      <div style={{width:'36px',height:'24px',borderRadius:'3px',background:'#0D1B21',border:'1px solid #243944'}} />
+      <div style={{width:'36px',height:'24px',borderRadius:'3px',background:'#142229',border:'1px solid #243944'}} />
+      <div style={{width:'36px',height:'24px',borderRadius:'3px',background:'#1C2F38',border:'1px solid #243944'}} />
+      <div style={{width:'36px',height:'24px',borderRadius:'3px',background:'#243944'}} />
+      <div style={{width:'36px',height:'24px',borderRadius:'3px',background:'#3DB9C2'}} />
+      <div style={{width:'36px',height:'24px',borderRadius:'3px',background:'#E2E8EC'}} />
+    </div>
+  </div>
+</div>
+
+<table className="gps-table">
+<thead><tr><th><span className="en">Token</span><span className="zh">代符</span></th><th><span className="en">Light</span><span className="zh">淺色</span></th><th><span className="en">Dark</span><span className="zh">深色</span></th><th><span className="en">Role</span><span className="zh">角色</span></th></tr></thead>
+<tbody>
+<tr><td><code>--bg</code></td><td>#F4F5F7</td><td>#0D1B21</td><td><span className="en">Page background</span><span className="zh">頁面背景</span></td></tr>
+<tr><td><code>--surface</code></td><td>#FFFFFF</td><td>#142229</td><td><span className="en">Cards, panels</span><span className="zh">卡片、面板</span></td></tr>
+<tr><td><code>--border</code></td><td>#E2E6EA</td><td>#243944</td><td><span className="en">Dividers</span><span className="zh">分隔線</span></td></tr>
+<tr><td><code>--text</code></td><td>#1A2A32</td><td>#E2E8EC</td><td><span className="en">Body text</span><span className="zh">內文</span></td></tr>
+<tr><td><code>--text-muted</code></td><td>#6B7B85</td><td>#8A9BA5</td><td><span className="en">Secondary text</span><span className="zh">次要文字</span></td></tr>
+<tr><td><code>--accent</code></td><td>#26A7B0</td><td>#3DB9C2</td><td><span className="en">Interactive</span><span className="zh">互動元素</span></td></tr>
+</tbody>
+</table>

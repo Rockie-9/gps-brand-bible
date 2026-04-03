@@ -1,0 +1,46 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+
+<ChapterHeader
+  number={22}
+  groupEn="Creative Variations"
+  groupZh="創意變體"
+  titleEn="Seasonal & Event Adaptations"
+  titleZh="季節與活動視覺變體"
+  ownerEn="GPS Strategy & DX"
+  ownerZh="GPS Strategy & DX"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Seasonal', status: 'done' },
+  { name: 'Event', status: 'done' }
+]} />
+
+
+<table className="gps-table">
+<thead>
+<tr><th><span className="en">Season / Event</span><span className="zh">季節 / 活動</span></th><th><span className="en">Gradient</span><span className="zh">漸層</span></th><th><span className="en">Photography</span><span className="zh">攝影</span></th><th><span className="en">Accent</span><span className="zh">點綴色</span></th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Spring / New Year</strong></td><td>Green-turquoise</td><td>Nature + architecture</td><td>Green-400</td></tr>
+<tr><td><strong>Summer / Safety Month</strong></td><td>Standard</td><td>Outdoor safety, hydration</td><td>Turquoise-400</td></tr>
+<tr><td><strong>Autumn / Fire Safety</strong></td><td>Orange-copper</td><td>Fire equipment, drills</td><td>Orange-500</td></tr>
+<tr><td><strong>Winter / Year-End</strong></td><td>Deep turquoise-black</td><td>Night-shift, winter safety</td><td>Turquoise-300</td></tr>
+<tr><td><strong>New Site Launch</strong></td><td>Full spectrum</td><td>Construction → completion</td><td>All secondaries</td></tr>
+<tr><td><strong>Global Safety Day</strong></td><td>Standard + white</td><td>Cross-site montage</td><td>Pure white</td></tr>
+<tr><td><strong>Award / Recognition</strong></td><td>Copper-purple</td><td>Portraits, achievement</td><td>Copper-500</td></tr>
+</tbody>
+</table>
+
+
+<DoExample
+  doContent={<><b><span className='en'>Always Preserved</span><span className='zh'>始終保留</span></b><span className="en">GPS logo unmodified. Noto Sans TC + Lato. Poster three-zone structure. Voice attributes. Clearspace. Accessibility.</span><span className="zh">GPS 標誌不修改。Noto Sans TC + Lato。海報三區結構。語調屬性。安全空間。無障礙。</span></>}
+  dontContent={<><b><span className='en'>Never Modified</span><span className='zh'>永不修改</span></b><span className="en">Logo color/shape/proportions. Type hierarchy max 3 sizes. Minimum logo sizes. Core turquoise or black tokens. Brand behaviors or voice vocabulary.</span><span className="zh">標誌色彩/形狀/比例。字體層級最多 3 種尺寸。標誌最小尺寸。核心青綠色或黑色代符。品牌行為或語調用語。</span></>}
+/>
+
+<Callout type="tip">
+<strong><span className='en'>Approval:</span><span className='zh'>核准：</span></strong><span className='en'>Standard mood → MarCom self-approves. Seasonal → GPS Strategy reviews. New event variation → GPS Director approves. Variations unused for 12 months expire.</span><span className='zh'>標準情緒 → MarCom 自行核准。季節性 → GPS 策略審核。新活動變體 → GPS Director 核准。12 個月未使用的變體自動失效。</span>
+</Callout>

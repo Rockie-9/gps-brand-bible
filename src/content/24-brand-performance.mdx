@@ -1,0 +1,67 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+
+<ChapterHeader
+  number={24}
+  groupEn="Governance"
+  groupZh="治理"
+  titleEn="Brand Performance Metrics"
+  titleZh="品牌績效指標"
+  ownerEn="GPS Strategy & DX · Approver: GPS Director"
+  ownerZh="GPS Strategy & DX · 核准：GPS Director"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Framework', status: 'done' },
+  { name: 'Baseline Survey', status: 'wip' },
+  { name: 'Dashboard', status: 'todo' }
+]} />
+
+<p className="en">A brand standard without measurement is a preference document.</p>
+<p className="zh">沒有衡量指標的品牌標準只是一份偏好文件。</p>
+
+<div className="card-grid card-grid-3">
+  <div className="card"><div className="cd-l"><span className="en">Pillar 01</span><span className="zh">支柱 01</span></div><div className="cd-v"><span className="en">Perception</span><span className="zh">認知度</span></div><div className="cd-n"><span className="en">Do people understand GPS's role? Unaided recall, sentiment, language analysis.</span><span className="zh">人們了解 GPS 的角色嗎？無提示回想、情感分析、語言分析。</span></div></div>
+  <div className="card"><div className="cd-l"><span className="en">Pillar 02</span><span className="zh">支柱 02</span></div><div className="cd-v"><span className="en">Consistency</span><span className="zh">一致性</span></div><div className="cd-n"><span className="en">Are all outputs on-brand? Quarterly audit of 20 random samples.</span><span className="zh">所有產出都符合品牌嗎？每季稽核 20 個隨機樣本。</span></div></div>
+  <div className="card"><div className="cd-l"><span className="en">Pillar 03</span><span className="zh">支柱 03</span></div><div className="cd-v"><span className="en">Reach</span><span className="zh">觸及率</span></div><div className="cd-n"><span className="en">Are messages landing? Open rates, cascade completion, geo coverage.</span><span className="zh">訊息有傳達嗎？開信率、層級傳達完成率、地域覆蓋率。</span></div></div>
+</div>
+
+#### <span className="en">Brand Metrics</span><span className="zh">品牌指標</span>
+
+
+<table className="gps-table"><thead><tr><th><span className="en">Metric</span><span className="zh">指標</span></th><th><span className="en">Method</span><span className="zh">方法</span></th><th><span className="en">Freq</span><span className="zh">頻率</span></th><th><span className="en">Target</span><span className="zh">目標</span></th></tr></thead><tbody><tr><td>Brand Sentiment</td><td>5-question pulse survey</td><td>Quarterly</td><td>+15% vs baseline, Year 1</td></tr><tr><td>Visual Consistency</td><td>20 outputs/quarter audit</td><td>Quarterly</td><td>≥85% compliance</td></tr><tr><td>Behavioral Alignment</td><td>Mystery visitor</td><td>Quarterly</td><td>4/5 behaviors observed</td></tr><tr><td>AI Fluency</td><td>Micro-Learning tiers</td><td>Monthly</td><td>30% Builder in 6 months</td></tr><tr><td>Geo Coverage</td><td>Active feedback loops</td><td>Quarterly</td><td>7/9 sites by Q3</td></tr></tbody></table>
+
+
+#### <span className="en">Communications Infrastructure Metrics</span><span className="zh">溝通基礎設施指標</span>
+
+
+<table className="gps-table"><thead><tr><th><span className="en">Metric</span><span className="zh">指標</span></th><th><span className="en">Method</span><span className="zh">方法</span></th><th><span className="en">Freq</span><span className="zh">頻率</span></th><th><span className="en">Target</span><span className="zh">目標</span></th></tr></thead><tbody><tr><td>Message Delivery Latency</td><td><span className="en">Time from HQ publish to last-site receipt</span><span className="zh">從總部發布到最後一個場域收到的時間</span></td><td>Per message</td><td>≤48 hours for all 9 regions</td></tr><tr><td>Cascade Completion Rate</td><td><span className="en">Section Head confirmation of relay</span><span className="zh">Section Head 確認轉達</span></td><td>Monthly</td><td>≥90% confirmation</td></tr><tr><td>Email Open Rate</td><td><span className="en">Newsletter analytics</span><span className="zh">電子報分析</span></td><td>Per send</td><td>≥45% average across 3 streams</td></tr><tr><td>Translation Turnaround</td><td><span className="en">Time from EN master to supplement delivery</span><span className="zh">從英文主版到補充版交付的時間</span></td><td>Per piece</td><td>≤5 business days (JP/DE/SC/ES)</td></tr><tr><td>Digital Signage Currency</td><td><span className="en">Spot checks — is displayed content current?</span><span className="zh">抽檢——顯示的內容是否為最新？</span></td><td>Monthly</td><td>≥90% screens showing ≤30-day content</td></tr><tr><td>Contracted Security Reach</td><td><span className="en">Supervisor confirmation of shift briefing delivery</span><span className="zh">主管確認換班簡報已傳達</span></td><td>Monthly</td><td>≥80% briefings delivered on schedule</td></tr></tbody></table>
+
+
+### <span className="en">Crisis Communication Protocol</span><span className="zh">危機溝通協議</span>
+
+<p className="en">When a security incident occurs at a GPS-managed site, brand voice must remain consistent while adapting to urgency. The GPS "Calm Authority" voice attribute becomes the governing principle — our voice gets calmer as the situation gets more serious.</p>
+<p className="zh">當 GPS 管理場域發生安全事件時，品牌聲音必須維持一致，同時因應緊急程度做出調整。GPS 的「沉穩權威」語調屬性成為主導原則——情況越嚴重，我們的聲音越沉穩。</p>
+
+
+<table className="gps-table"><thead><tr><th><span className="en">Phase</span><span className="zh">階段</span></th><th><span className="en">Timeline</span><span className="zh">時程</span></th><th><span className="en">Action</span><span className="zh">處置</span></th><th><span className="en">Owner</span><span className="zh">負責人</span></th></tr></thead><tbody><tr><td><strong>Acknowledge</strong></td><td>0–30 min</td><td><span className="en">Internal holding statement to affected site leadership. "We are aware of [incident type] at [site]. Response teams are activated. Updates will follow at [time]." No speculation. No blame. Facts only.</span><span className="zh">對受影響場域主管發出內部暫定聲明。「我們已知悉 [場域] 發生 [事件類型]。應變團隊已啟動。將於 [時間] 提供後續更新。」不臆測。不歸咎。僅陳述事實。</span></td><td>Site Security Mgr</td></tr><tr><td><strong>Inform</strong></td><td>30 min–2 hrs</td><td><span className="en">Structured update to GPS Director, Section Heads, and affected site all-staff. Channels: email + digital signage for affected site, email for global leadership.</span><span className="zh">向 GPS Director、Section Head 和受影響場域全員發送結構化更新。通路：受影響場域使用電子郵件 + 數位看板，全球主管使用電子郵件。</span></td><td>GPS Strategy</td></tr><tr><td><strong>Coordinate</strong></td><td>2–24 hrs</td><td><span className="en">Cross-functional alignment with Corporate PR (if external exposure), HR (if personnel impact), Legal (if regulatory). GPS provides facts; Corporate PR handles any external statement.</span><span className="zh">與企業公關（若有外部曝光）、人資（若涉及人員影響）、法務（若涉及法規）進行跨部門對齊。GPS 提供事實；企業公關處理任何對外聲明。</span></td><td>GPS Director</td></tr><tr><td><strong>Resolve & Debrief</strong></td><td>24–72 hrs</td><td><span className="en">All-clear communication. After-action summary (internal). Brand voice returns to standard warmth. Lessons learned documented.</span><span className="zh">全部解除通訊。事後行動摘要（內部）。品牌聲音恢復至標準溫暖。記錄經驗教訓。</span></td><td>GPS Strategy + MarCom</td></tr></tbody></table>
+
+
+<Callout type="warning">
+<strong><span className='en'>GPS never speaks externally.</span><span className='zh'>GPS 從不對外發言。</span></strong><span className='en'>All external communication routes through Corporate PR. GPS provides factual briefing materials. The GPS brand voice adapts under pressure but never abandons its core attributes — especially "Human First" and "Calm Authority."</span><span className='zh'>所有對外溝通經由企業公關部門。GPS 提供事實簡報材料。GPS 品牌聲音在壓力下調整但從不放棄核心屬性——特別是「以人為本」和「沉穩的權威」。</span>
+</Callout>
+
+### <span className="en">Brand Evolution Governance</span><span className="zh">品牌演進治理</span>
+
+<p className="en">The GPS brand is a living system. As the organization matures, the brand must evolve with it — but evolution must be governed, not improvised.</p>
+<p className="zh">GPS 品牌是一個活的系統。隨著組織成熟，品牌必須隨之演進——但演進必須被治理，而非即興發揮。</p>
+
+
+<table className="gps-table"><thead><tr><th><span className="en">Change Type</span><span className="zh">變更類型</span></th><th><span className="en">Example</span><span className="zh">範例</span></th><th><span className="en">Proposer</span><span className="zh">提案者</span></th><th><span className="en">Approval</span><span className="zh">核准</span></th><th><span className="en">Communication</span><span className="zh">溝通方式</span></th></tr></thead><tbody><tr><td><strong>Token adjustment</strong></td><td><span className="en">Hex value correction, weight update</span><span className="zh">色碼值修正、字重更新</span></td><td>MarCom / Strategy</td><td><span className="en">Self-approved, logged in <CrossRef section="sV">Appendix V</CrossRef></span><span className="zh">自行核准，記錄於<CrossRef section="sV">附錄 V</CrossRef></span></td><td>Changelog update</td></tr><tr><td><strong>Chapter revision</strong></td><td><span className="en">New do/don't examples, expanded specs</span><span className="zh">新增規範範例、擴展規格</span></td><td>GPS Strategy</td><td>GPS Strategy review</td><td><span className="en">Version bump, email to brand owners</span><span className="zh">版本升級，郵件通知品牌負責人</span></td></tr><tr><td><strong>Structural change</strong></td><td><span className="en">New chapter, pillar addition, logo modification</span><span className="zh">新章節、支柱新增、標誌修改</span></td><td>GPS Strategy</td><td>GPS Director sign-off</td><td><span className="en">Full version release, all-hands briefing</span><span className="zh">完整版本發布，全員簡報</span></td></tr><tr><td><strong>Narrative arc transition</strong></td><td><span className="en">Year 2 → Year 3 messaging shift</span><span className="zh">第二年 → 第三年訊息轉換</span></td><td>GPS Strategy</td><td><span className="en">GPS Director + Section Head alignment</span><span className="zh">GPS Director + Section Head 對齊</span></td><td><span className="en">Campaign launch, regional cascade</span><span className="zh">宣傳啟動，區域層級傳達</span></td></tr></tbody></table>
+
+
+<Callout type="tip">
+<strong><span className='en'>Annual Brand Review:</span><span className='zh'>年度品牌檢視：</span></strong><span className='en'>Every Q4, GPS Strategy conducts a comprehensive brand health review — synthesizing perception data, consistency audits, comms metrics, and behavioral assessments. Findings and proposed evolution items are presented to the GPS Director for approval before the new fiscal year.</span><span className='zh'>每年 Q4，GPS 策略團隊進行全面品牌健康檢視——綜合認知數據、一致性稽核、溝通指標和行為評估。發現及建議演進項目於新會計年度前呈報 GPS Director 核准。</span>
+</Callout>

@@ -1,0 +1,67 @@
+import ChapterHeader from '@/components/ChapterHeader';
+import ModuleTracker from '@/components/ModuleTracker';
+import ColorSwatch from '@/components/ColorSwatch';
+import DoExample from '@/components/DoExample';
+
+<ChapterHeader number="04" groupEn="Visual Identity" groupZh="視覺識別" titleEn="Master Color Palette" titleZh="主色調系統" ownerEn="MarCom Team" ownerZh="MarCom Team" />
+<ModuleTracker modules={[{name:'Primary',status:'done'},{name:'Secondary',status:'done'},{name:'Neutral',status:'done'}]} />
+
+### <span className="en">Primary Colors</span><span className="zh">主色</span>
+
+<p><span className="en">The turquoise-to-copper gradient is GPS's signature identity. Turquoise conveys trust and modernity; copper adds warmth and composure — together expressing secure, human-centered global operations.</span><span className="zh">青綠色至銅色漸層是 GPS 的標誌性視覺識別。青綠色傳達信任與現代感；銅色增添溫暖與沉穩——兩者共同表達安全、以人為本的全球營運精神。</span></p>
+
+<div className="swatch-grid">
+  <ColorSwatch color="#26A7B0" name="Turquoise" hex="#26A7B0" cmyk="C75 M23 Y37 K0" />
+  <div className="swatch"><div className="swatch-color" style={{background:'linear-gradient(135deg,#26A7B0,#CAC3D2)'}} /><div className="swatch-info"><div className="swatch-name">Primary Gradient</div><div className="swatch-value">Turquoise → Copper</div></div></div>
+  <ColorSwatch color="#CAC3D2" name="Copper Tone" hex="#CAC3D2" cmyk="C25 M24 Y12 K0" />
+</div>
+
+### <span className="en">Secondary Colors</span><span className="zh">輔助色</span>
+
+<div className="swatch-grid">
+  <ColorSwatch color="#8C9FCB" name="Purple" hex="#8C9FCB" cmyk="C30 M23 Y0 K20" />
+  <ColorSwatch color="#8CC897" name="Green" hex="#8CC897" cmyk="C30 M0 Y25 K22" />
+  <ColorSwatch color="#F6AD90" name="Orange" hex="#F6AD90" cmyk="C0 M30 Y41 K4" />
+</div>
+
+### <span className="en">Neutral Colors</span><span className="zh">中性色</span>
+
+<div className="swatch-grid">
+  <ColorSwatch color="#0A1A22" name="Black" hex="#0A1A22" />
+  <ColorSwatch color="#1A2A32" name="Ink" hex="#1A2A32" />
+  <ColorSwatch color="#4A5E6A" name="Slate" hex="#4A5E6A" />
+  <ColorSwatch color="#6B7B85" name="Grey 500" hex="#6B7B85" />
+  <ColorSwatch color="#B0BCC3" name="Grey 300" hex="#B0BCC3" />
+  <ColorSwatch color="#E8EDF0" name="Grey 100" hex="#E8EDF0" />
+  <ColorSwatch color="#F4F5F7" name="Grey 50" hex="#F4F5F7" />
+  <ColorSwatch color="#FFFFFF" name="White" hex="#FFFFFF" />
+</div>
+
+### <span className="en">Color Ratio</span><span className="zh">色彩比例</span>
+
+<div style={{display:'flex',borderRadius:'8px',overflow:'hidden',height:'40px',margin:'12px 0',boxShadow:'0 1px 3px rgba(0,0,0,.06)'}}>
+  <div style={{flex:6,background:'linear-gradient(135deg,#26A7B0,#CAC3D2)',display:'flex',alignItems:'center',justifyContent:'center',color:'#fff',fontSize:'11px',fontWeight:700}}>30–80%</div>
+  <div style={{flex:3,background:'#E8EDF0',display:'flex',alignItems:'center',justifyContent:'center',color:'var(--color-g500)',fontSize:'11px',fontWeight:700}}>10–60%</div>
+  <div style={{flex:3,background:'linear-gradient(135deg,#F6AD90,#8CC897)',display:'flex',alignItems:'center',justifyContent:'center',color:'var(--color-ink)',fontSize:'11px',fontWeight:700}}>10–60%</div>
+</div>
+<div style={{display:'flex',gap:0,fontSize:'9px',color:'var(--color-g500)',marginBottom:'12px'}}>
+  <div style={{flex:6,textAlign:'center'}}><span className="en">Primary / Image</span><span className="zh">主色 / 影像</span></div>
+  <div style={{flex:3,textAlign:'center'}}><span className="en">Neutral</span><span className="zh">中性色</span></div>
+  <div style={{flex:3,textAlign:'center'}}><span className="en">Secondary</span><span className="zh">輔助色</span></div>
+</div>
+
+<table className="gps-table">
+<thead><tr><th><span className="en">Role</span><span className="zh">角色</span></th><th><span className="en">Ratio</span><span className="zh">比例</span></th><th><span className="en">Application</span><span className="zh">應用</span></th></tr></thead>
+<tbody>
+<tr><td><strong>Primary</strong></td><td><code>30–80%</code></td><td><span className="en">Hero backgrounds, key visuals, brand surfaces</span><span className="zh">主視覺背景、關鍵視覺、品牌表面</span></td></tr>
+<tr><td><strong>Neutral</strong></td><td><code>10–60%</code></td><td><span className="en">Body backgrounds, card surfaces, text containers</span><span className="zh">內文背景、卡片表面、文字容器</span></td></tr>
+<tr><td><strong>Secondary</strong></td><td><code>10–60%</code></td><td><span className="en">Thematic accents, data categories, campaigns</span><span className="zh">主題點綴、數據分類、宣傳活動</span></td></tr>
+</tbody>
+</table>
+
+### <span className="en">Color Application</span><span className="zh">色彩應用</span>
+
+<DoExample
+  doContent={<><span className="en">Use neutral colors as base and highlight with the primary gradient. Use primary colors as base and balance with neutral tones. Use secondary colors to create alternative gradients that serve as thematic accents.</span><span className="zh">以中性色為底，以主漸層做強調。以主色為底，以中性色調平衡。使用輔助色創建作為主題點綴的替代漸層。</span></>}
+  dontContent={<><span className="en">Do not overuse colors or skip neutral balance. Do not color logos or type arbitrarily without ensuring contrast between background and type. Do not use harsh neon tones or visually jarring combinations. Do not apply random rainbows or unbalanced color blocks.</span><span className="zh">不要過度使用色彩或忽略中性色平衡。不要任意為標誌或文字上色而未確保背景與文字的對比。不要使用刺眼的霓虹色或視覺不協調的組合。不要使用隨意的彩虹色或不平衡的色塊。</span></>}
+/>

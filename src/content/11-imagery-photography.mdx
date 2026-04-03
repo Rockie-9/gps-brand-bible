@@ -1,0 +1,134 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+import CodeBlock from '@/components/CodeBlock'
+
+<ChapterHeader
+  number={11}
+  groupEn="Visual Identity"
+  groupZh="視覺識別"
+  titleEn="Imagery & Photography"
+  titleZh="影像與攝影"
+  ownerEn="MarCom Team"
+  ownerZh="MarCom Team"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Direction', status: 'done' },
+  { name: 'Avoid', status: 'done' },
+  { name: 'Photo Brief', status: 'wip' },
+  { name: 'Licensing', status: 'todo' },
+]} />
+
+### <span className="en">Imagery Guide</span><span className="zh">影像指南</span>
+
+<p className="en">Imagery should reflect GPS's core values of security, resilience, and human impact. Use authentic, professional photos that feature people in real environments — such as security checkpoints, or secure facilities — to convey trust and clarity. Supporting imagery may include architectural shots, surveillance technology, or abstract compositions that suggest protection and precision.</p>
+<p className="zh">影像應反映 GPS 的核心價值——安全、韌性和人文關懷。使用在真實環境中呈現人們的專業、真實照片——如安全檢查站或安全設施——以傳達信任和清晰感。輔助影像可包括建築攝影、監控技術，或暗示保護與精確的抽象構圖。</p>
+
+<div className="card-grid card-grid-4">
+  <div className="card">
+    <div className="card-label"><span className="en">Lighting</span><span className="zh">光線</span></div>
+    <div className="card-value"><span className="en">Natural & Even</span><span className="zh">自然均勻</span></div>
+    <div className="card-note"><span className="en">No dramatic shadows or excessive lens flare</span><span className="zh">無戲劇性陰影或過度鏡頭光暈</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Composition</span><span className="zh">構圖</span></div>
+    <div className="card-value"><span className="en">Clear & Intentional</span><span className="zh">清晰且有意圖</span></div>
+    <div className="card-note"><span className="en">Strong focal point, clean backgrounds</span><span className="zh">清晰的焦點、乾淨的背景</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">People</span><span className="zh">人物</span></div>
+    <div className="card-value"><span className="en">Authentic</span><span className="zh">真實自然</span></div>
+    <div className="card-note"><span className="en">Real interactions, no staging or artificial feel</span><span className="zh">真實互動、非刻意擺拍或人工感</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Color</span><span className="zh">色彩</span></div>
+    <div className="card-value"><span className="en">Neutral</span><span className="zh">中性色調</span></div>
+    <div className="card-note"><span className="en">No oversaturation or high-contrast grading</span><span className="zh">不過度飽和或高對比色彩調校</span></div>
+  </div>
+</div>
+
+<p className="en">All imagery is <strong>internal use only</strong>. Photos with identifiable individuals require signed release forms. The images are not authorized for external use.</p>
+<p className="zh">所有影像<strong>僅供內部使用</strong>。包含可辨識個人的照片需要簽署肖像授權書。這些影像不得對外使用。</p>
+
+{/* Reference image: GPS Imagery Guide — Photography examples showing security, resilience, human impact */}
+
+### <span className="en">Things to Avoid</span><span className="zh">應避免事項</span>
+
+<div className="card-grid card-grid-2">
+  <div className="card" style={{borderColor:'var(--danger)'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Avoid Staging</span><span className="zh">避免刻意擺拍</span></div>
+    <div className="card-note"><span className="en">Avoid staged or artificial feel. Prioritize genuine moments reflecting real interactions and scenarios. Do not include people in unnatural or staged poses.</span><span className="zh">避免刻意或人工感。優先選擇反映真實互動和場景的真誠瞬間。不要使用不自然或擺拍姿勢。</span></div>
+  </div>
+  <div className="card" style={{borderColor:'var(--danger)'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Avoid Overproduction</span><span className="zh">避免過度製作</span></div>
+    <div className="card-note"><span className="en">Balance professionalism and visual appeal, avoiding excessive manipulation or editing. Do not use overly dynamic lighting and excessive lens flare. Do not use oversaturated or high-contrast color grading.</span><span className="zh">平衡專業性與視覺吸引力，避免過度後製。不要使用過度戲劇化的燈光和過多鏡頭光暈。不要使用過度飽和或高對比色彩調校。</span></div>
+  </div>
+  <div className="card" style={{borderColor:'var(--danger)'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Avoid Disconnected Context</span><span className="zh">避免脈絡斷裂</span></div>
+    <div className="card-note"><span className="en">Clarify image context to match intended message and prevent confusion or misinterpretation. Avoid images with excessive post-production effects.</span><span className="zh">釐清影像脈絡以符合預期訊息，防止混淆或誤解。避免過度後製效果的影像。</span></div>
+  </div>
+  <div className="card" style={{borderColor:'var(--danger)'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Avoid Poor Composition</span><span className="zh">避免糟糕構圖</span></div>
+    <div className="card-note"><span className="en">Avoid clutter or chaos that diverts from intended focus. Ensure every photo has a clear subject and visual hierarchy.</span><span className="zh">避免分散焦點的雜亂或混亂。確保每張照片都有清晰的主題和視覺層級。</span></div>
+  </div>
+</div>
+
+{/* Reference image: GPS Things to Avoid — Photography dont examples with crossed-out images */}
+
+### <span className="en">Photography Shot List</span><span className="zh">攝影拍攝清單</span>
+
+<p className="en">Six reference scene specifications. Use these as briefs for photographers — specific enough to ensure consistency, flexible enough to adapt to each site's environment.</p>
+<p className="zh">六個參考場景規格。作為攝影師簡報使用——足夠具體以確保一致性，足夠靈活以適應各場域環境。</p>
+
+<div className="card-grid card-grid-2" style={{gap:'10px',margin:'12px 0'}}>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}><span className="en">Shot 01 — Checkpoint</span><span className="zh">場景 01——檢查站</span></div>
+    <div className="card-note" style={{fontSize:'11px',lineHeight:1.6}}><span className="en">Medium shot, eye level. Security officer greeting visitor with badge scan. Natural daylight from left. Clean industrial lobby background, out of focus at f/2.8. Subject making eye contact with visitor. Warm, professional — not surveillance.</span><span className="zh">中景、平視角。安全人員問候訪客並掃描門禁卡。自然日光從左側照入。乾淨的工業風大廳背景，f/2.8 虛化。主體與訪客有眼神接觸。溫暖、專業——非監控感。</span></div>
+  </div>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}><span className="en">Shot 02 — Shift Briefing</span><span className="zh">場景 02——換班簡報</span></div>
+    <div className="card-note" style={{fontSize:'11px',lineHeight:1.6}}><span className="en">Wide shot, slightly elevated (15°). Team of 4–6 in semi-circle around team lead with tablet. Fluorescent overhead + window ambient. Uniforms visible. Body language: engaged, leaning in. No staged posing.</span><span className="zh">廣角、略微俯角（15°）。4–6 人半圓圍繞持平板的組長。頂部日光燈 + 窗戶環境光。制服可見。身體語言：投入、前傾。無擺拍。</span></div>
+  </div>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}><span className="en">Shot 03 — Technology</span><span className="zh">場景 03——科技</span></div>
+    <div className="card-note" style={{fontSize:'11px',lineHeight:1.6}}><span className="en">Close-up, shallow depth of field. Hands interacting with access panel or monitoring screen. Screen content visible but not readable (privacy). Cool blue ambient from screens. Focus on hands + device interaction.</span><span className="zh">特寫、淺景深。手與門禁面板或監控螢幕互動。螢幕內容可見但不可讀（隱私考量）。螢幕發出冷藍環境光。焦點在手部與裝置互動。</span></div>
+  </div>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}><span className="en">Shot 04 — Environment</span><span className="zh">場景 04——環境</span></div>
+    <div className="card-note" style={{fontSize:'11px',lineHeight:1.6}}><span className="en">Wide establishing shot. Clean fab corridor or campus walkway with natural surveillance sightlines visible. Golden hour preferred. No people (or silhouettes only). Emphasize openness, design, CPTED principles — welcoming, not fortified.</span><span className="zh">廣角建立鏡頭。乾淨的廠區走廊或園區步道，可見自然監控視線。偏好黃金時段。無人物（或僅剪影）。強調開放性、設計感、CPTED 原則——親切感，非堡壘感。</span></div>
+  </div>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}><span className="en">Shot 05 — Family Extension</span><span className="zh">場景 05——家庭延伸</span></div>
+    <div className="card-note" style={{fontSize:'11px',lineHeight:1.6}}><span className="en">Medium-close, warm tones. Employee leaving site, transitioning to personal context (jacket on, bag, walking toward exit). Late afternoon light. Subtle smile. Conveys "safety travels home with you." No family members visible (privacy).</span><span className="zh">中近景、暖色調。員工離開場域，轉換至個人情境（穿外套、背包、走向出口）。午後光線。微笑。傳達「安全跟你一起回家」。不拍攝家人（隱私考量）。</span></div>
+  </div>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}><span className="en">Shot 06 — Training</span><span className="zh">場景 06——培訓</span></div>
+    <div className="card-note" style={{fontSize:'11px',lineHeight:1.6}}><span className="en">Medium shot, over-shoulder angle. Participant viewing tablet/screen with training content. Others visible in periphery. Bright, well-lit training room. Active participation — writing, tapping, discussing. Avoid "classroom" static rows.</span><span className="zh">中景、過肩角度。參訓者觀看平板/螢幕上的培訓內容。他人在周邊可見。明亮的培訓室。主動參與——書寫、操作、討論。避免「教室」靜態排列。</span></div>
+  </div>
+</div>
+
+### <span className="en">Photography Anti-Patterns</span><span className="zh">攝影反面教材</span>
+
+<p className="en">Three common failures that consistently produce off-brand imagery. Brief your photographer to avoid these specifically.</p>
+<p className="zh">三個常見失敗模式，會持續產出偏離品牌的影像。請特別向攝影師說明避免這些情況。</p>
+
+<div className="card-grid card-grid-3" style={{gap:'10px',margin:'12px 0'}}>
+  <div className="card" style={{borderColor:'var(--danger)',padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Anti-Pattern 01</span><span className="zh">反面教材 01</span></div>
+    <div className="card-value"><span className="en">The Surveillance Shot</span><span className="zh">監控視角照</span></div>
+    <div className="card-note"><span className="en">High-angle, fisheye distortion, empty corridors, ceiling-mounted camera perspective. This is exactly the "security as control" frame we are working to replace. If it looks like CCTV footage, it is wrong.</span><span className="zh">高空俯角、魚眼變形、空蕩走廊、天花板監視器視角。這正是我們正在努力取代的「安全即控制」框架。如果看起來像監視器畫面，就是錯的。</span></div>
+  </div>
+  <div className="card" style={{borderColor:'var(--danger)',padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Anti-Pattern 02</span><span className="zh">反面教材 02</span></div>
+    <div className="card-value"><span className="en">The Green-Cast Fluorescent</span><span className="zh">綠色日光燈色偏</span></div>
+    <div className="card-note"><span className="en">Uncorrected overhead fluorescent lighting that casts a sickly green-yellow over skin tones and uniforms. Kills the brand palette. Always shoot with custom white balance or add portable LED panels to correct ambient color.</span><span className="zh">未校正的頂部日光燈投射出病態的綠黃色偏在膚色和制服上。破壞品牌色盤。始終使用自訂白平衡拍攝，或加入攜帶型 LED 面板校正環境色溫。</span></div>
+  </div>
+  <div className="card" style={{borderColor:'var(--danger)',padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Anti-Pattern 03</span><span className="zh">反面教材 03</span></div>
+    <div className="card-value"><span className="en">The Dystopian Empty</span><span className="zh">反烏托邦空景</span></div>
+    <div className="card-note"><span className="en">Empty lobbies, deserted hallways, gates without people. Intended to show "secure environment" but reads as "abandoned facility." GPS imagery must include human presence — even a single person walking gives life and warmth.</span><span className="zh">空蕩的大廳、無人的走廊、沒有人的閘門。意圖展現「安全環境」卻讀起來像「廢棄設施」。GPS 影像必須包含人的存在——即使一個人在走路也能帶來生命力和溫暖。</span></div>
+  </div>
+</div>

@@ -1,0 +1,146 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+
+<ChapterHeader
+  number="R"
+  groupEn="Appendix"
+  groupZh="附錄"
+  titleEn="RACI Ownership Matrix"
+  titleZh="RACI 權責矩陣"
+  ownerEn="GPS Strategy & DX"
+  ownerZh="GPS Strategy & DX"
+/>
+
+<ModuleTracker modules={[
+  { name: 'RACI Table', status: 'done' }
+]} />
+
+<p className="en"><strong>R</strong> = Responsible · <strong>A</strong> = Accountable · <strong>C</strong> = Consulted · <strong>I</strong> = Informed</p>
+<p className="zh"><strong>R</strong> = 負責 · <strong>A</strong> = 當責 · <strong>C</strong> = 諮詢 · <strong>I</strong> = 告知</p>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th style={{ width: '28%' }}>Activity</th>
+      <th><span className="en">Director</span><span className="zh">Director</span></th>
+      <th><span className="en">Strategy</span><span className="zh">Strategy</span></th>
+      <th><span className="en">MarCom</span><span className="zh">MarCom</span></th>
+      <th><span className="en">Section Hd</span><span className="zh">Section Hd</span></th>
+      <th><span className="en">Regional</span><span className="zh">Regional</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span className="en">Brand Foundation</span><span className="zh">品牌基礎</span></td>
+      <td className="raci-a">A</td>
+      <td className="raci-r">R</td>
+      <td className="raci-c">C</td>
+      <td className="raci-i">I</td>
+      <td className="raci-i">I</td>
+    </tr>
+    <tr>
+      <td><span className="en">Brand Behaviors</span><span className="zh">品牌行為準則</span></td>
+      <td className="raci-a">A</td>
+      <td className="raci-r">R</td>
+      <td className="raci-i">I</td>
+      <td className="raci-c">C</td>
+      <td className="raci-c">C</td>
+    </tr>
+    <tr>
+      <td><span className="en">Visual Identity (03–11)</span><span className="zh">視覺識別 (03–11)</span></td>
+      <td className="raci-i">I</td>
+      <td className="raci-c">C</td>
+      <td className="raci-r">R</td>
+      <td className="raci-i">I</td>
+      <td className="raci-i">I</td>
+    </tr>
+    <tr>
+      <td>Voice &amp; Tone</td>
+      <td className="raci-a">A</td>
+      <td className="raci-r">R</td>
+      <td className="raci-c">C</td>
+      <td className="raci-c">C</td>
+      <td className="raci-c">C</td>
+    </tr>
+    <tr>
+      <td><span className="en">Motion</span><span className="zh">動態</span></td>
+      <td className="raci-i">I</td>
+      <td className="raci-c">C</td>
+      <td className="raci-r">R</td>
+      <td className="raci-i">I</td>
+      <td className="raci-i">I</td>
+    </tr>
+    <tr>
+      <td><span className="en">Print Applications</span><span className="zh">印刷應用</span></td>
+      <td className="raci-i">I</td>
+      <td className="raci-c">C</td>
+      <td className="raci-r">R</td>
+      <td className="raci-i">I</td>
+      <td className="raci-c">C</td>
+    </tr>
+    <tr>
+      <td><span className="en">Digital Applications</span><span className="zh">數位應用</span></td>
+      <td className="raci-i">I</td>
+      <td className="raci-r">R</td>
+      <td className="raci-r">R</td>
+      <td className="raci-i">I</td>
+      <td className="raci-c">C</td>
+    </tr>
+    <tr>
+      <td><span className="en">Creative Variations</span><span className="zh">創意變體</span></td>
+      <td className="raci-a">A</td>
+      <td className="raci-r">R</td>
+      <td className="raci-c">C</td>
+      <td className="raci-i">I</td>
+      <td className="raci-i">I</td>
+    </tr>
+    <tr>
+      <td><span className="en">Co-branding</span><span className="zh">聯合品牌</span></td>
+      <td className="raci-a">A</td>
+      <td className="raci-r">R</td>
+      <td className="raci-c">C</td>
+      <td className="raci-i">I</td>
+      <td className="raci-c">C</td>
+    </tr>
+    <tr>
+      <td><span className="en">Brand Performance</span><span className="zh">品牌績效</span></td>
+      <td className="raci-a">A</td>
+      <td className="raci-r">R</td>
+      <td className="raci-c">C</td>
+      <td className="raci-c">C</td>
+      <td className="raci-c">C</td>
+    </tr>
+    <tr>
+      <td><span className="en">Templates</span><span className="zh">模板</span></td>
+      <td className="raci-i">I</td>
+      <td className="raci-c">C</td>
+      <td className="raci-r">R</td>
+      <td className="raci-i">I</td>
+      <td className="raci-i">I</td>
+    </tr>
+    <tr>
+      <td><span className="en">New Site Activation</span><span className="zh">新廠區啟動</span></td>
+      <td className="raci-a">A</td>
+      <td className="raci-r">R</td>
+      <td className="raci-r">R</td>
+      <td className="raci-c">C</td>
+      <td className="raci-r">R</td>
+    </tr>
+    <tr>
+      <td><span className="en">Language Supplements</span><span className="zh">語言補充版</span></td>
+      <td className="raci-i">I</td>
+      <td className="raci-a">A</td>
+      <td className="raci-r">R</td>
+      <td className="raci-i">I</td>
+      <td className="raci-r">R</td>
+    </tr>
+    <tr>
+      <td><span className="en">Quarterly Brand Audit</span><span className="zh">季度品牌稽核</span></td>
+      <td className="raci-i">I</td>
+      <td className="raci-r">R</td>
+      <td className="raci-c">C</td>
+      <td className="raci-c">C</td>
+      <td className="raci-c">C</td>
+    </tr>
+  </tbody>
+</table>

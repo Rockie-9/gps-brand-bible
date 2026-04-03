@@ -1,0 +1,229 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+import CodeBlock from '@/components/CodeBlock'
+
+<ChapterHeader
+  number={15}
+  groupEn="Application: Print"
+  groupZh="應用：印刷"
+  titleEn="Poster & Environmental Signage"
+  titleZh="海報與環境標識"
+  ownerEn="MarCom Team"
+  ownerZh="MarCom Team"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Poster Types', status: 'done' },
+  { name: 'Zones', status: 'done' },
+  { name: 'Signage', status: 'done' },
+]} />
+
+<p className="en">This template is designed for multi-purpose use — from internal notices and event announcements to thematic campaigns and educational messaging. While the subject matter and visuals may vary, the structure, type system, and overall visual logic help ensure visual consistency across departments.</p>
+<p className="zh">此模板設計為多用途——從內部公告和活動宣傳到主題宣傳和教育訊息。雖然主題和視覺可能不同，但結構、字體系統和整體視覺邏輯有助於確保跨部門的視覺一致性。</p>
+
+{/* Reference image: GPS Poster Template Guide — Multi-purpose poster designs for internal communications */}
+
+### <span className="en">Poster Grid System</span><span className="zh">海報網格系統</span>
+
+<p className="en">All posters follow a 12-column grid with 16px gutters. Three zone structures accommodate different content types. Safe margin: 10mm from trim. Bleed: 3mm.</p>
+<p className="zh">所有海報遵循 12 欄網格、16px 間溝。三種區域結構因應不同內容類型。安全邊距：距裁切線 10mm。出血：3mm。</p>
+
+<div style={{display:'flex',gap:'12px',margin:'16px 0',flexWrap:'wrap'}}>
+  {/* Image Poster wireframe */}
+  <svg width="140" height="200" viewBox="0 0 140 200" style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'6px'}}>
+    <rect x="3" y="3" width="134" height="194" fill="none" stroke="var(--g300)" strokeWidth=".5" strokeDasharray="2,2"/>
+    <rect x="8" y="8" width="124" height="118" rx="2" fill="var(--turquoise-100)" stroke="var(--turquoise-300)" strokeWidth=".5"/>
+    <text x="70" y="70" textAnchor="middle" fontSize="8" fill="var(--turquoise-600)">60%</text>
+    <text x="70" y="82" textAnchor="middle" fontSize="6" fill="var(--turquoise-500)">IMAGE ZONE</text>
+    <rect x="8" y="130" width="124" height="40" rx="2" fill="var(--copper-100)" stroke="var(--copper-300)" strokeWidth=".5"/>
+    <text x="70" y="153" textAnchor="middle" fontSize="8" fill="var(--copper-600)">25%</text>
+    <text x="70" y="163" textAnchor="middle" fontSize="6" fill="var(--copper-500)">TEXT</text>
+    <rect x="8" y="174" width="124" height="22" rx="2" fill="var(--g100)" stroke="var(--g300)" strokeWidth=".5"/>
+    <text x="70" y="188" textAnchor="middle" fontSize="6" fill="var(--g500)">15% LOGO</text>
+    <text x="70" y="198" textAnchor="middle" fontSize="5" fill="var(--turquoise)"><tspan className="en">Image Poster</tspan><tspan className="zh">形象海報</tspan></text>
+  </svg>
+  {/* Timeline Poster wireframe */}
+  <svg width="140" height="200" viewBox="0 0 140 200" style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'6px'}}>
+    <rect x="3" y="3" width="134" height="194" fill="none" stroke="var(--g300)" strokeWidth=".5" strokeDasharray="2,2"/>
+    <rect x="8" y="8" width="124" height="48" rx="2" fill="var(--turquoise-100)" stroke="var(--turquoise-300)" strokeWidth=".5"/>
+    <text x="70" y="35" textAnchor="middle" fontSize="8" fill="var(--turquoise-600)">30%</text>
+    <text x="70" y="47" textAnchor="middle" fontSize="6" fill="var(--turquoise-500)">HEADER / IMAGE</text>
+    <rect x="8" y="60" width="124" height="100" rx="2" fill="var(--copper-100)" stroke="var(--copper-300)" strokeWidth=".5"/>
+    <text x="70" y="108" textAnchor="middle" fontSize="8" fill="var(--copper-600)">50%</text>
+    <text x="70" y="120" textAnchor="middle" fontSize="6" fill="var(--copper-500)">TIMELINE / AGENDA</text>
+    <line x1="20" y1="72" x2="20" y2="148" stroke="var(--turquoise)" strokeWidth="1.5"/>
+    <circle cx="20" cy="80" r="2" fill="var(--turquoise)"/><circle cx="20" cy="100" r="2" fill="var(--turquoise)"/><circle cx="20" cy="120" r="2" fill="var(--turquoise)"/><circle cx="20" cy="140" r="2" fill="var(--turquoise)"/>
+    <rect x="8" y="164" width="124" height="32" rx="2" fill="var(--g100)" stroke="var(--g300)" strokeWidth=".5"/>
+    <text x="70" y="183" textAnchor="middle" fontSize="6" fill="var(--g500)">20% FOOTER</text>
+    <text x="70" y="198" textAnchor="middle" fontSize="5" fill="var(--turquoise)"><tspan className="en">Timeline Poster</tspan><tspan className="zh">時間軸海報</tspan></text>
+  </svg>
+  {/* Text Poster wireframe */}
+  <svg width="140" height="200" viewBox="0 0 140 200" style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'6px'}}>
+    <rect x="3" y="3" width="134" height="194" fill="none" stroke="var(--g300)" strokeWidth=".5" strokeDasharray="2,2"/>
+    <rect x="8" y="8" width="124" height="30" rx="2" fill="var(--turquoise-100)" stroke="var(--turquoise-300)" strokeWidth=".5"/>
+    <text x="70" y="27" textAnchor="middle" fontSize="6" fill="var(--turquoise-500)">20% HEADER</text>
+    <rect x="8" y="42" width="124" height="120" rx="2" fill="var(--copper-100)" stroke="var(--copper-300)" strokeWidth=".5"/>
+    <text x="70" y="100" textAnchor="middle" fontSize="8" fill="var(--copper-600)">60%</text>
+    <text x="70" y="112" textAnchor="middle" fontSize="6" fill="var(--copper-500)">TEXT CONTENT</text>
+    <rect x="14" y="54" width="50" height="3" rx="1" fill="var(--g300)"/><rect x="14" y="62" width="112" height="2" rx="1" fill="var(--g200)"/><rect x="14" y="68" width="100" height="2" rx="1" fill="var(--g200)"/><rect x="14" y="74" width="108" height="2" rx="1" fill="var(--g200)"/>
+    <rect x="14" y="84" width="45" height="3" rx="1" fill="var(--g300)"/><rect x="14" y="92" width="112" height="2" rx="1" fill="var(--g200)"/><rect x="14" y="98" width="95" height="2" rx="1" fill="var(--g200)"/>
+    <rect x="8" y="166" width="124" height="30" rx="2" fill="var(--g100)" stroke="var(--g300)" strokeWidth=".5"/>
+    <text x="70" y="184" textAnchor="middle" fontSize="6" fill="var(--g500)">20% FOOTER</text>
+    <text x="70" y="198" textAnchor="middle" fontSize="5" fill="var(--turquoise)"><tspan className="en">Text Notice Poster</tspan><tspan className="zh">文字公告海報</tspan></text>
+  </svg>
+</div>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Spec</span><span className="zh">規格</span></th>
+      <th><span className="en">Value</span><span className="zh">值</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><span className="en">Grid</span><span className="zh">網格</span></td><td>12-column, 16px gutter</td></tr>
+    <tr><td><span className="en">Trim (A3)</span><span className="zh">裁切（A3）</span></td><td>297 × 420mm</td></tr>
+    <tr><td><span className="en">Bleed</span><span className="zh">出血</span></td><td>3mm</td></tr>
+    <tr><td><span className="en">Safe margin</span><span className="zh">安全邊距</span></td><td>10mm</td></tr>
+    <tr><td><span className="en">Resolution</span><span className="zh">解析度</span></td><td>300dpi (print) / 150dpi (large-format)</td></tr>
+  </tbody>
+</table>
+
+### <span className="en">Text Placement Within Zones</span><span className="zh">區域內文字放置</span>
+
+<p className="en">Within each poster zone, text follows a consistent vertical flow. Headlines anchor to the top of their zone. Body text follows with <code>--sp-4</code> gap. Sublines sit <code>--sp-2</code> below headlines.</p>
+<p className="zh">每個海報區域內，文字遵循一致的垂直流動。標題錨定在區域頂部。內文以 <code>--sp-4</code> 間距跟隨。副行位於標題下方 <code>--sp-2</code>。</p>
+
+<table className="gps-table" style={{fontSize:'10px'}}>
+  <thead>
+    <tr>
+      <th><span className="en">Zone</span><span className="zh">區域</span></th>
+      <th><span className="en">Headline Position</span><span className="zh">標題位置</span></th>
+      <th><span className="en">Body Flow</span><span className="zh">內文流動</span></th>
+      <th><span className="en">Alignment</span><span className="zh">對齊</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span className="en">Image Zone</span><span className="zh">影像區</span></td>
+      <td><span className="en">Bottom-left overlay</span><span className="zh">左下覆蓋</span></td>
+      <td><span className="en">Headline only, no body text on image</span><span className="zh">僅標題，影像上不放內文</span></td>
+      <td><span className="en">Left-align</span><span className="zh">靠左</span></td>
+    </tr>
+    <tr>
+      <td><span className="en">Text Zone</span><span className="zh">文字區</span></td>
+      <td><span className="en">Top of zone, 16px from zone edge</span><span className="zh">區域頂部，距邊緣 16px</span></td>
+      <td><span className="en">Below headline, --sp-4 gap, left-align</span><span className="zh">標題下方，--sp-4 間距，靠左</span></td>
+      <td><span className="en">Left-align (body), center OK for single-line CTA</span><span className="zh">靠左（內文），單行 CTA 可置中</span></td>
+    </tr>
+    <tr>
+      <td><span className="en">Footer Zone</span><span className="zh">頁尾區</span></td>
+      <td>—</td>
+      <td><span className="en">Logo left, legal text right, vertically centered</span><span className="zh">標誌靠左，法律文字靠右，垂直置中</span></td>
+      <td><span className="en">Space-between</span><span className="zh">兩端對齊</span></td>
+    </tr>
+  </tbody>
+</table>
+
+### <span className="en">Poster Types & Use Cases</span><span className="zh">海報類型與使用場景</span>
+
+<div className="card-grid card-grid-3">
+  <div className="card">
+    <div className="card-label"><span className="en">Type 01</span><span className="zh">類型 01</span></div>
+    <div className="card-value"><span className="en">Image Poster</span><span className="zh">形象海報</span></div>
+    <div className="card-note"><span className="en">Use for visual-led content such as campaign posters, event photos, or brand messaging. Photography or illustration as the dominant visual element.</span><span className="zh">用於以視覺為主導的內容，如宣傳海報、活動照片或品牌訊息。攝影或插畫作為主要視覺元素。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Type 02</span><span className="zh">類型 02</span></div>
+    <div className="card-value"><span className="en">Timeline Poster</span><span className="zh">時間軸海報</span></div>
+    <div className="card-note"><span className="en">Best for showing schedules or agendas for upcoming events or trainings. Date/time hierarchy with supporting imagery.</span><span className="zh">最適合展示即將舉辦的活動或培訓的時程或議程。日期/時間層級搭配輔助影像。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Type 03</span><span className="zh">類型 03</span></div>
+    <div className="card-value"><span className="en">Text Notice Poster</span><span className="zh">文字公告海報</span></div>
+    <div className="card-note"><span className="en">Use for announcements, guidelines, or internal communications with more text content. Numbered sections with icon illustrations.</span><span className="zh">用於公告、指引或文字內容較多的內部溝通。編號區段搭配圖標插畫。</span></div>
+  </div>
+</div>
+
+{/* Reference image: GPS Poster Types — Image Poster, Timeline Poster, Text Notice Poster examples */}
+
+### <span className="en">Three Poster Mockups</span><span className="zh">三種海報示意</span>
+
+<div className="poster-mockups">
+  <div className="poster poster-image">
+    <div className="poster-inner">
+      <div className="poster-tag" style={{color:'rgba(255,255,255,.6)'}}>Campaign</div>
+      <div className="poster-title" style={{color:'#fff'}}>Safety is designed into every corner</div>
+      <div className="poster-footer" style={{color:'rgba(255,255,255,.5)'}}>GPS</div>
+    </div>
+  </div>
+  <div className="poster poster-timeline">
+    <div className="poster-inner">
+      <div className="poster-tag" style={{color:'var(--turquoise)'}}>Event</div>
+      <div style={{marginTop:'auto'}}>
+        <div style={{fontSize:'20px',fontWeight:900,color:'#fff',lineHeight:1}}>08</div>
+        <div style={{fontSize:'9px',color:'var(--turquoise)',fontWeight:700}}>12</div>
+      </div>
+      <div className="poster-title" style={{color:'#fff',fontSize:'6px',marginTop:'6px'}}>Security Training</div>
+    </div>
+  </div>
+  <div className="poster poster-text">
+    <div className="poster-inner">
+      <div className="poster-tag" style={{color:'var(--turquoise)'}}>Notice</div>
+      <div style={{marginTop:'6px'}}>
+        <div style={{fontSize:'7px',fontWeight:900,color:'var(--black)',lineHeight:1.2}}>Updated badge procedure</div>
+      </div>
+      <div className="poster-footer" style={{color:'var(--g400)'}}>GPS · 2026.04</div>
+    </div>
+  </div>
+</div>
+
+### <span className="en">Editable Zones</span><span className="zh">可編輯區域</span>
+
+<div className="card-grid card-grid-3">
+  <div className="card">
+    <div className="card-label"><span className="en">Zone 01</span><span className="zh">區域 01</span></div>
+    <div className="card-value"><span className="en">Text Area</span><span className="zh">文字區域</span></div>
+    <div className="card-note"><span className="en">All copy should stay within the defined safe zone. Maintain clear hierarchy and appropriate spacing. Avoid placing text too close to the edges.</span><span className="zh">所有文案應保持在定義的安全區域內。維持清晰的層級和適當的間距。避免將文字放置太靠近邊緣。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Zone 02</span><span className="zh">區域 02</span></div>
+    <div className="card-value"><span className="en">Image Area</span><span className="zh">影像區域</span></div>
+    <div className="card-note"><span className="en">Use photography or illustrations that support your topic. Visuals can extend beyond the placeholder, but keep layouts clean and avoid overly complex or off-brand styles.</span><span className="zh">使用支持主題的攝影或插畫。視覺可延伸超出預留位置，但保持版面乾淨，避免過於複雜或偏離品牌的風格。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Zone 03</span><span className="zh">區域 03</span></div>
+    <div className="card-value"><span className="en">Logo / Footer Area</span><span className="zh">標誌 / 頁尾區域</span></div>
+    <div className="card-note"><span className="en">Do not move or resize. Ensure text and logo remain readable against background. The footer zone is fixed and should not be modified.</span><span className="zh">不要移動或調整大小。確保文字和標誌在背景上保持可讀。頁尾區域是固定的，不應修改。</span></div>
+  </div>
+</div>
+
+{/* Reference image: GPS Editable Zones — Text Area, Image Area, Logo/Footer Area with demo poster */}
+
+### <span className="en">Signage</span><span className="zh">環境標識</span>
+
+<div className="mockup">
+  <div className="mockup-header">Entrance — Branded Wayfinding</div>
+  <div className="signage-mockup">
+    <div className="signage">
+      <div className="signage-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="3" width="5" height="5" rx="1" fill="#26A7B0" opacity=".9"/>
+          <rect x="9" y="3" width="5" height="5" rx="1" fill="#26A7B0" opacity=".5"/>
+          <rect x="3" y="9" width="5" height="5" rx="1" fill="#26A7B0" opacity=".8"/>
+          <rect x="15" y="9" width="5" height="5" rx="1" fill="#26A7B0" opacity=".3"/>
+          <rect x="9" y="15" width="5" height="5" rx="1" fill="#CAC3D2" opacity=".4"/>
+          <rect x="15" y="15" width="5" height="5" rx="1" fill="#26A7B0" opacity=".5"/>
+        </svg>
+      </div>
+      <div>
+        <h5>Global Physical Security</h5>
+        <p><span className="en">Global Physical Security · Visitor Check-in →</span><span className="zh">全球實體安全處 · 訪客報到 →</span></p>
+      </div>
+      <div className="signage-band"></div>
+    </div>
+  </div>
+</div>
