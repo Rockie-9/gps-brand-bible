@@ -65,3 +65,82 @@ import DoExample from '@/components/DoExample';
   doContent={<><span className="en">Use neutral colors as base and highlight with the primary gradient. Use primary colors as base and balance with neutral tones. Use secondary colors to create alternative gradients that serve as thematic accents.</span><span className="zh">以中性色為底，以主漸層做強調。以主色為底，以中性色調平衡。使用輔助色創建作為主題點綴的替代漸層。</span></>}
   dontContent={<><span className="en">Do not overuse colors or skip neutral balance. Do not color logos or type arbitrarily without ensuring contrast between background and type. Do not use harsh neon tones or visually jarring combinations. Do not apply random rainbows or unbalanced color blocks.</span><span className="zh">不要過度使用色彩或忽略中性色平衡。不要任意為標誌或文字上色而未確保背景與文字的對比。不要使用刺眼的霓虹色或視覺不協調的組合。不要使用隨意的彩虹色或不平衡的色塊。</span></>}
 />
+
+### <span className="en">Creative Color Combinations</span><span className="zh">創意色彩組合</span>
+
+<p><span className="en">These approved combination specimens show how GPS colors work together in real layouts. Each combination is tested for contrast, harmony, and brand recognition.</span><span className="zh">這些核准的色彩組合示例展示 GPS 色彩在實際版面中如何協作。每個組合都經過對比度、和諧度和品牌辨識度測試。</span></p>
+
+<div style={{display:'flex',flexWrap:'wrap',gap:'12px',margin:'14px 0'}}>
+  {/* 1. Hero + CTA */}
+  <div style={{width:'200px',borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid'}}>
+    <div style={{height:'6px',background:'linear-gradient(135deg,#26A7B0,#CAC3D2)'}} />
+    <div style={{background:'#26A7B0',padding:'12px 10px 8px'}}>
+      <div style={{fontSize:'11px',fontWeight:700,color:'#fff',lineHeight:1.3}}>Designed Safety / 設計安全</div>
+    </div>
+    <div style={{background:'#26A7B0',padding:'0 10px 12px'}}>
+      <div style={{fontSize:'9px',color:'rgba(255,255,255,0.8)',marginBottom:'8px',lineHeight:1.4}}><span className="en">When people feel genuinely safe, they are free to focus and create.</span><span className="zh">當人們感到真正安全，他們就能自由專注與創造。</span></div>
+      <div style={{display:'inline-block',padding:'4px 14px',borderRadius:'4px',background:'#CAC3D2',color:'#0A1A22',fontSize:'9px',fontWeight:700}}>Learn More / 了解更多</div>
+    </div>
+  </div>
+
+  {/* 2. Card on Neutral */}
+  <div style={{width:'200px',borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid',background:'#F4F5F7'}}>
+    <div style={{padding:'10px'}}>
+      <div style={{background:'#fff',borderRadius:'6px',borderLeft:'4px solid #26A7B0',padding:'10px 10px'}}>
+        <div style={{fontSize:'11px',fontWeight:700,color:'#0A1A22',marginBottom:'4px'}}><span className="en">Card Title</span><span className="zh">卡片標題</span></div>
+        <div style={{fontSize:'9px',color:'#4A5E6A',lineHeight:1.5,marginBottom:'6px'}}><span className="en">Body text on a neutral surface with turquoise left border accent.</span><span className="zh">中性底色卡片搭配青綠色左邊框點綴的內文。</span></div>
+        <div style={{fontSize:'9px',color:'#1E8A92',fontWeight:700}}>Read more → 閱讀更多 →</div>
+      </div>
+    </div>
+  </div>
+
+  {/* 3. Dark Executive */}
+  <div style={{width:'200px',borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid',background:'#0A1A22'}}>
+    <div style={{padding:'14px 12px'}}>
+      <div style={{fontSize:'12px',fontWeight:700,color:'#fff',marginBottom:'4px'}}><span className="en">Executive Brief</span><span className="zh">高階簡報</span></div>
+      <div style={{height:'2px',width:'40px',background:'#3EC8D1',marginBottom:'6px'}} />
+      <div style={{fontSize:'9px',color:'#CAC3D2',lineHeight:1.5,marginBottom:'8px'}}><span className="en">Strategic direction for Q3 brand initiatives across all global sites.</span><span className="zh">Q3 品牌倡議在全球所有場域的策略方向。</span></div>
+      <div style={{fontSize:'8px',color:'#4A5E6A'}}><span className="en">Confidential · Leadership Only</span><span className="zh">機密 · 僅限管理層</span></div>
+    </div>
+  </div>
+
+  {/* 4. Warm Community */}
+  <div style={{width:'200px',borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid',background:'#F0F9F2'}}>
+    <div style={{padding:'12px'}}>
+      <div style={{display:'flex',alignItems:'center',gap:'8px',marginBottom:'6px'}}>
+        <div style={{width:'28px',height:'28px',borderRadius:'50%',background:'#26A7B0',flexShrink:0}} />
+        <div style={{fontSize:'11px',fontWeight:700,color:'#2E7D46',lineHeight:1.3}}><span className="en">Community Event</span><span className="zh">社群活動</span></div>
+      </div>
+      <div style={{fontSize:'9px',color:'#1A2A32',lineHeight:1.5}}><span className="en">Join us for Safety Awareness Week — activities for all sites and families.</span><span className="zh">加入安全意識週——為所有場域和家庭設計的活動。</span></div>
+    </div>
+  </div>
+
+  {/* 5. Alert / Safety */}
+  <div style={{width:'200px',borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid',background:'#fff'}}>
+    <div style={{height:'4px',background:'#D94F4F'}} />
+    <div style={{padding:'12px'}}>
+      <div style={{fontSize:'11px',fontWeight:700,color:'#0A1A22',marginBottom:'4px'}}><span className="en">Safety Notice</span><span className="zh">安全通知</span></div>
+      <div style={{fontSize:'9px',color:'#4A5E6A',lineHeight:1.5,marginBottom:'8px'}}><span className="en">Emergency drill scheduled for all floors. Please review evacuation routes.</span><span className="zh">所有樓層已排定緊急演練。請檢視疏散路線。</span></div>
+      <div style={{display:'inline-block',padding:'4px 14px',borderRadius:'4px',background:'#26A7B0',color:'#fff',fontSize:'9px',fontWeight:700}}>Acknowledge / 確認</div>
+    </div>
+  </div>
+
+  {/* 6. Data Dashboard */}
+  <div style={{width:'200px',borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid',background:'#F4F5F7'}}>
+    <div style={{padding:'12px'}}>
+      <div style={{fontSize:'10px',fontWeight:700,color:'#0A1A22',marginBottom:'8px'}}><span className="en">Monthly Metrics</span><span className="zh">月度指標</span></div>
+      <div style={{display:'flex',alignItems:'flex-end',gap:'6px',height:'50px',marginBottom:'6px'}}>
+        <div style={{flex:1,background:'#26A7B0',borderRadius:'2px 2px 0 0',height:'80%'}} />
+        <div style={{flex:1,background:'#8C9FCB',borderRadius:'2px 2px 0 0',height:'55%'}} />
+        <div style={{flex:1,background:'#8CC897',borderRadius:'2px 2px 0 0',height:'70%'}} />
+        <div style={{flex:1,background:'#F6AD90',borderRadius:'2px 2px 0 0',height:'40%'}} />
+      </div>
+      <div style={{display:'flex',gap:'6px',fontSize:'7px',color:'#6B7B85'}}>
+        <div style={{flex:1,textAlign:'center'}}>SFI</div>
+        <div style={{flex:1,textAlign:'center'}}>Adopt</div>
+        <div style={{flex:1,textAlign:'center'}}>Train</div>
+        <div style={{flex:1,textAlign:'center'}}>Audit</div>
+      </div>
+    </div>
+  </div>
+</div>

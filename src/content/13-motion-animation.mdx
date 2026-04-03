@@ -142,6 +142,46 @@ import CodeBlock from '@/components/CodeBlock'
   </svg>
 </div>
 
+### <span className="en">Micro-Interaction Specimens</span><span className="zh">微互動模擬</span>
+
+<p><span className="en">GPS motion principles applied to common UI micro-interactions. These specimens demonstrate how motion personality creates a consistent "feel" across all touchpoints.</span><span className="zh">GPS 動態原則應用於常見 UI 微互動。這些模擬展示動態個性如何在所有接觸點創造一致的「感覺」。</span></p>
+
+<div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill, minmax(200px, 1fr))',gap:'12px',margin:'14px 0'}}>
+  <div style={{background:'#fff',border:'1px solid var(--color-g200)',borderRadius:'8px',padding:'16px',textAlign:'center',breakInside:'avoid'}}>
+    <div style={{fontSize:'9px',fontWeight:700,letterSpacing:'0.08em',color:'var(--color-turquoise-600)',marginBottom:'8px',textTransform:'uppercase'}}><span className="en">Button Hover</span><span className="zh">按鈕懸停</span></div>
+    <div style={{display:'inline-block',padding:'8px 20px',background:'var(--color-turquoise-500)',color:'#fff',borderRadius:'4px',fontSize:'11px',fontWeight:700,cursor:'pointer',transition:'all 0.3s cubic-bezier(0.25,0.1,0.25,1)',transformOrigin:'center'}}>
+      <span className="en">Hover Me</span><span className="zh">懸停此處</span>
+    </div>
+    <div style={{fontSize:'8px',color:'var(--color-g400)',marginTop:'8px',fontFamily:'var(--font-mono)'}}>300ms ease-out · scale(1.02)</div>
+  </div>
+
+  <div style={{background:'#fff',border:'1px solid var(--color-g200)',borderRadius:'8px',padding:'16px',textAlign:'center',breakInside:'avoid'}}>
+    <div style={{fontSize:'9px',fontWeight:700,letterSpacing:'0.08em',color:'var(--color-turquoise-600)',marginBottom:'8px',textTransform:'uppercase'}}><span className="en">Card Enter</span><span className="zh">卡片進場</span></div>
+    <div style={{background:'var(--color-turquoise-50)',border:'1px solid var(--color-turquoise-200)',borderRadius:'6px',padding:'10px',animation:'gps-reveal 0.4s ease-out'}}>
+      <div style={{fontSize:'10px',fontWeight:700,color:'var(--color-ink)'}}><span className="en">Notification</span><span className="zh">通知</span></div>
+      <div style={{fontSize:'8px',color:'var(--color-g500)'}}>reveal · 400ms</div>
+    </div>
+    <div style={{fontSize:'8px',color:'var(--color-g400)',marginTop:'8px',fontFamily:'var(--font-mono)'}}>translateY(12px→0) + fade</div>
+  </div>
+
+  <div style={{background:'#fff',border:'1px solid var(--color-g200)',borderRadius:'8px',padding:'16px',textAlign:'center',breakInside:'avoid'}}>
+    <div style={{fontSize:'9px',fontWeight:700,letterSpacing:'0.08em',color:'var(--color-turquoise-600)',marginBottom:'8px',textTransform:'uppercase'}}><span className="en">Status Pulse</span><span className="zh">狀態脈動</span></div>
+    <div style={{display:'flex',gap:'8px',justifyContent:'center',alignItems:'center'}}>
+      <div style={{width:'8px',height:'8px',borderRadius:'50%',background:'var(--color-success)',animation:'gps-pulse 2s ease-in-out infinite'}} />
+      <span style={{fontSize:'10px',color:'var(--color-ink)'}}><span className="en">Online</span><span className="zh">在線</span></span>
+    </div>
+    <div style={{fontSize:'8px',color:'var(--color-g400)',marginTop:'8px',fontFamily:'var(--font-mono)'}}>pulse · 2s infinite</div>
+  </div>
+
+  <div style={{background:'#fff',border:'1px solid var(--color-g200)',borderRadius:'8px',padding:'16px',textAlign:'center',breakInside:'avoid'}}>
+    <div style={{fontSize:'9px',fontWeight:700,letterSpacing:'0.08em',color:'var(--color-turquoise-600)',marginBottom:'8px',textTransform:'uppercase'}}><span className="en">Progress Bar</span><span className="zh">進度條</span></div>
+    <div style={{background:'var(--color-g100)',borderRadius:'4px',height:'6px',overflow:'hidden'}}>
+      <div style={{width:'72%',height:'100%',background:'linear-gradient(90deg,var(--color-turquoise-500),var(--color-copper-300))',borderRadius:'4px',animation:'gps-sweep 3s ease-in-out infinite'}} />
+    </div>
+    <div style={{fontSize:'8px',color:'var(--color-g400)',marginTop:'8px',fontFamily:'var(--font-mono)'}}>sweep · gradient fill</div>
+  </div>
+</div>
+
 ### <span className="en">Video Template Specs</span><span className="zh">影片模板規格</span>
 
 <table className="gps-table">
