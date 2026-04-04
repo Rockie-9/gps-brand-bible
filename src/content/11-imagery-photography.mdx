@@ -1,0 +1,167 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+import CodeBlock from '@/components/CodeBlock'
+
+<ChapterHeader
+  number={11}
+  groupEn="Visual Identity"
+  groupZh="視覺識別"
+  titleEn="Imagery & Photography"
+  titleZh="影像與攝影"
+  ownerEn="MarCom Team"
+  ownerZh="MarCom Team"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Direction', status: 'done' },
+  { name: 'Avoid', status: 'done' },
+  { name: 'Photo Brief', status: 'wip' },
+  { name: 'Licensing', status: 'todo' },
+]} />
+
+### <span className="en">Imagery Guide</span><span className="zh">影像指南</span>
+
+<p className="en">Imagery should reflect GPS's core values of security, resilience, and human impact. Use authentic, professional photos that feature people in real environments — such as security checkpoints, or secure facilities — to convey trust and clarity. Supporting imagery may include architectural shots, surveillance technology, or abstract compositions that suggest protection and precision.</p>
+<p className="zh">影像應反映 GPS 的核心價值——安全、韌性和人文關懷。使用在真實環境中呈現人們的專業、真實照片——如安全檢查站或安全設施——以傳達信任和清晰感。輔助影像可包括建築攝影、監控技術，或暗示保護與精確的抽象構圖。</p>
+
+<div className="card-grid card-grid-4">
+  <div className="card">
+    <div className="card-label"><span className="en">Lighting</span><span className="zh">光線</span></div>
+    <div className="card-value"><span className="en">Natural & Even</span><span className="zh">自然均勻</span></div>
+    <div className="card-note"><span className="en">No dramatic shadows or excessive lens flare</span><span className="zh">無戲劇性陰影或過度鏡頭光暈</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Composition</span><span className="zh">構圖</span></div>
+    <div className="card-value"><span className="en">Clear & Intentional</span><span className="zh">清晰且有意圖</span></div>
+    <div className="card-note"><span className="en">Strong focal point, clean backgrounds</span><span className="zh">清晰的焦點、乾淨的背景</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">People</span><span className="zh">人物</span></div>
+    <div className="card-value"><span className="en">Authentic</span><span className="zh">真實自然</span></div>
+    <div className="card-note"><span className="en">Real interactions, no staging or artificial feel</span><span className="zh">真實互動、非刻意擺拍或人工感</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Color</span><span className="zh">色彩</span></div>
+    <div className="card-value"><span className="en">Neutral</span><span className="zh">中性色調</span></div>
+    <div className="card-note"><span className="en">No oversaturation or high-contrast grading</span><span className="zh">不過度飽和或高對比色彩調校</span></div>
+  </div>
+</div>
+
+<p className="en">All imagery is <strong>internal use only</strong>. Photos with identifiable individuals require signed release forms. The images are not authorized for external use.</p>
+<p className="zh">所有影像<strong>僅供內部使用</strong>。包含可辨識個人的照片需要簽署肖像授權書。這些影像不得對外使用。</p>
+
+{/* Reference image: GPS Imagery Guide — Photography examples showing security, resilience, human impact */}
+
+### <span className="en">Things to Avoid</span><span className="zh">應避免事項</span>
+
+<div className="card-grid card-grid-2">
+  <div className="card" style={{borderColor:'var(--danger)'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Avoid Staging</span><span className="zh">避免刻意擺拍</span></div>
+    <div className="card-note"><span className="en">Avoid staged or artificial feel. Prioritize genuine moments reflecting real interactions and scenarios. Do not include people in unnatural or staged poses.</span><span className="zh">避免刻意或人工感。優先選擇反映真實互動和場景的真誠瞬間。不要使用不自然或擺拍姿勢。</span></div>
+  </div>
+  <div className="card" style={{borderColor:'var(--danger)'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Avoid Overproduction</span><span className="zh">避免過度製作</span></div>
+    <div className="card-note"><span className="en">Balance professionalism and visual appeal, avoiding excessive manipulation or editing. Do not use overly dynamic lighting and excessive lens flare. Do not use oversaturated or high-contrast color grading.</span><span className="zh">平衡專業性與視覺吸引力，避免過度後製。不要使用過度戲劇化的燈光和過多鏡頭光暈。不要使用過度飽和或高對比色彩調校。</span></div>
+  </div>
+  <div className="card" style={{borderColor:'var(--danger)'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Avoid Disconnected Context</span><span className="zh">避免脈絡斷裂</span></div>
+    <div className="card-note"><span className="en">Clarify image context to match intended message and prevent confusion or misinterpretation. Avoid images with excessive post-production effects.</span><span className="zh">釐清影像脈絡以符合預期訊息，防止混淆或誤解。避免過度後製效果的影像。</span></div>
+  </div>
+  <div className="card" style={{borderColor:'var(--danger)'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Avoid Poor Composition</span><span className="zh">避免糟糕構圖</span></div>
+    <div className="card-note"><span className="en">Avoid clutter or chaos that diverts from intended focus. Ensure every photo has a clear subject and visual hierarchy.</span><span className="zh">避免分散焦點的雜亂或混亂。確保每張照片都有清晰的主題和視覺層級。</span></div>
+  </div>
+</div>
+
+{/* Reference image: GPS Things to Avoid — Photography dont examples with crossed-out images */}
+
+### <span className="en">Photography Shot List</span><span className="zh">攝影拍攝清單</span>
+
+<p className="en">Six reference scene specifications. Use these as briefs for photographers — specific enough to ensure consistency, flexible enough to adapt to each site's environment.</p>
+<p className="zh">六個參考場景規格。作為攝影師簡報使用——足夠具體以確保一致性，足夠靈活以適應各場域環境。</p>
+
+<div className="card-grid card-grid-2" style={{gap:'10px',margin:'12px 0'}}>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}><span className="en">Shot 01 — Checkpoint</span><span className="zh">場景 01——檢查站</span></div>
+    <div className="card-note" style={{fontSize:'11px',lineHeight:1.6}}><span className="en">Medium shot, eye level. Security officer greeting visitor with badge scan. Natural daylight from left. Clean industrial lobby background, out of focus at f/2.8. Subject making eye contact with visitor. Warm, professional — not surveillance.</span><span className="zh">中景、平視角。安全人員問候訪客並掃描門禁卡。自然日光從左側照入。乾淨的工業風大廳背景，f/2.8 虛化。主體與訪客有眼神接觸。溫暖、專業——非監控感。</span></div>
+  </div>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}><span className="en">Shot 02 — Shift Briefing</span><span className="zh">場景 02——換班簡報</span></div>
+    <div className="card-note" style={{fontSize:'11px',lineHeight:1.6}}><span className="en">Wide shot, slightly elevated (15°). Team of 4–6 in semi-circle around team lead with tablet. Fluorescent overhead + window ambient. Uniforms visible. Body language: engaged, leaning in. No staged posing.</span><span className="zh">廣角、略微俯角（15°）。4–6 人半圓圍繞持平板的組長。頂部日光燈 + 窗戶環境光。制服可見。身體語言：投入、前傾。無擺拍。</span></div>
+  </div>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}><span className="en">Shot 03 — Technology</span><span className="zh">場景 03——科技</span></div>
+    <div className="card-note" style={{fontSize:'11px',lineHeight:1.6}}><span className="en">Close-up, shallow depth of field. Hands interacting with access panel or monitoring screen. Screen content visible but not readable (privacy). Cool blue ambient from screens. Focus on hands + device interaction.</span><span className="zh">特寫、淺景深。手與門禁面板或監控螢幕互動。螢幕內容可見但不可讀（隱私考量）。螢幕發出冷藍環境光。焦點在手部與裝置互動。</span></div>
+  </div>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}><span className="en">Shot 04 — Environment</span><span className="zh">場景 04——環境</span></div>
+    <div className="card-note" style={{fontSize:'11px',lineHeight:1.6}}><span className="en">Wide establishing shot. Clean fab corridor or campus walkway with natural surveillance sightlines visible. Golden hour preferred. No people (or silhouettes only). Emphasize openness, design, CPTED principles — welcoming, not fortified.</span><span className="zh">廣角建立鏡頭。乾淨的廠區走廊或園區步道，可見自然監控視線。偏好黃金時段。無人物（或僅剪影）。強調開放性、設計感、CPTED 原則——親切感，非堡壘感。</span></div>
+  </div>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}><span className="en">Shot 05 — Family Extension</span><span className="zh">場景 05——家庭延伸</span></div>
+    <div className="card-note" style={{fontSize:'11px',lineHeight:1.6}}><span className="en">Medium-close, warm tones. Employee leaving site, transitioning to personal context (jacket on, bag, walking toward exit). Late afternoon light. Subtle smile. Conveys "safety travels home with you." No family members visible (privacy).</span><span className="zh">中近景、暖色調。員工離開場域，轉換至個人情境（穿外套、背包、走向出口）。午後光線。微笑。傳達「安全跟你一起回家」。不拍攝家人（隱私考量）。</span></div>
+  </div>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}><span className="en">Shot 06 — Training</span><span className="zh">場景 06——培訓</span></div>
+    <div className="card-note" style={{fontSize:'11px',lineHeight:1.6}}><span className="en">Medium shot, over-shoulder angle. Participant viewing tablet/screen with training content. Others visible in periphery. Bright, well-lit training room. Active participation — writing, tapping, discussing. Avoid "classroom" static rows.</span><span className="zh">中景、過肩角度。參訓者觀看平板/螢幕上的培訓內容。他人在周邊可見。明亮的培訓室。主動參與——書寫、操作、討論。避免「教室」靜態排列。</span></div>
+  </div>
+</div>
+
+### <span className="en">Photography Anti-Patterns</span><span className="zh">攝影反面教材</span>
+
+<p className="en">Three common failures that consistently produce off-brand imagery. Brief your photographer to avoid these specifically.</p>
+<p className="zh">三個常見失敗模式，會持續產出偏離品牌的影像。請特別向攝影師說明避免這些情況。</p>
+
+<div className="card-grid card-grid-3" style={{gap:'10px',margin:'12px 0'}}>
+  <div className="card" style={{borderColor:'var(--danger)',padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Anti-Pattern 01</span><span className="zh">反面教材 01</span></div>
+    <div className="card-value"><span className="en">The Surveillance Shot</span><span className="zh">監控視角照</span></div>
+    <div className="card-note"><span className="en">High-angle, fisheye distortion, empty corridors, ceiling-mounted camera perspective. This is exactly the "security as control" frame we are working to replace. If it looks like CCTV footage, it is wrong.</span><span className="zh">高空俯角、魚眼變形、空蕩走廊、天花板監視器視角。這正是我們正在努力取代的「安全即控制」框架。如果看起來像監視器畫面，就是錯的。</span></div>
+  </div>
+  <div className="card" style={{borderColor:'var(--danger)',padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Anti-Pattern 02</span><span className="zh">反面教材 02</span></div>
+    <div className="card-value"><span className="en">The Green-Cast Fluorescent</span><span className="zh">綠色日光燈色偏</span></div>
+    <div className="card-note"><span className="en">Uncorrected overhead fluorescent lighting that casts a sickly green-yellow over skin tones and uniforms. Kills the brand palette. Always shoot with custom white balance or add portable LED panels to correct ambient color.</span><span className="zh">未校正的頂部日光燈投射出病態的綠黃色偏在膚色和制服上。破壞品牌色盤。始終使用自訂白平衡拍攝，或加入攜帶型 LED 面板校正環境色溫。</span></div>
+  </div>
+  <div className="card" style={{borderColor:'var(--danger)',padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--danger)'}}><span className="en">Anti-Pattern 03</span><span className="zh">反面教材 03</span></div>
+    <div className="card-value"><span className="en">The Dystopian Empty</span><span className="zh">反烏托邦空景</span></div>
+    <div className="card-note"><span className="en">Empty lobbies, deserted hallways, gates without people. Intended to show "secure environment" but reads as "abandoned facility." GPS imagery must include human presence — even a single person walking gives life and warmth.</span><span className="zh">空蕩的大廳、無人的走廊、沒有人的閘門。意圖展現「安全環境」卻讀起來像「廢棄設施」。GPS 影像必須包含人的存在——即使一個人在走路也能帶來生命力和溫暖。</span></div>
+  </div>
+</div>
+
+### <span className="en">Geographic Diversity Requirement</span><span className="zh">地理多樣性要求</span>
+
+<p className="en">All photography selections must represent multiple site geographies — TW fabs, JASM Kumamoto, ESMC Dresden, and AZ Phoenix — not default to Taiwan-only imagery. A cultural neutrality check is required for all photography selections to ensure no single geography dominates the visual narrative.</p>
+<p className="zh">所有攝影選擇必須代表多個廠區地理位置——台灣晶圓廠、JASM 熊本、ESMC 德勒斯登和 AZ 鳳凰城——不得預設僅使用台灣影像。所有攝影選擇都需要進行文化中立性檢查，確保沒有單一地理位置主導視覺敘事。</p>
+
+#### <span className="en">Geographic Diversity Checklist</span><span className="zh">地理多樣性檢查清單</span>
+
+<table className="gps-table"><thead><tr><th><span className="en">Check Item</span><span className="zh">檢查項目</span></th><th><span className="en">Requirement</span><span className="zh">要求</span></th><th><span className="en">Applies To</span><span className="zh">適用範圍</span></th></tr></thead><tbody><tr><td><span className="en">Site representation</span><span className="zh">廠區代表性</span></td><td><span className="en">Any campaign with 4+ images must include at least 2 geographies</span><span className="zh">任何包含 4 張以上圖片的宣傳必須涵蓋至少 2 個地理位置</span></td><td><span className="en">Campaigns, posters, newsletters</span><span className="zh">宣傳活動、海報、電子報</span></td></tr><tr><td><span className="en">Cultural neutrality</span><span className="zh">文化中立性</span></td><td><span className="en">No culturally specific gestures, symbols, or text visible unless intentional</span><span className="zh">除非有意為之，不得出現具文化特定性的手勢、符號或文字</span></td><td><span className="en">All photography</span><span className="zh">所有攝影</span></td></tr><tr><td><span className="en">Architecture variety</span><span className="zh">建築多樣性</span></td><td><span className="en">Mix of fab styles — not all identical TSMC Taiwan campus shots</span><span className="zh">混合不同廠房風格——不全是相同的台灣 TSMC 園區照片</span></td><td><span className="en">Environmental shots, signage photos</span><span className="zh">環境照、標識攝影</span></td></tr><tr><td><span className="en">Seasonal awareness</span><span className="zh">季節意識</span></td><td><span className="en">Imagery should not assume a single climate (e.g., tropical year-round)</span><span className="zh">影像不應假定單一氣候（如全年熱帶）</span></td><td><span className="en">Outdoor / campus shots</span><span className="zh">戶外 / 園區照片</span></td></tr><tr><td><span className="en">Workforce diversity</span><span className="zh">工作力多樣性</span></td><td><span className="en">Photography should reflect the demographic diversity of global GPS staff</span><span className="zh">攝影應反映全球 GPS 人員的人口多樣性</span></td><td><span className="en">People photography</span><span className="zh">人物攝影</span></td></tr></tbody></table>
+
+<Callout type="warning">
+<span className="en">Before finalizing any photography selection for brand-wide use, the reviewing team must confirm geographic and cultural balance. Submissions that default to a single site's imagery will be returned for revision.</span><span className="zh">在確定任何品牌通用的攝影選擇之前，審查團隊必須確認地理和文化平衡。預設使用單一廠區影像的提交將被退回修改。</span>
+</Callout>
+
+### <span className="en">Photography Production Checklists</span><span className="zh">攝影製作檢查清單</span>
+
+<p><span className="en">These checklists support any design production that uses photography as part of the design materials.</span><span className="zh">這些檢查清單支援任何使用攝影作為設計素材一部分的製作流程。</span></p>
+
+#### <span className="en">Pre-Shoot Planning</span><span className="zh">拍攝前規劃</span>
+
+<table className="gps-table"><thead><tr><th><span className="en">Check Item</span><span className="zh">檢查項目</span></th><th><span className="en">Details</span><span className="zh">細節</span></th></tr></thead><tbody><tr><td><span className="en">Location scouting</span><span className="zh">場勘</span></td><td><span className="en">Verify CPTED alignment — open sightlines, natural surveillance, branded zones visible</span><span className="zh">驗證 CPTED 一致性——開放視線、自然監控、品牌區域可見</span></td></tr><tr><td><span className="en">Lighting plan</span><span className="zh">燈光計畫</span></td><td><span className="en">Match zone color temperatures (3000K admin, 5000K fab) — see Ch10</span><span className="zh">匹配區域色溫（3000K 行政區、5000K 廠區）——參見 Ch10</span></td></tr><tr><td><span className="en">Subject diversity</span><span className="zh">拍攝對象多樣性</span></td><td><span className="en">Confirm multi-geography representation per checklist (TW, JASM, ESMC, AZ)</span><span className="zh">依檢查清單確認多地理位置代表性（TW、JASM、ESMC、AZ）</span></td></tr><tr><td><span className="en">Brand prop preparation</span><span className="zh">品牌道具準備</span></td><td><span className="en">GPS signage, branded materials, uniform elements in frame</span><span className="zh">GPS 標識、品牌素材、制服元素入鏡</span></td></tr><tr><td><span className="en">Shot list alignment</span><span className="zh">拍攝清單對齊</span></td><td><span className="en">Cross-reference 6 reference scenes (Checkpoint, Briefing, Technology, Environment, Family, Training)</span><span className="zh">交叉參照 6 個參考場景（檢查站、簡報、科技、環境、家庭、培訓）</span></td></tr><tr><td><span className="en">Legal clearance</span><span className="zh">法律許可</span></td><td><span className="en">Model releases, site photography permits, restricted area review</span><span className="zh">肖像授權書、場域攝影許可、管制區域審查</span></td></tr></tbody></table>
+
+#### <span className="en">On-Shoot Checklist</span><span className="zh">拍攝中清單</span>
+
+<table className="gps-table"><thead><tr><th><span className="en">Check Item</span><span className="zh">檢查項目</span></th><th><span className="en">Details</span><span className="zh">細節</span></th></tr></thead><tbody><tr><td><span className="en">Camera settings</span><span className="zh">相機設定</span></td><td><span className="en">RAW format, white balance matched to zone color temperature</span><span className="zh">RAW 格式、白平衡匹配區域色溫</span></td></tr><tr><td><span className="en">Composition rules</span><span className="zh">構圖規則</span></td><td><span className="en">Rule of thirds, eye-level for human subjects, wide for environments</span><span className="zh">三分法、人物拍攝使用平視角、環境拍攝使用廣角</span></td></tr><tr><td><span className="en">Brand element visibility</span><span className="zh">品牌元素可見性</span></td><td><span className="en">GPS logo, turquoise accents, branded signage in frame where natural</span><span className="zh">GPS 標誌、青綠色點綴、品牌標識在自然情況下入鏡</span></td></tr><tr><td><span className="en">Avoid anti-patterns</span><span className="zh">避免反面模式</span></td><td><span className="en">No surveillance angle, no green fluorescent cast, no dystopian empty</span><span className="zh">不使用監控視角、不出現綠色日光燈色偏、不拍攝反烏托邦空景</span></td></tr><tr><td><span className="en">Human warmth</span><span className="zh">人文溫度</span></td><td><span className="en">Authentic expressions, natural posture, no staging</span><span className="zh">真實表情、自然姿態、不擺拍</span></td></tr><tr><td><span className="en">Bilingual signage</span><span className="zh">雙語標識</span></td><td><span className="en">Both EN and zh-TW visible in signage shots</span><span className="zh">標識拍攝中 EN 和 zh-TW 皆可見</span></td></tr></tbody></table>
+
+#### <span className="en">Post-Production Checklist</span><span className="zh">後製清單</span>
+
+<table className="gps-table"><thead><tr><th><span className="en">Check Item</span><span className="zh">檢查項目</span></th><th><span className="en">Details</span><span className="zh">細節</span></th></tr></thead><tbody><tr><td><span className="en">Color grading</span><span className="zh">調色</span></td><td><span className="en">Grade toward brand palette — warm tones for admin, cool for tech zones</span><span className="zh">依品牌色盤調色——行政區暖色調、科技區冷色調</span></td></tr><tr><td><span className="en">Approved aspect ratios</span><span className="zh">核准長寬比</span></td><td><span className="en">Crop to approved ratios only</span><span className="zh">僅裁切為核准的長寬比</span></td></tr><tr><td><span className="en">File naming</span><span className="zh">檔案命名</span></td><td>GPS_Photo_{'{Site}'}_{'{Scene}'}_{'{Date}'}_{'{Sequence}'}.jpg</td></tr><tr><td><span className="en">Metadata</span><span className="zh">中繼資料</span></td><td><span className="en">Embed GPS brand tag, site location, photographer credit, usage rights</span><span className="zh">嵌入 GPS 品牌標籤、廠區位置、攝影師署名、使用權限</span></td></tr><tr><td><span className="en">Diversity review</span><span className="zh">多樣性審查</span></td><td><span className="en">Final selection must pass geographic diversity checklist</span><span className="zh">最終選擇必須通過地理多樣性檢查清單</span></td></tr><tr><td><span className="en">Format delivery</span><span className="zh">格式交付</span></td><td><span className="en">High-res (300dpi TIFF) for print, optimized (72dpi JPEG/WebP) for digital</span><span className="zh">高解析度（300dpi TIFF）供印刷、最佳化（72dpi JPEG/WebP）供數位</span></td></tr></tbody></table>
+
+#### <span className="en">Approved Aspect Ratios</span><span className="zh">核准長寬比</span>
+
+<table className="gps-table"><thead><tr><th><span className="en">Ratio</span><span className="zh">比例</span></th><th><span className="en">Use Case</span><span className="zh">使用情境</span></th><th><span className="en">Dimensions (px)</span><span className="zh">尺寸（px）</span></th></tr></thead><tbody><tr><td>16:9</td><td><span className="en">Hero images, digital signage, video thumbnails</span><span className="zh">主視覺圖、數位看板、影片縮圖</span></td><td>1920×1080, 1280×720</td></tr><tr><td>4:3</td><td><span className="en">Card images, presentation slides</span><span className="zh">卡片圖、簡報投影片</span></td><td>1200×900, 800×600</td></tr><tr><td>1:1</td><td><span className="en">Social media profiles, LINE OA icons</span><span className="zh">社群媒體頭像、LINE OA 圖示</span></td><td>1080×1080, 512×512</td></tr><tr><td>3:2</td><td><span className="en">Editorial photography, newsletter hero</span><span className="zh">編輯攝影、電子報主視覺</span></td><td>1500×1000, 900×600</td></tr><tr><td>9:16</td><td><span className="en">Mobile stories, vertical signage</span><span className="zh">行動裝置限時動態、直式看板</span></td><td>1080×1920</td></tr></tbody></table>

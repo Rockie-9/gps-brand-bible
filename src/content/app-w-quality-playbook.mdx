@@ -1,0 +1,369 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+
+<ChapterHeader
+  number="W"
+  groupEn="Appendix"
+  groupZh="附錄"
+  titleEn="Brand Quality Playbook"
+  titleZh="品牌品質手冊"
+  ownerEn="GPS Strategy & DX"
+  ownerZh="GPS Strategy & DX"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Roles', status: 'done' },
+  { name: 'Work Types', status: 'done' },
+  { name: 'Flows', status: 'done' },
+  { name: 'Checklists', status: 'done' },
+  { name: 'Fixes', status: 'done' },
+  { name: 'Check-Ups', status: 'done' }
+]} />
+
+<p className="en">A simple guide for our three-person team. Who does what, how we check our work, and how we fix things when they're off.</p>
+<p className="zh">我們三人團隊的簡單指南。誰負責什麼、如何檢查工作、以及發現問題時如何修正。</p>
+
+### <span className="en">How We Work Together</span><span className="zh">我們怎麼合作</span>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-4">
+  <div className="border rounded-lg p-4 border-t-[3px] border-t-turquoise-500">
+    <div className="font-semibold text-sm mb-2"><span className="en">Sort first, then start</span><span className="zh">先分類，再開始</span></div>
+    <div className="text-sm"><span className="en">Before making anything, decide how important it is. Big decisions go to the Division Head. Regular work stays between Strategy and Promotion.</span><span className="zh">製作任何東西之前，先判斷重要性。重大決策交給處長。一般工作在策略與推廣之間完成。</span></div>
+  </div>
+  <div className="border rounded-lg p-4 border-t-[3px] border-t-gps-purple">
+    <div className="font-semibold text-sm mb-2"><span className="en">Use the checklist, not guesswork</span><span className="zh">用檢查表，不靠猜測</span></div>
+    <div className="text-sm"><span className="en">The Brand Bible tells us what's right. When checking work, refer to the specific chapter — not personal preference.</span><span className="zh">品牌聖經告訴我們什麼是對的。檢查工作時，參照具體章節——而非個人偏好。</span></div>
+  </div>
+  <div className="border rounded-lg p-4 border-t-[3px] border-t-gps-orange">
+    <div className="font-semibold text-sm mb-2"><span className="en">Protect the Director's time</span><span className="zh">保護處長的時間</span></div>
+    <div className="text-sm"><span className="en">Only strategic items need the Division Head. Routine work flows between Strategy and Promotion. If in doubt, ask Strategy first.</span><span className="zh">只有策略性事項需要處長。日常工作在策略與推廣之間流轉。有疑問時，先問策略。</span></div>
+  </div>
+</div>
+
+### <span className="en">Who Does What</span><span className="zh">誰負責什麼</span>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Role</span><span className="zh">角色</span></th>
+      <th><span className="en">Scope</span><span className="zh">範圍</span></th>
+      <th><span className="en">In Practice</span><span className="zh">實際上</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><span className="en">Division Head</span><span className="zh">處長</span></strong></td>
+      <td><span className="en">Sets the direction. Approves big-picture decisions: brand messaging changes, co-branding, new site launches, Director-level messages. Reviews annual brand health report in Q4.</span><span className="zh">設定方向。核准重大決策：品牌訊息變更、聯合品牌、新據點啟動、處長級訊息。Q4 檢視年度品牌健康報告。</span></td>
+      <td><span className="en">You'll see strategic briefs a few times per quarter. One round of feedback, then it ships.</span><span className="zh">每季看到幾次策略簡報。一輪回饋後即發布。</span></td>
+    </tr>
+    <tr>
+      <td><strong><span className="en">Strategy &amp; Transformation</span><span className="zh">策略轉型</span></strong></td>
+      <td><span className="en">Writes the brief, guards the standard. Reviews all campaign-level work for message alignment. Maintains the Brand Bible. Runs quarterly check-ups. Decides which type a request is.</span><span className="zh">撰寫簡報、守護標準。審查所有活動級別作品的訊息一致性。維護品牌聖經。執行季度檢查。決定每個需求的類型。</span></td>
+      <td><span className="en">Every campaign starts with your brief. You review Promotion's work against the Brand Bible before it goes live.</span><span className="zh">每個活動從你的簡報開始。推廣的作品上線前，你對照品牌聖經審查。</span></td>
+    </tr>
+    <tr>
+      <td><strong><span className="en">Promotion</span><span className="zh">推廣</span></strong></td>
+      <td><span className="en">Makes it real. Designs and produces all visual materials. Manages templates. Publishes to platforms. For everyday items, self-checks against the Brand Bible and publishes directly.</span><span className="zh">將品牌實現。設計製作所有視覺材料。管理模板。發布至平台。日常項目自行對照品牌聖經檢查後直接發布。</span></td>
+      <td><span className="en">You bring the brand to life. For everyday items, the Brand Bible checklist is your approval. For campaigns, Strategy reviews before you publish.</span><span className="zh">你讓品牌活起來。日常項目以品牌聖經檢查表為核准。活動項目由策略在發布前審查。</span></td>
+    </tr>
+  </tbody>
+</table>
+
+### <span className="en">Three Types of Work</span><span className="zh">三種工作類型</span>
+
+<p className="en">Not everything needs the same process. Sort each request into one of these:</p>
+<p className="zh">不是所有事情都需要相同的流程。將每個需求歸入以下其中一種：</p>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Type</span><span className="zh">類型</span></th>
+      <th><span className="en">What</span><span className="zh">內容</span></th>
+      <th><span className="en">Who Reviews</span><span className="zh">誰審查</span></th>
+      <th><span className="en">Time</span><span className="zh">時間</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><span className="en">Big Decisions</span><span className="zh">重大決策</span></strong></td>
+      <td><span className="en">Brand messaging changes, Director messages, co-branding, new site launch, crisis response</span><span className="zh">品牌訊息變更、處長訊息、聯合品牌、新據點啟動、危機回應</span></td>
+      <td><span className="en">Division Head</span><span className="zh">處長</span></td>
+      <td>~10d</td>
+    </tr>
+    <tr>
+      <td><strong><span className="en">Campaigns &amp; Content</span><span className="zh">活動與內容</span></strong></td>
+      <td><span className="en">Newsletters, awareness campaigns, new poster designs, landing page updates, training decks, digital signage, LINE OA learning &amp; news pushes</span><span className="zh">電子報、宣導活動、新海報設計、入口頁面更新、培訓簡報、數位看板、LINE OA 學習與新聞推播</span></td>
+      <td><span className="en">Strategy</span><span className="zh">策略</span></td>
+      <td>~5d</td>
+    </tr>
+    <tr>
+      <td><strong><span className="en">Everyday Items</span><span className="zh">日常項目</span></strong></td>
+      <td><span className="en">Posters from templates, routine emails, shift briefing cards, minor updates, re-exports</span><span className="zh">模板海報、例行郵件、換班簡報卡、小幅更新、資產重新匯出</span></td>
+      <td><span className="en">Promotion (self)</span><span className="zh">推廣（自行）</span></td>
+      <td>~2d</td>
+    </tr>
+  </tbody>
+</table>
+
+<Callout type="warning">
+<strong><span className="en">Not sure which type?</span><span className="zh">不確定哪種類型？</span></strong> <span className="en">Default to the higher one. If unsure whether "Everyday" or "Campaign" — treat it as a Campaign. Strategy will re-classify if needed.</span><span className="zh">預設歸入較高的類型。如果不確定是「日常」還是「活動」——按「活動」處理。策略會視需要重新分類。</span>
+</Callout>
+
+<Callout type="tip">
+<strong>LINE OA (@918rtiju):</strong> <span className="en">LINE operates outside the corporate firewall. GPS uses it only to push learning content and news (non-corporate information). Because it represents GPS brand externally, LINE content always goes through Strategy review. No corporate-sensitive or policy-level content via LINE.</span><span className="zh">LINE 在企業防火牆之外運作。GPS 僅用於推播學習內容和新聞（非公司資訊）。因為它對外代表 GPS 品牌，LINE 內容必須經過策略審查。不得透過 LINE 傳送公司機敏或政策層級內容。</span>
+</Callout>
+
+### <span className="en">Step by Step</span><span className="zh">步驟流程</span>
+
+<p className="en"><strong>Big Decisions:</strong> Strategy writes brief → Division Head approves direction → Promotion designs → Strategy checks message → Division Head signs off → Promotion publishes.</p>
+<p className="zh"><strong>重大決策：</strong>策略撰寫簡報 → 處長核准方向 → 推廣設計 → 策略檢查訊息 → 處長簽核 → 推廣發布。</p>
+
+<p className="en"><strong>Campaigns:</strong> Strategy writes brief → Promotion designs &amp; self-checks visuals → Strategy reviews message → Promotion publishes.</p>
+<p className="zh"><strong>活動：</strong>策略撰寫簡報 → 推廣設計並自行檢查視覺 → 策略審查訊息 → 推廣發布。</p>
+
+<p className="en"><strong>Everyday:</strong> Promotion produces from template → self-checks against Brand Bible → publishes.</p>
+<p className="zh"><strong>日常：</strong>推廣從模板製作 → 自行對照品牌聖經檢查 → 發布。</p>
+
+### <span className="en">Work Type Flow Diagrams</span><span className="zh">工作類型流程圖</span>
+
+<p className="en">Each work type follows a defined quality flow. These diagrams show the steps from initiation to publication.</p>
+<p className="zh">每種工作類型遵循既定的品質流程。以下流程圖展示從發起到發布的各步驟。</p>
+
+<div style={{breakInside:'avoid',margin:'16px 0'}}>
+
+{/* Message Flow */}
+<div style={{marginBottom:'16px',padding:'12px',background:'#f7f9fb',borderRadius:'8px',border:'1px solid #e2e8f0'}}>
+  <div style={{fontSize:'10px',fontWeight:700,color:'#26A7B0',letterSpacing:'.08em',marginBottom:'8px'}}><span className="en">MESSAGE FLOW</span><span className="zh">訊息流程</span></div>
+  <div style={{display:'flex',alignItems:'center',gap:'0',flexWrap:'wrap',justifyContent:'center'}}>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Draft</span><span className="zh">草稿</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Voice Check</span><span className="zh">語調檢查</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Bilingual QA</span><span className="zh">雙語品管</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#26A7B0',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:700,color:'#fff',whiteSpace:'nowrap'}}><span className="en">Publish</span><span className="zh">發布</span></div>
+  </div>
+</div>
+
+{/* Visual Flow */}
+<div style={{marginBottom:'16px',padding:'12px',background:'#f7f9fb',borderRadius:'8px',border:'1px solid #e2e8f0'}}>
+  <div style={{fontSize:'10px',fontWeight:700,color:'#8C9FCB',letterSpacing:'.08em',marginBottom:'8px'}}><span className="en">VISUAL FLOW</span><span className="zh">視覺流程</span></div>
+  <div style={{display:'flex',alignItems:'center',gap:'0',flexWrap:'wrap',justifyContent:'center'}}>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Brief</span><span className="zh">簡報</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Design</span><span className="zh">設計</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Brand Check</span><span className="zh">品牌檢查</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Approval</span><span className="zh">核准</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#26A7B0',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:700,color:'#fff',whiteSpace:'nowrap'}}><span className="en">Production</span><span className="zh">製作</span></div>
+  </div>
+</div>
+
+{/* Campaign Flow */}
+<div style={{marginBottom:'16px',padding:'12px',background:'#f7f9fb',borderRadius:'8px',border:'1px solid #e2e8f0'}}>
+  <div style={{fontSize:'10px',fontWeight:700,color:'#F6AD90',letterSpacing:'.08em',marginBottom:'8px'}}><span className="en">CAMPAIGN FLOW</span><span className="zh">活動流程</span></div>
+  <div style={{display:'flex',alignItems:'center',gap:'0',flexWrap:'wrap',justifyContent:'center'}}>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Strategy</span><span className="zh">策略</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Mood Select</span><span className="zh">情緒選擇</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Multi-channel</span><span className="zh">多通路</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Review</span><span className="zh">審查</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#26A7B0',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:700,color:'#fff',whiteSpace:'nowrap'}}><span className="en">Launch</span><span className="zh">上線</span></div>
+  </div>
+</div>
+
+{/* Template Flow */}
+<div style={{marginBottom:'4px',padding:'12px',background:'#f7f9fb',borderRadius:'8px',border:'1px solid #e2e8f0'}}>
+  <div style={{fontSize:'10px',fontWeight:700,color:'#CAC3D2',letterSpacing:'.08em',marginBottom:'8px'}}><span className="en">TEMPLATE FLOW</span><span className="zh">模板流程</span></div>
+  <div style={{display:'flex',alignItems:'center',gap:'0',flexWrap:'wrap',justifyContent:'center'}}>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Request</span><span className="zh">需求</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Design</span><span className="zh">設計</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Token Check</span><span className="zh">代符檢查</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#fff',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:600,color:'#0A1A22',whiteSpace:'nowrap'}}><span className="en">Test</span><span className="zh">測試</span></div>
+    <div style={{color:'#26A7B0',fontSize:'16px',padding:'0 6px',fontWeight:700}}>→</div>
+    <div style={{background:'#26A7B0',border:'2px solid #26A7B0',borderRadius:'6px',padding:'6px 14px',fontSize:'11px',fontWeight:700,color:'#fff',whiteSpace:'nowrap'}}><span className="en">Release</span><span className="zh">發布</span></div>
+  </div>
+</div>
+
+</div>
+
+### <span className="en">Two Simple Checklists</span><span className="zh">兩個簡單檢查表</span>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-4">
+  <div className="border border-turquoise-500 rounded-lg p-4">
+    <div className="font-bold text-turquoise-500 mb-2"><span className="en">Message Check (Strategy runs)</span><span className="zh">訊息檢查（策略執行）</span></div>
+    <div className="leading-loose">
+      <span className="en">○ Connects to Core Belief or Brand Pillar → <CrossRef section="s01">Ch 01</CrossRef><br/>○ Tone fits the situation → <CrossRef section="s12">Ch 12</CrossRef><br/>○ Language suits the audience → <CrossRef section="s12">Ch 12</CrossRef><br/>○ Uses GPS vocabulary, avoids banned words → <CrossRef section="s12">Ch 12</CrossRef><br/>○ Fits the current narrative phase → <CrossRef section="s01">Ch 01</CrossRef><br/>○ Right language version for the region → <CrossRef section="sL">App L</CrossRef></span>
+      <span className="zh">○ 連結核心信念或品牌支柱 → <CrossRef section="s01">第 01 章</CrossRef><br/>○ 語氣符合情境 → <CrossRef section="s12">第 12 章</CrossRef><br/>○ 語言適合受眾 → <CrossRef section="s12">第 12 章</CrossRef><br/>○ 使用 GPS 用語、避免禁用詞彙 → <CrossRef section="s12">第 12 章</CrossRef><br/>○ 符合當前敘事階段 → <CrossRef section="s01">第 01 章</CrossRef><br/>○ 正確的區域語言版本 → <CrossRef section="sL">附錄 L</CrossRef></span>
+    </div>
+  </div>
+  <div className="border border-gps-purple rounded-lg p-4">
+    <div className="font-bold text-gps-purple mb-2"><span className="en">Visual Check (Promotion runs)</span><span className="zh">視覺檢查（推廣執行）</span></div>
+    <div className="leading-loose">
+      <span className="en">○ Correct logo with enough clear space → <CrossRef section="s03">Ch 03</CrossRef><br/>○ Colors from approved palette → <CrossRef section="s04">Ch 04</CrossRef><br/>○ Right fonts: Noto Sans TC + Lato, max 3 sizes → <CrossRef section="s09">Ch 09</CrossRef><br/>○ Graphics from brand library, not overloaded → <CrossRef section="s10">Ch 10</CrossRef><br/>○ Photos follow our style guide → <CrossRef section="s11">Ch 11</CrossRef><br/>○ Text is readable (contrast OK) → <CrossRef section="s08">Ch 08</CrossRef><br/>○ Works on the target platform → <CrossRef section="s14">Ch 14–20</CrossRef><br/>○ Bilingual: EN + zh-TW minimum → <CrossRef section="sL">App L</CrossRef></span>
+      <span className="zh">○ 正確標誌並保留足夠安全空間 → <CrossRef section="s03">第 03 章</CrossRef><br/>○ 色彩來自核准色盤 → <CrossRef section="s04">第 04 章</CrossRef><br/>○ 正確字型：Noto Sans TC + Lato，最多 3 種尺寸 → <CrossRef section="s09">第 09 章</CrossRef><br/>○ 圖形來自品牌素材庫，不過度堆疊 → <CrossRef section="s10">第 10 章</CrossRef><br/>○ 照片遵循風格指南 → <CrossRef section="s11">第 11 章</CrossRef><br/>○ 文字可讀（對比度 OK）→ <CrossRef section="s08">第 08 章</CrossRef><br/>○ 在目標平台上正常運作 → <CrossRef section="s14">第 14–20 章</CrossRef><br/>○ 雙語：至少 EN + zh-TW → <CrossRef section="sL">附錄 L</CrossRef></span>
+    </div>
+  </div>
+</div>
+
+### <span className="en">When Something's Off</span><span className="zh">需要修正的時候</span>
+
+<p className="en">Mistakes happen — especially when moving fast. The goal isn't blame; it's fixing it quickly and learning from it.</p>
+<p className="zh">錯誤會發生——尤其是在快速推進時。目標不是追究責任，而是快速修正並從中學習。</p>
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-4">
+  <div className="border rounded-lg p-4 border-t-[3px] border-t-gps-green text-center">
+    <div className="font-semibold mb-2"><span className="en">Small Fix</span><span className="zh">小修正</span></div>
+    <div className="text-sm"><span className="en">Wrong font weight, color slightly off, spacing issue. Promotion fixes within 2 days.</span><span className="zh">字重錯誤、色彩略偏、間距問題。推廣在 2 天內修正。</span></div>
+  </div>
+  <div className="border rounded-lg p-4 border-t-[3px] border-t-gps-orange text-center">
+    <div className="font-semibold mb-2"><span className="en">Needs a Redo</span><span className="zh">需要重做</span></div>
+    <div className="text-sm"><span className="en">Wrong logo version, missing bilingual text, tone mismatch. Promotion revises within 5 days. Strategy notes for quarterly review.</span><span className="zh">標誌版本錯誤、缺少雙語文字、語氣不符。推廣在 5 天內修訂。策略記錄於季度檢討。</span></div>
+  </div>
+  <div className="border rounded-lg p-4 border-t-[3px] border-t-red-400 text-center">
+    <div className="font-semibold mb-2"><span className="en">Pause &amp; Discuss</span><span className="zh">暫停並討論</span></div>
+    <div className="text-sm"><span className="en">Unauthorized co-branding, off-message content, regulatory risk. Pull it down. Strategy + Division Head discuss within 48 hours.</span><span className="zh">未經授權的聯合品牌、偏離訊息的內容、法規風險。先下架。策略 + 處長在 48 小時內討論。</span></div>
+  </div>
+</div>
+
+<Callout type="warning">
+<strong><span className="en">The pattern to watch for:</span><span className="zh">要注意的模式：</span></strong> <span className="en">If the same issue shows up 3+ times in a quarter, it's not a people problem — it's a process problem. Strategy should update the template, checklist, or Brand Bible section to prevent it.</span><span className="zh">如果同一類問題在一個季度內出現 3 次以上，這不是人的問題——而是流程的問題。策略應更新模板、檢查表或品牌聖經章節來預防。</span>
+</Callout>
+
+### <span className="en">Regular Check-Ups</span><span className="zh">定期檢查</span>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">What</span><span className="zh">事項</span></th>
+      <th><span className="en">When</span><span className="zh">時間</span></th>
+      <th><span className="en">Who</span><span className="zh">負責人</span></th>
+      <th><span className="en">Output</span><span className="zh">產出</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><span className="en">Self-check before publishing</span><span className="zh">發布前自檢</span></strong></td>
+      <td><span className="en">Every item</span><span className="zh">每個項目</span></td>
+      <td><span className="en">Promotion</span><span className="zh">推廣</span></td>
+      <td><span className="en">Visual checklist completed</span><span className="zh">視覺檢查表完成</span></td>
+    </tr>
+    <tr>
+      <td><strong><span className="en">Campaign review</span><span className="zh">活動審查</span></strong></td>
+      <td><span className="en">Each campaign</span><span className="zh">每個活動</span></td>
+      <td><span className="en">Strategy</span><span className="zh">策略</span></td>
+      <td><span className="en">Message + visual check signed off</span><span className="zh">訊息 + 視覺檢查簽核</span></td>
+    </tr>
+    <tr>
+      <td><strong><span className="en">Quarterly check-up</span><span className="zh">季度檢查</span></strong></td>
+      <td><span className="en">Every Q</span><span className="zh">每季</span></td>
+      <td><span className="en">Strategy</span><span className="zh">策略</span></td>
+      <td><span className="en">Sample 20 items. Score them. Share "Top 3 to improve" with team.</span><span className="zh">抽查 20 個項目。評分。與團隊分享「最需改善的 3 點」。</span></td>
+    </tr>
+    <tr>
+      <td><strong><span className="en">Annual brand review</span><span className="zh">年度品牌檢視</span></strong></td>
+      <td>Q4</td>
+      <td><span className="en">Strategy → Division Head</span><span className="zh">策略 → 處長</span></td>
+      <td><span className="en">Full report: perception, consistency, metrics. What evolves next year?</span><span className="zh">完整報告：認知、一致性、指標。明年如何演進？</span></td>
+    </tr>
+    <tr>
+      <td><strong><span className="en">Brand Bible updates</span><span className="zh">品牌聖經更新</span></strong></td>
+      <td><span className="en">As needed</span><span className="zh">視需要</span></td>
+      <td><span className="en">Strategy</span><span className="zh">策略</span></td>
+      <td><span className="en">Small fixes: self-approved. Big changes: Division Head approves.</span><span className="zh">小修正：自行核准。重大變更：處長核准。</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<Callout type="tip">
+<strong><span className="en">The quarterly "Top 3" is the most important output.</span><span className="zh">季度「最需改善的 3 點」是最重要的產出。</span></strong> <span className="en">It turns patterns into fixes. If posters keep using the wrong color, update the template. If newsletters drift off-tone, refine the brief template. Close the loop before next quarter.</span><span className="zh">它將模式轉化為修正。如果海報一直用錯色彩，更新模板。如果電子報語氣偏離，改善簡報模板。在下個季度前關閉循環。</span>
+</Callout>
+
+### <span className="en">Quick Lookup</span><span className="zh">快速查詢</span>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">I need to...</span><span className="zh">我需要...</span></th>
+      <th><span className="en">Type</span><span className="zh">類型</span></th>
+      <th><span className="en">Starts</span><span className="zh">由誰啟動</span></th>
+      <th><span className="en">Approves</span><span className="zh">由誰核准</span></th>
+      <th><span className="en">Time</span><span className="zh">時間</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span className="en">Draft a Director message</span><span className="zh">撰寫處長訊息</span></td>
+      <td><code>Big</code></td>
+      <td><span className="en">Strategy</span><span className="zh">策略</span></td>
+      <td><span className="en">Division Head</span><span className="zh">處長</span></td>
+      <td>~10d</td>
+    </tr>
+    <tr>
+      <td><span className="en">Launch a new site's brand</span><span className="zh">啟動新據點品牌</span></td>
+      <td><code>Big</code></td>
+      <td><span className="en">Strategy</span><span className="zh">策略</span></td>
+      <td><span className="en">Division Head</span><span className="zh">處長</span></td>
+      <td>~10d</td>
+    </tr>
+    <tr>
+      <td><span className="en">Co-brand with a partner</span><span className="zh">與夥伴聯合品牌</span></td>
+      <td><code>Big</code></td>
+      <td><span className="en">Strategy</span><span className="zh">策略</span></td>
+      <td><span className="en">Division Head</span><span className="zh">處長</span></td>
+      <td>~10d</td>
+    </tr>
+    <tr>
+      <td><span className="en">Create a newsletter</span><span className="zh">製作電子報</span></td>
+      <td><code>Campaign</code></td>
+      <td><span className="en">Strategy</span><span className="zh">策略</span></td>
+      <td><span className="en">Strategy</span><span className="zh">策略</span></td>
+      <td>~5d</td>
+    </tr>
+    <tr>
+      <td><span className="en">Run awareness campaign</span><span className="zh">執行宣導活動</span></td>
+      <td><code>Campaign</code></td>
+      <td><span className="en">Strategy</span><span className="zh">策略</span></td>
+      <td><span className="en">Strategy</span><span className="zh">策略</span></td>
+      <td>~5d</td>
+    </tr>
+    <tr>
+      <td><span className="en">Push content via LINE OA</span><span className="zh">透過 LINE OA 推播</span></td>
+      <td><code>Campaign</code></td>
+      <td><span className="en">Strategy</span><span className="zh">策略</span></td>
+      <td><span className="en">Strategy</span><span className="zh">策略</span></td>
+      <td>~5d</td>
+    </tr>
+    <tr>
+      <td><span className="en">Make poster from template</span><span className="zh">用模板做海報</span></td>
+      <td><code>Everyday</code></td>
+      <td><span className="en">Promotion</span><span className="zh">推廣</span></td>
+      <td><span className="en">Promotion</span><span className="zh">推廣</span></td>
+      <td>~2d</td>
+    </tr>
+    <tr>
+      <td><span className="en">Send routine email</span><span className="zh">寄送例行郵件</span></td>
+      <td><code>Everyday</code></td>
+      <td><span className="en">Promotion</span><span className="zh">推廣</span></td>
+      <td><span className="en">Promotion</span><span className="zh">推廣</span></td>
+      <td>~2d</td>
+    </tr>
+    <tr>
+      <td><span className="en">Prepare shift briefing</span><span className="zh">準備換班簡報</span></td>
+      <td><code>Everyday</code></td>
+      <td><span className="en">Promotion</span><span className="zh">推廣</span></td>
+      <td><span className="en">Promotion</span><span className="zh">推廣</span></td>
+      <td>~2d</td>
+    </tr>
+  </tbody>
+</table>

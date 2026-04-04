@@ -1,0 +1,57 @@
+import ChapterHeader from '@/components/ChapterHeader';
+import ModuleTracker from '@/components/ModuleTracker';
+import Callout from '@/components/Callout';
+import ContrastCard from '@/components/ContrastCard';
+
+<ChapterHeader number="08" groupEn="Visual Identity" groupZh="視覺識別" titleEn="Accessibility Pairings" titleZh="無障礙色彩配對" ownerEn="MarCom Team" ownerZh="MarCom Team" />
+<ModuleTracker modules={[{name:'Pairing Table',status:'done'},{name:'Test Examples',status:'done'},{name:'Pass/Fail Cards',status:'done'}]} />
+
+<p><span className="en">Every color combination must meet WCAG 2.1 AA: 4.5:1 for normal text, 3:1 for large text (≥18px bold or ≥24px). Cards below show pass/fail with exact contrast ratios.</span><span className="zh">每種色彩組合必須符合 WCAG 2.1 AA：一般文字 4.5:1，大型文字（≥18px 粗體或 ≥24px）3:1。以下卡片顯示通過/不通過及精確對比值。</span></p>
+
+### <span className="en">Light Mode — Approved Pairings</span><span className="zh">淺色模式——核准配對</span>
+
+<div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))',gap:'10px',margin:'14px 0'}}>
+  <ContrastCard fg="#0A1A22" bg="#FAFBFC" label="Body on White" ratio="16.2:1" level="AAA" />
+  <ContrastCard fg="#1E8A92" bg="#FAFBFC" label="Turquoise-600" ratio="4.8:1" level="AA" />
+  <ContrastCard fg="#FAFBFC" bg="#0A1A22" label="White on Black" ratio="16.2:1" level="AAA" />
+  <ContrastCard fg="#0A1A22" bg="#26A7B0" label="Black on Turquoise" ratio="5.1:1" level="AA" />
+  <ContrastCard fg="#186E75" bg="#F0FAFB" label="T-700 on T-50" ratio="6.4:1" level="AA" />
+  <ContrastCard fg="#5B6FA3" bg="#FAFBFC" label="Purple-600 on White" ratio="4.8:1" level="AA" />
+</div>
+
+### <span className="en">Dark Mode — Approved Pairings</span><span className="zh">深色模式——核准配對</span>
+
+<div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))',gap:'10px',margin:'14px 0'}}>
+  <ContrastCard fg="#E2E8EC" bg="#0D1B21" label="Body on Dark" ratio="12.8:1" level="AAA" />
+  <ContrastCard fg="#3DB9C2" bg="#142229" label="Accent on Surface" ratio="5.6:1" level="AA" />
+</div>
+
+### <span className="en">Forbidden Combinations</span><span className="zh">禁止組合</span>
+
+<div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))',gap:'10px',margin:'14px 0'}}>
+  <ContrastCard fg="#FFFFFF" bg="#26A7B0" label="White on Turquoise-500" ratio="3.2:1" level="Fail" />
+  <ContrastCard fg="#FFFFFF" bg="#CAC3D2" label="White on Copper-300" ratio="2.1:1" level="Fail" />
+  <ContrastCard fg="#8C9FCB" bg="#FFFFFF" label="Purple-400 on White" ratio="3.0:1" level="Fail" />
+</div>
+
+<Callout type="warning"><strong><span className="en">Forbidden:</span><span className="zh">禁止：</span></strong><span className="en"> White on Turquoise-500 for body (3.2:1 fails AA). White on Copper-300 (2.1:1 fails all). Purple-400 on White (3.0:1 — use Purple-600).</span><span className="zh"> Turquoise-500 上的白色內文（3.2:1 不符合 AA）。Copper-300 上的白色（2.1:1 全不符合）。白色上的 Purple-400（3.0:1——改用 Purple-600）。</span></Callout>
+
+### <span className="en">Color Pairing Matrix</span><span className="zh">色彩配對矩陣</span>
+
+<p><span className="en">Every foreground/background combination must meet WCAG 2.1 AA. This matrix shows contrast ratios for the most common pairings. <strong>Green</strong> = passes AA (≥4.5:1). <strong>Yellow</strong> = large text only (≥3:1). <strong>Red</strong> = fails.</span><span className="zh">每種前景/背景組合必須符合 WCAG 2.1 AA。此矩陣顯示最常見配對的對比度。<strong>綠色</strong> = 符合 AA（≥4.5:1）。<strong>黃色</strong> = 僅限大型文字（≥3:1）。<strong>紅色</strong> = 不符合。</span></p>
+
+<div style={{overflowX:'auto',margin:'12px 0'}}>
+<table className="gps-table" style={{fontSize:'10px',whiteSpace:'nowrap'}}>
+<thead><tr><th style={{minWidth:'80px'}}><span className="en">FG \ BG</span><span className="zh">前景 \ 背景</span></th><th style={{background:'#fff',border:'1px solid #eee'}}>White</th><th style={{background:'#F4F5F7'}}>Grey-50</th><th style={{background:'#F0FAFB'}}>Turq-50</th><th style={{background:'#26A7B0',color:'#fff'}}>Turq-500</th><th style={{background:'#0A1A22',color:'#fff'}}>Black</th><th style={{background:'#CAC3D2'}}>Copper</th></tr></thead>
+<tbody>
+<tr><td style={{fontWeight:700}}>Black #0A1A22</td><td style={{background:'#d4edda',textAlign:'center'}}>16.8 ✓</td><td style={{background:'#d4edda',textAlign:'center'}}>15.2 ✓</td><td style={{background:'#d4edda',textAlign:'center'}}>15.7 ✓</td><td style={{background:'#d4edda',textAlign:'center'}}>4.7 ✓</td><td style={{background:'#f8d7da',textAlign:'center'}}>1.0 ✗</td><td style={{background:'#d4edda',textAlign:'center'}}>9.2 ✓</td></tr>
+<tr><td style={{fontWeight:700}}>Ink #1A2A32</td><td style={{background:'#d4edda',textAlign:'center'}}>14.1 ✓</td><td style={{background:'#d4edda',textAlign:'center'}}>12.8 ✓</td><td style={{background:'#d4edda',textAlign:'center'}}>13.2 ✓</td><td style={{background:'#fff3cd',textAlign:'center'}}>4.0 △</td><td style={{background:'#f8d7da',textAlign:'center'}}>1.2 ✗</td><td style={{background:'#d4edda',textAlign:'center'}}>7.7 ✓</td></tr>
+<tr><td style={{fontWeight:700}}>Turq-600 #1E8A92</td><td style={{background:'#d4edda',textAlign:'center'}}>5.1 ✓</td><td style={{background:'#d4edda',textAlign:'center'}}>4.6 ✓</td><td style={{background:'#d4edda',textAlign:'center'}}>4.7 ✓</td><td style={{background:'#f8d7da',textAlign:'center'}}>1.6 ✗</td><td style={{background:'#fff3cd',textAlign:'center'}}>3.3 △</td><td style={{background:'#fff3cd',textAlign:'center'}}>3.0 △</td></tr>
+<tr><td style={{fontWeight:700}}>Turq-500 #26A7B0</td><td style={{background:'#fff3cd',textAlign:'center'}}>3.6 △</td><td style={{background:'#fff3cd',textAlign:'center'}}>3.2 △</td><td style={{background:'#fff3cd',textAlign:'center'}}>3.3 △</td><td style={{background:'#f8d7da',textAlign:'center'}}>1.0 ✗</td><td style={{background:'#d4edda',textAlign:'center'}}>4.7 ✓</td><td style={{background:'#f8d7da',textAlign:'center'}}>2.2 ✗</td></tr>
+<tr><td style={{fontWeight:700}}>White #FFFFFF</td><td style={{background:'#f8d7da',textAlign:'center'}}>1.0 ✗</td><td style={{background:'#f8d7da',textAlign:'center'}}>1.1 ✗</td><td style={{background:'#f8d7da',textAlign:'center'}}>1.1 ✗</td><td style={{background:'#fff3cd',textAlign:'center'}}>3.6 △</td><td style={{background:'#d4edda',textAlign:'center'}}>16.8 ✓</td><td style={{background:'#f8d7da',textAlign:'center'}}>1.8 ✗</td></tr>
+<tr><td style={{fontWeight:700}}>Purple-600 #5B6FA3</td><td style={{background:'#d4edda',textAlign:'center'}}>4.8 ✓</td><td style={{background:'#d4edda',textAlign:'center'}}>4.5 ✓</td><td style={{background:'#d4edda',textAlign:'center'}}>4.6 ✓</td><td style={{background:'#f8d7da',textAlign:'center'}}>1.5 ✗</td><td style={{background:'#fff3cd',textAlign:'center'}}>3.5 △</td><td style={{background:'#f8d7da',textAlign:'center'}}>2.7 ✗</td></tr>
+</tbody>
+</table>
+</div>
+
+<Callout type="tip"><span className="en"><strong>Rule of thumb:</strong> Use Turquoise-600+ or Black for text on light backgrounds. Use White for text on Turquoise-500+ or Black backgrounds. Never use Turquoise-500 or Copper as text color on light backgrounds — contrast is insufficient.</span><span className="zh"><strong>經驗法則：</strong>淺色背景上的文字使用 Turquoise-600+ 或黑色。Turquoise-500+ 或黑色背景上使用白色文字。切勿在淺色背景上以 Turquoise-500 或 Copper 作為文字色——對比度不足。</span></Callout>

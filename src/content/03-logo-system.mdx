@@ -1,0 +1,128 @@
+import ChapterHeader from '@/components/ChapterHeader';
+import ModuleTracker from '@/components/ModuleTracker';
+import Callout from '@/components/Callout';
+import CrossRef from '@/components/CrossRef';
+
+<ChapterHeader number="03" groupEn="Visual Identity" groupZh="視覺識別" titleEn="Logo System" titleZh="標誌系統" ownerEn="MarCom Team" ownerZh="MarCom Team" />
+<ModuleTracker modules={[{name:'Mark',status:'done'},{name:'Lockups',status:'done'},{name:'Clearspace',status:'done'},{name:'Scalability',status:'done'},{name:'Misuse',status:'done'},{name:'Clarity',status:'done'},{name:'File Assets',status:'wip'}]} />
+
+<p><span className="en">The GPS logo mark is a checkerboard-derived pattern of dots arranged in a spherical projection — representing precision, global interconnection, and the grid-based monitoring systems at the core of physical security. Paired with bilingual text lockup, it forms the primary visual anchor of the brand.</span><span className="zh">GPS 標誌圖標是源自棋盤格的圓點組成球面投影——代表精確、全球互聯，以及實體安全核心的網格監控系統。搭配雙語文字（全球實體安全處 / GLOBAL PHYSICAL SECURITY），形成品牌的主要視覺錨點。</span></p>
+
+### <span className="en">Logo Mark</span><span className="zh">標誌圖標</span>
+
+<div className="logo-gallery">
+  <div className="logo-box logo-box-light" style={{position:'relative'}}>
+    <span style={{position:'absolute',top:8,left:12,fontSize:'8px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'var(--color-g400)'}}><span className="en">Mark — Standard</span><span className="zh">標準標誌</span></span>
+    <img src="/assets/logo-mark-standard.svg" alt="GPS Logo Mark Standard" width="80" height="80" />
+  </div>
+  <div className="logo-box logo-box-dark" style={{position:'relative'}}>
+    <span style={{position:'absolute',top:8,left:12,fontSize:'8px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)'}}><span className="en">Mark — Reversed</span><span className="zh">反白標誌</span></span>
+    <img src="/assets/logo-mark-reversed.svg" alt="GPS Logo Mark Reversed" width="80" height="80" />
+  </div>
+</div>
+
+### <span className="en">Construction Grid</span><span className="zh">結構網格</span>
+
+<p><span className="en">The logo mark is generated from a spherical grid with concentric radial zones. Dots increase in size and density toward the equator, creating the characteristic asymmetric sweep. Understanding this grid is essential for co-branded layouts and custom applications at non-standard aspect ratios.</span><span className="zh">標誌圖標由同心放射狀區域的球面網格生成。圓點朝赤道方向逐漸增大、密度增加，形成特有的不對稱弧形。理解此網格對於聯合品牌排版和非標準長寬比的自訂應用至關重要。</span></p>
+
+<table className="gps-table">
+<thead><tr><th><span className="en">Zone</span><span className="zh">區域</span></th><th><span className="en">Dot Size</span><span className="zh">圓點尺寸</span></th><th><span className="en">Opacity</span><span className="zh">不透明度</span></th></tr></thead>
+<tbody>
+<tr><td><span className="en">1 (Apex)</span><span className="zh">1（頂端）</span></td><td>1–2px</td><td>20–40%</td></tr>
+<tr><td><span className="en">2 (Transition)</span><span className="zh">2（過渡）</span></td><td>3–5px</td><td>50–80%</td></tr>
+<tr><td><span className="en">3 (Equator)</span><span className="zh">3（赤道）</span></td><td>6–8px</td><td>80–100%</td></tr>
+<tr><td><span className="en">4 (Taper)</span><span className="zh">4（漸收）</span></td><td>4–6px</td><td>40–70%</td></tr>
+</tbody>
+</table>
+
+<Callout type="tip"><span className="en"><strong>Note:</strong> This is a structural reference. Production logo files maintain exact dot coordinates from the master Figma source.</span><span className="zh"><strong>備註：</strong>此為結構參考。正式標誌檔案使用 Figma 主檔的精確圓點座標。</span></Callout>
+
+### <span className="en">Horizontal Lockup</span><span className="zh">水平組合標誌</span>
+
+<p><span className="en">The horizontal lockup is the default and primary choice for most applications.</span><span className="zh">水平組合標誌是大多數應用場景的預設和首選。</span></p>
+
+<div className="logo-gallery">
+  <div className="logo-box logo-box-light" style={{position:'relative',minHeight:'100px'}}>
+    <span style={{position:'absolute',top:8,left:12,fontSize:'8px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'var(--color-g400)'}}><span className="en">Chinese Main · Light BG</span><span className="zh">中文主標 · 淺色背景</span></span>
+    <div style={{display:'flex',alignItems:'center',gap:'14px'}}>
+      <img src="/assets/logo-mark-standard.svg" alt="GPS Mark" width="52" height="52" />
+      <div><div style={{fontFamily:'var(--font-zh)',fontWeight:700,fontSize:'16px',letterSpacing:'0.08em',color:'#0A1A22'}}>全球實體安全處</div><div style={{fontFamily:'var(--font-en)',fontWeight:700,fontSize:'9px',letterSpacing:'0.14em',textTransform:'uppercase',color:'var(--color-g500)'}}>Global Physical Security</div></div>
+    </div>
+  </div>
+  <div className="logo-box logo-box-dark" style={{position:'relative',minHeight:'100px'}}>
+    <span style={{position:'absolute',top:8,left:12,fontSize:'8px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)'}}><span className="en">Chinese Main · Dark BG</span><span className="zh">中文主標 · 深色背景</span></span>
+    <div style={{display:'flex',alignItems:'center',gap:'14px'}}>
+      <img src="/assets/logo-mark-reversed.svg" alt="GPS Mark Reversed" width="52" height="52" />
+      <div><div style={{fontFamily:'var(--font-zh)',fontWeight:700,fontSize:'16px',letterSpacing:'0.08em',color:'#fff'}}>全球實體安全處</div><div style={{fontFamily:'var(--font-en)',fontWeight:700,fontSize:'9px',letterSpacing:'0.14em',textTransform:'uppercase',color:'rgba(255,255,255,0.6)'}}>Global Physical Security</div></div>
+    </div>
+  </div>
+</div>
+
+#### <span className="en">English Main — Horizontal</span><span className="zh">英文主標——水平</span>
+
+<div className="logo-gallery">
+  <div className="logo-box logo-box-light" style={{position:'relative',minHeight:'100px'}}>
+    <span style={{position:'absolute',top:8,left:12,fontSize:'8px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'var(--color-g400)'}}><span className="en">English Main · Light BG</span><span className="zh">英文主標 · 淺色背景</span></span>
+    <div style={{display:'flex',alignItems:'center',gap:'14px'}}>
+      <img src="/assets/logo-mark-standard.svg" alt="GPS Mark" width="48" height="48" />
+      <div><div style={{fontFamily:'var(--font-en)',fontWeight:700,fontSize:'16px',color:'#0A1A22',letterSpacing:'0.02em',lineHeight:1.15}}>GLOBAL<br/>PHYSICAL<br/>SECURITY</div><div style={{fontFamily:'var(--font-zh)',fontSize:'8px',color:'var(--color-g500)',marginTop:'2px'}}>全球實體安全處</div></div>
+    </div>
+  </div>
+  <div className="logo-box logo-box-dark" style={{position:'relative',minHeight:'100px'}}>
+    <span style={{position:'absolute',top:8,left:12,fontSize:'8px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)'}}><span className="en">English Main · Dark BG</span><span className="zh">英文主標 · 深色背景</span></span>
+    <div style={{display:'flex',alignItems:'center',gap:'14px'}}>
+      <img src="/assets/logo-mark-reversed.svg" alt="GPS Mark Reversed" width="48" height="48" />
+      <div><div style={{fontFamily:'var(--font-en)',fontWeight:700,fontSize:'16px',color:'#fff',letterSpacing:'0.02em',lineHeight:1.15}}>GLOBAL<br/>PHYSICAL<br/>SECURITY</div><div style={{fontFamily:'var(--font-zh)',fontSize:'8px',color:'rgba(255,255,255,0.5)',marginTop:'2px'}}>全球實體安全處</div></div>
+    </div>
+  </div>
+</div>
+
+### <span className="en">Vertical Lockup</span><span className="zh">垂直組合標誌</span>
+
+<p><span className="en">Use when horizontal space is limited. The vertical lockup stacks the mark above the bilingual text.</span><span className="zh">當水平空間有限時使用。垂直組合標誌將圖標堆疊在雙語文字之上。</span></p>
+
+<Callout type="tip"><strong className="en">Production note:</strong><strong className="zh">製作備註：</strong><span className="en"> The SVG renderings above are structural approximations. For production use, source official vector files (SVG / EPS / AI) from the GPS shared drive. Both Chinese Main and English Main lockups are equally valid — select based on the primary audience language.</span><span className="zh"> 以上 SVG 為結構性近似圖。正式製作時，請從 GPS 共用磁碟取用官方向量檔（SVG / EPS / AI）。中文主標和英文主標兩種組合同等有效——依受眾主要語言選擇。</span></Callout>
+
+### <span className="en">Logo Lockups — Specifications</span><span className="zh">標誌組合——規格</span>
+
+<p><span className="en">Horizontal Lockup is the default and primary choice for most use cases. If space is limited, use the secondary vertical logos. The logo mark alone can be used where space is very limited, such as web clip or favicon. Each lockup exists in <strong>Chinese Main Lockup</strong> and <strong>English Main Lockup</strong> variants — both are equally valid. Select based on the audience's primary language.</span><span className="zh">水平組合標誌是大多數使用場景的預設和首選。空間有限時使用垂直組合。標誌圖標可在極小空間（如網頁圖示或 favicon）單獨使用。每種組合都有<strong>中文主標</strong>和<strong>英文主標</strong>兩種變體——兩者同等有效，依受眾主要語言選擇。</span></p>
+
+<table className="gps-table">
+<thead><tr><th><span className="en">Lockup</span><span className="zh">組合</span></th><th><span className="en">Usage</span><span className="zh">用途</span></th><th><span className="en">Standard Min Height</span><span className="zh">標準最小高度</span></th><th><span className="en">Below Min</span><span className="zh">低於最小值</span></th><th><span className="en">Optical Min</span><span className="zh">光學最小值</span></th></tr></thead>
+<tbody>
+<tr><td><strong>Horizontal logo</strong></td><td>Default, primary choice</td><td><code>36px / 10mm</code></td><td>use optical</td><td><code>28px / 8mm</code></td></tr>
+<tr><td><strong>Vertical (tall)</strong></td><td>Limited horizontal space</td><td><code>160px / 40mm</code></td><td>use horizontal optical</td><td>—</td></tr>
+<tr><td><strong>Vertical (wide)</strong></td><td>Wider vertical containers</td><td><code>120px / 35mm</code></td><td>use horizontal optical</td><td>—</td></tr>
+<tr><td><strong>Vertical (compact)</strong></td><td>Minimal footprint</td><td><code>100px / 28mm</code></td><td>use horizontal optical</td><td>—</td></tr>
+<tr><td><strong>Logo Mark</strong></td><td>Favicon, web clip, profile</td><td><code>36px / 10mm</code></td><td>use optical</td><td><code>20px / 5mm</code></td></tr>
+</tbody>
+</table>
+
+<p style={{fontSize:'11px',color:'var(--color-g500)'}}>mm: for print size / px: for digital size. Minimums ensure no strokes fall below 0.3pt — the threshold below which fine details fail to reproduce reliably.</p>
+
+### <span className="en">Lockup Proportions</span><span className="zh">比例標注</span>
+
+<p><span className="en">Internal spacing between the mark and text is defined proportionally to the mark dimensions (a = mark width, b = mark height), ensuring consistent appearance at any scale.</span><span className="zh">圖標與文字之間的內部間距，以圖標尺寸的比例定義（a = 圖標寬度，b = 圖標高度），確保在任何縮放比例下都呈現一致的外觀。</span></p>
+
+<table className="gps-table">
+<thead><tr><th><span className="en">Lockup</span><span className="zh">組合</span></th><th><span className="en">Mark-Text Gap</span><span className="zh">圖標-文字間距</span></th><th><span className="en">Top</span><span className="zh">頂部</span></th><th><span className="en">Bottom</span><span className="zh">底部</span></th><th><span className="en">Sides</span><span className="zh">側邊</span></th></tr></thead>
+<tbody>
+<tr><td><strong>Horizontal — CN/EN</strong></td><td><code>1/7a</code></td><td><code>1/7a</code></td><td><code>1/7a</code></td><td><code>1/7a · 1/6b</code></td></tr>
+<tr><td><strong>Vertical — CN (small)</strong></td><td><code>1/6b</code></td><td><code>a</code></td><td><code>1/6b</code></td><td><code>a</code></td></tr>
+<tr><td><strong>Vertical — EN (wide)</strong></td><td><code>1/6b</code></td><td><code>a</code></td><td><code>1/6b · c</code></td><td><code>11/7a · 2/7a</code></td></tr>
+<tr><td><strong>Vertical — CN (tall)</strong></td><td><code>1/4a</code></td><td><code>a</code></td><td><code>1/2a</code></td><td><code>b · 1/4a</code></td></tr>
+</tbody>
+</table>
+
+### <span className="en">Clearspace</span><span className="zh">安全空間</span>
+
+<p><span className="en">Always keep a minimum amount of clear space around the logo — free from text, graphics, and other elements. This minimum clearspace scales with the size of the logo mark and should never be reduced.</span><span className="zh">始終在標誌周圍保留最低安全空間——遠離文字、圖形及其他元素。此最小安全空間隨標誌圖標尺寸等比縮放，不得減少。</span></p>
+
+<table className="gps-table">
+<thead><tr><th><span className="en">Lockup</span><span className="zh">組合</span></th><th><span className="en">Clearspace Rule</span><span className="zh">安全空間規則</span></th><th><span className="en">Notation</span><span className="zh">標注</span></th></tr></thead>
+<tbody>
+<tr><td><strong>Horizontal logo</strong></td><td><span className="en">1/4 of the logo mark size on all sides</span><span className="zh">標誌圖標尺寸的 1/4（四邊）</span></td><td><code>1/2a</code> top · <code>1/2b</code> bottom · <code>a</code> sides</td></tr>
+<tr><td><strong>Vertical logo</strong></td><td><span className="en">1/2 of the logo mark width on all sides</span><span className="zh">標誌圖標寬度的 1/2（四邊）</span></td><td><code>1/2a</code> top · <code>b</code> bottom · <code>1/2b</code> sides</td></tr>
+<tr><td><strong>Logo mark</strong></td><td><span className="en">1/2 of the mark's own width on all sides</span><span className="zh">圖標自身寬度的 1/2（四邊）</span></td><td><code>1/2a</code> all directions</td></tr>
+</tbody>
+</table>

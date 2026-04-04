@@ -1,0 +1,73 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+
+<ChapterHeader
+  number={25}
+  groupEn="Governance"
+  groupZh="治理"
+  titleEn="Templates & Toolkit"
+  titleZh="模板與工具包"
+  ownerEn="MarCom Team"
+  ownerZh="MarCom Team"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Poster', status: 'done' },
+  { name: 'Checklist', status: 'done' },
+  { name: 'Figma Files', status: 'wip' },
+  { name: 'Email Template', status: 'todo' }
+]} />
+
+
+<table className="gps-table"><thead><tr><th><span className="en">Template</span><span className="zh">模板</span></th><th><span className="en">Format</span><span className="zh">格式</span></th><th><span className="en">Use Case</span><span className="zh">使用場景</span></th></tr></thead><tbody><tr><td>Image Poster</td><td>Figma + Canva</td><td>Campaigns, event promotion</td></tr><tr><td>Timeline Poster</td><td>Figma + Canva</td><td>Schedules, agendas, training</td></tr><tr><td>Text Notice Poster</td><td>Figma + Canva</td><td>Announcements, policy updates</td></tr><tr><td>Email — All-Staff</td><td>MJML / HTML</td><td>Division-wide announcements</td></tr><tr><td>Email — Newsletter</td><td>MJML / HTML</td><td>3 newsletter streams</td></tr><tr><td>Presentation Deck</td><td>PPTX</td><td>Director briefings, training</td></tr><tr><td>One-Pager</td><td>DOCX / HTML</td><td><span className="en">Quick reference, shift briefing cards</span><span className="zh">快速參考、換班簡報卡</span></td></tr><tr><td>Digital Signage</td><td>Figma</td><td>Internal screens, displays</td></tr></tbody></table>
+
+
+### <span className="en">Visual Consistency</span><span className="zh">視覺一致性</span>
+
+<p className="en">Three pillars govern visual consistency across all GPS outputs:</p>
+<p className="zh">三大支柱治理所有 GPS 產出的視覺一致性：</p>
+
+<div className="card-grid card-grid-3">
+  <div className="card"><div className="cd-l"><span className="en">Typography</span><span className="zh">字體排版</span></div><div className="cd-v"><span className="en">Brand Fonts Only</span><span className="zh">僅使用品牌字體</span></div><div className="cd-n"><span className='en'>Stick with the brand fonts. Use approved heading/subheading/body text sizes for hierarchy. Max 3 font sizes in one sector to maintain readability.</span><span className='zh'>堅持使用品牌字體。使用核定的標題/副標題/內文字級維持層級。每區段最多 3 種字級以維持可讀性。</span></div></div>
+  <div className="card"><div className="cd-l"><span className="en">Color</span><span className="zh">色彩</span></div><div className="cd-v"><span className="en">Brand Palette</span><span className="zh">品牌色盤</span></div><div className="cd-n"><span className='en'>Begin with neutral or brand-approved colors. Sticking to the brand palette makes it easier to keep things consistent without needing design expertise. You may use topic-specific color themes, but avoid harsh neon tones or visually jarring combinations.</span><span className='zh'>以中性或品牌核准色開始。遵循品牌色盤能更輕鬆地維持一致性，無需設計專業。可使用主題專屬配色，但避免刺眼的霓虹色或視覺不協調的組合。</span></div></div>
+  <div className="card"><div className="cd-l"><span className="en">Graphics</span><span className="zh">圖形</span></div><div className="cd-v"><span className="en">Pattern for Highlight</span><span className="zh">圖形用於強調</span></div><div className="cd-n"><span className='en'>Use graphic pattern for highlight, not filler. The checkerboard elements should accent and complement, never overwhelm the content.</span><span className='zh'>使用圖形做強調，而非填充。棋格元素應做點綴和輔助，永遠不要壓過內容。</span></div></div>
+</div>
+
+### <span className="en">Visual Do's & Don'ts</span><span className="zh">視覺規範</span>
+
+#### <span className="en">Text Hierarchy</span><span className="zh">文字層級</span>
+
+<DoExample
+  doContent={<><b>正確</b><span className='en'>Use approved heading/subheading/body text sizes. Follow spacing and alignment structure. Use max 3 different font sizes/weights in one sector to keep readability and hierarchy. Rearrange layout based on your need — the structure is flexible.</span><span className='zh'>使用核定的標題/副標題/內文字級。遵循間距和對齊結構。每區段最多使用 3 種不同字級/字重以維持可讀性和層級。可依需要調整排版——結構是靈活的。</span></>}
+  dontContent={<><b>禁止</b><span className='en'>Do not mix fonts or make everything bold. Do not stretch or shrink text manually. Do not center-align everything by default — left-alignment is the standard for body text.</span><span className='zh'>不要混用字體或全部加粗。不要手動拉伸或縮小文字。不要預設置中對齊——左對齊是內文的標準。</span></>}
+/>
+
+#### <span className="en">Illustration Style</span><span className="zh">插畫風格</span>
+
+<DoExample
+  doContent={<><b>正確</b><span className='en'>Use minimal, clean, vector-style illustrations. Maintain consistent stroke, perspective, and color. Prefer neutral or brand-accented palettes. Introduce custom topic-specific color accents carefully.</span><span className='zh'>使用簡約、乾淨的向量風格插畫。維持一致的筆畫、透視和色彩。優先使用中性或品牌點綴色盤。謹慎引入自訂主題色彩。</span></>}
+  dontContent={<><b>禁止</b><span className='en'>Do not use mismatched clipart or stock cartoon packs. Do not combine different illustration styles with photo or 3D styles randomly. Maintain a single visual language per piece.</span><span className='zh'>不要使用不搭配的剪貼圖或素材卡通包。不要隨意混搭不同插畫風格與照片或 3D 風格。每件作品維持單一的視覺語言。</span></>}
+/>
+
+#### <span className="en">Color Usage</span><span className="zh">色彩使用</span>
+
+<DoExample
+  doContent={<><b>正確</b><span className='en'>Start with neutral or brand base. Ensure contrast between background and type. You may introduce custom topic-specific color accents carefully as long as they harmonize with the brand palette.</span><span className='zh'>以中性色或品牌色為底。確保背景與文字之間的對比。可謹慎引入自訂主題色彩，只要與品牌色盤協調。</span></>}
+  dontContent={<><b>禁止</b><span className='en'>Do not use harsh neon tones or visually jarring combinations. Do not apply random rainbows or unbalanced color blocks. Do not color logos or type arbitrarily without ensuring sufficient contrast.</span><span className='zh'>不要使用刺眼的霓虹色或視覺不協調的組合。不要使用隨意的彩虹色或不平衡的色塊。不要任意為標誌或文字上色而未確保充分的對比。</span></>}
+/>
+
+### <span className="en">Brand Violation Remediation</span><span className="zh">品牌違規處理</span>
+
+<p className="en">When a quarterly brand audit or ad-hoc review identifies a violation, follow this remediation pathway:</p>
+<p className="zh">當季度品牌稽核或臨時檢查發現違規時，遵循以下處理流程：</p>
+
+
+<table className="gps-table"><thead><tr><th><span className="en">Severity</span><span className="zh">嚴重度</span></th><th><span className="en">Example</span><span className="zh">範例</span></th><th><span className="en">Action</span><span className="zh">處置</span></th><th><span className="en">Timeline</span><span className="zh">時程</span></th></tr></thead><tbody><tr><td><strong>Minor</strong></td><td><span className="en">Wrong font weight, slightly off color</span><span className="zh">字重錯誤、色彩些微偏差</span></td><td><span className="en">MarCom sends correction email with correct asset attached. No escalation.</span><span className="zh">MarCom 寄送修正郵件並附上正確素材。無須升級。</span></td><td><span className="en">Corrected within 5 business days</span><span className="zh">5 個工作日內修正</span></td></tr><tr><td><strong>Moderate</strong></td><td><span className="en">Stretched logo, non-brand color palette, missing clearspace</span><span className="zh">拉伸標誌、非品牌色盤、缺少安全空間</span></td><td><span className="en">GPS Strategy contacts site owner directly. Provides correct template. Logged in audit tracker.</span><span className="zh">GPS 策略直接聯繫場域負責人。提供正確模板。記錄於稽核追蹤。</span></td><td><span className="en">Corrected within 10 business days</span><span className="zh">10 個工作日內修正</span></td></tr><tr><td><strong>Severe</strong></td><td><span className="en">Unauthorized co-branding, logo modification, external exposure of internal materials</span><span className="zh">未授權聯合品牌、標誌修改、內部材料外洩</span></td><td><span className="en">GPS Director notified. Material pulled immediately. Root cause analysis. Section Head briefing.</span><span className="zh">通知 GPS Director。立即撤下材料。根因分析。Section Head 簡報。</span></td><td><span className="en">Same-day pull, 5-day resolution</span><span className="zh">當日撤下，5 日解決</span></td></tr></tbody></table>
+
+
+<Callout type="tip">
+<strong><span className='en'>Remediation philosophy:</span><span className='zh'>處理哲學：</span></strong><span className='en'>The goal is education, not punishment. Most violations happen because people don't have access to the right templates. Fix the system, not the person.</span><span className='zh'>目標是教育，而非懲罰。多數違規發生是因為人們無法取得正確的模板。修正系統，而非修正人。</span>
+</Callout>

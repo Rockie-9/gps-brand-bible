@@ -1,0 +1,34 @@
+import ChapterHeader from '@/components/ChapterHeader';
+import ModuleTracker from '@/components/ModuleTracker';
+import GradientSwatch from '@/components/GradientSwatch';
+
+<ChapterHeader number="06" groupEn="Visual Identity" groupZh="視覺識別" titleEn="Gradient Library" titleZh="漸層色庫" ownerEn="MarCom Team" ownerZh="MarCom Team" />
+<ModuleTracker modules={[{name:'Library',status:'done'},{name:'Brand Gradient',status:'done'},{name:'Dark Variant',status:'done'},{name:'Interactive Demo',status:'done'}]} />
+
+<p><span className="en">Hover to reveal the CSS value, click to copy. All gradients are production-ready CSS.</span><span className="zh">懸停以顯示 CSS 值，點擊以複製。所有漸層皆為可直接使用的 CSS。</span></p>
+
+### <span className="en">Primary</span><span className="zh">主要漸層</span>
+
+<GradientSwatch nameEn="Signature" nameZh="標誌漸層" css="linear-gradient(135deg, #26A7B0, #CAC3D2)" gradient="linear-gradient(135deg,#26A7B0,#CAC3D2)" />
+
+<GradientSwatch nameEn="Horizontal Flow" nameZh="水平流動" css="linear-gradient(90deg, #26A7B0, #CAC3D2)" gradient="linear-gradient(90deg,#26A7B0,#CAC3D2)" />
+
+<GradientSwatch nameEn="Vertical Descent" nameZh="垂直下降" css="linear-gradient(180deg, #26A7B0, #CAC3D2)" gradient="linear-gradient(180deg,#26A7B0,#CAC3D2)" />
+
+### <span className="en">Extended</span><span className="zh">延伸漸層</span>
+
+<GradientSwatch nameEn="Deep Turquoise" nameZh="深青綠" css="linear-gradient(135deg, #0F4249, #26A7B0)" gradient="linear-gradient(135deg,#0F4249,#26A7B0)" />
+
+<GradientSwatch nameEn="Deep Copper" nameZh="深銅色" css="linear-gradient(135deg, #41374B, #CAC3D2)" gradient="linear-gradient(135deg,#41374B,#CAC3D2)" />
+
+<GradientSwatch nameEn="Turquoise → Purple" nameZh="青綠 → 紫" css="linear-gradient(135deg, #26A7B0, #8C9FCB)" gradient="linear-gradient(135deg,#26A7B0,#8C9FCB)" />
+
+<GradientSwatch nameEn="Green → Turquoise" nameZh="綠 → 青綠" css="linear-gradient(135deg, #8CC897, #26A7B0)" gradient="linear-gradient(135deg,#8CC897,#26A7B0)" />
+
+<GradientSwatch nameEn="Full Spectrum" nameZh="全光譜" css="linear-gradient(135deg, #0A1A22, #26A7B0, #CAC3D2)" gradient="linear-gradient(135deg,#0A1A22,#26A7B0,#CAC3D2)" />
+
+### <span className="en">Atmospheric (Mesh)</span><span className="zh">氛圍（Mesh）漸層</span>
+
+<GradientSwatch nameEn="Atmospheric Light" nameZh="氛圍淺色" css="radial-gradient(ellipse at 30% 40%, #26A7B0 0%, transparent 60%), radial-gradient(ellipse at 70% 60%, #CAC3D2 0%, transparent 50%), radial-gradient(ellipse at 50% 80%, #8C9FCB 0%, transparent 60%), #F0FAFB" gradient="radial-gradient(ellipse at 30% 40%,#26A7B0 0%,transparent 60%),radial-gradient(ellipse at 70% 60%,#CAC3D2 0%,transparent 50%),radial-gradient(ellipse at 50% 80%,#8C9FCB 0%,transparent 60%),#F0FAFB" height={80} />
+
+<GradientSwatch nameEn="Atmospheric Dark" nameZh="氛圍深色" css="radial-gradient(ellipse at 20% 30%, #1E8A92 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, #574A63 0%, transparent 50%), radial-gradient(ellipse at 50% 90%, #26A7B0 0%, transparent 60%), #0A1A22" gradient="radial-gradient(ellipse at 20% 30%,#1E8A92 0%,transparent 50%),radial-gradient(ellipse at 80% 50%,#574A63 0%,transparent 50%),radial-gradient(ellipse at 50% 90%,#26A7B0 0%,transparent 60%),#0A1A22" height={80} />

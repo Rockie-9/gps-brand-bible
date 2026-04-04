@@ -1,0 +1,253 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+import CodeBlock from '@/components/CodeBlock'
+import PatternLibrary from '@/components/PatternLibrary'
+
+<ChapterHeader
+  number={10}
+  groupEn="Visual Identity"
+  groupZh="視覺識別"
+  titleEn="Graphic System & Iconography"
+  titleZh="圖形系統與圖標學"
+  ownerEn="MarCom Team"
+  ownerZh="MarCom Team"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Elements', status: 'done' },
+  { name: 'Application', status: 'done' },
+  { name: 'Do/Don\'t', status: 'done' },
+  { name: 'Icon Library', status: 'todo' },
+]} />
+
+<p className="en">GPS's graphic elements are derived from the logo mark's grid structure and curved form, echoing the brand's themes of protection, flow, and precision. These elements are designed to be used in conjunction with the brand logo, color, typography, and imagery. They can be applied in both sharp and blurred styles to introduce depth, motion, or emphasis, and are intended to complement layouts.</p>
+<p className="zh">GPS 的圖形元素源自標誌圖標的網格結構和曲線造型，呼應品牌保護、流動和精確的主題。這些元素設計為與品牌標誌、色彩、字體排版和影像搭配使用。它們可以鋒利和模糊兩種風格呈現，用以引入深度、動感或強調，並旨在作為版面配置的補充。</p>
+
+### <span className="en">Graphic Elements — Core Visual</span><span className="zh">圖形元素——核心視覺</span>
+
+<p className="en">The primary graphic element is the checkerboard pattern derived from the logo mark, rendered on brand gradient backgrounds. These elements tie together the identity components — logo, typography, and imagery — into a cohesive visual system.</p>
+<p className="zh">主要圖形元素是源自標誌圖標的棋格圖案，在品牌漸層背景上呈現。這些元素將識別元件——標誌、字體排版和影像——串聯成一個統一的視覺系統。</p>
+
+{/* Reference image: GPS Graphic System — Core visual element on brand gradient */}
+
+### <span className="en">Three Element Styles</span><span className="zh">三種元素風格</span>
+
+<p className="en">Visual elements derived from the GPS logomark's grid structure and curved form can be applied in three distinct styles.</p>
+<p className="zh">源自 GPS 標誌圖標的網格結構和曲線造型的視覺元素，可以三種不同風格呈現。</p>
+
+<div className="card-grid card-grid-3">
+  <div className="card">
+    <div className="card-label"><span className="en">Style 01</span><span className="zh">風格 01</span></div>
+    <div className="card-value"><span className="en">Blurred Organic</span><span className="zh">模糊有機風格</span></div>
+    <div className="card-note"><span className="en">Soft, atmospheric renderings of the checkerboard dots with gaussian blur and transparency. Used for background textures, hero sections, and brand-building materials where a subtle, modern feel is desired.</span><span className="zh">以高斯模糊和透明度呈現的柔和、氛圍感棋格點陣。用於背景紋理、主視覺區段和需要微妙現代感的品牌建設材料。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Style 02</span><span className="zh">風格 02</span></div>
+    <div className="card-value"><span className="en">Flowing Organic</span><span className="zh">流動有機風格</span></div>
+    <div className="card-note"><span className="en">Curved, dynamic arrangements of dots and shapes suggesting movement and protection. Used for event materials, campaign visuals, and content where energy and motion are desired.</span><span className="zh">暗示運動和保護的曲線、動態圓點與形狀排列。用於活動材料、宣傳視覺和需要能量感與動態感的內容。</span></div>
+  </div>
+  <div className="card">
+    <div className="card-label"><span className="en">Style 03</span><span className="zh">風格 03</span></div>
+    <div className="card-value"><span className="en">Sharp Geometric</span><span className="zh">銳利幾何風格</span></div>
+    <div className="card-note"><span className="en">Crisp, grid-aligned checkerboard patterns with clear edges. Used for data-driven content, technical documents, signage, and materials requiring precision and structure.</span><span className="zh">邊緣清晰的網格對齊棋格圖案。用於數據驅動內容、技術文件、標識和需要精確與結構感的材料。</span></div>
+  </div>
+</div>
+
+{/* Reference image: GPS Three Element Styles — Blurred Organic, Flowing Organic, Sharp Geometric */}
+
+### <span className="en">Graphic Application</span><span className="zh">圖形應用</span>
+
+<DoExample
+  doContent={<><span className="en">Use graphic elements for general layout enhancement on brand gradient backgrounds. Use as appropriate repeated patterns for texture and depth. Use for highlight moments — accent corners, section dividers, and focal points alongside photography.</span><span className="zh">在品牌漸層背景上使用圖形元素做版面強化。適當使用重複圖案增添紋理和深度。用於強調時刻——裝飾角落、區段分隔線和攝影旁的焦點。</span></>}
+  dontContent={<><span className="en">Do not overuse the graphics — excessive pattern coverage overwhelms content and reduces readability. Elements should complement, never compete with, the content they accompany. Maintain visual breathing room.</span><span className="zh">不要過度使用圖形——過多的圖案覆蓋會壓過內容並降低可讀性。元素應輔助、而非與其伴隨的內容競爭。維持視覺呼吸空間。</span></>}
+/>
+
+{/* Reference image: GPS Graphic Application — Do and Dont examples */}
+
+### <span className="en">Icon System</span><span className="zh">圖標系統</span>
+
+<p className="en">All icons must be custom SVG — no icon libraries (FontAwesome, Material, etc.).</p>
+<p className="zh">所有圖標必須為自製 SVG——不使用圖標庫（FontAwesome、Material 等）。</p>
+
+<div style={{display:'flex',gap:'16px',margin:'12px 0',flexWrap:'wrap',alignItems:'flex-start'}}>
+  <svg width="120" height="120" viewBox="0 0 120 120" style={{background:'var(--g50)',borderRadius:'8px',border:'1px solid var(--g200)'}}>
+    <rect x="10" y="10" width="100" height="100" fill="none" stroke="var(--g300)" strokeWidth=".5" strokeDasharray="2,2"/>
+    <rect x="18" y="18" width="84" height="84" fill="none" stroke="var(--turquoise)" strokeWidth="1" strokeDasharray="3,2"/>
+    <text x="60" y="8" textAnchor="middle" fontSize="6" fill="var(--g400)" fontFamily="Consolas,monospace">24px</text>
+    <text x="60" y="114" textAnchor="middle" fontSize="5" fill="var(--turquoise)" fontFamily="Consolas,monospace">2px pad</text>
+    <path d="M42 42 L78 42 L78 78 L42 78 Z" fill="none" stroke="var(--ink)" strokeWidth="2.5" rx="3"/>
+    <path d="M52 58 L58 64 L70 52" fill="none" stroke="var(--turquoise)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+  <div>
+    <table className="gps-table">
+      <thead>
+        <tr>
+          <th><span className="en">Icon Property</span><span className="zh">圖標屬性</span></th>
+          <th><span className="en">Spec</span><span className="zh">規格</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><span className="en">Stroke</span><span className="zh">筆畫</span></td><td><code>1.5–2px</code> <span className="en">consistent</span><span className="zh">一致</span></td></tr>
+        <tr><td><span className="en">Corner radius</span><span className="zh">圓角半徑</span></td><td><code>2px</code> min</td></tr>
+        <tr><td><span className="en">Grid</span><span className="zh">網格</span></td><td><code>24×24px</code>, <code>2px</code> padding</td></tr>
+        <tr><td><span className="en">Color</span><span className="zh">色彩</span></td><td><span className="en">Single-color, <code>currentColor</code></span><span className="zh">單色，<code>currentColor</code></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+### <span className="en">Brand Pattern & Texture Library</span><span className="zh">品牌圖案與紋理庫</span>
+
+<p><span className="en">Approved background patterns and textures for use in presentations, posters, digital signage, and web surfaces. Click any pattern to copy its CSS. All patterns use brand colors only.</span><span className="zh">核准的背景圖案與紋理，可用於簡報、海報、數位看板和網頁表面。點擊任何圖案可複製其 CSS。所有圖案僅使用品牌色彩。</span></p>
+
+<PatternLibrary />
+
+### <span className="en">Physical Material & Lighting Standards</span><span className="zh">實體材質與照明標準</span>
+
+<p className="en">Brand identity extends beyond communications into the physical environment. Material finishes, color-to-safety-function mapping, and lighting color temperatures must align with GPS brand pillars to create a cohesive experience across all touchpoints.</p>
+<p className="zh">品牌識別不僅限於溝通，更延伸至實體環境。材質飾面、色彩與安全功能的對應，以及照明色溫都必須與 GPS 品牌支柱對齊，在所有接觸點創造一致的體驗。</p>
+
+<p style={{fontWeight:700,fontSize:'14px',margin:'24px 0 8px'}}><span className="en">Facility Zone — Lighting & Material Map</span><span className="zh">設施區域——照明與材質分佈</span></p>
+
+<div style={{overflowX:'auto',margin:'16px 0'}}>
+<svg viewBox="0 0 600 300" width="600" height="300" style={{maxWidth:'100%',height:'auto',borderRadius:'8px',border:'1px solid var(--g200, #ddd)',background:'#0A1A22'}}>
+  <defs>
+    <linearGradient id="zone1-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#5a6a78" stopOpacity="0.9"/><stop offset="100%" stopColor="#3a4a58" stopOpacity="0.95"/></linearGradient>
+    <linearGradient id="zone2-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#d4a87a" stopOpacity="0.7"/><stop offset="100%" stopColor="#b8926a" stopOpacity="0.8"/></linearGradient>
+    <linearGradient id="zone3-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#26A7B0" stopOpacity="0.5"/><stop offset="100%" stopColor="#1e8a92" stopOpacity="0.6"/></linearGradient>
+    <linearGradient id="zone4-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#d4a87a" stopOpacity="0.6"/><stop offset="100%" stopColor="#b8926a" stopOpacity="0.7"/></linearGradient>
+    <linearGradient id="zone5-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#26A7B0" stopOpacity="0.6"/><stop offset="100%" stopColor="#1e8a92" stopOpacity="0.7"/></linearGradient>
+    <linearGradient id="zone6-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#e8eef5" stopOpacity="0.8"/><stop offset="100%" stopColor="#d0dae8" stopOpacity="0.85"/></linearGradient>
+    <linearGradient id="zone7-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#6a7a88" stopOpacity="0.8"/><stop offset="100%" stopColor="#4a5a68" stopOpacity="0.85"/></linearGradient>
+    <linearGradient id="zone8-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#e8eef5" stopOpacity="0.7"/><stop offset="100%" stopColor="#26A7B0" stopOpacity="0.4"/></linearGradient>
+    <linearGradient id="temp-bar" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stopColor="#d4a87a"/><stop offset="30%" stopColor="#c8b898"/><stop offset="60%" stopColor="#a0b8c8"/><stop offset="100%" stopColor="#e8eef5"/></linearGradient>
+  </defs>
+
+  {/* Title */}
+  <text x="300" y="20" textAnchor="middle" fontSize="10" fontFamily="Lato,sans-serif" fontWeight="700" fill="#CAC3D2" letterSpacing="1">FACILITY CROSS-SECTION</text>
+
+  {/* Zone 1: Perimeter/Parking */}
+  <rect x="4" y="32" width="72" height="210" rx="3" fill="url(#zone1-bg)"/>
+  <circle cx="40" cy="50" r="3" fill="#26A7B0" opacity="0.6"/>
+  <text x="40" y="70" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff">Perimeter</text>
+  <text x="40" y="80" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff">Parking</text>
+  <text x="40" y="94" textAnchor="middle" fontSize="5.5" fontFamily="Noto Sans TC,sans-serif" fill="#CAC3D2">周界/停車場</text>
+  <rect x="16" y="108" width="48" height="14" rx="2" fill="#0A1A22" opacity="0.4"/>
+  <text x="40" y="118" textAnchor="middle" fontSize="6" fontFamily="Consolas,monospace" fill="#f0f0f0">4000K</text>
+  <text x="40" y="140" textAnchor="middle" fontSize="5" fontFamily="Lato,sans-serif" fill="#CAC3D2" opacity="0.8">Journey</text>
+  <text x="40" y="148" textAnchor="middle" fontSize="5" fontFamily="Lato,sans-serif" fill="#CAC3D2" opacity="0.8">Protection</text>
+  <text x="40" y="158" textAnchor="middle" fontSize="5" fontFamily="Noto Sans TC,sans-serif" fill="#CAC3D2" opacity="0.6">旅程保護</text>
+
+  {/* Zone 2: Main Entrance/Lobby */}
+  <rect x="79" y="32" width="72" height="210" rx="3" fill="url(#zone2-bg)"/>
+  <circle cx="115" cy="50" r="3" fill="#CAC3D2"/>
+  <text x="115" y="70" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff">Main Entrance</text>
+  <text x="115" y="80" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff">Lobby</text>
+  <text x="115" y="94" textAnchor="middle" fontSize="5.5" fontFamily="Noto Sans TC,sans-serif" fill="#fff" opacity="0.9">大廳/入口</text>
+  <rect x="91" y="108" width="48" height="14" rx="2" fill="#0A1A22" opacity="0.4"/>
+  <text x="115" y="118" textAnchor="middle" fontSize="6" fontFamily="Consolas,monospace" fill="#f0f0f0">3000K</text>
+  <text x="115" y="140" textAnchor="middle" fontSize="5" fontFamily="Lato,sans-serif" fill="#fff" opacity="0.8">Warm Copper</text>
+  <text x="115" y="148" textAnchor="middle" fontSize="5" fontFamily="Lato,sans-serif" fill="#fff" opacity="0.8">Welcoming</text>
+  <text x="115" y="158" textAnchor="middle" fontSize="5" fontFamily="Noto Sans TC,sans-serif" fill="#fff" opacity="0.7">溫暖銅色/親切</text>
+
+  {/* Zone 3: Visitor Registration Kiosk */}
+  <rect x="154" y="32" width="72" height="210" rx="3" fill="url(#zone3-bg)"/>
+  <circle cx="190" cy="50" r="3" fill="#26A7B0"/>
+  <rect x="176" y="100" width="28" height="40" rx="2" fill="#0A1A22" opacity="0.3" stroke="#26A7B0" strokeWidth="0.5"/>
+  <text x="190" y="124" textAnchor="middle" fontSize="4" fontFamily="Consolas,monospace" fill="#26A7B0">KIOSK</text>
+  <text x="190" y="70" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff">Visitor</text>
+  <text x="190" y="80" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff">Registration</text>
+  <text x="190" y="94" textAnchor="middle" fontSize="5.5" fontFamily="Noto Sans TC,sans-serif" fill="#fff" opacity="0.9">訪客登記區</text>
+  <text x="190" y="156" textAnchor="middle" fontSize="5" fontFamily="Lato,sans-serif" fill="#fff" opacity="0.8">Turquoise Digital</text>
+  <text x="190" y="166" textAnchor="middle" fontSize="5" fontFamily="Noto Sans TC,sans-serif" fill="#fff" opacity="0.7">青綠數位介面</text>
+
+  {/* Zone 4: Administrative Corridor */}
+  <rect x="229" y="32" width="72" height="210" rx="3" fill="url(#zone4-bg)"/>
+  <circle cx="265" cy="50" r="3" fill="#CAC3D2"/>
+  <text x="265" y="70" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff">Administrative</text>
+  <text x="265" y="80" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff">Corridor</text>
+  <text x="265" y="94" textAnchor="middle" fontSize="5.5" fontFamily="Noto Sans TC,sans-serif" fill="#fff" opacity="0.9">行政走廊</text>
+  <rect x="241" y="108" width="48" height="14" rx="2" fill="#0A1A22" opacity="0.4"/>
+  <text x="265" y="118" textAnchor="middle" fontSize="6" fontFamily="Consolas,monospace" fill="#f0f0f0">3000K</text>
+  <text x="265" y="140" textAnchor="middle" fontSize="5" fontFamily="Lato,sans-serif" fill="#fff" opacity="0.8">Warm Branded</text>
+  <text x="265" y="148" textAnchor="middle" fontSize="5" fontFamily="Lato,sans-serif" fill="#fff" opacity="0.8">Wayfinding</text>
+  <text x="265" y="158" textAnchor="middle" fontSize="5" fontFamily="Noto Sans TC,sans-serif" fill="#fff" opacity="0.7">暖色品牌導引</text>
+
+  {/* Zone 5: Controlled Access Gate */}
+  <rect x="304" y="32" width="72" height="210" rx="3" fill="url(#zone5-bg)"/>
+  <circle cx="340" cy="50" r="3" fill="#26A7B0"/>
+  <rect x="330" y="100" width="20" height="30" rx="1" fill="#0A1A22" opacity="0.3" stroke="#26A7B0" strokeWidth="0.8"/>
+  <text x="340" y="118" textAnchor="middle" fontSize="4" fontFamily="Consolas,monospace" fill="#26A7B0">BADGE</text>
+  <line x1="304" y1="95" x2="376" y2="95" stroke="#26A7B0" strokeWidth="1.5" opacity="0.7"/>
+  <text x="340" y="70" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff">Controlled</text>
+  <text x="340" y="80" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff">Access Gate</text>
+  <text x="340" y="92" textAnchor="middle" fontSize="5.5" fontFamily="Noto Sans TC,sans-serif" fill="#fff" opacity="0.9">門禁閘門</text>
+  <text x="340" y="148" textAnchor="middle" fontSize="5" fontFamily="Lato,sans-serif" fill="#fff" opacity="0.8">Turquoise Strips</text>
+  <text x="340" y="158" textAnchor="middle" fontSize="5" fontFamily="Noto Sans TC,sans-serif" fill="#fff" opacity="0.7">青綠色引導條</text>
+
+  {/* Zone 6: Clean Room/Fab Corridor */}
+  <rect x="379" y="32" width="72" height="210" rx="3" fill="url(#zone6-bg)"/>
+  <circle cx="415" cy="50" r="3" fill="#26A7B0" opacity="0.5"/>
+  <text x="415" y="70" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#0A1A22">Clean Room</text>
+  <text x="415" y="80" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#0A1A22">Fab Corridor</text>
+  <text x="415" y="94" textAnchor="middle" fontSize="5.5" fontFamily="Noto Sans TC,sans-serif" fill="#0A1A22" opacity="0.7">潔淨室/廠房走廊</text>
+  <rect x="391" y="108" width="48" height="14" rx="2" fill="#0A1A22" opacity="0.15"/>
+  <text x="415" y="118" textAnchor="middle" fontSize="6" fontFamily="Consolas,monospace" fill="#0A1A22">5000K+</text>
+  <text x="415" y="140" textAnchor="middle" fontSize="5" fontFamily="Lato,sans-serif" fill="#0A1A22" opacity="0.7">Cool High-CRI</text>
+  <text x="415" y="148" textAnchor="middle" fontSize="5" fontFamily="Lato,sans-serif" fill="#0A1A22" opacity="0.7">Transparent Tech</text>
+  <text x="415" y="158" textAnchor="middle" fontSize="5" fontFamily="Noto Sans TC,sans-serif" fill="#0A1A22" opacity="0.6">冷白高CRI/透明科技</text>
+
+  {/* Zone 7: Guard Station/Control Room */}
+  <rect x="454" y="32" width="72" height="210" rx="3" fill="url(#zone7-bg)"/>
+  <circle cx="490" cy="50" r="3" fill="#26A7B0" opacity="0.6"/>
+  <rect x="474" y="100" width="32" height="20" rx="2" fill="#1a3040" stroke="#26A7B0" strokeWidth="0.4"/>
+  <rect x="476" y="102" width="12" height="8" rx="1" fill="#26A7B0" opacity="0.3"/>
+  <rect x="490" y="102" width="12" height="8" rx="1" fill="#26A7B0" opacity="0.2"/>
+  <text x="490" y="70" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff">Guard Station</text>
+  <text x="490" y="80" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#fff">Control Room</text>
+  <text x="490" y="94" textAnchor="middle" fontSize="5.5" fontFamily="Noto Sans TC,sans-serif" fill="#CAC3D2">警衛站/控制室</text>
+  <rect x="466" y="130" width="48" height="14" rx="2" fill="#0A1A22" opacity="0.4"/>
+  <text x="490" y="140" textAnchor="middle" fontSize="6" fontFamily="Consolas,monospace" fill="#f0f0f0">4000K</text>
+  <text x="490" y="160" textAnchor="middle" fontSize="5" fontFamily="Lato,sans-serif" fill="#CAC3D2" opacity="0.8">Mixed/Display Glow</text>
+  <text x="490" y="170" textAnchor="middle" fontSize="5" fontFamily="Noto Sans TC,sans-serif" fill="#CAC3D2" opacity="0.6">混合/螢幕光</text>
+
+  {/* Zone 8: Emergency Exit Pathway */}
+  <rect x="529" y="32" width="67" height="210" rx="3" fill="url(#zone8-bg)"/>
+  <circle cx="562" cy="50" r="3" fill="#26A7B0"/>
+  <line x1="529" y1="180" x2="596" y2="180" stroke="#26A7B0" strokeWidth="2" opacity="0.8"/>
+  <line x1="529" y1="186" x2="596" y2="186" stroke="#26A7B0" strokeWidth="1" opacity="0.5"/>
+  <text x="562" y="70" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#0A1A22">Emergency</text>
+  <text x="562" y="80" textAnchor="middle" fontSize="6.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#0A1A22">Exit Path</text>
+  <text x="562" y="94" textAnchor="middle" fontSize="5.5" fontFamily="Noto Sans TC,sans-serif" fill="#0A1A22" opacity="0.7">緊急逃生通道</text>
+  <rect x="538" y="108" width="48" height="14" rx="2" fill="#0A1A22" opacity="0.15"/>
+  <text x="562" y="118" textAnchor="middle" fontSize="6" fontFamily="Consolas,monospace" fill="#0A1A22">5000K</text>
+  <text x="562" y="140" textAnchor="middle" fontSize="5" fontFamily="Lato,sans-serif" fill="#0A1A22" opacity="0.7">Daylight</text>
+  <text x="562" y="148" textAnchor="middle" fontSize="5" fontFamily="Lato,sans-serif" fill="#0A1A22" opacity="0.7">Photoluminescent</text>
+  <text x="562" y="158" textAnchor="middle" fontSize="5" fontFamily="Noto Sans TC,sans-serif" fill="#0A1A22" opacity="0.6">日光/蓄光青綠條</text>
+
+  {/* Bottom gradient bar: Warm → Cool */}
+  <rect x="4" y="252" width="592" height="16" rx="4" fill="url(#temp-bar)"/>
+  <text x="20" y="262" fontSize="5.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#0A1A22">WARM 暖</text>
+  <text x="300" y="262" textAnchor="middle" fontSize="5.5" fontFamily="Lato,sans-serif" fill="#0A1A22" opacity="0.6">3000K → 4000K → 5000K+</text>
+  <text x="578" y="262" textAnchor="end" fontSize="5.5" fontFamily="Lato,sans-serif" fontWeight="700" fill="#0A1A22">COOL 冷</text>
+
+  {/* Bottom labels */}
+  <text x="300" y="282" textAnchor="middle" fontSize="7" fontFamily="Lato,sans-serif" fontWeight="400" fill="#CAC3D2" opacity="0.7">Color Temperature Gradient Across Facility Zones</text>
+  <text x="300" y="294" textAnchor="middle" fontSize="6.5" fontFamily="Noto Sans TC,sans-serif" fontWeight="400" fill="#CAC3D2" opacity="0.5">設施各區域色溫漸變</text>
+</svg>
+</div>
+
+#### <span className="en">Material Specifications</span><span className="zh">材質規格</span>
+
+<table className="gps-table"><thead><tr><th><span className="en">Material Application</span><span className="zh">材質應用</span></th><th><span className="en">Specification</span><span className="zh">規格</span></th><th><span className="en">Brand Connection</span><span className="zh">品牌連結</span></th></tr></thead><tbody><tr><td><span className="en">Visitor desks, access gates</span><span className="zh">訪客櫃台、出入閘門</span></td><td><span className="en">Anodized/brushed metal, Copper tone #CAC3D2</span><span className="zh">陽極氧化/拉絲金屬，銅色調 #CAC3D2</span></td><td><span className="en">Warmth, Guardian identity</span><span className="zh">溫暖感、守護者識別</span></td></tr><tr><td><span className="en">Emergency help buttons</span><span className="zh">緊急求助按鈕</span></td><td><span className="en">Turquoise #26A7B0, high-contrast</span><span className="zh">青綠色 #26A7B0，高對比</span></td><td><span className="en">Designed Safety pillar</span><span className="zh">設計安全支柱</span></td></tr><tr><td><span className="en">Evacuation guide strips</span><span className="zh">疏散引導條</span></td><td><span className="en">Turquoise #26A7B0, photoluminescent</span><span className="zh">青綠色 #26A7B0，蓄光材質</span></td><td><span className="en">Journey Protection pillar</span><span className="zh">旅程保護支柱</span></td></tr><tr><td><span className="en">Guard epaulette stitching</span><span className="zh">警衛肩章縫線</span></td><td><span className="en">Turquoise thread on black</span><span className="zh">黑底青綠色縫線</span></td><td><span className="en">Brand continuity</span><span className="zh">品牌延續性</span></td></tr></tbody></table>
+
+#### <span className="en">Lighting Color Temperature by Zone</span><span className="zh">各區域照明色溫</span>
+
+<table className="gps-table"><thead><tr><th><span className="en">Zone Type</span><span className="zh">區域類型</span></th><th><span className="en">Color Temperature</span><span className="zh">色溫</span></th><th><span className="en">CRI</span><span className="zh">CRI</span></th><th><span className="en">Brand Alignment</span><span className="zh">品牌對齊</span></th></tr></thead><tbody><tr><td><span className="en">Administrative / Reception</span><span className="zh">行政 / 接待區</span></td><td><span className="en">Warm 3000K</span><span className="zh">暖色 3000K</span></td><td>≥80</td><td><span className="en">Guardian tone, welcoming</span><span className="zh">守護者調性、親切感</span></td></tr><tr><td><span className="en">Controlled / Clean zones</span><span className="zh">管制 / 潔淨區</span></td><td><span className="en">Cool 5000K+</span><span className="zh">冷色 5000K+</span></td><td>≥90 (<span className="en">high-CRI</span><span className="zh">高 CRI</span>)</td><td><span className="en">Transparent Technology</span><span className="zh">透明科技</span></td></tr><tr><td><span className="en">Perimeter / Parking</span><span className="zh">周界 / 停車場</span></td><td><span className="en">Neutral 4000K</span><span className="zh">中性 4000K</span></td><td>≥70</td><td><span className="en">Journey Protection</span><span className="zh">旅程保護</span></td></tr><tr><td><span className="en">Emergency pathways</span><span className="zh">緊急通道</span></td><td><span className="en">5000K daylight</span><span className="zh">5000K 日光</span></td><td>≥90</td><td><span className="en">Designed Safety</span><span className="zh">設計安全</span></td></tr></tbody></table>
+
+<Callout type="tip">
+<span className="en">Color-to-safety-function mapping ensures brand identity extends into physical infrastructure, not just communications. Coordinate material and lighting specifications with facility management during the architectural planning phase — see <CrossRef section="sA">Appendix A</CrossRef> for new site activation requirements.</span><span className="zh">色彩與安全功能的對應確保品牌識別延伸至實體基礎設施，而非僅限於溝通。在建築規劃階段與設施管理協調材質和照明規格——參見<CrossRef section="sA">附錄 A</CrossRef>了解新廠區啟動要求。</span>
+</Callout>

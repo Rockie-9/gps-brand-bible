@@ -1,0 +1,71 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+
+<ChapterHeader
+  number="V"
+  groupEn="Appendix"
+  groupZh="附錄"
+  titleEn="Version History & Changelog"
+  titleZh="版本紀錄與變更日誌"
+  ownerEn="GPS Strategy & DX"
+  ownerZh="GPS Strategy & DX"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Changelog', status: 'done' }
+]} />
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Version</span><span className="zh">版本</span></th>
+      <th><span className="en">Date</span><span className="zh">日期</span></th>
+      <th><span className="en">Changes</span><span className="zh">變更內容</span></th>
+      <th><span className="en">Approved By</span><span className="zh">核准者</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>v4.0</strong></td>
+      <td>2026 Q2</td>
+      <td><span className="en">Major platform migration: monolithic HTML portal → Next.js component architecture with MDX. All 31 sections extracted into individual content files. New features: (1) Interactive visual demos — TintStrip, GradientSwatch (click-to-copy), DarkModeToggle, ContrastCards with WCAG ratings, SVG stationery/badge/lanyard mockups, campaign mood boards, dashboard wireframes, phase timelines, workflow diagrams. (2) Content additions — Physical Material & Lighting Standards (Ch10/15), Safety Feeling Index + Brand Adoption Rate (Ch24), Geographic Diversity requirement (Ch11), Canonical Bilingual Email Layout (Ch18), Security-in-Architectural-Design (App A). (3) AI Compliance Checker — vocabulary scan, tone classification, readability scoring, bilingual completeness, cross-references to Brand Bible sections. (4) AI Brand Assistant — streaming chat with Claude, stakeholder templates (JASM/ESMC/AZ), image upload for vision analysis (logo clearspace, color accuracy, grid compliance, contrast check). (5) Accessibility — ARIA roles, skip-to-content, keyboard navigation. (6) Print stylesheet — A4, page-break-per-chapter, AI panels hidden.</span><span className="zh">重大平台遷移：單體 HTML 入口網站 → 基於 Next.js 元件架構的 MDX。所有 31 個章節提取為個別內容檔案。新功能：(1) 互動式視覺展示——TintStrip、GradientSwatch（點擊複製）、DarkModeToggle、ContrastCards（含 WCAG 評級）、SVG 文具/識別證/識別帶模型、活動情緒板、儀表板線框圖、階段時間軸、工作流程圖。(2) 內容新增——實體材質與照明標準（Ch10/15）、安全感受指數 + 品牌採用率（Ch24）、地理多樣性要求（Ch11）、標準雙語電子郵件排版（Ch18）、建築設計中的安全整合（App A）。(3) AI 合規檢查器——詞彙掃描、語調分類、可讀性評分、雙語完整性、品牌聖經章節交叉參照。(4) AI 品牌助手——串流式 Claude 對話、利害關係人模板（JASM/ESMC/AZ）、圖片上傳進行視覺分析（標誌安全空間、色彩準確度、網格合規、對比度檢查）。(5) 無障礙性——ARIA 角色、跳轉內容、鍵盤導航。(6) 列印樣式——A4、每章分頁、AI 面板隱藏。</span></td>
+      <td>GPS Strategy & DX</td>
+    </tr>
+    <tr>
+      <td><strong>v3.2</strong></td>
+      <td>2026 Q2</td>
+      <td><span className="en">Added Appendix W — Brand Quality Playbook. Three-role workstream (Division Head / Strategy &amp; Transformation / Promotion) with three work types (Big Decisions / Campaigns / Everyday), two checklists (Message Check + Visual Check), friendly remediation path, quarterly check-up cadence. LINE OA classified as Campaign-tier (non-corporate, external channel). Full bilingual.</span><span className="zh">新增附錄 W——品牌品質手冊。三角色工作流程（處長/策略轉型/推廣）搭配三種工作類型（重大決策/活動/日常）、兩個檢查表（訊息檢查+視覺檢查）、友善修正流程、季度檢查節奏。LINE OA 分類為活動級（非公司、外部通路）。完整雙語。</span></td>
+      <td>GPS Strategy</td>
+    </tr>
+    <tr>
+      <td><strong>v3.1</strong></td>
+      <td>2026 Q2</td>
+      <td><span className="en">Integrated module-level status indicators (30 chapters × 2–7 modules = 91 pills). Enhanced print stylesheet (A4 paging, break-inside, CMYK-safe). P0 content patches: Ch02 expanded with Behaviors 06–07 (Transparent Technology, Dignity) + audience standards table with observable indicators. Ch12 expanded with Leadership tone + audience-specific writing rules (frontline vs directors). App A expanded with TSMC Arizona ES workforce accessibility / OSHA note.</span><span className="zh">整合模組層級狀態指示器（30 章 × 2–7 模組 = 91 顆指示丸）。增強列印樣式表（A4 分頁、防斷裂、CMYK 安全色）。P0 內容修補：第 02 章擴充行為 06–07（科技透明、尊嚴維護）+ 受眾行為標準表含可觀察指標。第 12 章擴充主管訊息語氣 + 受眾寫作規則（員工層 vs 主管層）。附錄 A 擴充台積電亞利桑那 ES 勞動力可及性 / OSHA 說明。</span></td>
+      <td>GPS Strategy</td>
+    </tr>
+    <tr>
+      <td><strong>v3.0</strong></td>
+      <td>2026 Q2</td>
+      <td><span className="en">Mega Portal merge — combined Brand Standards (v1.0) + Brand Bible Supreme (v2.0) into single portal. Added: Crisis Comms protocol, Brand Evolution governance, Bilingual canonical example, Brand Violation remediation pathway, Version History. Corrected: RACI row (03–11), Lato weight spec, owner tags on all chapters.</span><span className="zh">Mega Portal 合併——將品牌標準 (v1.0) + 品牌聖經至尊版 (v2.0) 合併為單一入口網站。新增：危機溝通協議、品牌演進治理、雙語正式範例、品牌違規處理流程、版本紀錄。修正：RACI 列 (03–11)、Lato 字重規格、所有章節負責人標注。</span></td>
+      <td>GPS Director</td>
+    </tr>
+    <tr>
+      <td><strong>v2.0</strong></td>
+      <td>2026 Q1</td>
+      <td><span className="en">Brand Bible Supreme — expanded color universe (60+ tokens, 11-step scales), print/digital/motion applications, creative variations (6 campaign moods, 7 seasonal), dark mode, accessibility pairings.</span><span className="zh">品牌聖經至尊版——擴展色彩系統（60+ 代符、11 階色階）、印刷/數位/動態應用、創意變體（6 種宣傳情緒、7 種季節變體）、深色模式、無障礙配對。</span></td>
+      <td>GPS Strategy</td>
+    </tr>
+    <tr>
+      <td><strong>v1.0</strong></td>
+      <td>2026 Q1</td>
+      <td><span className="en">Initial Brand Standards Portal — 13 chapters + <CrossRef section="sA">Appendix A</CrossRef>. Foundation, Visual Identity, Expression, Application, Governance, New Site Activation Playbook, Language Architecture, RACI.</span><span className="zh">初版品牌標準入口——13 章 + <CrossRef section="sA">附錄 A</CrossRef>。基礎、視覺識別、表達、應用、治理、新廠區品牌啟動手冊、語言架構、RACI。</span></td>
+      <td>GPS Strategy</td>
+    </tr>
+  </tbody>
+</table>
+
+<Callout type="tip">
+<strong><span className="en">Change governance:</span><span className="zh">變更治理：</span></strong> <span className="en">Minor corrections (typos, token values) are logged and published by GPS Strategy without approval. Structural changes (new chapters, pillar additions, logo modifications) require GPS Director sign-off. All versions are archived and accessible. Regional teams must verify they reference the current version before producing new materials.</span><span className="zh">小幅修正（錯字、代符值）由 GPS 策略團隊記錄並發布，無需核准。結構性變更（新章節、支柱新增、標誌修改）需 GPS Director 簽核。所有版本皆歸檔並可存取。區域團隊在製作新材料前，必須確認參照的是最新版本。</span>
+</Callout>

@@ -1,0 +1,123 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+
+<ChapterHeader
+  number={20}
+  groupEn="Application: Digital"
+  groupZh="應用：數位"
+  titleEn="Digital Signage"
+  titleZh="數位看板"
+  ownerEn="MarCom Team"
+  ownerZh="MarCom Team"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Templates', status: 'done' },
+  { name: 'Content Zones', status: 'done' }
+]} />
+
+
+<table className="gps-table">
+<thead>
+<tr><th><span className="en">Property</span><span className="zh">屬性</span></th><th><span className="en">Value</span><span className="zh">值</span></th></tr>
+</thead>
+<tbody>
+<tr><td>Resolution</td><td>1920×1080 (landscape) or 1080×1920 (portrait)</td></tr>
+<tr><td>Safe area</td><td><span className="en">5% margin all edges</span><span className="zh">四邊 5% 邊距</span></td></tr>
+<tr><td>Min text</td><td>48px body, 72px headlines (at 1080p)</td></tr>
+<tr><td>Animation</td><td><span className="en">Slide transitions, 8s min dwell, no auto-video</span><span className="zh">滑動轉場，最少停留 8 秒，不自動播放影片</span></td></tr>
+<tr><td>Logo</td><td><span className="en">Bottom-right or top-left, horizontal, min 120px h</span><span className="zh">右下或左上，水平排列，最小高度 120px</span></td></tr>
+<tr><td>Rotation</td><td><span className="en">6-screen starter kit, monthly refresh</span><span className="zh">6 畫面入門套組，每月更新</span></td></tr>
+</tbody>
+</table>
+
+
+### <span className="en">Content Zones</span><span className="zh">內容區域</span>
+
+<p className="en">Every signage screen follows a consistent layout structure regardless of content type.</p>
+<p className="zh">每個看板畫面遵循一致的版面結構，不論內容類型。</p>
+
+<div style={{margin:'12px 0',maxWidth:'500px'}}>
+  <svg width="100%" viewBox="0 0 480 270" style={{background:'var(--black)',borderRadius:'8px',border:'1px solid var(--g200)'}}>
+    {/* Safe area */}
+    <rect x="24" y="14" width="432" height="243" fill="none" stroke="var(--turquoise)" strokeWidth=".5" strokeDasharray="3,3"/>
+    <text x="240" y="10" textAnchor="middle" fontSize="6" fill="var(--turquoise-400)">5% safe area</text>
+    {/* Main content area */}
+    <rect x="30" y="20" width="340" height="200" rx="3" fill="var(--dm-s)" stroke="var(--turquoise-700)" strokeWidth=".5"/>
+    <text x="200" y="115" textAnchor="middle" fontSize="11" fill="var(--dm-t)"><tspan className="en">MAIN CONTENT AREA</tspan><tspan className="zh">主要內容區域</tspan></text>
+    <text x="200" y="130" textAnchor="middle" fontSize="8" fill="var(--dm-tm)">72px headline / 48px body</text>
+    {/* Sidebar */}
+    <rect x="380" y="20" width="76" height="200" rx="3" fill="var(--dm-s2)" stroke="var(--turquoise-700)" strokeWidth=".5"/>
+    <text x="418" y="80" textAnchor="middle" fontSize="7" fill="var(--dm-tm)" transform="rotate(90,418,80)"><tspan className="en">SIDEBAR</tspan><tspan className="zh">側欄</tspan></text>
+    {/* Bottom bar */}
+    <rect x="30" y="228" width="426" height="28" rx="3" fill="var(--dm-s2)" stroke="var(--turquoise-700)" strokeWidth=".5"/>
+    <text x="50" y="245" fontSize="7" fill="var(--turquoise-400)">GPS</text>
+    <text x="240" y="245" textAnchor="middle" fontSize="7" fill="var(--dm-tm)"><tspan className="en">Ticker / Date / Weather</tspan><tspan className="zh">跑馬燈 / 日期 / 天氣</tspan></text>
+    <text x="440" y="245" textAnchor="end" fontSize="6" fill="var(--dm-tm)">12:00</text>
+  </svg>
+</div>
+
+### <span className="en">Content Types & Rotation</span><span className="zh">內容類型與輪替</span>
+
+
+<table className="gps-table">
+<thead>
+<tr><th><span className="en">Slide Type</span><span className="zh">畫面類型</span></th><th><span className="en">Dwell Time</span><span className="zh">停留時間</span></th><th><span className="en">Max per Rotation</span><span className="zh">每輪最多</span></th><th><span className="en">Content</span><span className="zh">內容</span></th></tr>
+</thead>
+<tbody>
+<tr><td><span className="en">Announcement</span><span className="zh">公告</span></td><td>10–15s</td><td>2</td><td><span className="en">Policy updates, event notices, training reminders</span><span className="zh">政策更新、活動通知、培訓提醒</span></td></tr>
+<tr><td><span className="en">Brand / Culture</span><span className="zh">品牌 / 文化</span></td><td>8–10s</td><td>2</td><td><span className="en">Pillar messaging, brand imagery, CPTED awareness</span><span className="zh">支柱訊息、品牌影像、CPTED 意識</span></td></tr>
+<tr><td><span className="en">Safety Tip</span><span className="zh">安全提示</span></td><td>8s</td><td>1</td><td><span className="en">Family extension tips, commute safety, seasonal awareness</span><span className="zh">家庭延伸提示、通勤安全、季節性意識</span></td></tr>
+<tr><td><span className="en">Data / Metric</span><span className="zh">數據 / 指標</span></td><td>10s</td><td>1</td><td><span className="en">Days without incident, training completion %, visitor count</span><span className="zh">無事故天數、培訓完成率、訪客人數</span></td></tr>
+</tbody>
+</table>
+
+
+<Callout type="warning">
+<span className="en"><strong>Emergency override:</strong> When a site enters emergency mode, all signage content is replaced with a single full-screen emergency message. Red (#D94F4F) background, white text, 96px minimum font size. Standard content resumes only after all-clear from site command.</span><span className="zh"><strong>緊急覆蓋：</strong>當場域進入緊急模式時，所有看板內容替換為單一全螢幕緊急訊息。紅色（#D94F4F）背景、白色文字、最小 96px 字級。標準內容僅在場域指揮中心發布全部解除後恢復。</span>
+</Callout>
+
+### <span className="en">Internal Announcement Template</span><span className="zh">內部公告模板</span>
+
+<p><span className="en">Standard template for intranet and Teams announcements. Maintains brand consistency across internal digital communications.</span><span className="zh">用於內部網站和 Teams 公告的標準模板。在內部數位溝通中維持品牌一致性。</span></p>
+
+<div style={{maxWidth:'400px',margin:'16px 0',border:'1px solid #ddd',borderRadius:'8px',overflow:'hidden',background:'#fff',breakInside:'avoid'}}>
+  {/* Turquoise top accent bar */}
+  <div style={{height:'4px',background:'#26A7B0'}}></div>
+  {/* Header row: GPS mark + ANNOUNCEMENT tag */}
+  <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'12px 16px',borderBottom:'1px solid #eee'}}>
+    <div style={{display:'flex',alignItems:'center',gap:'8px'}}>
+      <div style={{width:'28px',height:'28px',borderRadius:'4px',background:'rgba(38,167,176,0.15)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'9px',fontWeight:700,color:'#26A7B0'}}>GPS</div>
+      <div style={{fontSize:'10px',color:'#666'}}><span className="en">Global Physical Security</span><span className="zh">全球實體安全處</span></div>
+    </div>
+    <div style={{background:'#26A7B0',color:'#fff',fontSize:'8px',fontWeight:700,padding:'3px 8px',borderRadius:'10px'}}>ANNOUNCEMENT / 公告</div>
+  </div>
+  {/* Title zone */}
+  <div style={{padding:'16px 16px 8px'}}>
+    <div style={{fontSize:'16px',fontWeight:700,color:'#0A1A22',lineHeight:1.3}}><span className="en">Quarterly Safety Review Complete</span><span className="zh">季度安全審查完成</span></div>
+  </div>
+  {/* Body zone */}
+  <div style={{padding:'0 16px 12px'}}>
+    <div style={{fontSize:'11px',lineHeight:1.6,color:'#333',marginBottom:'8px'}}><span className="en">The Q1 2026 safety review has been completed across all sites. Key findings and improvement actions are summarized below. All section heads are requested to review the action items relevant to their areas.</span><span className="zh">2026 年第一季安全審查已在所有廠區完成。主要發現和改善措施摘要如下。請各 Section Head 審查與其負責領域相關的行動項目。</span></div>
+  </div>
+  {/* Action items zone */}
+  <div style={{padding:'0 16px 12px'}}>
+    <div style={{fontSize:'10px',fontWeight:700,color:'#0A1A22',marginBottom:'6px'}}><span className="en">Action Items:</span><span className="zh">行動項目：</span></div>
+    <div style={{fontSize:'10px',color:'#333',lineHeight:1.8,paddingLeft:'12px'}}>
+      <div>1. <span className="en">Review updated evacuation routes by April 15</span><span className="zh">於 4 月 15 日前審查更新的疏散路線</span></div>
+      <div>2. <span className="en">Complete safety training refresher by April 30</span><span className="zh">於 4 月 30 日前完成安全培訓複習</span></div>
+      <div>3. <span className="en">Submit site-specific improvement plans by May 10</span><span className="zh">於 5 月 10 日前提交各廠區改善計畫</span></div>
+    </div>
+  </div>
+  {/* Contact/owner zone */}
+  <div style={{padding:'0 16px 12px',borderBottom:'1px solid #eee'}}>
+    <div style={{fontSize:'10px',color:'#666'}}><span className="en">Posted by / 發布者：</span><span style={{fontWeight:700}}><span className="en">GPS Strategy & Transformation</span><span className="zh">GPS 策略與轉型</span></span></div>
+  </div>
+  {/* Footer: date + category tag */}
+  <div style={{padding:'10px 16px',display:'flex',alignItems:'center',justifyContent:'space-between',background:'#fafafa'}}>
+    <div style={{fontSize:'9px',color:'#999'}}>2026-04-04</div>
+    <div style={{background:'rgba(38,167,176,0.1)',color:'#26A7B0',fontSize:'8px',fontWeight:600,padding:'2px 8px',borderRadius:'10px'}}><span className="en">Safety Review</span><span className="zh">安全審查</span></div>
+  </div>
+</div>

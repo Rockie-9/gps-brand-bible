@@ -1,0 +1,124 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import CrossRef from '@/components/CrossRef'
+
+<ChapterHeader
+  number={17}
+  groupEn="Application: Digital"
+  groupZh="應用：數位"
+  titleEn="Web & Landing Page"
+  titleZh="網頁與入口頁面"
+  ownerEn="GPS Strategy & DX"
+  ownerZh="GPS Strategy & DX"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Tokens', status: 'done' },
+  { name: 'Components', status: 'done' },
+  { name: 'Patterns', status: 'done' },
+  { name: 'Landing', status: 'done' }
+]} />
+
+<div className="mk-r">
+  <div className="mk"><div className="mk-h">Desktop</div><div className="wm"><div className="wf"><div className="wb"><div className="wd" style={{background:'#FF5F57'}}></div><div className="wd" style={{background:'#FEBC2E'}}></div><div className="wd" style={{background:'#28C840'}}></div></div><div className="wh"><span>Global Physical Security<br/><small style={{fontSize:'5px',fontWeight:400,opacity:'.7'}}>全球實體安全處</small></span></div><div className="wc"><div className="wl"></div><div className="wl" style={{width:'80%'}}></div><div className="wl" style={{width:'60%'}}></div><div style={{display:'flex',gap:'4px',marginTop:'6px'}}><div style={{flex:1,height:'32px',background:'var(--turquoise-50)',borderRadius:'3px',border:'1px solid var(--turquoise-100)'}}></div><div style={{flex:1,height:'32px',background:'var(--copper-50)',borderRadius:'3px',border:'1px solid var(--copper-100)'}}></div><div style={{flex:1,height:'32px',background:'var(--purple-50)',borderRadius:'3px',border:'1px solid var(--purple-100)'}}></div></div></div></div></div></div>
+  <div className="mk"><div className="mk-h">Mobile</div><div className="mm"><div className="mf"><div className="mn"></div><div className="mh"><span>GPS</span></div><div className="mc"><div className="mcd"></div><div className="mcd"></div><div className="mcd"></div><div className="mcd"></div></div></div></div></div>
+</div>
+
+### <span className="en">Design Tokens</span><span className="zh">動態設計代符</span>
+
+
+<table className="gps-table"><thead><tr><th><span className="en">Token</span><span className="zh">代符</span></th><th><span className="en">Value</span><span className="zh">值</span></th></tr></thead><tbody><tr><td>Max width</td><td><code>1200px</code> (960px prose)</td></tr><tr><td>Grid</td><td>12-col, <code>24px</code> gutter</td></tr><tr><td>Breakpoints</td><td><code>375</code> · <code>768</code> · <code>1024</code> · <code>1440</code></td></tr><tr><td>Border radius</td><td><code>4</code> · <code>8</code> · <code>12</code> · <code>9999px</code></td></tr><tr><td>Shadow L1</td><td><code>0 1px 3px rgba(10,26,34,.06)</code></td></tr><tr><td>Shadow L2</td><td><code>0 4px 12px rgba(10,26,34,.08)</code></td></tr><tr><td>Touch target</td><td><code>44×44px</code> min</td></tr></tbody></table>
+
+
+### <span className="en">Core Components</span><span className="zh">核心元件</span>
+
+<p className="en">Four foundational UI components. All use brand tokens. All states must be implemented.</p>
+<p className="zh">四個基礎 UI 元件。全部使用品牌代符。所有狀態皆須實作。</p>
+
+<div style={{display:'flex',gap:'12px',flexWrap:'wrap',margin:'12px 0'}}>
+  {/* Button component */}
+  <div style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'8px',padding:'16px',flex:1,minWidth:'200px'}}>
+    <div style={{fontSize:'10px',fontWeight:700,color:'var(--turquoise)',letterSpacing:'.08em',marginBottom:'10px'}}>BUTTON</div>
+    <div style={{display:'flex',flexDirection:'column',gap:'6px'}}>
+      <div style={{background:'var(--turquoise)',color:'#fff',padding:'8px 16px',borderRadius:'4px',fontSize:'12px',fontWeight:700,textAlign:'center',cursor:'pointer'}}>Primary</div>
+      <div style={{background:'transparent',color:'var(--turquoise)',padding:'8px 16px',borderRadius:'4px',fontSize:'12px',fontWeight:700,textAlign:'center',border:'1.5px solid var(--turquoise)'}}>Secondary</div>
+      <div style={{background:'transparent',color:'var(--turquoise)',padding:'8px 16px',borderRadius:'4px',fontSize:'12px',fontWeight:700,textAlign:'center'}}>Ghost</div>
+      <div style={{background:'var(--g200)',color:'var(--g400)',padding:'8px 16px',borderRadius:'4px',fontSize:'12px',fontWeight:700,textAlign:'center',cursor:'not-allowed'}}>Disabled</div>
+    </div>
+    <div style={{fontSize:'8px',color:'var(--g500)',marginTop:'8px',lineHeight:1.5}}>Padding: 8px 16px · Radius: 4px · Font: Lato Bold 13px</div>
+  </div>
+  {/* Card component */}
+  <div style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'8px',padding:'16px',flex:1,minWidth:'200px'}}>
+    <div style={{fontSize:'10px',fontWeight:700,color:'var(--turquoise)',letterSpacing:'.08em',marginBottom:'10px'}}>CARD</div>
+    <div style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'6px',padding:'12px',marginBottom:'6px'}}>
+      <div style={{fontSize:'10px',fontWeight:700,color:'var(--ink)'}}>Standard</div>
+      <div style={{fontSize:'8px',color:'var(--g500)'}}>border: 1px --g200</div>
+    </div>
+    <div style={{background:'#fff',borderRadius:'6px',padding:'12px',boxShadow:'0 2px 8px rgba(0,0,0,.08)'}}>
+      <div style={{fontSize:'10px',fontWeight:700,color:'var(--ink)'}}>Elevated</div>
+      <div style={{fontSize:'8px',color:'var(--g500)'}}>shadow: 0 2px 8px rgba(0,0,0,.08)</div>
+    </div>
+    <div style={{fontSize:'8px',color:'var(--g500)',marginTop:'8px',lineHeight:1.5}}>Padding: 16px · Radius: 6px · Gap: 12px</div>
+  </div>
+  {/* Input component */}
+  <div style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'8px',padding:'16px',flex:1,minWidth:'200px'}}>
+    <div style={{fontSize:'10px',fontWeight:700,color:'var(--turquoise)',letterSpacing:'.08em',marginBottom:'10px'}}>INPUT</div>
+    <div style={{display:'flex',flexDirection:'column',gap:'6px'}}>
+      <div style={{padding:'8px 12px',border:'1.5px solid var(--g300)',borderRadius:'4px',fontSize:'11px',color:'var(--g400)'}}>Default — placeholder</div>
+      <div style={{padding:'8px 12px',border:'1.5px solid var(--turquoise)',borderRadius:'4px',fontSize:'11px',color:'var(--ink)',boxShadow:'0 0 0 2px var(--turquoise-100)'}}>Focus — ring: turquoise-100</div>
+      <div style={{padding:'8px 12px',border:'1.5px solid var(--danger)',borderRadius:'4px',fontSize:'11px',color:'var(--ink)'}}>Error — border: danger</div>
+      <div style={{padding:'8px 12px',border:'1.5px solid var(--g200)',borderRadius:'4px',fontSize:'11px',color:'var(--g400)',background:'var(--g50)',cursor:'not-allowed'}}>Disabled</div>
+    </div>
+    <div style={{fontSize:'8px',color:'var(--g500)',marginTop:'8px',lineHeight:1.5}}>Padding: 8px 12px · Radius: 4px · Font: Lato 13px</div>
+  </div>
+</div>
+
+### <span className="en">Extended Components</span><span className="zh">延伸元件</span>
+
+<div style={{display:'flex',gap:'12px',flexWrap:'wrap',margin:'12px 0'}}>
+  {/* Badge/Tag */}
+  <div style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'8px',padding:'16px',flex:1,minWidth:'180px'}}>
+    <div style={{fontSize:'10px',fontWeight:700,color:'var(--turquoise)',letterSpacing:'.08em',marginBottom:'10px'}}>BADGE / TAG</div>
+    <div style={{display:'flex',flexWrap:'wrap',gap:'6px',marginBottom:'8px'}}>
+      <span style={{background:'var(--turquoise-100)',color:'var(--turquoise-700)',padding:'2px 8px',borderRadius:'3px',fontSize:'10px',fontWeight:700}}>Active</span>
+      <span style={{background:'#d4edda',color:'#155724',padding:'2px 8px',borderRadius:'3px',fontSize:'10px',fontWeight:700}}>Safe</span>
+      <span style={{background:'#fff3cd',color:'#856404',padding:'2px 8px',borderRadius:'3px',fontSize:'10px',fontWeight:700}}>Caution</span>
+      <span style={{background:'#f8d7da',color:'#721c24',padding:'2px 8px',borderRadius:'3px',fontSize:'10px',fontWeight:700}}>Alert</span>
+      <span style={{background:'var(--g100)',color:'var(--g500)',padding:'2px 8px',borderRadius:'3px',fontSize:'10px',fontWeight:700}}>Inactive</span>
+    </div>
+    <div style={{fontSize:'8px',color:'var(--g500)',lineHeight:1.5}}>Padding: 2px 8px · Radius: 3px · Font: Lato Bold 10px</div>
+  </div>
+  {/* Toast/Notification */}
+  <div style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'8px',padding:'16px',flex:1,minWidth:'180px'}}>
+    <div style={{fontSize:'10px',fontWeight:700,color:'var(--turquoise)',letterSpacing:'.08em',marginBottom:'10px'}}>TOAST / NOTIFICATION</div>
+    <div style={{display:'flex',flexDirection:'column',gap:'6px'}}>
+      <div style={{background:'#d4edda',borderLeft:'3px solid var(--success)',padding:'8px 12px',borderRadius:'0 4px 4px 0',fontSize:'10px',color:'#155724'}}>&#10003; <span className="en">Access granted successfully</span><span className="zh">存取已成功授權</span></div>
+      <div style={{background:'#fff3cd',borderLeft:'3px solid var(--warning)',padding:'8px 12px',borderRadius:'0 4px 4px 0',fontSize:'10px',color:'#856404'}}>&#9888; <span className="en">Badge expires in 7 days</span><span className="zh">門禁卡 7 天後到期</span></div>
+      <div style={{background:'#f8d7da',borderLeft:'3px solid var(--danger)',padding:'8px 12px',borderRadius:'0 4px 4px 0',fontSize:'10px',color:'#721c24'}}>&#10007; <span className="en">Unauthorized access attempt</span><span className="zh">未授權存取嘗試</span></div>
+    </div>
+    <div style={{fontSize:'8px',color:'var(--g500)',marginTop:'8px',lineHeight:1.5}}>Left border: 3px semantic color · Padding: 8px 12px · Auto-dismiss: 5s (success), persist (error)</div>
+  </div>
+  {/* Modal/Dialog */}
+  <div style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'8px',padding:'16px',flex:1,minWidth:'180px'}}>
+    <div style={{fontSize:'10px',fontWeight:700,color:'var(--turquoise)',letterSpacing:'.08em',marginBottom:'10px'}}>MODAL / DIALOG</div>
+    <div style={{background:'var(--g50)',border:'1px solid var(--g200)',borderRadius:'6px',padding:'12px'}}>
+      <div style={{fontSize:'11px',fontWeight:700,color:'var(--ink)',marginBottom:'4px'}}><span className="en">Confirm Action</span><span className="zh">確認操作</span></div>
+      <div style={{fontSize:'9px',color:'var(--g500)',marginBottom:'10px'}}><span className="en">Are you sure you want to revoke this access?</span><span className="zh">您確定要撤銷此存取權限嗎？</span></div>
+      <div style={{display:'flex',gap:'6px',justifyContent:'flex-end'}}>
+        <div style={{padding:'4px 10px',border:'1px solid var(--g300)',borderRadius:'3px',fontSize:'9px',color:'var(--g500)'}}><span className="en">Cancel</span><span className="zh">取消</span></div>
+        <div style={{padding:'4px 10px',background:'var(--danger)',borderRadius:'3px',fontSize:'9px',color:'#fff'}}><span className="en">Revoke</span><span className="zh">撤銷</span></div>
+      </div>
+    </div>
+    <div style={{fontSize:'8px',color:'var(--g500)',marginTop:'8px',lineHeight:1.5}}>Max-width: 480px · Padding: 24px · Overlay: rgba(10,26,34,.5) · Radius: 8px</div>
+  </div>
+  {/* Navigation */}
+  <div style={{background:'#fff',border:'1px solid var(--g200)',borderRadius:'8px',padding:'16px',flex:1,minWidth:'180px'}}>
+    <div style={{fontSize:'10px',fontWeight:700,color:'var(--turquoise)',letterSpacing:'.08em',marginBottom:'10px'}}>TAB NAV</div>
+    <div style={{display:'flex',gap:0,borderBottom:'2px solid var(--g200)',marginBottom:'8px'}}>
+      <div style={{padding:'6px 12px',fontSize:'10px',fontWeight:700,color:'var(--turquoise)',borderBottom:'2px solid var(--turquoise)',marginBottom:'-2px'}}><span className="en">Overview</span><span className="zh">總覽</span></div>
+      <div style={{padding:'6px 12px',fontSize:'10px',color:'var(--g500)'}}><span className="en">Details</span><span className="zh">詳情</span></div>
+      <div style={{padding:'6px 12px',fontSize:'10px',color:'var(--g500)'}}><span className="en">History</span><span className="zh">紀錄</span></div>
+    </div>
+    <div style={{fontSize:'8px',color:'var(--g500)',lineHeight:1.5}}>Active: turquoise + 2px bottom border · Inactive: grey-500 · Padding: 6px 12px · Font: Lato Bold 12px</div>
+  </div>
+</div>

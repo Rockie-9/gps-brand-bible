@@ -1,0 +1,47 @@
+import ChapterHeader from '@/components/ChapterHeader';
+import ModuleTracker from '@/components/ModuleTracker';
+import ColorSwatch from '@/components/ColorSwatch';
+import DarkModeToggle from '@/components/DarkModeToggle';
+
+<ChapterHeader number="07" groupEn="Visual Identity" groupZh="視覺識別" titleEn="Semantic Colors & Dark Mode" titleZh="語意色與深色模式" ownerEn="MarCom Team" ownerZh="MarCom Team" />
+<ModuleTracker modules={[{name:'Semantic',status:'done'},{name:'Dark Mode',status:'done'},{name:'Mapping',status:'done'},{name:'Live Toggle',status:'done'}]} />
+
+### <span className="en">Semantic Colors</span><span className="zh">語意色彩</span>
+
+<div className="swatch-grid">
+  <ColorSwatch color="#2D9F5B" name="Success / Safe" hex="#2D9F5B" />
+  <ColorSwatch color="#E5993E" name="Warning / Caution" hex="#E5993E" />
+  <ColorSwatch color="#D94F4F" name="Danger / Alert" hex="#D94F4F" />
+  <ColorSwatch color="#26A7B0" name="Info / Active" hex="#26A7B0" />
+</div>
+
+### <span className="en">Pillar Color Mapping</span><span className="zh">支柱色彩對應</span>
+
+<table className="gps-table">
+<thead><tr><th><span className="en">Pillar</span><span className="zh">支柱</span></th><th><span className="en">Color</span><span className="zh">色彩</span></th><th><span className="en">Tint BG</span><span className="zh">淡色背景</span></th></tr></thead>
+<tbody>
+<tr><td><strong>Designed Safety</strong></td><td><code>#26A7B0</code> Turquoise</td><td><code>#F0FAFB</code></td></tr>
+<tr><td><strong>Journey Protection</strong></td><td><code>#8C9FCB</code> Purple</td><td><code>#F4F6FB</code></td></tr>
+<tr><td><strong>Family Extension</strong></td><td><code>#F6AD90</code> Orange</td><td><code>#FEF6F2</code></td></tr>
+<tr><td><strong>Living Culture</strong></td><td><code>#8CC897</code> Green</td><td><code>#F3FAF5</code></td></tr>
+<tr><td><strong>Transparent Technology</strong></td><td><code>#CAC3D2</code> Copper</td><td><code>#F8F7F9</code></td></tr>
+</tbody>
+</table>
+
+### <span className="en">Dark Mode — Interactive Preview</span><span className="zh">深色模式——互動預覽</span>
+
+<p><span className="en">Toggle between light and dark to see how GPS tokens adapt. The left panel shows a live UI mockup; the right shows active token values.</span><span className="zh">切換淺色與深色模式，查看 GPS 代符如何適應。左側面板為即時 UI 模擬；右側顯示作用中的代符值。</span></p>
+
+<DarkModeToggle />
+
+<table className="gps-table">
+<thead><tr><th><span className="en">Token</span><span className="zh">代符</span></th><th><span className="en">Light</span><span className="zh">淺色</span></th><th><span className="en">Dark</span><span className="zh">深色</span></th><th><span className="en">Role</span><span className="zh">角色</span></th></tr></thead>
+<tbody>
+<tr><td><code>--bg</code></td><td>#F4F5F7</td><td>#0D1B21</td><td><span className="en">Page background</span><span className="zh">頁面背景</span></td></tr>
+<tr><td><code>--surface</code></td><td>#FFFFFF</td><td>#142229</td><td><span className="en">Cards, panels</span><span className="zh">卡片、面板</span></td></tr>
+<tr><td><code>--border</code></td><td>#E2E6EA</td><td>#243944</td><td><span className="en">Dividers</span><span className="zh">分隔線</span></td></tr>
+<tr><td><code>--text</code></td><td>#1A2A32</td><td>#E2E8EC</td><td><span className="en">Body text</span><span className="zh">內文</span></td></tr>
+<tr><td><code>--text-muted</code></td><td>#6B7B85</td><td>#8A9BA5</td><td><span className="en">Secondary text</span><span className="zh">次要文字</span></td></tr>
+<tr><td><code>--accent</code></td><td>#26A7B0</td><td>#3DB9C2</td><td><span className="en">Interactive</span><span className="zh">互動元素</span></td></tr>
+</tbody>
+</table>

@@ -1,0 +1,52 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+import CodeBlock from '@/components/CodeBlock'
+
+<ChapterHeader
+  number={14}
+  groupEn="Application: Print"
+  groupZh="應用：印刷"
+  titleEn="Stationery System"
+  titleZh="文具系統"
+  ownerEn="MarCom Team"
+  ownerZh="MarCom Team"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Letterhead', status: 'done' },
+  { name: 'Safety Cards', status: 'done' },
+  { name: 'Gift Items', status: 'done' },
+]} />
+
+<p><span className="en">GPS print applications extend the brand into everyday physical touchpoints — from desk cards to family safety packages. Each item uses the brand gradient bar, GPS mark, and bilingual text as minimum brand elements.</span><span className="zh">GPS 印刷應用將品牌延伸到日常實體接觸點——從桌上卡片到家庭安全包。每個物品以品牌漸層條、GPS 標誌和雙語文字作為最低品牌元素。</span></p>
+
+### <span className="en">GPS Safety Print Items</span><span className="zh">GPS 安全印刷品項</span>
+
+<table className="gps-table"><thead><tr><th><span className="en">Item (EN)</span><span className="zh">品項（EN）</span></th><th><span className="en">Item (ZH)</span><span className="zh">品項（ZH）</span></th><th><span className="en">Dimensions</span><span className="zh">尺寸</span></th><th><span className="en">Material</span><span className="zh">材質</span></th><th><span className="en">Brand Elements</span><span className="zh">品牌元素</span></th></tr></thead><tbody><tr><td>Safety Behavior Reminder Card</td><td>安全行為提醒卡</td><td>90×55mm</td><td>350gsm coated</td><td><span className="en">Gradient top bar, GPS mark, 7 behaviors summary</span><span className="zh">漸層頂部條、GPS 標誌、7 項行為摘要</span></td></tr><tr><td>Desktop Evacuation Card</td><td>桌上避難流程卡</td><td>100×70mm tent fold</td><td>300gsm matte</td><td><span className="en">Turquoise header, floor plan area, emergency contacts</span><span className="zh">青綠色標頭、樓層平面圖區域、緊急聯絡資訊</span></td></tr><tr><td>Pocket SOP Card</td><td>口袋 SOP 卡</td><td>85×55mm tri-fold</td><td>300gsm waterproof laminate</td><td><span className="en">Turquoise spine, step-by-step SOP, bilingual</span><span className="zh">青綠色書脊、逐步 SOP、雙語</span></td></tr><tr><td>Safety Guide Card</td><td>安全指南卡</td><td>90×55mm</td><td>350gsm coated</td><td><span className="en">Gradient bar, key safety guidelines, QR code</span><span className="zh">漸層條、重點安全指南、QR 碼</span></td></tr><tr><td>Safety Themed Notebook</td><td>安全主題筆記本</td><td>A5 (148×210mm)</td><td>80gsm lined, 250gsm cover</td><td><span className="en">Gradient cover band, GPS mark, safety quotes</span><span className="zh">漸層封面帶、GPS 標誌、安全語錄</span></td></tr><tr><td>Waterproof Document Pouch</td><td>防水資料袋</td><td>240×180mm</td><td>PVC waterproof, zip closure</td><td><span className="en">GPS mark screen-printed, turquoise zipper pull</span><span className="zh">GPS 標誌網版印刷、青綠色拉鏈頭</span></td></tr><tr><td>ID Lanyard with Safety Slogan</td><td>證件掛繩（含安全標語）</td><td>20mm×900mm</td><td>Polyester sublimation</td><td><span className="en">Turquoise→copper gradient, "Safety First 安全第一" repeat</span><span className="zh">青綠色→銅色漸層、「Safety First 安全第一」重複圖案</span></td></tr><tr><td>Phone Sticker Emergency Contact</td><td>手機貼（緊急聯絡資訊）</td><td>50×80mm</td><td>Vinyl removable adhesive</td><td><span className="en">Turquoise border, emergency numbers, GPS mark</span><span className="zh">青綠色邊框、緊急電話號碼、GPS 標誌</span></td></tr><tr><td>Vehicle Safety Reminder Card</td><td>車用安全提醒卡</td><td>85×130mm visor clip</td><td>400gsm rigid</td><td><span className="en">Turquoise clip tab, driving safety tips, bilingual</span><span className="zh">青綠色夾片、駕駛安全提示、雙語</span></td></tr><tr><td>Travel Safety Checklist Pack</td><td>旅行安全 Checklist 包</td><td>150×100mm zip pouch</td><td>Nylon, YKK zip</td><td><span className="en">GPS mark embroidered, turquoise accent, checklist cards inside</span><span className="zh">GPS 標誌刺繡、青綠色點綴、內含檢查清單卡</span></td></tr><tr><td>Family Safety Package Box</td><td>家庭安全包裝盒</td><td>250×180×60mm</td><td>Corrugated with sleeve</td><td><span className="en">Gradient ribbon wrap, GPS mark, family safety guide included</span><span className="zh">漸層緞帶包裝、GPS 標誌、附家庭安全指南</span></td></tr><tr><td>Safety Culture Sticker</td><td>安全文化貼紙（可貼設備）</td><td>∅50mm circular</td><td>Vinyl weather-resistant</td><td><span className="en">Turquoise border, GPS mark center, bilingual slogan</span><span className="zh">青綠色邊框、GPS 標誌居中、雙語標語</span></td></tr></tbody></table>
+
+### <span className="en">Visual Mockups</span><span className="zh">視覺模擬</span>
+
+<div style={{background:'#f5f5f5',padding:'24px',borderRadius:'8px',breakInside:'avoid'}}>
+
+<p style={{fontWeight:700,marginBottom:'16px'}}><span className="en">Letterhead Header</span><span className="zh">信紙頁首</span></p>
+<svg viewBox="0 0 400 80" width="600" height="120" style={{border:'1px solid #ddd',borderRadius:'4px',background:'#fff',display:'block'}}>
+  <defs>
+    <linearGradient id="lh-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#26A7B0"/>
+      <stop offset="100%" stopColor="#CAC3D2"/>
+    </linearGradient>
+  </defs>
+  <rect x="20" y="14" width="24" height="24" rx="4" fill="#26A7B0" opacity="0.15"/>
+  <text x="32" y="30" fontSize="9" fontFamily="Lato,sans-serif" fontWeight="700" fill="#26A7B0" textAnchor="middle">GPS</text>
+  <text x="52" y="25" fontSize="7" fontFamily="Lato,sans-serif" fontWeight="700" fill="#0A1A22">Global Physical Security</text>
+  <text x="52" y="34" fontSize="5.5" fontFamily="Noto Sans TC,sans-serif" fontWeight="400" fill="#0A1A22" opacity="0.7">全球實體安全處</text>
+  <rect x="20" y="48" width="360" height="2" fill="url(#lh-grad)" rx="1"/>
+  <text x="380" y="24" fontSize="4.5" fontFamily="Lato,sans-serif" fill="#0A1A22" opacity="0.5" textAnchor="end">HsinChu Science Park</text>
+  <text x="380" y="31" fontSize="4.5" fontFamily="Lato,sans-serif" fill="#0A1A22" opacity="0.5" textAnchor="end">No. 8, Li-Hsin Rd. VI</text>
+  <text x="380" y="38" fontSize="4.5" fontFamily="Lato,sans-serif" fill="#0A1A22" opacity="0.5" textAnchor="end">HsinChu 300-096, Taiwan</text>
+</svg>
+
+</div>

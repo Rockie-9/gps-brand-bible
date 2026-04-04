@@ -1,0 +1,188 @@
+import ChapterHeader from '@/components/ChapterHeader';
+import ModuleTracker from '@/components/ModuleTracker';
+import ColorSwatch from '@/components/ColorSwatch';
+import DoExample from '@/components/DoExample';
+
+<ChapterHeader number="04" groupEn="Visual Identity" groupZh="視覺識別" titleEn="Master Color Palette" titleZh="主色調系統" ownerEn="MarCom Team" ownerZh="MarCom Team" />
+<ModuleTracker modules={[{name:'Primary',status:'done'},{name:'Secondary',status:'done'},{name:'Neutral',status:'done'}]} />
+
+### <span className="en">Primary Colors</span><span className="zh">主色</span>
+
+<p><span className="en">The turquoise-to-copper gradient is GPS's signature identity. Turquoise conveys trust and modernity; copper adds warmth and composure — together expressing secure, human-centered global operations.</span><span className="zh">青綠色至銅色漸層是 GPS 的標誌性視覺識別。青綠色傳達信任與現代感；銅色增添溫暖與沉穩——兩者共同表達安全、以人為本的全球營運精神。</span></p>
+
+<div className="swatch-grid">
+  <ColorSwatch color="#26A7B0" name="Turquoise" hex="#26A7B0" cmyk="C75 M23 Y37 K0" />
+  <div className="swatch"><div className="swatch-color" style={{background:'linear-gradient(135deg,#26A7B0,#CAC3D2)'}} /><div className="swatch-info"><div className="swatch-name">Primary Gradient</div><div className="swatch-value">Turquoise → Copper</div></div></div>
+  <ColorSwatch color="#CAC3D2" name="Copper Tone" hex="#CAC3D2" cmyk="C25 M24 Y12 K0" />
+</div>
+
+### <span className="en">Secondary Colors</span><span className="zh">輔助色</span>
+
+<div className="swatch-grid">
+  <ColorSwatch color="#8C9FCB" name="Purple" hex="#8C9FCB" cmyk="C30 M23 Y0 K20" />
+  <ColorSwatch color="#8CC897" name="Green" hex="#8CC897" cmyk="C30 M0 Y25 K22" />
+  <ColorSwatch color="#F6AD90" name="Orange" hex="#F6AD90" cmyk="C0 M30 Y41 K4" />
+</div>
+
+### <span className="en">Neutral Colors</span><span className="zh">中性色</span>
+
+<div className="swatch-grid">
+  <ColorSwatch color="#0A1A22" name="Black" hex="#0A1A22" />
+  <ColorSwatch color="#1A2A32" name="Ink" hex="#1A2A32" />
+  <ColorSwatch color="#4A5E6A" name="Slate" hex="#4A5E6A" />
+  <ColorSwatch color="#6B7B85" name="Grey 500" hex="#6B7B85" />
+  <ColorSwatch color="#B0BCC3" name="Grey 300" hex="#B0BCC3" />
+  <ColorSwatch color="#E8EDF0" name="Grey 100" hex="#E8EDF0" />
+  <ColorSwatch color="#F4F5F7" name="Grey 50" hex="#F4F5F7" />
+  <ColorSwatch color="#FFFFFF" name="White" hex="#FFFFFF" />
+</div>
+
+### <span className="en">Color Ratio</span><span className="zh">色彩比例</span>
+
+<div style={{display:'flex',borderRadius:'8px',overflow:'hidden',height:'40px',margin:'12px 0',boxShadow:'0 1px 3px rgba(0,0,0,.06)'}}>
+  <div style={{flex:6,background:'linear-gradient(135deg,#26A7B0,#CAC3D2)',display:'flex',alignItems:'center',justifyContent:'center',color:'#fff',fontSize:'11px',fontWeight:700}}>30–80%</div>
+  <div style={{flex:3,background:'#E8EDF0',display:'flex',alignItems:'center',justifyContent:'center',color:'var(--color-g500)',fontSize:'11px',fontWeight:700}}>10–60%</div>
+  <div style={{flex:3,background:'linear-gradient(135deg,#F6AD90,#8CC897)',display:'flex',alignItems:'center',justifyContent:'center',color:'var(--color-ink)',fontSize:'11px',fontWeight:700}}>10–60%</div>
+</div>
+<div style={{display:'flex',gap:0,fontSize:'9px',color:'var(--color-g500)',marginBottom:'12px'}}>
+  <div style={{flex:6,textAlign:'center'}}><span className="en">Primary / Image</span><span className="zh">主色 / 影像</span></div>
+  <div style={{flex:3,textAlign:'center'}}><span className="en">Neutral</span><span className="zh">中性色</span></div>
+  <div style={{flex:3,textAlign:'center'}}><span className="en">Secondary</span><span className="zh">輔助色</span></div>
+</div>
+
+<table className="gps-table">
+<thead><tr><th><span className="en">Role</span><span className="zh">角色</span></th><th><span className="en">Ratio</span><span className="zh">比例</span></th><th><span className="en">Application</span><span className="zh">應用</span></th></tr></thead>
+<tbody>
+<tr><td><strong>Primary</strong></td><td><code>30–80%</code></td><td><span className="en">Hero backgrounds, key visuals, brand surfaces</span><span className="zh">主視覺背景、關鍵視覺、品牌表面</span></td></tr>
+<tr><td><strong>Neutral</strong></td><td><code>10–60%</code></td><td><span className="en">Body backgrounds, card surfaces, text containers</span><span className="zh">內文背景、卡片表面、文字容器</span></td></tr>
+<tr><td><strong>Secondary</strong></td><td><code>10–60%</code></td><td><span className="en">Thematic accents, data categories, campaigns</span><span className="zh">主題點綴、數據分類、宣傳活動</span></td></tr>
+</tbody>
+</table>
+
+### <span className="en">Color Application</span><span className="zh">色彩應用</span>
+
+<DoExample
+  doContent={<><span className="en">Use neutral colors as base and highlight with the primary gradient. Use primary colors as base and balance with neutral tones. Use secondary colors to create alternative gradients that serve as thematic accents.</span><span className="zh">以中性色為底，以主漸層做強調。以主色為底，以中性色調平衡。使用輔助色創建作為主題點綴的替代漸層。</span></>}
+  dontContent={<><span className="en">Do not overuse colors or skip neutral balance. Do not color logos or type arbitrarily without ensuring contrast between background and type. Do not use harsh neon tones or visually jarring combinations. Do not apply random rainbows or unbalanced color blocks.</span><span className="zh">不要過度使用色彩或忽略中性色平衡。不要任意為標誌或文字上色而未確保背景與文字的對比。不要使用刺眼的霓虹色或視覺不協調的組合。不要使用隨意的彩虹色或不平衡的色塊。</span></>}
+/>
+
+### <span className="en">Creative Color Combinations</span><span className="zh">創意色彩組合</span>
+
+<p><span className="en">These approved combination specimens show how GPS colors work together in real layouts. Each combination is tested for contrast, harmony, and brand recognition.</span><span className="zh">這些核准的色彩組合示例展示 GPS 色彩在實際版面中如何協作。每個組合都經過對比度、和諧度和品牌辨識度測試。</span></p>
+
+<div style={{display:'flex',flexWrap:'wrap',gap:'12px',margin:'14px 0'}}>
+  {/* 1. Hero + CTA */}
+  <div style={{width:'200px',borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid'}}>
+    <div style={{height:'6px',background:'linear-gradient(135deg,#26A7B0,#CAC3D2)'}} />
+    <div style={{background:'#26A7B0',padding:'12px 10px 8px'}}>
+      <div style={{fontSize:'11px',fontWeight:700,color:'#fff',lineHeight:1.3}}>Designed Safety / 設計安全</div>
+    </div>
+    <div style={{background:'#26A7B0',padding:'0 10px 12px'}}>
+      <div style={{fontSize:'9px',color:'rgba(255,255,255,0.8)',marginBottom:'8px',lineHeight:1.4}}><span className="en">When people feel genuinely safe, they are free to focus and create.</span><span className="zh">當人們感到真正安全，他們就能自由專注與創造。</span></div>
+      <div style={{display:'inline-block',padding:'4px 14px',borderRadius:'4px',background:'#CAC3D2',color:'#0A1A22',fontSize:'9px',fontWeight:700}}>Learn More / 了解更多</div>
+    </div>
+  </div>
+
+  {/* 2. Card on Neutral */}
+  <div style={{width:'200px',borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid',background:'#F4F5F7'}}>
+    <div style={{padding:'10px'}}>
+      <div style={{background:'#fff',borderRadius:'6px',borderLeft:'4px solid #26A7B0',padding:'10px 10px'}}>
+        <div style={{fontSize:'11px',fontWeight:700,color:'#0A1A22',marginBottom:'4px'}}><span className="en">Card Title</span><span className="zh">卡片標題</span></div>
+        <div style={{fontSize:'9px',color:'#4A5E6A',lineHeight:1.5,marginBottom:'6px'}}><span className="en">Body text on a neutral surface with turquoise left border accent.</span><span className="zh">中性底色卡片搭配青綠色左邊框點綴的內文。</span></div>
+        <div style={{fontSize:'9px',color:'#1E8A92',fontWeight:700}}>Read more → 閱讀更多 →</div>
+      </div>
+    </div>
+  </div>
+
+  {/* 3. Dark Executive */}
+  <div style={{width:'200px',borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid',background:'#0A1A22'}}>
+    <div style={{padding:'14px 12px'}}>
+      <div style={{fontSize:'12px',fontWeight:700,color:'#fff',marginBottom:'4px'}}><span className="en">Executive Brief</span><span className="zh">高階簡報</span></div>
+      <div style={{height:'2px',width:'40px',background:'#3EC8D1',marginBottom:'6px'}} />
+      <div style={{fontSize:'9px',color:'#CAC3D2',lineHeight:1.5,marginBottom:'8px'}}><span className="en">Strategic direction for Q3 brand initiatives across all global sites.</span><span className="zh">Q3 品牌倡議在全球所有場域的策略方向。</span></div>
+      <div style={{fontSize:'8px',color:'#4A5E6A'}}><span className="en">Confidential · Leadership Only</span><span className="zh">機密 · 僅限管理層</span></div>
+    </div>
+  </div>
+
+  {/* 4. Warm Community */}
+  <div style={{width:'200px',borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid',background:'#F0F9F2'}}>
+    <div style={{padding:'12px'}}>
+      <div style={{display:'flex',alignItems:'center',gap:'8px',marginBottom:'6px'}}>
+        <div style={{width:'28px',height:'28px',borderRadius:'50%',background:'#26A7B0',flexShrink:0}} />
+        <div style={{fontSize:'11px',fontWeight:700,color:'#2E7D46',lineHeight:1.3}}><span className="en">Community Event</span><span className="zh">社群活動</span></div>
+      </div>
+      <div style={{fontSize:'9px',color:'#1A2A32',lineHeight:1.5}}><span className="en">Join us for Safety Awareness Week — activities for all sites and families.</span><span className="zh">加入安全意識週——為所有場域和家庭設計的活動。</span></div>
+    </div>
+  </div>
+
+  {/* 5. Alert / Safety */}
+  <div style={{width:'200px',borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid',background:'#fff'}}>
+    <div style={{height:'4px',background:'#D94F4F'}} />
+    <div style={{padding:'12px'}}>
+      <div style={{fontSize:'11px',fontWeight:700,color:'#0A1A22',marginBottom:'4px'}}><span className="en">Safety Notice</span><span className="zh">安全通知</span></div>
+      <div style={{fontSize:'9px',color:'#4A5E6A',lineHeight:1.5,marginBottom:'8px'}}><span className="en">Emergency drill scheduled for all floors. Please review evacuation routes.</span><span className="zh">所有樓層已排定緊急演練。請檢視疏散路線。</span></div>
+      <div style={{display:'inline-block',padding:'4px 14px',borderRadius:'4px',background:'#26A7B0',color:'#fff',fontSize:'9px',fontWeight:700}}>Acknowledge / 確認</div>
+    </div>
+  </div>
+
+  {/* 6. Data Dashboard */}
+  <div style={{width:'200px',borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid',background:'#F4F5F7'}}>
+    <div style={{padding:'12px'}}>
+      <div style={{fontSize:'10px',fontWeight:700,color:'#0A1A22',marginBottom:'8px'}}><span className="en">Monthly Metrics</span><span className="zh">月度指標</span></div>
+      <div style={{display:'flex',alignItems:'flex-end',gap:'6px',height:'50px',marginBottom:'6px'}}>
+        <div style={{flex:1,background:'#26A7B0',borderRadius:'2px 2px 0 0',height:'80%'}} />
+        <div style={{flex:1,background:'#8C9FCB',borderRadius:'2px 2px 0 0',height:'55%'}} />
+        <div style={{flex:1,background:'#8CC897',borderRadius:'2px 2px 0 0',height:'70%'}} />
+        <div style={{flex:1,background:'#F6AD90',borderRadius:'2px 2px 0 0',height:'40%'}} />
+      </div>
+      <div style={{display:'flex',gap:'6px',fontSize:'7px',color:'#6B7B85'}}>
+        <div style={{flex:1,textAlign:'center'}}>SFI</div>
+        <div style={{flex:1,textAlign:'center'}}>Adopt</div>
+        <div style={{flex:1,textAlign:'center'}}>Train</div>
+        <div style={{flex:1,textAlign:'center'}}>Audit</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### <span className="en">Color Psychology</span><span className="zh">色彩心理學</span>
+
+<p><span className="en">Each GPS color was chosen for its psychological and cultural associations. Together they form a palette that communicates safety as care, not control.</span><span className="zh">每種 GPS 色彩都因其心理和文化聯想而被選擇。它們共同形成一個傳達「安全即關懷，而非管控」的色板。</span></p>
+
+<div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))',gap:'10px',margin:'14px 0'}}>
+  <div style={{borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid'}}>
+    <div style={{height:'40px',background:'#26A7B0'}} />
+    <div style={{padding:'10px',background:'#fff'}}>
+      <div style={{fontSize:'11px',fontWeight:700,color:'var(--color-ink)'}}><span className="en">Turquoise — Trust & Clarity</span><span className="zh">青綠——信任與清晰</span></div>
+      <div style={{fontSize:'9px',color:'var(--color-g500)',lineHeight:1.5,marginTop:'4px'}}><span className="en">Evokes clean water and open sky. Communicates technology and modernity without coldness. The primary brand carrier.</span><span className="zh">喚起清水與晴空。傳達科技感與現代感而不失溫度。主要品牌載體。</span></div>
+    </div>
+  </div>
+  <div style={{borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid'}}>
+    <div style={{height:'40px',background:'#CAC3D2'}} />
+    <div style={{padding:'10px',background:'#fff'}}>
+      <div style={{fontSize:'11px',fontWeight:700,color:'var(--color-ink)'}}><span className="en">Copper — Warmth & Stability</span><span className="zh">銅色——溫暖與穩定</span></div>
+      <div style={{fontSize:'9px',color:'var(--color-g500)',lineHeight:1.5,marginTop:'4px'}}><span className="en">Evokes handshake and hearth. Communicates human presence and approachability. Balances turquoise's technical edge.</span><span className="zh">喚起握手與爐火。傳達人文溫度與親近感。平衡青綠色的技術感。</span></div>
+    </div>
+  </div>
+  <div style={{borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid'}}>
+    <div style={{height:'40px',background:'#8C9FCB'}} />
+    <div style={{padding:'10px',background:'#fff'}}>
+      <div style={{fontSize:'11px',fontWeight:700,color:'var(--color-ink)'}}><span className="en">Purple — Innovation & Wisdom</span><span className="zh">紫色——創新與智慧</span></div>
+      <div style={{fontSize:'9px',color:'var(--color-g500)',lineHeight:1.5,marginTop:'4px'}}><span className="en">Evokes forward thinking and depth. Used for AI, digital transformation, and strategic communications.</span><span className="zh">喚起前瞻思維與深度。用於 AI、數位轉型和策略性溝通。</span></div>
+    </div>
+  </div>
+  <div style={{borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid'}}>
+    <div style={{height:'40px',background:'#8CC897'}} />
+    <div style={{padding:'10px',background:'#fff'}}>
+      <div style={{fontSize:'11px',fontWeight:700,color:'var(--color-ink)'}}><span className="en">Green — Growth & Community</span><span className="zh">綠色——成長與社群</span></div>
+      <div style={{fontSize:'9px',color:'var(--color-g500)',lineHeight:1.5,marginTop:'4px'}}><span className="en">Evokes living systems and nature. Used for wellbeing, community events, and Living Culture pillar content.</span><span className="zh">喚起生命系統與自然。用於健康、社群活動和活的文化支柱內容。</span></div>
+    </div>
+  </div>
+  <div style={{borderRadius:'8px',overflow:'hidden',border:'1px solid var(--color-g200)',breakInside:'avoid'}}>
+    <div style={{height:'40px',background:'#F6AD90'}} />
+    <div style={{padding:'10px',background:'#fff'}}>
+      <div style={{fontSize:'11px',fontWeight:700,color:'var(--color-ink)'}}><span className="en">Orange — Energy & Care</span><span className="zh">橘色——活力與關懷</span></div>
+      <div style={{fontSize:'9px',color:'var(--color-g500)',lineHeight:1.5,marginTop:'4px'}}><span className="en">Evokes warmth without alarm. Used for Family Extension pillar, home safety, and personal care communications.</span><span className="zh">喚起溫暖而非警示。用於家庭延伸支柱、居家安全和個人關懷溝通。</span></div>
+    </div>
+  </div>
+</div>

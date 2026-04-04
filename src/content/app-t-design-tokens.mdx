@@ -1,0 +1,177 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import CodeBlock from '@/components/CodeBlock'
+
+<ChapterHeader
+  number="T"
+  groupEn="Appendix"
+  groupZh="附錄"
+  titleEn="Design Token Export"
+  titleZh="設計代符匯出"
+  ownerEn="GPS Strategy & DX"
+  ownerZh="GPS Strategy & DX"
+/>
+
+<ModuleTracker modules={[
+  { name: 'CSS Tokens', status: 'done' },
+  { name: 'Tailwind Config', status: 'done' }
+]} />
+
+<p className="en">Copy-paste ready token definitions for all major platforms. These are the single source of truth — do not manually define brand values in code.</p>
+<p className="zh">各主要平台的代符定義，可直接複製貼上使用。這些是唯一的事實來源——不要在程式碼中手動定義品牌值。</p>
+
+### <span className="en">JSON Tokens</span><span className="zh">JSON 代符</span>
+
+<p className="en">Import into Figma Tokens, Style Dictionary, or any token pipeline.</p>
+<p className="zh">匯入 Figma Tokens、Style Dictionary 或任何代符管線。</p>
+
+<CodeBlock>
+{`{
+  "color": {
+    "primary": {
+      "turquoise":    { "value": "#26A7B0", "type": "color" },
+      "copper":       { "value": "#CAC3D2", "type": "color" }
+    },
+    "secondary": {
+      "purple":  { "value": "#8C9FCB", "type": "color" },
+      "green":   { "value": "#8CC897", "type": "color" },
+      "orange":  { "value": "#F6AD90", "type": "color" }
+    },
+    "neutral": {
+      "black":   { "value": "#0A1A22", "type": "color" },
+      "ink":     { "value": "#1A2A32", "type": "color" },
+      "charcoal":{ "value": "#2D3E48", "type": "color" },
+      "slate":   { "value": "#4A5E6A", "type": "color" },
+      "grey500": { "value": "#6B7B85", "type": "color" },
+      "grey400": { "value": "#8E9CA5", "type": "color" },
+      "grey300": { "value": "#B0BCC3", "type": "color" },
+      "grey200": { "value": "#D2DAE0", "type": "color" },
+      "grey100": { "value": "#E8EDF0", "type": "color" },
+      "grey50":  { "value": "#F4F5F7", "type": "color" },
+      "white":   { "value": "#FAFBFC", "type": "color" }
+    },
+    "semantic": {
+      "success": { "value": "#2D9F5B", "type": "color" },
+      "warning": { "value": "#E5993E", "type": "color" },
+      "danger":  { "value": "#D94F4F", "type": "color" }
+    }
+  },
+  "spacing": {
+    "sp1":  { "value": "4px" },  "sp2":  { "value": "8px" },
+    "sp3":  { "value": "12px" }, "sp4":  { "value": "16px" },
+    "sp6":  { "value": "24px" }, "sp8":  { "value": "32px" },
+    "sp12": { "value": "48px" }, "sp16": { "value": "64px" },
+    "sp24": { "value": "96px" }
+  },
+  "typography": {
+    "fontEN":  { "value": "Lato, Trebuchet MS, Verdana, sans-serif" },
+    "fontZH":  { "value": "Noto Sans TC, Microsoft JhengHei, sans-serif" },
+    "fontMono":{ "value": "SF Mono, Fira Code, Consolas, monospace" }
+  },
+  "motion": {
+    "easeEnter":  { "value": "cubic-bezier(0.25, 0.1, 0.25, 1.0)" },
+    "easeExit":   { "value": "cubic-bezier(0.22, 0.61, 0.36, 1)" },
+    "easeSettle": { "value": "cubic-bezier(0.16, 1, 0.3, 1)" },
+    "durReveal":  { "value": "400ms" },
+    "durCascade": { "value": "350ms" },
+    "durPulse":   { "value": "600ms" },
+    "durSettle":  { "value": "500ms" }
+  },
+  "breakpoint": {
+    "sm":  { "value": "420px" },
+    "md":  { "value": "768px" },
+    "lg":  { "value": "1024px" },
+    "xl":  { "value": "1280px" }
+  },
+  "radius": {
+    "sm": { "value": "4px" },
+    "md": { "value": "6px" },
+    "lg": { "value": "8px" },
+    "xl": { "value": "12px" }
+  }
+}`}
+</CodeBlock>
+
+### <span className="en">Tailwind Config</span><span className="zh">Tailwind 設定</span>
+
+<CodeBlock>
+{`// tailwind.config.js — GPS Brand Extension
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        turquoise: { 50:'#F0FAFB', 100:'#D4F1F3', 200:'#A8E3E8', 300:'#6DCDD5', 400:'#3DB9C2', 500:'#26A7B0', 600:'#1E8A92', 700:'#186E75', 800:'#145860', 900:'#0F4249', 950:'#082A30' },
+        copper:    { 50:'#F8F7F9', 100:'#EDEAF1', 200:'#DDD8E5', 300:'#CAC3D2', 400:'#B3A9C2', 500:'#9B8FA8', 600:'#857693', 700:'#6E5F7C', 800:'#574A63', 900:'#41374B', 950:'#2B2433' },
+        gps: { purple:'#8C9FCB', green:'#8CC897', orange:'#F6AD90', black:'#0A1A22', ink:'#1A2A32' }
+      },
+      fontFamily: {
+        en: ['Lato','Trebuchet MS','Verdana','sans-serif'],
+        zh: ['Noto Sans TC','Microsoft JhengHei','sans-serif'],
+        mono: ['SF Mono','Fira Code','Consolas','monospace']
+      },
+      spacing: { 'sp-1':'4px','sp-2':'8px','sp-3':'12px','sp-4':'16px','sp-6':'24px','sp-8':'32px','sp-12':'48px','sp-16':'64px','sp-24':'96px' },
+      transitionTimingFunction: {
+        'gps-enter':'cubic-bezier(0.25,0.1,0.25,1)',
+        'gps-exit':'cubic-bezier(0.22,0.61,0.36,1)',
+        'gps-settle':'cubic-bezier(0.16,1,0.3,1)'
+      }
+    }
+  }
+}`}
+</CodeBlock>
+
+### <span className="en">SCSS Variables</span><span className="zh">SCSS 變數</span>
+
+<CodeBlock>
+{`// _gps-tokens.scss
+$turquoise: #26A7B0;  $copper: #CAC3D2;
+$purple: #8C9FCB;     $green: #8CC897;    $orange: #F6AD90;
+$black: #0A1A22;      $ink: #1A2A32;      $white: #FAFBFC;
+$success: #2D9F5B;    $warning: #E5993E;  $danger: #D94F4F;
+$font-en: 'Lato','Trebuchet MS',Verdana,sans-serif;
+$font-zh: 'Noto Sans TC','Microsoft JhengHei',sans-serif;
+$sp: (1:4px, 2:8px, 3:12px, 4:16px, 6:24px, 8:32px, 12:48px, 16:64px, 24:96px);
+$bp-sm:420px; $bp-md:768px; $bp-lg:1024px; $bp-xl:1280px;`}
+</CodeBlock>
+
+### <span className="en">Responsive Breakpoints</span><span className="zh">響應式斷點</span>
+
+<p className="en">All GPS digital products must use these breakpoints for consistency across dashboards, portals, and web applications.</p>
+<p className="zh">所有 GPS 數位產品必須使用這些斷點，以確保儀表板、入口網站和網頁應用的一致性。</p>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>px</th>
+      <th><span className="en">Target</span><span className="zh">目標</span></th>
+      <th><span className="en">Columns</span><span className="zh">欄數</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>$bp-sm</code></td>
+      <td>420px</td>
+      <td><span className="en">Small phones</span><span className="zh">小型手機</span></td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td><code>$bp-md</code></td>
+      <td>768px</td>
+      <td><span className="en">Tablets, large phones</span><span className="zh">平板、大型手機</span></td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td><code>$bp-lg</code></td>
+      <td>1024px</td>
+      <td><span className="en">Laptops, small desktops</span><span className="zh">筆電、小型桌機</span></td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td><code>$bp-xl</code></td>
+      <td>1280px</td>
+      <td><span className="en">Large desktops, signage panels</span><span className="zh">大型桌機、看板面板</span></td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>

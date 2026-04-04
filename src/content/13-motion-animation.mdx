@@ -1,0 +1,235 @@
+import ChapterHeader from '@/components/ChapterHeader'
+import ModuleTracker from '@/components/ModuleTracker'
+import DoExample from '@/components/DoExample'
+import Callout from '@/components/Callout'
+import CrossRef from '@/components/CrossRef'
+import CodeBlock from '@/components/CodeBlock'
+
+<ChapterHeader
+  number={13}
+  groupEn="Expression"
+  groupZh="表達"
+  titleEn="Motion & Animation"
+  titleZh="動態與動畫"
+  ownerEn="MarCom Team"
+  ownerZh="MarCom Team"
+/>
+
+<ModuleTracker modules={[
+  { name: 'Principles', status: 'done' },
+  { name: 'Tokens', status: 'done' },
+  { name: 'Moods', status: 'done' },
+  { name: 'Video Examples', status: 'todo' },
+]} />
+
+<p className="en">Motion feels like a controlled sweep — purposeful, measured, never frenetic.</p>
+<p className="zh">動態感覺像是一次有控制的掃掠——有目的、有節制、從不急躁。</p>
+
+### <span className="en">Four Signature Motions</span><span className="zh">四種標誌性動態</span>
+
+<div className="motion-demo">
+  <div className="motion-demos">
+    <div className="motion-ball pulse-anim">Pulse</div>
+    <div className="motion-ball sweep-anim">Sweep</div>
+    <div className="motion-ball reveal-anim">Reveal</div>
+    <div className="motion-ball fade-anim">Fade</div>
+  </div>
+  <div className="motion-labels">
+    <span>Status</span>
+    <span>Entry</span>
+    <span>Data</span>
+    <span>Ambient</span>
+  </div>
+</div>
+
+### <span className="en">Tokens</span><span className="zh">動態設計代符</span>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Token</span><span className="zh">代符</span></th>
+      <th><span className="en">Value</span><span className="zh">值</span></th>
+      <th><span className="en">Use</span><span className="zh">用途</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>--dur-fast</code></td><td>150ms</td><td>Hover, toggle</td></tr>
+    <tr><td><code>--dur-normal</code></td><td>300ms</td><td>Panel slide, card reveal</td></tr>
+    <tr><td><code>--dur-slow</code></td><td>600ms</td><td>Page transition, hero</td></tr>
+    <tr><td><code>--ease-default</code></td><td>cubic-bezier(0.25,0.1,0.25,1)</td><td>Standard</td></tr>
+    <tr><td><code>--ease-enter</code></td><td>cubic-bezier(0,0,0.2,1)</td><td>Elements entering</td></tr>
+    <tr><td><code>--stagger</code></td><td>60ms</td><td>Sibling delay</td></tr>
+  </tbody>
+</table>
+
+<Callout type="warning">
+  <strong><span className="en">Forbidden:</span><span className="zh">禁止：</span></strong>
+  <span className="en">No bounce/elastic. No spinning (surveillance connotation). No auto-play video BG. No infinite loops on content. No parallax. Respect <code>prefers-reduced-motion</code>.</span>
+  <span className="zh">不使用彈跳/彈性動效。不使用旋轉（有監控聯想）。不使用自動播放影片背景。不使用內容的無限循環。不使用視差效果。尊重 <code>prefers-reduced-motion</code>。</span>
+</Callout>
+
+### <span className="en">Motion Personality</span><span className="zh">動態性格</span>
+
+<p className="en">Each signature motion carries an emotional intent. Share these metaphors with your team to ensure the feel matches the technical parameters.</p>
+<p className="zh">每種標誌性動態都帶有情感意圖。與團隊分享這些比喻，以確保感受與技術參數一致。</p>
+
+<div className="card-grid card-grid-2" style={{gap:'10px',margin:'12px 0'}}>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}>Reveal</div>
+    <div className="card-value"><span className="en">A curtain rising gently</span><span className="zh">一道輕輕升起的帷幕</span></div>
+    <div className="card-note"><span className="en">Content emerges from rest — never jumps in. Like watching morning light gradually illuminate a room. Feels: calm arrival, quiet confidence.</span><span className="zh">內容從靜止中浮現——永遠不會跳入。像觀看晨光逐漸照亮一個房間。感受：沉靜到來、安靜自信。</span></div>
+  </div>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}>Pulse</div>
+    <div className="card-value"><span className="en">A heartbeat, not an alarm</span><span className="zh">一次心跳，而非警鈴</span></div>
+    <div className="card-note"><span className="en">A rhythmic, living emphasis — not frantic. Like the steady blink of a system status indicator. Feels: alive, monitored, under control.</span><span className="zh">有韻律的、活的強調——不是慌亂的。像系統狀態指示燈的穩定閃爍。感受：活躍、被監控、在掌控中。</span></div>
+  </div>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}>Cascade</div>
+    <div className="card-value"><span className="en">Dominoes in slow motion</span><span className="zh">慢動作的骨牌</span></div>
+    <div className="card-note"><span className="en">Sequential elements follow a leader — each waits its turn with precision. Like a well-drilled team moving through a checkpoint. Feels: orchestrated, professional, deliberate.</span><span className="zh">序列元素跟隨引導者——每個精確等待自己的順序。像一個訓練有素的團隊通過檢查站。感受：有編排、專業、刻意為之。</span></div>
+  </div>
+  <div className="card" style={{padding:'12px'}}>
+    <div className="card-label" style={{color:'var(--turquoise)'}}>Settle</div>
+    <div className="card-value"><span className="en">A stone finding its resting place</span><span className="zh">一顆石頭找到它的安歇之處</span></div>
+    <div className="card-note"><span className="en">An element that overshoots slightly, then eases into its final position. Like setting down a briefcase on a desk — the smallest bounce, then stillness. Feels: resolved, grounded, complete.</span><span className="zh">一個元素略微超出，然後緩和至最終位置。像把公事包放在桌上——最輕微的彈跳，然後靜止。感受：解決、踏實、完成。</span></div>
+  </div>
+</div>
+
+### <span className="en">Motion Timing Tokens</span><span className="zh">動態時間代符</span>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Motion</span><span className="zh">動態</span></th>
+      <th><span className="en">Entry</span><span className="zh">進入</span></th>
+      <th><span className="en">Exit</span><span className="zh">退出</span></th>
+      <th><span className="en">Stagger</span><span className="zh">錯開</span></th>
+      <th><span className="en">Easing</span><span className="zh">緩動</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Reveal</td><td><code>400ms</code></td><td><code>300ms</code></td><td><code>60ms</code></td><td><code>cubic-bezier(0.25, 0.1, 0.25, 1.0)</code></td></tr>
+    <tr><td>Pulse</td><td><code>600ms</code></td><td><code>600ms</code></td><td>—</td><td><code>cubic-bezier(0.4, 0, 0.6, 1)</code></td></tr>
+    <tr><td>Cascade</td><td><code>350ms</code></td><td><code>250ms</code></td><td><code>80ms</code></td><td><code>cubic-bezier(0.22, 0.61, 0.36, 1)</code></td></tr>
+    <tr><td>Settle</td><td><code>500ms</code></td><td><code>400ms</code></td><td>—</td><td><code>cubic-bezier(0.16, 1, 0.3, 1)</code></td></tr>
+  </tbody>
+</table>
+
+### <span className="en">Named Easing Curves</span><span className="zh">命名緩動曲線</span>
+
+<div style={{display:'flex',gap:'12px',flexWrap:'wrap',margin:'12px 0'}}>
+  <svg width="120" height="100" viewBox="0 0 120 100" style={{background:'var(--g50)',borderRadius:'6px',border:'1px solid var(--g200)'}}>
+    <line x1="10" y1="85" x2="110" y2="85" stroke="var(--g300)" strokeWidth=".5"/>
+    <line x1="10" y1="15" x2="10" y2="85" stroke="var(--g300)" strokeWidth=".5"/>
+    <path d="M10,85 C35,78 35,15 110,15" fill="none" stroke="var(--turquoise)" strokeWidth="2"/>
+    <text x="60" y="98" textAnchor="middle" fontSize="7" fill="var(--turquoise-700)" fontWeight="700">--ease-enter</text>
+    <text x="60" y="10" textAnchor="middle" fontSize="6" fill="var(--g500)">(0.25, 0.1, 0.25, 1.0)</text>
+  </svg>
+  <svg width="120" height="100" viewBox="0 0 120 100" style={{background:'var(--g50)',borderRadius:'6px',border:'1px solid var(--g200)'}}>
+    <line x1="10" y1="85" x2="110" y2="85" stroke="var(--g300)" strokeWidth=".5"/>
+    <line x1="10" y1="15" x2="10" y2="85" stroke="var(--g300)" strokeWidth=".5"/>
+    <path d="M10,85 C75,85 75,15 110,15" fill="none" stroke="var(--purple)" strokeWidth="2"/>
+    <text x="60" y="98" textAnchor="middle" fontSize="7" fill="var(--purple-700)" fontWeight="700">--ease-exit</text>
+    <text x="60" y="10" textAnchor="middle" fontSize="6" fill="var(--g500)">(0.22, 0.61, 0.36, 1)</text>
+  </svg>
+  <svg width="120" height="100" viewBox="0 0 120 100" style={{background:'var(--g50)',borderRadius:'6px',border:'1px solid var(--g200)'}}>
+    <line x1="10" y1="85" x2="110" y2="85" stroke="var(--g300)" strokeWidth=".5"/>
+    <line x1="10" y1="15" x2="10" y2="85" stroke="var(--g300)" strokeWidth=".5"/>
+    <path d="M10,85 C26,15 40,15 110,15" fill="none" stroke="var(--green)" strokeWidth="2"/>
+    <text x="60" y="98" textAnchor="middle" fontSize="7" fill="var(--green-700)" fontWeight="700">--ease-settle</text>
+    <text x="60" y="10" textAnchor="middle" fontSize="6" fill="var(--g500)">(0.16, 1, 0.3, 1)</text>
+  </svg>
+</div>
+
+### <span className="en">Micro-Interaction Specimens</span><span className="zh">微互動模擬</span>
+
+<p><span className="en">GPS motion principles applied to common UI micro-interactions. These specimens demonstrate how motion personality creates a consistent "feel" across all touchpoints.</span><span className="zh">GPS 動態原則應用於常見 UI 微互動。這些模擬展示動態個性如何在所有接觸點創造一致的「感覺」。</span></p>
+
+<div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill, minmax(200px, 1fr))',gap:'12px',margin:'14px 0'}}>
+  <div style={{background:'#fff',border:'1px solid var(--color-g200)',borderRadius:'8px',padding:'16px',textAlign:'center',breakInside:'avoid'}}>
+    <div style={{fontSize:'9px',fontWeight:700,letterSpacing:'0.08em',color:'var(--color-turquoise-600)',marginBottom:'8px',textTransform:'uppercase'}}><span className="en">Button Hover</span><span className="zh">按鈕懸停</span></div>
+    <div style={{display:'inline-block',padding:'8px 20px',background:'var(--color-turquoise-500)',color:'#fff',borderRadius:'4px',fontSize:'11px',fontWeight:700,cursor:'pointer',transition:'all 0.3s cubic-bezier(0.25,0.1,0.25,1)',transformOrigin:'center'}}>
+      <span className="en">Hover Me</span><span className="zh">懸停此處</span>
+    </div>
+    <div style={{fontSize:'8px',color:'var(--color-g400)',marginTop:'8px',fontFamily:'var(--font-mono)'}}>300ms ease-out · scale(1.02)</div>
+  </div>
+
+  <div style={{background:'#fff',border:'1px solid var(--color-g200)',borderRadius:'8px',padding:'16px',textAlign:'center',breakInside:'avoid'}}>
+    <div style={{fontSize:'9px',fontWeight:700,letterSpacing:'0.08em',color:'var(--color-turquoise-600)',marginBottom:'8px',textTransform:'uppercase'}}><span className="en">Card Enter</span><span className="zh">卡片進場</span></div>
+    <div style={{background:'var(--color-turquoise-50)',border:'1px solid var(--color-turquoise-200)',borderRadius:'6px',padding:'10px',animation:'gps-reveal 0.4s ease-out'}}>
+      <div style={{fontSize:'10px',fontWeight:700,color:'var(--color-ink)'}}><span className="en">Notification</span><span className="zh">通知</span></div>
+      <div style={{fontSize:'8px',color:'var(--color-g500)'}}>reveal · 400ms</div>
+    </div>
+    <div style={{fontSize:'8px',color:'var(--color-g400)',marginTop:'8px',fontFamily:'var(--font-mono)'}}>translateY(12px→0) + fade</div>
+  </div>
+
+  <div style={{background:'#fff',border:'1px solid var(--color-g200)',borderRadius:'8px',padding:'16px',textAlign:'center',breakInside:'avoid'}}>
+    <div style={{fontSize:'9px',fontWeight:700,letterSpacing:'0.08em',color:'var(--color-turquoise-600)',marginBottom:'8px',textTransform:'uppercase'}}><span className="en">Status Pulse</span><span className="zh">狀態脈動</span></div>
+    <div style={{display:'flex',gap:'8px',justifyContent:'center',alignItems:'center'}}>
+      <div style={{width:'8px',height:'8px',borderRadius:'50%',background:'var(--color-success)',animation:'gps-pulse 2s ease-in-out infinite'}} />
+      <span style={{fontSize:'10px',color:'var(--color-ink)'}}><span className="en">Online</span><span className="zh">在線</span></span>
+    </div>
+    <div style={{fontSize:'8px',color:'var(--color-g400)',marginTop:'8px',fontFamily:'var(--font-mono)'}}>pulse · 2s infinite</div>
+  </div>
+
+  <div style={{background:'#fff',border:'1px solid var(--color-g200)',borderRadius:'8px',padding:'16px',textAlign:'center',breakInside:'avoid'}}>
+    <div style={{fontSize:'9px',fontWeight:700,letterSpacing:'0.08em',color:'var(--color-turquoise-600)',marginBottom:'8px',textTransform:'uppercase'}}><span className="en">Progress Bar</span><span className="zh">進度條</span></div>
+    <div style={{background:'var(--color-g100)',borderRadius:'4px',height:'6px',overflow:'hidden'}}>
+      <div style={{width:'72%',height:'100%',background:'linear-gradient(90deg,var(--color-turquoise-500),var(--color-copper-300))',borderRadius:'4px',animation:'gps-sweep 3s ease-in-out infinite'}} />
+    </div>
+    <div style={{fontSize:'8px',color:'var(--color-g400)',marginTop:'8px',fontFamily:'var(--font-mono)'}}>sweep · gradient fill</div>
+  </div>
+</div>
+
+### <span className="en">Video Template Specs</span><span className="zh">影片模板規格</span>
+
+<table className="gps-table">
+  <thead>
+    <tr>
+      <th><span className="en">Format</span><span className="zh">格式</span></th>
+      <th><span className="en">Resolution</span><span className="zh">解析度</span></th>
+      <th><span className="en">Safe Title</span><span className="zh">安全標題區</span></th>
+      <th><span className="en">Logo Zone</span><span className="zh">標誌區域</span></th>
+      <th><span className="en">Intro/Outro</span><span className="zh">片頭/片尾</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>16:9 Landscape</td><td>1920 × 1080</td><td><span className="en">80% center</span><span className="zh">中央 80%</span></td><td><span className="en">Bottom-right, 120px h</span><span className="zh">右下，高 120px</span></td><td>2.5s / 2s</td></tr>
+    <tr><td>9:16 Vertical</td><td>1080 × 1920</td><td><span className="en">85% center</span><span className="zh">中央 85%</span></td><td><span className="en">Bottom-center, 80px h</span><span className="zh">底部置中，高 80px</span></td><td>2s / 1.5s</td></tr>
+    <tr><td>1:1 Square</td><td>1080 × 1080</td><td><span className="en">80% center</span><span className="zh">中央 80%</span></td><td><span className="en">Bottom-right, 80px h</span><span className="zh">右下，高 80px</span></td><td>2s / 1.5s</td></tr>
+    <tr><td><span className="en">Digital Signage</span><span className="zh">數位看板</span></td><td>1920 × 1080</td><td><span className="en">90% center</span><span className="zh">中央 90%</span></td><td><span className="en">Bottom-right, 120px h</span><span className="zh">右下，高 120px</span></td><td>2.5s / 2s</td></tr>
+  </tbody>
+</table>
+
+### <span className="en">Audio & Sound</span><span className="zh">音效與聲音</span>
+
+<p className="en">GPS does not maintain a sonic brand identity. Digital interfaces use system-default notification sounds only. Video productions may use ambient tone (low-frequency, non-melodic) but no branded music or jingles. Emergency communications follow standard alert tones per local regulation (OSHA, J-ALERT, etc.).</p>
+<p className="zh">GPS 不維護聲音品牌識別。數位介面僅使用系統預設通知音。影片製作可使用氛圍音（低頻、非旋律性），但不使用品牌音樂或片頭曲。緊急通訊遵循當地法規的標準警報音（OSHA、J-ALERT 等）。</p>
+
+### <span className="en">Motion Code Reference</span><span className="zh">動態程式碼參考</span>
+
+<CodeBlock>
+{`/* GPS Motion Tokens */
+:root {
+  --ease-enter: cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  --ease-exit:  cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-reveal: 400ms; --dur-cascade: 350ms;
+  --dur-pulse: 600ms;  --dur-settle: 500ms;
+}
+@keyframes gps-reveal {
+  from { opacity:0; transform:translateY(12px) }
+  to   { opacity:1; transform:translateY(0) }
+}
+@keyframes gps-cascade {
+  from { opacity:0; transform:translateX(-8px) }
+  to   { opacity:1; transform:translateX(0) }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}`}
+</CodeBlock>
