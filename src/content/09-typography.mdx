@@ -20,7 +20,8 @@ import CodeBlock from '@/components/CodeBlock'
   { name: 'Scale', status: 'done' },
   { name: 'Hierarchy', status: 'done' },
   { name: 'Type on Image', status: 'done' },
-  { name: 'CJK Guide', status: 'wip' },
+  { name: 'CJK Guide', status: 'done' },
+  { name: 'JP/SC', status: 'done' },
 ]} />
 
 <table className="gps-table">
@@ -32,9 +33,14 @@ import CodeBlock from '@/components/CodeBlock'
     </tr>
   </thead>
   <tbody>
-    <tr><td><strong>Chinese</strong></td><td><code>Noto Sans TC</code></td><td>Light 300 · Regular 400 · Medium 500 · Bold 700</td></tr>
+    <tr><td><strong>Chinese (TC)</strong></td><td><code>Noto Sans TC</code></td><td>Light 300 · Regular 400 · Medium 500 · Bold 700</td></tr>
+    <tr><td><strong>Chinese (SC)</strong></td><td><code>Noto Sans SC</code></td><td>Light 300 · Regular 400 · Medium 500 · Bold 700</td></tr>
+    <tr><td><strong>Japanese</strong></td><td><code>Noto Sans JP</code></td><td>Light 300 · Regular 400 · Medium 500 · Bold 700</td></tr>
     <tr><td><strong>English</strong></td><td><code>Lato</code></td><td>Light 300 · Regular 400 · Bold 700</td></tr>
-    <tr><td><strong>Fallback</strong></td><td><code>Trebuchet MS, Verdana</code></td><td>Regular · Bold</td></tr>
+    <tr><td><strong>Fallback EN</strong></td><td><code>Trebuchet MS, Verdana</code></td><td>Regular · Bold</td></tr>
+    <tr><td><strong>Fallback TC</strong></td><td><code>Microsoft JhengHei</code></td><td>Regular · Bold</td></tr>
+    <tr><td><strong>Fallback SC</strong></td><td><code>Microsoft YaHei</code></td><td>Regular · Bold</td></tr>
+    <tr><td><strong>Fallback JP</strong></td><td><code>Hiragino Sans, Yu Gothic</code></td><td>Regular · Bold</td></tr>
   </tbody>
 </table>
 
@@ -64,6 +70,40 @@ import CodeBlock from '@/components/CodeBlock'
   <div style={{fontFamily:'var(--fz)',fontSize:'14px',color:'var(--dm-t)',lineHeight:1.85,marginBottom:'12px',maxWidth:'65ch',opacity:0.9}}>深色背景上的 Noto Sans TC 內文。主要文字使用 DM-Text (#E2E8EC)，次要內容使用 DM-TextMuted (#8A9BA5)。永不使用純白——會造成過度對比。</div>
   <div style={{fontFamily:'var(--fe)',fontSize:'11px',color:'var(--dm-tm)',lineHeight:1.6}}>Caption · DM-TextMuted (#8A9BA5) · metadata, timestamps, secondary labels</div>
 </div>
+
+### <span className="en">Type Specimen — Japanese (JASM)</span><span className="zh">字體樣本頁——日文（JASM）</span>
+
+<p><span className="en">Japanese typography for JASM Kumamoto site communications. Uses Noto Sans JP with polite-form (丁寧語) writing conventions. No vertical text — all horizontal composition.</span><span className="zh">用於 JASM 熊本廠區通訊的日文排版。使用 Noto Sans JP 搭配丁寧語書寫慣例。不使用直排——全部採用橫式排版。</span></p>
+
+<div style={{padding:'24px',background:'#fff',border:'1px solid var(--color-g200)',borderRadius:'8px',margin:'16px 0'}}>
+  <div style={{fontFamily:'Noto Sans JP, Hiragino Sans, Yu Gothic, sans-serif',fontWeight:700,fontSize:'28px',color:'#0A1A22',lineHeight:1.5,marginBottom:'4px'}}>安全は、制限ではなく自由です</div>
+  <div style={{fontFamily:'Lato, sans-serif',fontWeight:300,fontSize:'12px',color:'var(--color-g500)',marginBottom:'16px',letterSpacing:'0.04em'}}>Safety is freedom, not restriction</div>
+  <div style={{fontFamily:'Noto Sans JP, sans-serif',fontWeight:700,fontSize:'20px',color:'var(--color-turquoise-700)',lineHeight:1.5,marginBottom:'4px'}}>H2 · セクション見出し · Noto Sans JP Bold 20px</div>
+  <div style={{fontFamily:'Noto Sans JP, sans-serif',fontWeight:500,fontSize:'15px',color:'var(--color-charcoal)',lineHeight:1.5,marginBottom:'12px'}}>H3 · サブセクション · Noto Sans JP Medium 15px</div>
+  <div style={{fontFamily:'Noto Sans JP, sans-serif',fontSize:'14px',color:'#1A2A32',lineHeight:1.85,marginBottom:'12px',maxWidth:'65ch'}}>本文テキスト Noto Sans JP Regular 14px。JASMは、環境設計による犯罪予防（CPTED）の原則に基づき、すべての従業員が安心して働ける職場環境を構築しています。安全は私たちの文化であり、カイゼンの精神で日々改善を続けています。</div>
+  <div style={{fontFamily:'Noto Sans JP, sans-serif',fontSize:'11px',color:'var(--color-g500)',lineHeight:1.7}}>キャプション · Noto Sans JP Regular 11px · メタデータ、ラベル、補足テキスト</div>
+</div>
+
+<Callout type="tip"><span className="en"><strong>JASM conventions:</strong> Always use 丁寧語 (polite form: ～ます/～です). No vertical text layout. Katakana for GPS brand terms: セキュリティ, ターコイズ. Line-height: 1.85 for Japanese body text. Primary digital channel: LINE Works.</span><span className="zh"><strong>JASM 慣例：</strong>始終使用丁寧語（禮貌形式：～ます/～です）。不使用直排。品牌術語使用片假名：セキュリティ、ターコイズ。日文內文行高：1.85。主要數位通路：LINE Works。</span></Callout>
+
+### <span className="en">Type Specimen — Simplified Chinese (Shanghai/Nanjing)</span><span className="zh">字體樣本頁——簡體中文（上海/南京）</span>
+
+<p><span className="en">Simplified Chinese typography for mainland China site communications. Uses Noto Sans SC. Do NOT auto-convert zh-TW → zh-CN — have native speakers produce SC content independently to avoid awkward phrasing.</span><span className="zh">用於中國大陸廠區通訊的簡體中文排版。使用 Noto Sans SC。不要自動將繁體中文轉換為簡體中文——應由母語人士獨立製作簡體內容，避免不自然的措辭。</span></p>
+
+<div style={{padding:'24px',background:'#fff',border:'1px solid var(--color-g200)',borderRadius:'8px',margin:'16px 0'}}>
+  <div style={{fontFamily:'Noto Sans SC, Microsoft YaHei, sans-serif',fontWeight:700,fontSize:'28px',color:'#0A1A22',lineHeight:1.5,marginBottom:'4px'}}>安全不是限制，而是自由的保障</div>
+  <div style={{fontFamily:'Lato, sans-serif',fontWeight:300,fontSize:'12px',color:'var(--color-g500)',marginBottom:'16px',letterSpacing:'0.04em'}}>Safety is not restriction, but the guarantee of freedom</div>
+  <div style={{fontFamily:'Noto Sans SC, sans-serif',fontWeight:700,fontSize:'20px',color:'var(--color-turquoise-700)',lineHeight:1.5,marginBottom:'4px'}}>H2 · 章节标题 · Noto Sans SC Bold 20px</div>
+  <div style={{fontFamily:'Noto Sans SC, sans-serif',fontWeight:500,fontSize:'15px',color:'var(--color-charcoal)',lineHeight:1.5,marginBottom:'12px'}}>H3 · 子标题 · Noto Sans SC Medium 15px</div>
+  <div style={{fontFamily:'Noto Sans SC, sans-serif',fontSize:'14px',color:'#1A2A32',lineHeight:1.85,marginBottom:'12px',maxWidth:'65ch'}}>正文文本 Noto Sans SC Regular 14px。全球实体安全处（GPS）致力于为台积电全球各运营据点构建安全、可靠的工作环境。我们的安全理念源于关怀，通过环境设计预防犯罪（CPTED）原则，让安全融入每一个空间的设计之中。</div>
+  <div style={{fontFamily:'Noto Sans SC, sans-serif',fontSize:'11px',color:'var(--color-g500)',lineHeight:1.7}}>说明文字 · Noto Sans SC Regular 11px · 元数据、标签、辅助文字</div>
+</div>
+
+<Callout type="warning"><span className="en"><strong>SC content rule:</strong> Never auto-convert zh-TW to zh-CN. Mainland Chinese writing conventions differ beyond character simplification — sentence structure, terminology, and formal register vary. Always commission independent SC copywriting from native speakers.</span><span className="zh"><strong>簡體內容規則：</strong>絕不自動將繁體中文轉換為簡體中文。中國大陸的寫作慣例不僅是字形簡化——句式結構、用語和正式語體都有差異。務必由母語人士獨立撰寫簡體內容。</span></Callout>
+
+### <span className="en">Regional Typography Summary</span><span className="zh">區域字體摘要</span>
+
+<table className="gps-table"><thead><tr><th><span className="en">Region</span><span className="zh">區域</span></th><th><span className="en">Primary Font</span><span className="zh">主要字體</span></th><th><span className="en">Fallback</span><span className="zh">備用字體</span></th><th><span className="en">Line-Height</span><span className="zh">行高</span></th><th><span className="en">Key Rules</span><span className="zh">關鍵規則</span></th></tr></thead><tbody><tr><td>TW (HQ)</td><td><code>Noto Sans TC</code></td><td>Microsoft JhengHei</td><td>1.85</td><td><span className="en">Co-equal with EN, never footnoted</span><span className="zh">與英文共同等權，絕不置於註腳</span></td></tr><tr><td>JP (JASM)</td><td><code>Noto Sans JP</code></td><td>Hiragino Sans, Yu Gothic</td><td>1.85</td><td><span className="en">丁寧語 only, no vertical text, katakana for brand terms</span><span className="zh">僅使用丁寧語、不使用直排、品牌術語用片假名</span></td></tr><tr><td>CN (Shanghai/Nanjing)</td><td><code>Noto Sans SC</code></td><td>Microsoft YaHei</td><td>1.85</td><td><span className="en">No auto-convert from TC, independent SC copywriting</span><span className="zh">不自動從繁體轉換、獨立簡體撰寫</span></td></tr><tr><td>DE (ESMC)</td><td><code>Lato</code></td><td>Trebuchet MS, Verdana</td><td>1.65</td><td><span className="en">German supplement only, not full localization</span><span className="zh">僅德文補充、非全面本地化</span></td></tr><tr><td>US (AZ)</td><td><code>Lato</code></td><td>Trebuchet MS, Verdana</td><td>1.65</td><td><span className="en">ES supplement for OSHA (accessibility, not localization)</span><span className="zh">西文補充用於 OSHA（無障礙性、非本地化）</span></td></tr></tbody></table>
 
 ### <span className="en">Type Scale</span><span className="zh">字級系統</span>
 
