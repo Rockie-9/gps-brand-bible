@@ -3,10 +3,11 @@
 import { useState, useEffect, useCallback, Suspense, lazy, ComponentType } from 'react';
 import Sidebar from '@/components/Sidebar';
 import TopBar from '@/components/TopBar';
-import AIPromptPanel from '@/components/AIPromptPanel';
-import AIComplianceChecker from '@/components/AIComplianceChecker';
-import AIBrandAssistant from '@/components/AIBrandAssistant';
 import { sectionIdToSlug } from '@/lib/navigation';
+
+const AIPromptPanel = lazy(() => import('@/components/AIPromptPanel'));
+const AIComplianceChecker = lazy(() => import('@/components/AIComplianceChecker'));
+const AIBrandAssistant = lazy(() => import('@/components/AIBrandAssistant'));
 
 const contentComponents: Record<string, () => Promise<{ default: ComponentType }>> = {
   '01-brand-foundation': () => import('@/content/01-brand-foundation.mdx'),
