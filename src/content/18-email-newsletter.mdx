@@ -75,6 +75,126 @@ import Callout from '@/components/Callout'
 
 <table className="gps-table"><thead><tr><th><span className="en">Newsletter</span><span className="zh">電子報</span></th><th><span className="en">Header Gradient</span><span className="zh">標頭漸層</span></th><th><span className="en">Accent</span><span className="zh">點綴色</span></th><th><span className="en">Frequency</span><span className="zh">頻率</span></th><th><span className="en">Audience</span><span className="zh">受眾</span></th></tr></thead><tbody><tr><td>Supply Chain Security</td><td>Turquoise → Copper (135°)</td><td>Turquoise-600</td><td><span className="en">Monthly</span><span className="zh">月刊</span></td><td><span className="en">Security managers, Section Heads</span><span className="zh">安全管理人員、Section Head</span></td></tr><tr><td>AI &amp; DX Navigator</td><td>Copper → Purple (135°)</td><td>Copper-600</td><td><span className="en">Biweekly</span><span className="zh">雙週刊</span></td><td><span className="en">All GPS staff</span><span className="zh">全體 GPS 人員</span></td></tr><tr><td>GPS Rebranding Update</td><td>Deep Turquoise → Turquoise (135°)</td><td>Turquoise-500</td><td><span className="en">Quarterly</span><span className="zh">季刊</span></td><td><span className="en">GPS Director, Section Heads, MarCom</span><span className="zh">GPS Director、Section Head、MarCom</span></td></tr></tbody></table>
 
+### <span className="en">Three Newsletter Layout Designs</span><span className="zh">三種電子報版型設計</span>
+
+<p><span className="en">Three distinct layouts for GPS newsletters, each meeting Outlook-safe requirements, bilingual co-equal display, and 600px max-width. Select based on content density and communication purpose.</span><span className="zh">GPS 電子報的三種不同版型，每種均符合 Outlook 安全要求、雙語對等顯示和 600px 最大寬度。依內容密度和溝通目的選擇。</span></p>
+
+<div style={{display:'flex',gap:'16px',flexWrap:'wrap',margin:'16px 0',breakInside:'avoid'}}>
+
+{/* Layout A: Hero-Centric */}
+<div style={{width:'260px',flexShrink:0}}>
+<p style={{fontWeight:700,fontSize:'12px',marginBottom:'8px'}}><span className="en">Layout A: Hero-Centric</span><span className="zh">版型 A：主視覺型</span></p>
+<p style={{fontSize:'10px',color:'#666',marginBottom:'8px'}}><span className="en">Supply Chain Security newsletter</span><span className="zh">供應鏈安全電子報</span></p>
+<div style={{width:'260px',border:'1px solid #ddd',borderRadius:'4px',overflow:'hidden',background:'#fff',fontSize:'0'}}>
+  <div style={{background:'linear-gradient(135deg, #26A7B0, #CAC3D2)',height:'120px',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:'16px'}}>
+    <div style={{color:'#fff',fontWeight:700,fontSize:'14px',textAlign:'center'}}>Safety Update</div>
+    <div style={{color:'#fff',fontSize:'11px',textAlign:'center',marginTop:'4px'}}>安全更新</div>
+  </div>
+  <div style={{padding:'16px'}}>
+    <div style={{fontSize:'10px',lineHeight:1.6,color:'#0A1A22',marginBottom:'8px'}}>Supply chain security remains a top priority across all GPS sites globally. We continue to strengthen our partnerships...</div>
+    <div style={{fontSize:'10px',lineHeight:1.6,color:'#0A1A22',marginBottom:'12px'}}>供應鏈安全在全球所有 GPS 廠區仍是最高優先。我們持續強化夥伴關係⋯</div>
+    <div style={{background:'#26A7B0',color:'#fff',textAlign:'center',padding:'8px 16px',borderRadius:'4px',fontSize:'11px',fontWeight:700}}>Read More / 閱讀更多</div>
+  </div>
+  <div style={{background:'#f5f5f5',padding:'8px 16px',borderTop:'1px solid #eee',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+    <div style={{fontSize:'8px',fontWeight:700,color:'#26A7B0'}}>GPS</div>
+    <div style={{fontSize:'7px',color:'#999'}}>Unsubscribe / 取消訂閱</div>
+  </div>
+</div>
+</div>
+
+{/* Layout B: Split Panel */}
+<div style={{width:'260px',flexShrink:0}}>
+<p style={{fontWeight:700,fontSize:'12px',marginBottom:'8px'}}><span className="en">Layout B: Split Panel</span><span className="zh">版型 B：分割面板型</span></p>
+<p style={{fontSize:'10px',color:'#666',marginBottom:'8px'}}><span className="en">AI &amp; DX Navigator newsletter</span><span className="zh">AI &amp; DX Navigator 電子報</span></p>
+<div style={{width:'260px',border:'1px solid #ddd',borderRadius:'4px',overflow:'hidden',background:'#fff',fontSize:'0'}}>
+  <div style={{display:'flex',minHeight:'320px'}}>
+    <div style={{width:'10px',background:'linear-gradient(180deg, #CAC3D2, #8C9FCB)',flexShrink:0}}></div>
+    <div style={{flex:1,padding:'16px'}}>
+      <div style={{fontSize:'10px',fontWeight:700,color:'#8C9FCB',marginBottom:'4px'}}>AI &amp; DX Navigator</div>
+      <div style={{fontSize:'9px',color:'#999',marginBottom:'12px'}}>Weekly Digest / 每週摘要</div>
+      <div style={{borderLeft:'3px solid #8C9FCB',paddingLeft:'8px',marginBottom:'12px'}}>
+        <div style={{fontSize:'10px',fontWeight:700,color:'#0A1A22',marginBottom:'2px'}}>AI Fluency Program Update</div>
+        <div style={{fontSize:'9px',color:'#0A1A22',lineHeight:1.5}}>New training modules for security analytics are now available.</div>
+        <div style={{fontSize:'9px',color:'#0A1A22',lineHeight:1.5}}>新的安全分析培訓模組現已上線。</div>
+      </div>
+      <div style={{borderTop:'1px solid #eee',paddingTop:'12px',marginBottom:'12px'}}>
+        <div style={{borderLeft:'3px solid #8C9FCB',paddingLeft:'8px'}}>
+          <div style={{fontSize:'10px',fontWeight:700,color:'#0A1A22',marginBottom:'2px'}}>DX Tool Spotlight</div>
+          <div style={{fontSize:'9px',color:'#0A1A22',lineHeight:1.5}}>Automated reporting dashboard goes live Q2.</div>
+          <div style={{fontSize:'9px',color:'#0A1A22',lineHeight:1.5}}>自動化報告儀表板將於第二季上線。</div>
+        </div>
+      </div>
+      <div style={{borderTop:'1px solid #eee',paddingTop:'12px'}}>
+        <div style={{borderLeft:'3px solid #8C9FCB',paddingLeft:'8px'}}>
+          <div style={{fontSize:'10px',fontWeight:700,color:'#0A1A22',marginBottom:'2px'}}>Upcoming Events</div>
+          <div style={{fontSize:'9px',color:'#0A1A22',lineHeight:1.5}}>AI workshop registration open through May.</div>
+          <div style={{fontSize:'9px',color:'#0A1A22',lineHeight:1.5}}>AI 工作坊報名至五月截止。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style={{background:'#f5f5f5',padding:'8px 16px',borderTop:'1px solid #eee',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+    <div style={{fontSize:'8px',fontWeight:700,color:'#8C9FCB'}}>GPS</div>
+    <div style={{fontSize:'7px',color:'#999'}}>Unsubscribe / 取消訂閱</div>
+  </div>
+</div>
+</div>
+
+{/* Layout C: Magazine Grid */}
+<div style={{width:'260px',flexShrink:0}}>
+<p style={{fontWeight:700,fontSize:'12px',marginBottom:'8px'}}><span className="en">Layout C: Magazine Grid</span><span className="zh">版型 C：雜誌格型</span></p>
+<p style={{fontSize:'10px',color:'#666',marginBottom:'8px'}}><span className="en">GPS Rebranding Update newsletter</span><span className="zh">GPS 品牌重塑更新電子報</span></p>
+<div style={{width:'260px',border:'1px solid #ddd',borderRadius:'4px',overflow:'hidden',background:'#fff',fontSize:'0'}}>
+  <div style={{background:'#26A7B0',padding:'10px 16px',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+    <div style={{fontSize:'10px',fontWeight:700,color:'#fff'}}>GPS</div>
+    <div style={{fontSize:'9px',color:'rgba(255,255,255,0.8)'}}>Rebranding Update / 品牌重塑更新</div>
+  </div>
+  <div style={{padding:'12px',display:'grid',gridTemplateColumns:'1fr 1fr',gap:'8px'}}>
+    <div style={{border:'1px solid #eee',borderRadius:'4px',overflow:'hidden'}}>
+      <div style={{height:'4px',background:'linear-gradient(90deg, #26A7B0, #CAC3D2)'}}></div>
+      <div style={{padding:'8px'}}>
+        <div style={{fontSize:'9px',fontWeight:700,color:'#0A1A22',marginBottom:'2px'}}>New Logo System</div>
+        <div style={{fontSize:'8px',color:'#666',lineHeight:1.4}}>Updated lockups for all sites.</div>
+        <div style={{fontSize:'8px',color:'#666',lineHeight:1.4}}>所有廠區更新標誌組合。</div>
+      </div>
+    </div>
+    <div style={{border:'1px solid #eee',borderRadius:'4px',overflow:'hidden'}}>
+      <div style={{height:'4px',background:'linear-gradient(90deg, #26A7B0, #CAC3D2)'}}></div>
+      <div style={{padding:'8px'}}>
+        <div style={{fontSize:'9px',fontWeight:700,color:'#0A1A22',marginBottom:'2px'}}>Color Palette</div>
+        <div style={{fontSize:'8px',color:'#666',lineHeight:1.4}}>Refreshed tokens live in portal.</div>
+        <div style={{fontSize:'8px',color:'#666',lineHeight:1.4}}>更新色彩代符已在入口網站上線。</div>
+      </div>
+    </div>
+    <div style={{border:'1px solid #eee',borderRadius:'4px',overflow:'hidden'}}>
+      <div style={{height:'4px',background:'linear-gradient(90deg, #26A7B0, #CAC3D2)'}}></div>
+      <div style={{padding:'8px'}}>
+        <div style={{fontSize:'9px',fontWeight:700,color:'#0A1A22',marginBottom:'2px'}}>Typography</div>
+        <div style={{fontSize:'8px',color:'#666',lineHeight:1.4}}>Lato + Noto Sans TC standard.</div>
+        <div style={{fontSize:'8px',color:'#666',lineHeight:1.4}}>Lato + Noto Sans TC 為標準字體。</div>
+      </div>
+    </div>
+    <div style={{border:'1px solid #eee',borderRadius:'4px',overflow:'hidden'}}>
+      <div style={{height:'4px',background:'linear-gradient(90deg, #26A7B0, #CAC3D2)'}}></div>
+      <div style={{padding:'8px'}}>
+        <div style={{fontSize:'9px',fontWeight:700,color:'#0A1A22',marginBottom:'2px'}}>Templates</div>
+        <div style={{fontSize:'8px',color:'#666',lineHeight:1.4}}>Download toolkit from portal.</div>
+        <div style={{fontSize:'8px',color:'#666',lineHeight:1.4}}>從入口網站下載工具包。</div>
+      </div>
+    </div>
+  </div>
+  <div style={{padding:'8px 12px'}}>
+    <div style={{background:'#26A7B0',color:'#fff',textAlign:'center',padding:'8px',borderRadius:'4px',fontSize:'10px',fontWeight:700}}>View Brand Portal / 瀏覽品牌入口</div>
+  </div>
+  <div style={{background:'#f5f5f5',padding:'8px 16px',borderTop:'1px solid #eee',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+    <div style={{fontSize:'8px',fontWeight:700,color:'#26A7B0'}}>GPS</div>
+    <div style={{fontSize:'7px',color:'#999'}}>Unsubscribe / 取消訂閱</div>
+  </div>
+</div>
+</div>
+
+</div>
+
 
 ### <span className="en">Email Typography Stack</span><span className="zh">電子郵件字體堆疊</span>
 

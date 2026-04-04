@@ -78,3 +78,46 @@ import CrossRef from '@/components/CrossRef'
 <Callout type="warning">
 <span className="en"><strong>Emergency override:</strong> When a site enters emergency mode, all signage content is replaced with a single full-screen emergency message. Red (#D94F4F) background, white text, 96px minimum font size. Standard content resumes only after all-clear from site command.</span><span className="zh"><strong>緊急覆蓋：</strong>當場域進入緊急模式時，所有看板內容替換為單一全螢幕緊急訊息。紅色（#D94F4F）背景、白色文字、最小 96px 字級。標準內容僅在場域指揮中心發布全部解除後恢復。</span>
 </Callout>
+
+### <span className="en">Internal Announcement Template</span><span className="zh">內部公告模板</span>
+
+<p><span className="en">Standard template for intranet and Teams announcements. Maintains brand consistency across internal digital communications.</span><span className="zh">用於內部網站和 Teams 公告的標準模板。在內部數位溝通中維持品牌一致性。</span></p>
+
+<div style={{maxWidth:'400px',margin:'16px 0',border:'1px solid #ddd',borderRadius:'8px',overflow:'hidden',background:'#fff',breakInside:'avoid'}}>
+  {/* Turquoise top accent bar */}
+  <div style={{height:'4px',background:'#26A7B0'}}></div>
+  {/* Header row: GPS mark + ANNOUNCEMENT tag */}
+  <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'12px 16px',borderBottom:'1px solid #eee'}}>
+    <div style={{display:'flex',alignItems:'center',gap:'8px'}}>
+      <div style={{width:'28px',height:'28px',borderRadius:'4px',background:'rgba(38,167,176,0.15)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'9px',fontWeight:700,color:'#26A7B0'}}>GPS</div>
+      <div style={{fontSize:'10px',color:'#666'}}><span className="en">Global Physical Security</span><span className="zh">全球實體安全處</span></div>
+    </div>
+    <div style={{background:'#26A7B0',color:'#fff',fontSize:'8px',fontWeight:700,padding:'3px 8px',borderRadius:'10px'}}>ANNOUNCEMENT / 公告</div>
+  </div>
+  {/* Title zone */}
+  <div style={{padding:'16px 16px 8px'}}>
+    <div style={{fontSize:'16px',fontWeight:700,color:'#0A1A22',lineHeight:1.3}}><span className="en">Quarterly Safety Review Complete</span><span className="zh">季度安全審查完成</span></div>
+  </div>
+  {/* Body zone */}
+  <div style={{padding:'0 16px 12px'}}>
+    <div style={{fontSize:'11px',lineHeight:1.6,color:'#333',marginBottom:'8px'}}><span className="en">The Q1 2026 safety review has been completed across all sites. Key findings and improvement actions are summarized below. All section heads are requested to review the action items relevant to their areas.</span><span className="zh">2026 年第一季安全審查已在所有廠區完成。主要發現和改善措施摘要如下。請各 Section Head 審查與其負責領域相關的行動項目。</span></div>
+  </div>
+  {/* Action items zone */}
+  <div style={{padding:'0 16px 12px'}}>
+    <div style={{fontSize:'10px',fontWeight:700,color:'#0A1A22',marginBottom:'6px'}}><span className="en">Action Items:</span><span className="zh">行動項目：</span></div>
+    <div style={{fontSize:'10px',color:'#333',lineHeight:1.8,paddingLeft:'12px'}}>
+      <div>1. <span className="en">Review updated evacuation routes by April 15</span><span className="zh">於 4 月 15 日前審查更新的疏散路線</span></div>
+      <div>2. <span className="en">Complete safety training refresher by April 30</span><span className="zh">於 4 月 30 日前完成安全培訓複習</span></div>
+      <div>3. <span className="en">Submit site-specific improvement plans by May 10</span><span className="zh">於 5 月 10 日前提交各廠區改善計畫</span></div>
+    </div>
+  </div>
+  {/* Contact/owner zone */}
+  <div style={{padding:'0 16px 12px',borderBottom:'1px solid #eee'}}>
+    <div style={{fontSize:'10px',color:'#666'}}><span className="en">Posted by / 發布者：</span><span style={{fontWeight:700}}><span className="en">GPS Strategy & Transformation</span><span className="zh">GPS 策略與轉型</span></span></div>
+  </div>
+  {/* Footer: date + category tag */}
+  <div style={{padding:'10px 16px',display:'flex',alignItems:'center',justifyContent:'space-between',background:'#fafafa'}}>
+    <div style={{fontSize:'9px',color:'#999'}}>2026-04-04</div>
+    <div style={{background:'rgba(38,167,176,0.1)',color:'#26A7B0',fontSize:'8px',fontWeight:600,padding:'2px 8px',borderRadius:'10px'}}><span className="en">Safety Review</span><span className="zh">安全審查</span></div>
+  </div>
+</div>

@@ -39,6 +39,27 @@ For frontline / all-staff content:
 - Flag if only one language is present
 - Flag if one language section is significantly shorter than the other (>50% difference)
 
+=== SCORING ALGORITHM ===
+Start at 100 points. Deduct per violation:
+- Banned word: -8 per occurrence
+- Cautionary word: -3 per occurrence
+- Tone mismatch (detected vs stated purpose): -15
+- Grade level >8 for frontline content: -10
+- Grade level >12 for management content: -5
+- Missing language (EN or zh-TW absent): -20
+- Unbalanced languages (>50% length difference): -10
+- Passive voice construction: -3 per occurrence
+- Jargon without explanation: -5 per term
+- Unexpanded acronym: -2 per occurrence
+- Sentence >25 words: -2 per sentence
+Minimum floor: 0. Round to nearest integer.
+
+Severity classification:
+- CRITICAL (0–40): Major brand violations, do not publish
+- WARNING (41–69): Significant issues, revision required
+- ACCEPTABLE (70–84): Minor issues, review recommended
+- EXCELLENT (85–100): Brand-compliant, ready for use
+
 === OUTPUT FORMAT ===
 Return ONLY valid JSON with this structure:
 {
