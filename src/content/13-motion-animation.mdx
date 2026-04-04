@@ -182,6 +182,39 @@ import CodeBlock from '@/components/CodeBlock'
   </div>
 </div>
 
+### <span className="en">Sonic Identity — The Sound of GPS</span><span className="zh">聲音識別——GPS 的聲音</span>
+
+<p><span className="en">GPS defines audio cues for security infrastructure to reinforce brand identity through sound. All audio follows the principle: "remind with calm authority, never alarm with aggression." Sound design aligns with the protective, human-centered brand voice.</span><span className="zh">GPS 為安全基礎設施定義音頻提示，透過聲音強化品牌識別。所有音頻遵循原則：「以沉穩的權威提醒，絕不以攻擊性驚擾。」聲音設計與保護性、以人為本的品牌語調一致。</span></p>
+
+#### <span className="en">Audio Design Principles</span><span className="zh">音頻設計原則</span>
+
+<div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'10px',margin:'14px 0'}}>
+  <div style={{background:'#fff',borderLeft:'3px solid var(--color-turquoise-500)',padding:'12px',fontSize:'10px',breakInside:'avoid'}}>
+    <div style={{fontWeight:700,color:'var(--color-turquoise-700)',marginBottom:'6px'}}><span className="en">Frequency Range</span><span className="zh">頻率範圍</span></div>
+    <div style={{color:'var(--color-ink)',lineHeight:1.6}}><span className="en">Notification tones: 400-800Hz (mid-range, non-startling). Alert tones: 800-1200Hz (attention without pain). Emergency: 1000Hz pulsed (ISO 8201 compliant).</span><span className="zh">通知音：400-800Hz（中頻、不驚嚇）。警示音：800-1200Hz（引起注意但不造成痛苦）。緊急：1000Hz 脈衝（符合 ISO 8201）。</span></div>
+  </div>
+  <div style={{background:'#fff',borderLeft:'3px solid var(--color-turquoise-500)',padding:'12px',fontSize:'10px',breakInside:'avoid'}}>
+    <div style={{fontWeight:700,color:'var(--color-turquoise-700)',marginBottom:'6px'}}><span className="en">Waveform</span><span className="zh">波形</span></div>
+    <div style={{color:'var(--color-ink)',lineHeight:1.6}}><span className="en">Prefer sine and triangle waves over square waves. Sine waves feel organic and calming. Square waves feel mechanical and harsh — reserved only for critical emergency.</span><span className="zh">優先使用正弦波和三角波，而非方波。正弦波感覺有機且平靜。方波感覺機械且刺耳——僅保留用於重大緊急情況。</span></div>
+  </div>
+  <div style={{background:'#fff',borderLeft:'3px solid var(--color-turquoise-500)',padding:'12px',fontSize:'10px',breakInside:'avoid'}}>
+    <div style={{fontWeight:700,color:'var(--color-turquoise-700)',marginBottom:'6px'}}><span className="en">Duration & Rhythm</span><span className="zh">時長與節奏</span></div>
+    <div style={{color:'var(--color-ink)',lineHeight:1.6}}><span className="en">Notification: 200-400ms single tone. Confirmation: two short ascending tones (200ms + 300ms). Alert: 500ms repeated at 1s intervals. Never exceed 85dB at 1m.</span><span className="zh">通知：200-400ms 單音。確認：兩個短促上行音（200ms + 300ms）。警示：500ms 以 1 秒間隔重複。距離 1 公尺處絕不超過 85dB。</span></div>
+  </div>
+  <div style={{background:'#fff',borderLeft:'3px solid var(--color-turquoise-500)',padding:'12px',fontSize:'10px',breakInside:'avoid'}}>
+    <div style={{fontWeight:700,color:'var(--color-turquoise-700)',marginBottom:'6px'}}><span className="en">Emotional Mapping</span><span className="zh">情緒對應</span></div>
+    <div style={{color:'var(--color-ink)',lineHeight:1.6}}><span className="en">Access granted: gentle ascending C-E-G chord (care). Access denied: single neutral tone (guidance, not punishment). Emergency: standard ISO alarm (safety).</span><span className="zh">通行允許：柔和上行 C-E-G 和弦（關懷）。通行拒絕：單一中性音（引導，非懲罰）。緊急：標準 ISO 警報（安全）。</span></div>
+  </div>
+</div>
+
+#### <span className="en">Sound Event Specifications</span><span className="zh">聲音事件規格</span>
+
+<table className="gps-table"><thead><tr><th><span className="en">Event</span><span className="zh">事件</span></th><th><span className="en">Frequency</span><span className="zh">頻率</span></th><th><span className="en">Duration</span><span className="zh">時長</span></th><th><span className="en">Pattern</span><span className="zh">模式</span></th><th><span className="en">Emotion</span><span className="zh">情緒</span></th></tr></thead><tbody><tr><td><span className="en">Access Granted</span><span className="zh">通行允許</span></td><td>523Hz (C5) → 659Hz (E5)</td><td>200ms + 200ms</td><td><span className="en">Ascending dyad</span><span className="zh">上行二音</span></td><td><span className="en">Welcoming, affirming</span><span className="zh">歡迎、肯定</span></td></tr><tr><td><span className="en">Access Denied</span><span className="zh">通行拒絕</span></td><td>440Hz (A4)</td><td>300ms</td><td><span className="en">Single tone</span><span className="zh">單音</span></td><td><span className="en">Neutral, guiding</span><span className="zh">中性、引導</span></td></tr><tr><td><span className="en">Badge Tap</span><span className="zh">感應刷卡</span></td><td>698Hz (F5)</td><td>100ms</td><td><span className="en">Single click</span><span className="zh">單擊</span></td><td><span className="en">Acknowledgment</span><span className="zh">確認回應</span></td></tr><tr><td><span className="en">Emergency Alert</span><span className="zh">緊急警報</span></td><td>1000Hz</td><td>500ms on, 500ms off</td><td><span className="en">ISO 8201 pulse</span><span className="zh">ISO 8201 脈衝</span></td><td><span className="en">Urgent, clear</span><span className="zh">緊迫、清晰</span></td></tr><tr><td><span className="en">System Ready</span><span className="zh">系統就緒</span></td><td>392Hz (G4) → 523Hz (C5)</td><td>150ms + 250ms</td><td><span className="en">Ascending</span><span className="zh">上行</span></td><td><span className="en">Reassuring</span><span className="zh">令人安心</span></td></tr><tr><td><span className="en">Visitor Welcome</span><span className="zh">訪客歡迎</span></td><td>523Hz → 659Hz → 784Hz</td><td>200ms each</td><td><span className="en">C-E-G triad</span><span className="zh">C-E-G 三和弦</span></td><td><span className="en">Warm, hospitable</span><span className="zh">溫暖、好客</span></td></tr></tbody></table>
+
+<Callout type="tip">
+<span className="en">Audio branding extends the GPS identity into an often-overlooked sensory dimension. The sound palette was designed to feel protective — like a guardian's calm voice, not a guard's whistle.</span><span className="zh">音頻品牌將 GPS 識別延伸至一個常被忽視的感官維度。聲音調色板的設計旨在傳達保護感——如同守護者沉穩的聲音，而非警衛的哨聲。</span>
+</Callout>
+
 ### <span className="en">Video Template Specs</span><span className="zh">影片模板規格</span>
 
 <table className="gps-table">
