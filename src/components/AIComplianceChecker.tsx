@@ -112,7 +112,7 @@ export default function AIComplianceChecker({ isOpen, onClose }: AIComplianceChe
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div
-        className="max-w-[760px] mx-auto mt-8 mb-8 bg-white rounded-xl relative"
+        className="max-w-[760px] mx-4 sm:mx-auto mt-8 mb-8 bg-white rounded-xl relative"
         style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}
       >
         {/* Header */}

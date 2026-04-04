@@ -123,7 +123,7 @@ export default function AIBrandAssistant({ isOpen, onClose }: AIBrandAssistantPr
         }
       }
     } catch {
-      setMessages(prev => [...prev, { role: 'assistant', content: 'Network error. Please try again.' }]);
+      setMessages(prev => [...prev, { role: 'assistant', content: 'Network error. Please try again. / 網路錯誤，請再試一次。' }]);
     } finally {
       setLoading(false);
       removeImage();
@@ -284,11 +284,11 @@ export default function AIBrandAssistant({ isOpen, onClose }: AIBrandAssistantPr
               disabled={loading || (!input.trim() && !image)}
               className="shrink-0 px-3 h-8 rounded-md border-none cursor-pointer text-xs font-bold"
               style={{
-                background: loading || (!input.trim() && !image) ? 'var(--color-g200)' : 'var(--color-turquoise-500)',
-                color: loading || (!input.trim() && !image) ? 'var(--color-g400)' : '#fff',
-              }}
+                  background: loading || (!input.trim() && !image) ? 'var(--color-g200)' : 'var(--color-turquoise-500)',
+                  color: loading || (!input.trim() && !image) ? 'var(--color-g400)' : '#fff',
+                }}
             >
-              {loading ? '...' : 'Send'}
+              {loading ? '...' : <><span className="en">Send</span><span className="zh">發送</span></>}
             </button>
           </div>
         </div>

@@ -16,11 +16,11 @@ export default function TopBar({ activeSection, lang, onLangToggle, onMenuOpen }
 
   return (
     <div
-      className="h-12 bg-white flex items-center px-8 sticky top-0 z-50 text-[11px]"
+      className="h-12 bg-white flex items-center px-4 sm:px-8 sticky top-0 z-50 text-[11px]"
       style={{ borderBottom: '1px solid var(--color-g200)', color: 'var(--color-g500)' }}
     >
       <button
-        className="mob-btn flex items-center justify-center w-9 h-9 border-none bg-transparent cursor-pointer p-0 md:hidden"
+        className="mob-btn flex items-center justify-center w-9 h-9 border-none bg-transparent cursor-pointer p-0"
         onClick={onMenuOpen}
       >
         <svg width="20" height="20" viewBox="0 0 24 24" stroke="var(--color-ink)" strokeWidth="2" fill="none">

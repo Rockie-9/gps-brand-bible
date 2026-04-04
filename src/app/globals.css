@@ -533,16 +533,43 @@ code.copied::after { content: '\2713'; margin-left: 4px; }
   .nav-overlay.open { display: block; }
   .main-content { margin-left: 0; }
 
+  /* Mobile menu button */
+  .mob-btn { display: flex !important; }
+
+  /* Stack all grids on mobile */
   .card-grid-2, .card-grid-3, .card-grid-4, .card-grid-5,
   .do-dont, .mockup-row, .variation-grid, .pillar-row, .year-arc,
   .logo-gallery, .a11y-grid {
     grid-template-columns: 1fr;
   }
   .pillar-row { grid-template-columns: 1fr 1fr; }
+
+  /* Content area tighter padding on mobile */
+  .main-content .max-w-\[1020px\] {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Tables scroll horizontally on mobile */
+  .gps-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* Section header smaller on mobile */
+  .section-header { margin-bottom: 24px; padding-bottom: 16px; }
 }
 
 @media (max-width: 420px) {
   .pillar-row { grid-template-columns: 1fr; }
+
+  /* Extra tight on small phones */
+  .main-content .max-w-\[1020px\] {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* Hide mobile menu on desktop */
+@media (min-width: 901px) {
+  .mob-btn { display: none !important; }
 }
 
 /* ═══ NAV BUTTON RESET ═══ */
