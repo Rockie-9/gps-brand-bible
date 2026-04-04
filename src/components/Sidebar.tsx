@@ -116,10 +116,11 @@ export default function Sidebar({
               <span className="zh">{group.zh}</span>
             </div>
             {group.items.map((item) => (
-              <a
+              <button
                 key={item.id}
                 className={`nav-link${activeSection === item.id ? ' active' : ''}`}
                 onClick={() => onNavigate(item.id)}
+                aria-current={activeSection === item.id ? 'page' : undefined}
               >
                 <span
                   className="text-[9px] min-w-[18px]"
@@ -132,7 +133,7 @@ export default function Sidebar({
                 </span>
                 <span className="en">{item.en}</span>
                 <span className="zh">{item.zh}</span>
-              </a>
+              </button>
             ))}
           </div>
         ))}

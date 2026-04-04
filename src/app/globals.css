@@ -545,6 +545,20 @@ code.copied::after { content: '\2713'; margin-left: 4px; }
   .pillar-row { grid-template-columns: 1fr; }
 }
 
+/* ═══ NAV BUTTON RESET ═══ */
+.nav-link {
+  background: none;
+  font-size: inherit;
+  font-family: inherit;
+  text-align: left;
+  width: 100%;
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-turquoise-500);
+  outline-offset: -2px;
+}
+
 /* ═══ PRINT ═══ */
 @media print {
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }

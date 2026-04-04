@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback, Suspense, lazy, ComponentType } from 'react';
 import Sidebar from '@/components/Sidebar';
 import TopBar from '@/components/TopBar';
+import ErrorBoundary from '@/components/ErrorBoundary';
+import SearchPalette from '@/components/SearchPalette';
 import { sectionIdToSlug } from '@/lib/navigation';
 
 const AIPromptPanel = lazy(() => import('@/components/AIPromptPanel'));
@@ -43,6 +45,19 @@ const contentComponents: Record<string, () => Promise<{ default: ComponentType }
   'app-w-quality-playbook': () => import('@/content/app-w-quality-playbook.mdx'),
 };
 
+function SectionSkeleton() {
+  return (
+    <div style={{ padding: '40px 0' }} aria-busy="true" aria-label="Loading section">
+      <div style={{ height: '12px', width: '120px', background: 'var(--color-g100)', borderRadius: '4px', marginBottom: '8px', animation: 'gps-fade 1.5s ease-in-out infinite' }} />
+      <div style={{ height: '34px', width: '320px', background: 'var(--color-g100)', borderRadius: '6px', marginBottom: '16px', animation: 'gps-fade 1.5s ease-in-out infinite 0.1s' }} />
+      <div style={{ height: '2px', width: '100%', background: 'var(--color-turquoise-100)', marginBottom: '24px' }} />
+      <div style={{ height: '10px', width: '100%', maxWidth: '500px', background: 'var(--color-g100)', borderRadius: '3px', marginBottom: '10px', animation: 'gps-fade 1.5s ease-in-out infinite 0.2s' }} />
+      <div style={{ height: '10px', width: '85%', maxWidth: '430px', background: 'var(--color-g100)', borderRadius: '3px', marginBottom: '10px', animation: 'gps-fade 1.5s ease-in-out infinite 0.3s' }} />
+      <div style={{ height: '10px', width: '92%', maxWidth: '460px', background: 'var(--color-g100)', borderRadius: '3px', animation: 'gps-fade 1.5s ease-in-out infinite 0.4s' }} />
+    </div>
+  );
+}
+
 function SectionContent({ sectionId }: { sectionId: string }) {
   const slug = sectionIdToSlug[sectionId];
   if (!slug || !contentComponents[slug]) {
@@ -50,9 +65,11 @@ function SectionContent({ sectionId }: { sectionId: string }) {
   }
   const Content = lazy(contentComponents[slug]);
   return (
-    <Suspense fallback={<div style={{ padding: '40px', color: 'var(--color-g500)' }}>Loading...</div>}>
-      <Content />
-    </Suspense>
+    <ErrorBoundary>
+      <Suspense fallback={<SectionSkeleton />}>
+        <Content />
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 
@@ -63,6 +80,7 @@ export default function Home() {
   const [promptOpen, setPromptOpen] = useState(false);
   const [complianceOpen, setComplianceOpen] = useState(false);
   const [assistantOpen, setAssistantOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   // Restore saved language
   useEffect(() => {
@@ -78,7 +96,7 @@ export default function Home() {
     localStorage.setItem('gps-lang', lang);
   }, [lang]);
 
-  // Escape key closes all panels
+  // Escape key closes all panels, Ctrl+K opens search
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -86,10 +104,20 @@ export default function Home() {
         setComplianceOpen(false);
         setAssistantOpen(false);
         setNavOpen(false);
+        setSearchOpen(false);
+      }
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setSearchOpen(prev => !prev);
       }
     };
+    const searchToggle = () => setSearchOpen(prev => !prev);
     window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
+    window.addEventListener('gps-search-toggle', searchToggle);
+    return () => {
+      window.removeEventListener('keydown', handler);
+      window.removeEventListener('gps-search-toggle', searchToggle);
+    };
   }, []);
 
   // Listen for cross-reference navigation events
@@ -159,17 +187,22 @@ export default function Home() {
       <AIPromptPanel isOpen={promptOpen} onClose={() => setPromptOpen(false)} />
       <AIComplianceChecker isOpen={complianceOpen} onClose={() => setComplianceOpen(false)} />
       <AIBrandAssistant isOpen={assistantOpen} onClose={() => setAssistantOpen(false)} />
+      <SearchPalette isOpen={searchOpen} onClose={() => setSearchOpen(false)} onNavigate={handleNavigate} />
 
       <div
-        className="fixed bottom-4 right-4 px-3 py-1.5 rounded-md text-[10px] pointer-events-none z-50"
+        onClick={() => setSearchOpen(true)}
+        className="fixed bottom-4 right-4 px-3 py-1.5 rounded-md text-[10px] z-50 cursor-pointer"
         style={{
           background: 'var(--color-ink)',
           color: 'var(--color-g200)',
           fontFamily: 'var(--font-mono)',
-          opacity: 0.5,
+          opacity: 0.6,
+          transition: 'opacity 0.2s',
         }}
+        role="button"
+        aria-label="Open search (Ctrl+K)"
       >
-        Ctrl+F <span className="en">to search</span><span className="zh">搜尋</span>
+        <kbd style={{background:'rgba(255,255,255,0.1)',padding:'1px 4px',borderRadius:'3px'}}>⌘K</kbd> <span className="en">Search</span><span className="zh">搜尋</span>
       </div>
     </>
   );
