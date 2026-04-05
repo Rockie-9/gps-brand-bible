@@ -98,12 +98,12 @@
   --font-en: 'Lato', 'Trebuchet MS', Verdana, sans-serif;
   --font-zh: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
   --font-mono: 'SF Mono', 'Fira Code', Consolas, monospace;
+}
 
-  /* ═══ LEGACY VARIABLE ALIASES ═══ */
-  /* Maps v3.2 CSS variable names to Tailwind v4 theme tokens */
-  /* This ensures all 31 MDX content files render correctly */
-
-  /* Primary colors */
+/* ═══ LEGACY VARIABLE ALIASES ═══ */
+/* Maps v3.2 CSS variable names used in MDX content to actual values */
+/* Must be in :root, NOT inside @theme (which prefixes with --color-) */
+:root {
   --turquoise: #26A7B0;
   --turquoise-50: #F0FAFB;
   --turquoise-100: #D4F1F3;
@@ -118,20 +118,25 @@
   --copper: #CAC3D2;
   --copper-50: #F8F7F9;
   --copper-100: #EDEAF1;
+  --copper-200: #DDD8E5;
   --copper-300: #CAC3D2;
   --copper-400: #B3A9C2;
+  --copper-500: #9B8FA8;
+  --copper-600: #857693;
   --copper-700: #6E5F7C;
-
-  /* Secondary */
+  --copper-950: #2B2433;
   --purple: #8C9FCB;
+  --purple-400: #8C9FCB;
   --purple-500: #7086BA;
+  --purple-600: #5B6FA3;
   --purple-700: #495A85;
   --green: #8CC897;
+  --green-400: #8CC897;
+  --green-500: #6BB57E;
   --green-700: #437D50;
   --orange: #F6AD90;
+  --orange-500: #ED7442;
   --orange-700: #AC4722;
-
-  /* Neutrals */
   --black: #0A1A22;
   --ink: #1A2A32;
   --charcoal: #2D3E48;
@@ -143,25 +148,20 @@
   --g100: #E8EDF0;
   --g50: #F4F5F7;
   --white: #FAFBFC;
-
-  /* Semantic */
   --success: #2D9F5B;
   --warning: #E5993E;
   --danger: #D94F4F;
-
-  /* Dark mode */
   --dm-bg: #0D1B21;
   --dm-s: #142229;
   --dm-s2: #1C2F38;
   --dm-b: #243944;
   --dm-t: #E2E8EC;
   --dm-tm: #8A9BA5;
-
-  /* Fonts (legacy shorthand) */
   --fd: 'DM Serif Display', Georgia, serif;
   --fe: 'Lato', 'Trebuchet MS', Verdana, sans-serif;
   --fz: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
   --fm: 'SF Mono', 'Fira Code', Consolas, monospace;
+  --nw: 256px;
 }
 
 /* ═══ BASE STYLES ═══ */
