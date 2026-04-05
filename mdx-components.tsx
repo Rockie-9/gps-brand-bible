@@ -7,11 +7,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <h3
         style={{
           fontSize: '18px',
-          fontWeight: 900,
+          fontWeight: 800,
           color: '#0A1A22',
-          margin: '36px 0 14px',
-          paddingTop: '18px',
-          borderTop: '1px solid var(--color-g100)',
+          margin: '40px 0 16px',
+          paddingTop: '20px',
+          borderTop: '1px solid rgba(0, 0, 0, 0.06)',
+          letterSpacing: '-0.01em',
         }}
         {...props}
       />
@@ -19,18 +20,18 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h4: (props) => (
       <h4
         style={{
-          fontSize: '12px',
+          fontSize: '11px',
           fontWeight: 700,
-          color: 'var(--color-charcoal)',
-          margin: '20px 0 6px',
-          letterSpacing: '0.04em',
+          color: 'var(--color-turquoise-700)',
+          margin: '24px 0 8px',
+          letterSpacing: '0.08em',
           textTransform: 'uppercase' as const,
         }}
         {...props}
       />
     ),
     p: (props) => (
-      <p style={{ marginBottom: '16px', maxWidth: '72ch' }} {...props} />
+      <p style={{ marginBottom: '18px', maxWidth: '68ch', lineHeight: 1.8 }} {...props} />
     ),
     table: (props) => <table className="gps-table" {...props} />,
     code: (props) => (

@@ -23,8 +23,9 @@ export default function ChapterHeader({
         className="text-[10px] font-bold uppercase"
         style={{
           fontFamily: 'var(--font-mono)',
-          color: 'var(--color-turquoise-500)',
-          letterSpacing: '0.14em',
+          color: 'var(--color-turquoise-600)',
+          letterSpacing: '0.16em',
+          marginBottom: '6px',
         }}
       >
         <span className="en">Chapter {number} — {groupEn}</span>
@@ -34,9 +35,10 @@ export default function ChapterHeader({
         className="my-1"
         style={{
           fontFamily: 'var(--font-display)',
-          fontSize: '34px',
+          fontSize: '36px',
           color: '#0A1A22',
-          lineHeight: 1.15,
+          lineHeight: 1.12,
+          letterSpacing: '-0.02em',
         }}
       >
         <span className="en">{titleEn}</span>
