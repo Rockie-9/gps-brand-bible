@@ -172,6 +172,58 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+/* ═══ IP PROTECTION ═══ */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection only inside content area for usability */
+.main-content code,
+.main-content .gps-table td,
+.main-content input,
+.main-content textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
+}
+
+/* Dynamic watermark overlay */
+.watermark-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 9990;
+  opacity: 0.03;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 200px,
+    rgba(38, 167, 176, 0.3) 200px,
+    rgba(38, 167, 176, 0.3) 201px
+  );
+  mix-blend-mode: multiply;
+}
+
+.watermark-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-35deg);
+  font-size: 80px;
+  font-weight: 900;
+  color: rgba(38, 167, 176, 0.025);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 9991;
+  letter-spacing: 0.2em;
+  font-family: var(--font-en);
+}
+
 body {
   font-family: var(--font-en);
   background: #F7F8FA;
@@ -712,18 +764,31 @@ code.copied::after { content: '\2713'; margin-left: 4px; }
 
 /* ═══ PRINT ═══ */
 @media print {
+  /* IP Protection: show watermark in print */
+  body::after {
+    content: 'CONFIDENTIAL — GPS Internal Use Only — 機密文件';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-35deg);
+    font-size: 48pt;
+    color: rgba(38, 167, 176, 0.08) !important;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 9999;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+  }
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-  body { font-size: 11pt; line-height: 1.5; background: #fff; }
+  body { font-size: 11pt; line-height: 1.5; background: #fff; -webkit-user-select: none !important; }
   .nav-sidebar, .topbar, .mob-btn, .nav-overlay { display: none !important; }
-  /* Hide all AI panels and interactive controls in print */
   [class*="AIComplianceChecker"], [class*="AIBrandAssistant"], [class*="AIPromptPanel"] { display: none !important; }
+  .watermark-overlay, .watermark-text { display: none !important; }
   .main-content { margin-left: 0 !important; }
   .section { display: block !important; page-break-before: always; }
   .section:first-child { page-break-before: auto; }
   .gps-table, .do-card, .dont-card, .card, .swatch, .a11y-pair, .dark-preview, svg { break-inside: avoid; }
   .gradient-strip, .scale-row, .logo-gallery, .pillar-row, .year-arc { break-inside: avoid; }
-  img[src*="unsplash"] { break-inside: avoid; max-height: 120px; }
-  /* Hide floating UI in print */
   .fixed { display: none !important; }
   @page { margin: 20mm 18mm; size: A4; }
 

@@ -159,8 +159,40 @@ export default function Home() {
     return () => document.removeEventListener('click', handler);
   }, []);
 
+  // IP Protection: disable right-click, Ctrl+C on non-code, Ctrl+U, Ctrl+S, print screen
+  useEffect(() => {
+    const blockContext = (e: MouseEvent) => { e.preventDefault(); };
+    const blockKeys = (e: KeyboardEvent) => {
+      // Block Ctrl+U (view source), Ctrl+S (save), Ctrl+P (print), F12 (devtools)
+      if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'p')) {
+        e.preventDefault();
+      }
+      if (e.key === 'F12') {
+        e.preventDefault();
+      }
+      // Block PrintScreen
+      if (e.key === 'PrintScreen') {
+        navigator.clipboard.writeText('');
+      }
+    };
+    const blockDrag = (e: DragEvent) => { e.preventDefault(); };
+
+    document.addEventListener('contextmenu', blockContext);
+    document.addEventListener('keydown', blockKeys);
+    document.addEventListener('dragstart', blockDrag);
+    return () => {
+      document.removeEventListener('contextmenu', blockContext);
+      document.removeEventListener('keydown', blockKeys);
+      document.removeEventListener('dragstart', blockDrag);
+    };
+  }, []);
+
   return (
     <>
+      {/* Dynamic watermark */}
+      <div className="watermark-overlay" />
+      <div className="watermark-text">CONFIDENTIAL</div>
+
       <Sidebar
         activeSection={activeSection}
         lang={lang}
