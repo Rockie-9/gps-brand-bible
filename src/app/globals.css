@@ -291,6 +291,18 @@ body.lang-zh {
 .main-content {
   margin-left: 256px;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Prevent any inline-styled element from overflowing */
+.main-content div,
+.main-content svg,
+.main-content table {
+  max-width: 100%;
+}
+
+.main-content svg {
+  height: auto;
 }
 
 /* ═══ COMPONENTS ═══ */
