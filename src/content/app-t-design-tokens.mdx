@@ -175,3 +175,51 @@ $bp-sm:420px; $bp-md:768px; $bp-lg:1024px; $bp-xl:1280px;`}
     </tr>
   </tbody>
 </table>
+
+### <span className="en">Component Token Mapping</span><span className="zh">元件代符對應</span>
+
+<p><span className="en">Maps design primitives to component-level semantics. Use these mappings when building UI components to ensure consistent token usage across all GPS digital products.</span><span className="zh">將設計原語對應至元件層級語意。建構 UI 元件時使用這些對應，確保所有 GPS 數位產品的代符使用一致。</span></p>
+
+<table className="gps-table"><thead><tr><th><span className="en">Component</span><span className="zh">元件</span></th><th><span className="en">Property</span><span className="zh">屬性</span></th><th>Token</th><th><span className="en">Value</span><span className="zh">值</span></th></tr></thead><tbody><tr><td><strong>Button Primary</strong></td><td>background</td><td><code>color.turquoise.500</code></td><td>#26A7B0</td></tr><tr><td></td><td>text</td><td><code>color.neutral.white</code></td><td>#FFFFFF</td></tr><tr><td></td><td>padding</td><td><code>spacing.sp2 × sp4</code></td><td>8px 16px</td></tr><tr><td></td><td>border-radius</td><td><code>radius.sm</code></td><td>4px</td></tr><tr><td><strong>Button Secondary</strong></td><td>background</td><td><code>transparent</code></td><td>—</td></tr><tr><td></td><td>border</td><td><code>color.turquoise.500</code></td><td>1.5px solid</td></tr><tr><td><strong>Card</strong></td><td>background</td><td><code>color.neutral.white</code></td><td>#FFFFFF</td></tr><tr><td></td><td>border</td><td><code>color.neutral.g200</code></td><td>#D2DAE0</td></tr><tr><td></td><td>border-radius</td><td><code>radius.lg</code></td><td>12px</td></tr><tr><td></td><td>padding</td><td><code>spacing.sp4</code></td><td>16px</td></tr><tr><td><strong>Table Header</strong></td><td>background</td><td><code>color.neutral.black</code></td><td>#0A1A22</td></tr><tr><td></td><td>text</td><td><code>color.neutral.white @ 85%</code></td><td>rgba(255,255,255,0.85)</td></tr><tr><td><strong>Callout Tip</strong></td><td>background</td><td><code>color.turquoise.50</code></td><td>#F0FAFB</td></tr><tr><td></td><td>border-left</td><td><code>color.turquoise.500</code></td><td>3px solid</td></tr><tr><td><strong>Nav Link Active</strong></td><td>background</td><td><code>color.turquoise.500 @ 8%</code></td><td>rgba(38,167,176,0.08)</td></tr><tr><td></td><td>text</td><td><code>color.turquoise.400</code></td><td>#3DB9C2</td></tr><tr><td></td><td>border-left</td><td><code>color.turquoise.400</code></td><td>2px solid</td></tr><tr><td><strong>Badge/Pill</strong></td><td>background</td><td><code>color.neutral.g50 @ 80%</code></td><td>rgba(244,245,247,0.8)</td></tr><tr><td></td><td>padding</td><td><code>spacing.sp1 × sp3</code></td><td>4px 12px</td></tr><tr><td></td><td>border-radius</td><td><code>radius.full</code></td><td>100px</td></tr></tbody></table>
+
+### <span className="en">TypeScript Type Definitions</span><span className="zh">TypeScript 型別定義</span>
+
+<p><span className="en">Copy these type definitions into your project for type-safe token usage. Autocomplete and compile-time checking prevent off-brand color/spacing usage.</span><span className="zh">將這些型別定義複製到您的專案中，實現型別安全的代符使用。自動完成和編譯時檢查可防止不符品牌的色彩/間距使用。</span></p>
+
+<CodeBlock>{`// gps-tokens.d.ts — GPS Brand Bible Design Token Types
+
+export type GPSColorPrimary = 'turquoise' | 'copper';
+export type GPSColorSecondary = 'purple' | 'green' | 'orange';
+export type GPSColorNeutral = 'black' | 'ink' | 'charcoal' | 'slate'
+  | 'g500' | 'g400' | 'g300' | 'g200' | 'g100' | 'g50' | 'white';
+export type GPSColorSemantic = 'success' | 'warning' | 'danger';
+
+export type GPSColorScale = 50 | 100 | 200 | 300 | 400 | 500
+  | 600 | 700 | 800 | 900 | 950;
+
+export type GPSSpacingToken = 'sp1' | 'sp2' | 'sp3' | 'sp4'
+  | 'sp6' | 'sp8' | 'sp12' | 'sp16' | 'sp24';
+
+export type GPSBreakpoint = 'sm' | 'md' | 'lg' | 'xl';
+
+export type GPSFontFamily = 'en' | 'zh' | 'display' | 'mono';
+
+export type GPSRadius = 'sm' | 'md' | 'lg' | 'xl' | 'full';
+
+export type GPSMotionEasing = 'reveal' | 'settle' | 'standard';
+export type GPSMotionDuration = 'fast' | 'normal' | 'slow';
+
+export interface GPSTokens {
+  color: {
+    primary: Record<GPSColorPrimary, Record<GPSColorScale, string>>;
+    secondary: Record<GPSColorSecondary, Record<GPSColorScale, string>>;
+    neutral: Record<GPSColorNeutral, string>;
+    semantic: Record<GPSColorSemantic, string>;
+  };
+  spacing: Record<GPSSpacingToken, string>;
+  breakpoint: Record<GPSBreakpoint, string>;
+  font: Record<GPSFontFamily, string>;
+  radius: Record<GPSRadius, string>;
+}`}</CodeBlock>
+
+<Callout type="tip"><span className="en"><strong>Token governance:</strong> All token changes require GPS Strategy approval. Changes to primary colors or typography require GPS Director sign-off. Token version is tied to Brand Bible version (currently v4.0). Breaking changes must be communicated to all implementing teams 30 days in advance.</span><span className="zh"><strong>代符治理：</strong>所有代符變更需經 GPS 策略團隊核准。主要色彩或字體的變更需 GPS Director 簽核。代符版本與品牌聖經版本綁定（目前 v4.0）。重大變更必須提前 30 天通知所有實作團隊。</span></Callout>
