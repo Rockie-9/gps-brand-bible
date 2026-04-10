@@ -162,6 +162,24 @@
   --fz: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
   --fm: 'SF Mono', 'Fira Code', Consolas, monospace;
   --nw: 256px;
+  /* Additional missing scales */
+  --purple-50: #F4F6FB;
+  --purple-100: #E2E7F4;
+  --purple-200: #C5CEE8;
+  --purple-300: #A8B6DD;
+  --green-50: #F3FAF5;
+  --green-100: #E0F2E4;
+  --green-200: #C2E5CB;
+  --green-300: #A4D8B1;
+  --orange-50: #FEF6F2;
+  --orange-100: #FDE8DE;
+  --orange-200: #FAD1BD;
+  --orange-300: #F6AD90;
+  --orange-400: #F29068;
+  --g600: #4A5E6A;
+  --turquoise-950: #082A30;
+  --copper-200: #DDD8E5;
+  --copper-950: #2B2433;
 }
 
 /* ═══ BASE STYLES ═══ */
@@ -773,6 +791,52 @@ code.copied::after { content: '\2713'; margin-left: 4px; }
   outline: 2px solid var(--color-turquoise-500);
   outline-offset: -2px;
 }
+
+/* ═══ LEGACY v3.2 COMPONENT CLASSES ═══ */
+/* Poster mockups from reference HTML */
+.poster-mockups { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; padding: 20px; background: var(--g50); border-radius: 10px; margin: 16px 0; }
+.poster { width: 110px; height: 155px; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: relative; }
+.poster-image { background: linear-gradient(180deg, var(--turquoise), var(--turquoise-700)); }
+.poster-timeline { background: var(--black); }
+.poster-text { background: #fff; border: 1px solid var(--g200); }
+.poster-inner { padding: 8px; height: 100%; display: flex; flex-direction: column; }
+.poster-tag { font-size: 5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.poster-title { font-size: 8px; font-weight: 900; margin-top: auto; line-height: 1.2; }
+.poster-footer { font-size: 4px; margin-top: 4px; opacity: 0.5; }
+
+/* Web/mobile wireframe mockups */
+.mk-r { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+.mk { border-radius: 10px; overflow: hidden; border: 1px solid var(--g200); background: #fff; }
+.mk-h { padding: 8px 14px; background: var(--g50); border-bottom: 1px solid var(--g200); font-size: 9px; font-weight: 700; color: var(--g500); letter-spacing: 0.08em; text-transform: uppercase; }
+.wm { background: var(--g50); padding: 16px; display: flex; justify-content: center; }
+.wf { width: 300px; height: 180px; background: #fff; border-radius: 6px; box-shadow: 0 3px 16px rgba(0,0,0,0.06); overflow: hidden; max-width: 100%; }
+.wb { height: 16px; background: var(--g100); display: flex; align-items: center; padding: 0 6px; gap: 3px; }
+.wd { width: 4px; height: 4px; border-radius: 50%; }
+.wh { height: 50px; background: linear-gradient(135deg, var(--turquoise-500), var(--copper-300)); display: flex; align-items: center; justify-content: center; }
+.wh span { font-size: 7px; font-weight: 700; color: #fff; text-align: center; line-height: 1.3; }
+.wc { padding: 8px; }
+.wl { height: 2px; background: var(--g100); margin-bottom: 3px; border-radius: 1px; }
+
+/* Mobile wireframe */
+.mm { background: var(--g50); padding: 16px; display: flex; justify-content: center; }
+.mf { width: 90px; height: 180px; background: #fff; border-radius: 12px; box-shadow: 0 3px 16px rgba(0,0,0,0.08); overflow: hidden; border: 2px solid var(--g200); }
+.mn { width: 36px; height: 5px; background: var(--g200); border-radius: 3px; margin: 5px auto 3px; }
+.mh { height: 44px; background: linear-gradient(135deg, var(--turquoise), var(--copper)); margin: 0 5px; border-radius: 5px; display: flex; align-items: center; justify-content: center; }
+.mh span { font-size: 5px; font-weight: 700; color: #fff; }
+.mc { padding: 4px; }
+.mcd { height: 16px; background: var(--g50); border-radius: 3px; margin-bottom: 3px; border: 1px solid var(--g100); }
+
+/* Signage mockup */
+.signage-mockup { background: var(--g50); padding: 18px; display: flex; justify-content: center; margin: 16px 0; border-radius: 10px; }
+.signage { width: 260px; height: 70px; background: var(--black); border-radius: 4px; display: flex; align-items: center; padding: 0 14px; gap: 10px; box-shadow: 0 3px 14px rgba(0,0,0,0.2); position: relative; max-width: 100%; }
+.signage-mark { width: 32px; height: 32px; border-radius: 6px; background: rgba(38,167,176,0.15); display: flex; align-items: center; justify-content: center; }
+.signage-band { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--turquoise), var(--copper)); }
+.signage h5 { font-size: 9px; color: #fff; font-weight: 700; margin: 0; }
+.signage p { font-size: 6px; color: rgba(255,255,255,0.5); margin: 2px 0 0; }
+
+/* Email mockup */
+.em { background: var(--g50); padding: 16px; display: flex; justify-content: center; }
+.ef { width: 240px; background: #fff; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; max-width: 100%; }
 
 /* ═══ PRINT ═══ */
 @media print {
