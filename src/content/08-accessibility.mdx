@@ -2,6 +2,7 @@ import ChapterHeader from '@/components/ChapterHeader';
 import ModuleTracker from '@/components/ModuleTracker';
 import Callout from '@/components/Callout';
 import ContrastCard from '@/components/ContrastCard';
+import ContrastChecker from '@/components/ContrastChecker';
 
 <ChapterHeader number="08" groupEn="Visual Identity" groupZh="視覺識別" titleEn="Accessibility Pairings" titleZh="無障礙色彩配對" ownerEn="MarCom Team" ownerZh="MarCom Team" />
 <ModuleTracker modules={[{name:'Pairing Table',status:'done'},{name:'Test Examples',status:'done'},{name:'Pass/Fail Cards',status:'done'}]} />
@@ -35,6 +36,12 @@ import ContrastCard from '@/components/ContrastCard';
 </div>
 
 <Callout type="warning"><strong><span className="en">Forbidden:</span><span className="zh">禁止：</span></strong><span className="en"> White on Turquoise-500 for body (3.2:1 fails AA). White on Copper-300 (2.1:1 fails all). Purple-400 on White (3.0:1 — use Purple-600).</span><span className="zh"> Turquoise-500 上的白色內文（3.2:1 不符合 AA）。Copper-300 上的白色（2.1:1 全不符合）。白色上的 Purple-400（3.0:1——改用 Purple-600）。</span></Callout>
+
+### <span className="en">Interactive Contrast Checker</span><span className="zh">互動對比度檢查器</span>
+
+<p><span className="en">Test any color combination against WCAG standards. Pick from GPS brand colors or enter custom hex values. The preview shows how text will look on your chosen background.</span><span className="zh">針對 WCAG 標準測試任何色彩組合。從 GPS 品牌色中選擇或輸入自訂 hex 值。預覽顯示文字在您選擇的背景上的呈現效果。</span></p>
+
+<ContrastChecker />
 
 ### <span className="en">Color Pairing Matrix</span><span className="zh">色彩配對矩陣</span>
 

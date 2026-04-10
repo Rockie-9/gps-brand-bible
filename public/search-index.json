@@ -1,0 +1,793 @@
+[
+  {
+    "id": "s01",
+    "slug": "01-brand-foundation",
+    "headings": [
+      "Core Belief",
+      "Narrative Architecture",
+      "Brand Purpose",
+      "Brand Mission",
+      "Brand Vision",
+      "Five Brand Pillars",
+      "Phased Narrative Arc",
+      "Messaging Coherence Matrix",
+      "Philosophical Foundation",
+      "Messaging Coherence Matrix"
+    ],
+    "searchEN": "Core Belief Narrative Architecture Brand Purpose Brand Mission Brand Vision Five Brand Pillars Phased Narrative Arc Messaging Coherence Matrix Philosophical Foundation Messaging Coherence Matrix Core Belief \"When people feel genuinely safe — not just at work, but across their whole lives — they are free to focus, create, and contribute at their highest level.\" Narrative Architecture Brand Purpose Brand Mission Brand Vision Five Brand Pillars Designed Safety Security by design, not afterthought J",
+    "searchZH": "核心信念 「當人們感到真正的安全——不僅僅是在工作中，而是貫穿他們的整個生活——他們才能自由地專注、創造，並以最高水準做出貢獻。」 敘事架構 品牌目的 品牌使命 品牌願景 五大品牌支柱 設計安全 安全從設計開始，而非事後補救 旅途保護 從家到廠、從廠到家 家庭延伸 安全跟你一起回家 活的文化 安全作為集體認同 透明科技 科技可見地服務於人 階段性敘事弧線 第一階段 · 2026 「我們正在改變安全的感受」",
+    "codes": [],
+    "colors": [
+      "#26A7B0"
+    ]
+  },
+  {
+    "id": "s02",
+    "slug": "02-brand-behaviors",
+    "headings": [
+      "Behavioral Standards by Audience",
+      "Measurement"
+    ],
+    "searchEN": "Behavioral Standards by Audience Measurement Behavior 01 Explain Before Enforce Every security procedure has a reason. We communicate the \"why\" before enforcing the \"what.\" Behavior 02 Greet First, Verify Second Human acknowledgment precedes security protocol. A greeting before badge verification signals we protect people, not perimeters. Behavior 03 Design for the Uncomfortable Moment Security encounters are asymmetric. We proactively minimize discomfort, wait time, and ambiguity. Behavior 04 S",
+    "searchZH": "行為 01 先說明，後執行 每一項安全程序都有其理由。我們在執行「做什麼」之前，先溝通「為什麼」。 行為 02 先問候，再驗證 先以人的方式致意，再進行安全協議。在查驗門禁前先問候，表明我們保護的是人，不是圍牆。 行為 03 為不適時刻而設計 安全互動本質上是不對等的。我們主動最小化不適感、等待時間和模糊感。 行為 04 分享所知 安全知識不是專屬情報。當 GPS 學到能保護某人家庭或通勤安全的知識——我們分享它。 行為 05——基礎 視每個場域為某人的第一天 新進人員、訪客和調派員工在接觸其他任何部門之前，最先體驗到的就是 GPS。我們是第一印象。每一次互動都應符合我們對自己第一天的期望標準",
+    "codes": [],
+    "colors": []
+  },
+  {
+    "id": "s03",
+    "slug": "03-logo-system",
+    "headings": [
+      "Logo Mark",
+      "Construction Grid",
+      "Horizontal Lockup",
+      "English Main — Horizontal",
+      "Vertical Lockup",
+      "Logo Lockups — Specifications",
+      "Lockup Proportions",
+      "Clearspace",
+      "English Main — Horizontal"
+    ],
+    "searchEN": "Logo Mark Construction Grid Horizontal Lockup English Main — Horizontal Vertical Lockup Logo Lockups — Specifications Lockup Proportions Clearspace English Main — Horizontal The GPS logo mark is a checkerboard-derived pattern of dots arranged in a spherical projection — representing precision, global interconnection, and the grid-based monitoring systems at the core of physical security. Paired with bilingual text lockup, it forms the primary visual anchor of the brand. Logo Mark Mark — Standard",
+    "searchZH": "GPS 標誌圖標是源自棋盤格的圓點組成球面投影——代表精確、全球互聯，以及實體安全核心的網格監控系統。搭配雙語文字（全球實體安全處 / GLOBAL PHYSICAL SECURITY），形成品牌的主要視覺錨點。 標誌圖標 標準標誌 反白標誌 結構網格 標誌圖標由同心放射狀區域的球面網格生成。圓點朝赤道方向逐漸增大、密度增加，形成特有的不對稱弧形。理解此網格對於聯合品牌排版和非標準長寬比的自訂應用至關重要。 區域 圓點尺寸 不透明度 1（頂端） 2（過渡） 3（赤道） 4（漸收） 備註：此為結構參考。正式標誌檔案使用 Figma 主檔的精確圓點座標。 水平組合標誌 水平組合標誌是大多數應用場景",
+    "codes": [
+      "20px / 5mm",
+      "1/6b",
+      "36px / 10mm",
+      "28px / 8mm",
+      "1/7a",
+      "a",
+      "1/7a · 1/6b",
+      "120px / 35mm",
+      "160px / 40mm",
+      "100px / 28mm"
+    ],
+    "colors": [
+      "#0A1A22"
+    ]
+  },
+  {
+    "id": "s04",
+    "slug": "04-color-palette",
+    "headings": [
+      "Primary Colors",
+      "Secondary Colors",
+      "Neutral Colors",
+      "Color Ratio",
+      "Color Production Codes",
+      "Color Application",
+      "Creative Color Combinations",
+      "Color Psychology"
+    ],
+    "searchEN": "Primary Colors Secondary Colors Neutral Colors Color Ratio Color Production Codes Color Application Creative Color Combinations Color Psychology Primary Colors The turquoise-to-copper gradient is GPS's signature identity. Turquoise conveys trust and modernity; copper adds warmth and composure — together expressing secure, human-centered global operations. Secondary Colors Neutral Colors Color Ratio Primary / Image Neutral Secondary Role Ratio Application Hero backgrounds, key visuals, brand surf",
+    "searchZH": "主色 青綠色至銅色漸層是 GPS 的標誌性視覺識別。青綠色傳達信任與現代感；銅色增添溫暖與沉穩——兩者共同表達安全、以人為本的全球營運精神。 輔助色 中性色 色彩比例 主色 / 影像 中性色 輔助色 角色 比例 應用 主視覺背景、關鍵視覺、品牌表面 內文背景、卡片表面、文字容器 主題點綴、數據分類、宣傳活動 色彩生產代碼 完整的印刷、標識、紡織和數位生產參考。大量生產前請以實體色票確認 PMS——螢幕顯示僅為近似值。 色彩 用途 主品牌、標識、繡製、陽極處理 次品牌、拉絲金屬飾面、紡織",
+    "codes": [
+      "#CAC3D2",
+      "30–80%",
+      "#E5993E",
+      "#8C9FCB",
+      "#26A7B0",
+      "#8CC897",
+      "#2D9F5B",
+      "10–60%",
+      "#D94F4F",
+      "#0A1A22",
+      "#F6AD90"
+    ],
+    "colors": [
+      "#8CC897",
+      "#CAC3D2",
+      "#8C9FCB",
+      "#26A7B0"
+    ]
+  },
+  {
+    "id": "s05",
+    "slug": "05-tint-scales",
+    "headings": [
+      "Scale Usage Guide"
+    ],
+    "searchEN": "Scale Usage Guide Each brand color expands into an 11-step scale (50→950) for consistent UI, charts, and data visualization. Click any swatch to copy its hex value. Scale Usage Guide The 50–950 range serves different purposes. Lighter tints (50–200) for backgrounds and surfaces. Mid-range (300–500) for interactive elements and accents. Dark shades (600–950) for text and high-contrast elements. Range Purpose Examples Page backgrounds, card surfaces, subtle fills Turquoise-50 for section BG, Coppe",
+    "searchZH": "每種品牌色彩擴展為 11 階色階（50→950），用於一致的 UI、圖表和數據視覺化。點擊任何色塊即可複製其 hex 值。 色階使用指南 50–950 範圍服務不同用途。淡色（50–200）用於背景和表面。中間色（300–500）用於互動元素和點綴。深色（600–950）用於文字和高對比元素。 範圍 用途 範例 頁面背景、卡片表面、細微填充 Turquoise-50 區段背景，Copper-100 懸停狀態 邊框、分隔線、停用狀態、淡色面板 Turquoise-200 卡片邊框，Green-300 圖表填充 主要品牌表面、按鈕、活動狀態 Turquoise-500 行動按鈕，Copper-40",
+    "codes": [],
+    "colors": [
+      "#1E8A92",
+      "#6DCDD5",
+      "#145860",
+      "#3DB9C2",
+      "#F0FAFB",
+      "#26A7B0",
+      "#A8E3E8",
+      "#0F4249",
+      "#D4F1F3",
+      "#186E75"
+    ]
+  },
+  {
+    "id": "s06",
+    "slug": "06-gradient-library",
+    "headings": [
+      "Primary",
+      "Extended",
+      "Atmospheric (Mesh)"
+    ],
+    "searchEN": "Primary Extended Atmospheric (Mesh) Hover to reveal the CSS value, click to copy. All gradients are production-ready CSS. Primary Extended Atmospheric (Mesh)",
+    "searchZH": "懸停以顯示 CSS 值，點擊以複製。所有漸層皆為可直接使用的 CSS。 主要漸層 延伸漸層 氛圍（Mesh）漸層",
+    "codes": [],
+    "colors": [
+      "#CAC3D2",
+      "#26A7B0"
+    ]
+  },
+  {
+    "id": "s07",
+    "slug": "07-semantic-dark-mode",
+    "headings": [
+      "Semantic Colors",
+      "Pillar Color Mapping",
+      "Dark Mode — Interactive Preview"
+    ],
+    "searchEN": "Semantic Colors Pillar Color Mapping Dark Mode — Interactive Preview Semantic Colors Pillar Color Mapping Pillar Color Tint BG Dark Mode — Interactive Preview Toggle between light and dark to see how GPS tokens adapt. The left panel shows a live UI mockup; the right shows active token values. Token Light Dark Role Page background Cards, panels Dividers Body text Secondary text Interactive #26A7B0 #F0FAFB #8C9FCB #F4F6FB #F6AD90 #FEF6F2 #8CC897 #F3FAF5 #CAC3D2 #F8F7F9",
+    "searchZH": "語意色彩 支柱色彩對應 支柱 色彩 淡色背景 深色模式——互動預覽 切換淺色與深色模式，查看 GPS 代符如何適應。左側面板為即時 UI 模擬；右側顯示作用中的代符值。 代符 淺色 深色 角色 頁面背景 卡片、面板 分隔線 內文 次要文字 互動元素",
+    "codes": [
+      "#F4F6FB",
+      "--text",
+      "#CAC3D2",
+      "--text-muted",
+      "--surface",
+      "#8C9FCB",
+      "#F0FAFB",
+      "#26A7B0",
+      "#8CC897",
+      "#F8F7F9",
+      "--bg",
+      "#FEF6F2",
+      "#F6AD90",
+      "#F3FAF5",
+      "--border"
+    ],
+    "colors": [
+      "#E5993E",
+      "#F0FAFB",
+      "#26A7B0",
+      "#2D9F5B",
+      "#D94F4F"
+    ]
+  },
+  {
+    "id": "s08",
+    "slug": "08-accessibility",
+    "headings": [
+      "Light Mode — Approved Pairings",
+      "Dark Mode — Approved Pairings",
+      "Forbidden Combinations",
+      "Color Pairing Matrix",
+      "WCAG 2.2 Compliance",
+      "Alt-Text Writing Guidelines"
+    ],
+    "searchEN": "Light Mode — Approved Pairings Dark Mode — Approved Pairings Forbidden Combinations Color Pairing Matrix WCAG 2.2 Compliance Alt-Text Writing Guidelines Every color combination must meet WCAG 2.1 AA: 4.5:1 for normal text, 3:1 for large text (≥18px bold or ≥24px). Cards below show pass/fail with exact contrast ratios. Light Mode — Approved Pairings Dark Mode — Approved Pairings Forbidden Combinations Forbidden:  White on Turquoise-500 for body (3.2:1 fails AA). White on Copper-300 (2.1:1 fails a",
+    "searchZH": "每種色彩組合必須符合 WCAG 2.1 AA：一般文字 4.5:1，大型文字（≥18px 粗體或 ≥24px）3:1。以下卡片顯示通過/不通過及精確對比值。 淺色模式——核准配對 深色模式——核准配對 禁止組合 禁止：  Turquoise-500 上的白色內文（3.2:1 不符合 AA）。Copper-300 上的白色（2.1:1 全不符合）。白色上的 Purple-400（3.0:1——改用 Purple-600）。 色彩配對矩陣 每種前景/背景組合必須符合 WCAG 2.1 AA。此矩陣顯示最常見配對的對比度。綠色 = 符合 AA（≥4.5:1）。黃色 = 僅限大型文字（≥3:1）。紅色",
+    "codes": [
+      "alt=\"Turquoise #26A7B0\"",
+      "alt=\"SFI score trending upward from 62 to 86 over Q1-Q4\"",
+      "alt=\"GPS — Global Physical Security logo\"",
+      "aria-hidden=\"true\"",
+      "alt=\"Campaign poster mockup showing turquoise gradient hero\"",
+      "alt=\"Security checkpoint scene — placeholder\""
+    ],
+    "colors": [
+      "#1E8A92",
+      "#FAFBFC",
+      "#26A7B0",
+      "#F0FAFB",
+      "#0A1A22",
+      "#186E75"
+    ]
+  },
+  {
+    "id": "s09",
+    "slug": "09-typography",
+    "headings": [
+      "Type Specimen",
+      "Type Specimen — Dark Mode",
+      "Type Specimen — Japanese (JASM)",
+      "Type Specimen — Simplified Chinese (Shanghai/Nanjing)",
+      "Regional Typography Summary",
+      "Type Scale",
+      "Type Hierarchy",
+      "Type on Image",
+      "Spacing Scale"
+    ],
+    "searchEN": "Type Specimen Type Specimen — Dark Mode Type Specimen — Japanese (JASM) Type Specimen — Simplified Chinese (Shanghai/Nanjing) Regional Typography Summary Type Scale Type Hierarchy Type on Image Spacing Scale Role Typeface Weights Type Specimen Type Specimen — Dark Mode Type Specimen — Japanese (JASM) Japanese typography for JASM Kumamoto site communications. Uses Noto Sans JP with polite-form (丁寧語) writing conventions. No vertical text — all horizontal composition. JASM conventions: Always use 丁",
+    "searchZH": "角色 字體 字重 字體樣本頁 字體樣本頁——深色模式 字體樣本頁——日文（JASM） 用於 JASM 熊本廠區通訊的日文排版。使用 Noto Sans JP 搭配丁寧語書寫慣例。不使用直排——全部採用橫式排版。 JASM 慣例：始終使用丁寧語（禮貌形式：～ます/～です）。不使用直排。品牌術語使用片假名：セキュリティ、ターコイズ。日文內文行高：1.85。主要數位通路：LINE Works。 字體樣本頁——簡體中文（上海/南京） 用於中國大陸廠區通訊的簡體中文排版。使用 Noto Sans SC。不要自動將繁體中文轉換為簡體中文——應由母語人士獨立製作簡體內容，避免不自然的措辭。 簡體內容規則：絕",
+    "codes": [
+      "Hiragino Sans, Yu Gothic",
+      "Noto Sans TC",
+      "Lato",
+      "Microsoft JhengHei",
+      "Noto Sans SC",
+      "32–48px",
+      "24–28px",
+      "Microsoft YaHei",
+      "Noto Sans JP",
+      "Trebuchet MS, Verdana"
+    ],
+    "colors": [
+      "#1A2A32",
+      "#0A1A22",
+      "#8A9BA5",
+      "#E2E8EC"
+    ]
+  },
+  {
+    "id": "s10",
+    "slug": "10-graphic-iconography",
+    "headings": [
+      "Graphic Elements — Core Visual",
+      "Three Element Styles",
+      "Graphic Application",
+      "Icon System",
+      "Brand Pattern & Texture Library",
+      "Physical Material & Lighting Standards",
+      "Material Specifications",
+      "Lighting Color Temperature by Zone",
+      "Material Specifications",
+      "Lighting Color Temperature by Zone"
+    ],
+    "searchEN": "Graphic Elements — Core Visual Three Element Styles Graphic Application Icon System Brand Pattern & Texture Library Physical Material & Lighting Standards Material Specifications Lighting Color Temperature by Zone Material Specifications Lighting Color Temperature by Zone Graphic Elements — Core Visual Three Element Styles Style 01 Blurred Organic Soft, atmospheric renderings of the checkerboard dots with gaussian blur and transparency. Used for background textures, hero sections, and brand-buil",
+    "searchZH": "圖形元素——核心視覺 三種元素風格 風格 01 模糊有機風格 以高斯模糊和透明度呈現的柔和、氛圍感棋格點陣。用於背景紋理、主視覺區段和需要微妙現代感的品牌建設材料。 風格 02 流動有機風格 暗示運動和保護的曲線、動態圓點與形狀排列。用於活動材料、宣傳視覺和需要能量感與動態感的內容。 風格 03 銳利幾何風格 邊緣清晰的網格對齊棋格圖案。用於數據驅動內容、技術文件、標識和需要精確與結構感的材料。 圖形應用 在品牌漸層背景上使用圖形元素做版面強化。適當使用重複圖案增添紋理和深度。用於強調時刻——裝飾角落、區段分隔線和攝影旁的焦點。 不要過度使用圖形——過多的圖案覆蓋會壓過內容並降低可讀性。元素應",
+    "codes": [
+      "24×24px",
+      "1.5–2px",
+      "currentColor",
+      "2px"
+    ],
+    "colors": [
+      "#1e8a92",
+      "#3a4a58",
+      "#d4a87a",
+      "#26A7B0",
+      "#5a6a78",
+      "#0A1A22",
+      "#b8926a"
+    ]
+  },
+  {
+    "id": "s11",
+    "slug": "11-imagery-photography",
+    "headings": [
+      "Imagery Guide",
+      "Things to Avoid",
+      "Photography Shot List",
+      "Photography Anti-Patterns",
+      "Geographic Diversity Requirement",
+      "Geographic Diversity Checklist",
+      "Photography Production Checklists",
+      "Pre-Shoot Planning",
+      "On-Shoot Checklist",
+      "Post-Production Checklist",
+      "Approved Aspect Ratios",
+      "Geographic Diversity Checklist",
+      "Pre-Shoot Planning",
+      "On-Shoot Checklist",
+      "Post-Production Checklist",
+      "Approved Aspect Ratios"
+    ],
+    "searchEN": "Imagery Guide Things to Avoid Photography Shot List Photography Anti-Patterns Geographic Diversity Requirement Geographic Diversity Checklist Photography Production Checklists Pre-Shoot Planning On-Shoot Checklist Post-Production Checklist Approved Aspect Ratios Geographic Diversity Checklist Pre-Shoot Planning On-Shoot Checklist Post-Production Checklist Approved Aspect Ratios Imagery Guide Lighting Natural & Even No dramatic shadows or excessive lens flare Composition Clear & Intentional Stron",
+    "searchZH": "影像指南 光線 自然均勻 無戲劇性陰影或過度鏡頭光暈 構圖 清晰且有意圖 清晰的焦點、乾淨的背景 人物 真實自然 真實互動、非刻意擺拍或人工感 色彩 中性色調 不過度飽和或高對比色彩調校 應避免事項 避免刻意擺拍 避免刻意或人工感。優先選擇反映真實互動和場景的真誠瞬間。不要使用不自然或擺拍姿勢。 避免過度製作 平衡專業性與視覺吸引力，避免過度後製。不要使用過度戲劇化的燈光和過多鏡頭光暈。不要使用過度飽和或高對比色彩調校。 避免脈絡斷裂 釐清影像脈絡以符合預期訊息，防止混淆或誤解。避免過度後製效果的影像。",
+    "codes": [],
+    "colors": []
+  },
+  {
+    "id": "s12",
+    "slug": "12-voice-tone",
+    "headings": [
+      "Tone by Context",
+      "Audience-Specific Writing Rules",
+      "Security Communication Templates"
+    ],
+    "searchEN": "Tone by Context Audience-Specific Writing Rules Security Communication Templates Attribute 01 Calm Authority Confidence from competence, not volume. In a crisis, our voice gets calmer. Attribute 02 Clear Before Clever Plain language, short sentences, concrete examples. Attribute 03 Human First People as people — not \"resources\" or \"headcount.\" Attribute 04 Precise & Accountable Specific numbers, dates, owners. \"By Q3\" not \"soon.\" Tone by Context Context Tone Example Emergency Direct, zero ambigu",
+    "searchZH": "屬性 01 沉穩的權威 來自能力的自信，而非音量。在危機中，我們的聲音更加沉穩。 屬性 02 清晰優先於巧妙 淺顯的語言、短句、具體的例子。 屬性 03 以人為本 將人視為人——不是「資源」或「員額」。 屬性 04 精確且負責 具體的數字、日期、負責人。「Q3 前完成」而非「近期」。 依情境調整語氣 情境 語氣 範例 緊急狀況 直接、零模糊 「立即疏散至集合點 B。不要使用電梯。」 政策",
+    "codes": [],
+    "colors": []
+  },
+  {
+    "id": "s13",
+    "slug": "13-motion-animation",
+    "headings": [
+      "Four Signature Motions",
+      "Tokens",
+      "Motion Personality",
+      "Motion Timing Tokens",
+      "Named Easing Curves",
+      "Micro-Interaction Specimens",
+      "Sonic Identity — The Sound of GPS",
+      "Audio Design Principles",
+      "Playable Sound Demos",
+      "Sound Event Specifications",
+      "Video Template Specs",
+      "Audio & Sound",
+      "Motion Code Reference",
+      "Audio Design Principles",
+      "Playable Sound Demos",
+      "Sound Event Specifications"
+    ],
+    "searchEN": "Four Signature Motions Tokens Motion Personality Motion Timing Tokens Named Easing Curves Micro-Interaction Specimens Sonic Identity — The Sound of GPS Audio Design Principles Playable Sound Demos Sound Event Specifications Video Template Specs Audio & Sound Motion Code Reference Audio Design Principles Playable Sound Demos Sound Event Specifications Four Signature Motions Tokens Token Value Use Forbidden: No bounce/elastic. No spinning (surveillance connotation). No auto-play video BG. No infin",
+    "searchZH": "四種標誌性動態 動態設計代符 代符 值 用途 禁止： 不使用彈跳/彈性動效。不使用旋轉（有監控聯想）。不使用自動播放影片背景。不使用內容的無限循環。不使用視差效果。尊重 prefers-reduced-motion。 動態性格 一道輕輕升起的帷幕 內容從靜止中浮現——永遠不會跳入。像觀看晨光逐漸照亮一個房間。感受：沉靜到來、安靜自信。 一次心跳，而非警鈴 有韻律的、活的強調——不是慌亂的。像系統狀態指示燈的穩定閃爍。感受：活躍、被監控、在掌控中。 慢動作的骨牌 序列元素跟隨引導者——每個精確等待自己的順序。像一個訓練有素的團隊通過檢查站。感受：有編排、專業、刻意為之。 一顆石頭找到它的安歇之處",
+    "codes": [
+      "--ease-enter",
+      "600ms",
+      "--dur-normal",
+      "--stagger",
+      "prefers-reduced-motion",
+      "--ease-default",
+      "300ms",
+      "60ms",
+      "400ms",
+      "--dur-fast",
+      "cubic-bezier(0.25, 0.1, 0.25, 1.0)",
+      "--dur-slow",
+      "cubic-bezier(0.4, 0, 0.6, 1)"
+    ],
+    "colors": []
+  },
+  {
+    "id": "s14",
+    "slug": "14-stationery",
+    "headings": [
+      "GPS Safety Print Items",
+      "Visual Mockups"
+    ],
+    "searchEN": "GPS Safety Print Items Visual Mockups GPS print applications extend the brand into everyday physical touchpoints — from desk cards to family safety packages. Each item uses the brand gradient bar, GPS mark, and bilingual text as minimum brand elements. GPS Safety Print Items Item (EN) Item (ZH) Dimensions Material Brand Elements Gradient top bar, GPS mark, 7 behaviors summary Turquoise header, floor plan area, emergency contacts Turquoise spine, step-by-step SOP, bilingual Gradient bar, key safe",
+    "searchZH": "GPS 印刷應用將品牌延伸到日常實體接觸點——從桌上卡片到家庭安全包。每個物品以品牌漸層條、GPS 標誌和雙語文字作為最低品牌元素。 GPS 安全印刷品項 品項（EN） 品項（ZH） 尺寸 材質 品牌元素 漸層頂部條、GPS 標誌、7 項行為摘要 青綠色標頭、樓層平面圖區域、緊急聯絡資訊 青綠色書脊、逐步 SOP、雙語 漸層條、重點安全指南、QR 碼 漸層封面帶、GPS 標誌、安全語錄 GPS 標誌網版印刷、青綠色拉鏈頭 青綠色→銅色漸層、「Safety First 安全第一」重複圖案 青綠色邊框、緊急電話號碼、GPS 標誌 青綠色夾片、駕駛安全提示、雙語 GPS 標誌刺繡、青綠色點綴、內含檢",
+    "codes": [],
+    "colors": [
+      "#0A1A22",
+      "#f5f5f5",
+      "#CAC3D2",
+      "#26A7B0"
+    ]
+  },
+  {
+    "id": "s15",
+    "slug": "15-poster-signage",
+    "headings": [
+      "Poster Grid System",
+      "Text Placement Within Zones",
+      "Poster Types & Use Cases",
+      "Three Poster Mockups",
+      "Editable Zones",
+      "Signage",
+      "Physical Material & Lighting Standards",
+      "Spatial Wayfinding Standards",
+      "Installation Heights",
+      "Signage Material Specifications",
+      "Detailed Material & Mounting Specifications",
+      "Quality Acceptance Criteria",
+      "Viewing Distance & Typography Scale",
+      "Installation Heights",
+      "Signage Material Specifications",
+      "Detailed Material & Mounting Specifications",
+      "Quality Acceptance Criteria",
+      "Viewing Distance & Typography Scale"
+    ],
+    "searchEN": "Poster Grid System Text Placement Within Zones Poster Types & Use Cases Three Poster Mockups Editable Zones Signage Physical Material & Lighting Standards Spatial Wayfinding Standards Installation Heights Signage Material Specifications Detailed Material & Mounting Specifications Quality Acceptance Criteria Viewing Distance & Typography Scale Installation Heights Signage Material Specifications Detailed Material & Mounting Specifications Quality Acceptance Criteria Viewing Distance & Typography ",
+    "searchZH": "海報網格系統 規格 值 網格 裁切（A3） 出血 安全邊距 解析度 區域內文字放置 區域 標題位置 內文流動 對齊 影像區 左下覆蓋 僅標題，影像上不放內文 靠左 文字區 區域頂部，距邊緣 16px 標題下方，--sp-4 間距，靠左",
+    "codes": [
+      "--sp-4",
+      "--sp-2"
+    ],
+    "colors": [
+      "#0A1A22",
+      "#CAC3D2",
+      "#26A7B0",
+      "#f8f9fa"
+    ]
+  },
+  {
+    "id": "s16",
+    "slug": "16-uniform-wearables",
+    "headings": [
+      "Material Specifications",
+      "Visual Mockups",
+      "Corporate Safety Gifts"
+    ],
+    "searchEN": "Material Specifications Visual Mockups Corporate Safety Gifts Item Logo Color Left chest, 50mm max, white on dark Black fabric, turquoise piping Mark repeated at 20mm Turquoise-copper gradient sublimation Mark, 15mm, top center White card, turquoise header, category edge Mark only, optical at 20px White on turquoise circle, 30mm Full horizontal, reflective Reflective silver on standard hi-vis Contracted security:  Vendor uniforms do not carry the GPS logo. A branded arm patch (50mm × 30mm, embro",
+    "searchZH": "項目 標誌 色彩 左胸，最大 50mm，深色底白色標誌 黑色布料，青綠色滾邊 圖標 20mm 重複排列 青綠-銅色漸層熱昇華 圖標，15mm，頂部置中 白色卡片，青綠色頁首，分類邊條 僅圖標，20px 光學版 青綠色圓底白色，30mm 完整水平標誌，反光材質 標準反光背心上的反光銀色 承攬商保全：  承攬商制服不使用 GPS 標誌。提供品牌臂章（50mm × 30mm，繡製，黑底青綠色）供左袖佩戴。 材質規格 組件 材質 細節 Polo 衫布料",
+    "codes": [],
+    "colors": [
+      "#0A1A22",
+      "#f5f5f5",
+      "#26A7B0"
+    ]
+  },
+  {
+    "id": "s17",
+    "slug": "17-web-landing",
+    "headings": [
+      "Design Tokens",
+      "Core Components",
+      "Extended Components"
+    ],
+    "searchEN": "Design Tokens Core Components Extended Components Design Tokens Token Value Core Components Extended Components Access granted successfully Badge expires in 7 days Unauthorized access attempt Confirm Action Are you sure you want to revoke this access? Cancel Revoke Overview Details History 1200px 24px 375 768 1024 1440 4 8 12 9999px",
+    "searchZH": "動態設計代符 代符 值 核心元件 延伸元件 存取已成功授權 門禁卡 7 天後到期 未授權存取嘗試 確認操作 您確定要撤銷此存取權限嗎？ 取消 撤銷 總覽 詳情 紀錄",
+    "codes": [
+      "44×44px",
+      "1200px",
+      "9999px",
+      "0 1px 3px rgba(10,26,34,.06)",
+      "768",
+      "0 4px 12px rgba(10,26,34,.08)",
+      "375",
+      "1440",
+      "12",
+      "1024",
+      "8",
+      "24px",
+      "4"
+    ],
+    "colors": [
+      "#28C840",
+      "#721c24",
+      "#856404",
+      "#f8d7da",
+      "#155724",
+      "#FF5F57",
+      "#FEBC2E",
+      "#fff3cd",
+      "#d4edda"
+    ]
+  },
+  {
+    "id": "s18",
+    "slug": "18-email-newsletter",
+    "headings": [
+      "Newsletter Design System",
+      "Email Structure Grid",
+      "Three Newsletter Identities",
+      "Three Newsletter Layout Designs",
+      "Email Typography Stack",
+      "Outlook Rendering Checklist",
+      "Canonical Bilingual Layout",
+      "Layout 1: Paragraph-Aligned",
+      "Layout 2: Side-by-Side",
+      "Layout 1: Paragraph-Aligned",
+      "Layout 2: Side-by-Side"
+    ],
+    "searchEN": "Newsletter Design System Email Structure Grid Three Newsletter Identities Three Newsletter Layout Designs Email Typography Stack Outlook Rendering Checklist Canonical Bilingual Layout Layout 1: Paragraph-Aligned Layout 2: Side-by-Side Layout 1: Paragraph-Aligned Layout 2: Side-by-Side Newsletter Design System Email Structure Grid Zone Height Spec Header Logo left, meta right. Brand gradient or solid turquoise BG. Hero Hosted image or gradient. Alt text required. Max 200KB. Content Variable Table",
+    "searchZH": "電子報設計系統 電子郵件結構網格 區域 高度 規格 標頭 標誌靠左，中繼資料靠右。品牌漸層或純青綠色背景。 主視覺 託管圖片或漸層。必須有替代文字。最大 200KB。 內容 可變 表格排版 1 或 2 欄。H2：Bold 18px。內文：Regular 14px。連結：turquoise-600。 Turquoise-500 背景，白色文字，16px 內距，4px 圓角。防彈按鈕（VML + padding 備用）。 頁尾 Grey-100 背景。標誌圖標（光學 20px）。法律文字 10px。必須有取消訂閱連結。 三份電子報視覺識別 電子報 標頭漸層 點綴色 頻率",
+    "codes": [
+      "Trebuchet MS, Verdana, Arial, sans-serif",
+      "Consolas, 'Courier New', monospace",
+      "--sp-2",
+      "'Microsoft JhengHei', 'PingFang TC', 'Hiragino Sans', sans-serif",
+      "[data-ogsc]",
+      "8px",
+      "[data-ogsb]",
+      "mso-line-height-rule: exactly"
+    ],
+    "colors": [
+      "#f5f5f5",
+      "#CAC3D2",
+      "#8C9FCB",
+      "#26A7B0",
+      "#0A1A22"
+    ]
+  },
+  {
+    "id": "s19",
+    "slug": "19-mobile-line",
+    "headings": [
+      "LINE OA Visual Identity",
+      "Rich Menu Design",
+      "Flex Message Design Tokens",
+      "Push Notification Guidelines"
+    ],
+    "searchEN": "LINE OA Visual Identity Rich Menu Design Flex Message Design Tokens Push Notification Guidelines Element Spec Logo mark on turquoise-50, 640×640px 2500×1686px, 6-cell, turquoise-700 BG, white vectors Brand hex codes. System sans body. Bold headers. Turquoise-500 CTA. Calm authority voice. No ALL CAPS. No excessive punctuation. Bilingual zh-TW/EN. Warm tone. Quick-start buttons. LINE OA Visual Identity Rich Menu Design Flex Message Design Tokens Element Spec Header BG or Body font System sans-ser",
+    "searchZH": "元素 規格 標誌圖標置於 turquoise-50 底色，640×640px 2500×1686px，6 格，turquoise-700 背景，白色向量圖 品牌色碼。系統無襯線內文。粗體標題。Turquoise-500 行動按鈕。 沉穩權威語調。不全部大寫。不過度使用標點符號。 雙語 zh-TW/EN。溫暖語調。快速啟動按鈕。 LINE 官方帳號視覺識別 Rich Menu 設計 Flex Message 設計代符 元素 規格 標頭背景 或 內文字體 系統無襯線，14px，行高 1.6 行動按鈕 卡片內距 最大氣泡寬度 LINE 限制",
+    "codes": [],
+    "colors": []
+  },
+  {
+    "id": "s20",
+    "slug": "20-digital-signage",
+    "headings": [
+      "Content Zones",
+      "Content Types & Rotation",
+      "Internal Announcement Template"
+    ],
+    "searchEN": "Content Zones Content Types & Rotation Internal Announcement Template Property Value 5% margin all edges Slide transitions, 8s min dwell, no auto-video Bottom-right or top-left, horizontal, min 120px h 6-screen starter kit, monthly refresh Content Zones Content Types & Rotation Slide Type Dwell Time Max per Rotation Content Announcement Policy updates, event notices, training reminders Brand / Culture Pillar messaging, brand imagery, CPTED awareness Safety Tip Family extension tips, commute safe",
+    "searchZH": "屬性 值 四邊 5% 邊距 滑動轉場，最少停留 8 秒，不自動播放影片 右下或左上，水平排列，最小高度 120px 6 畫面入門套組，每月更新 內容區域 內容類型與輪替 畫面類型 停留時間 每輪最多 內容 公告 政策更新、活動通知、培訓提醒 品牌 / 文化 支柱訊息、品牌影像、CPTED 意識 安全提示 家庭延伸提示、通勤安全、季節性意識 數據 / 指標 無事故天數、培訓完成率、訪客人數",
+    "codes": [],
+    "colors": [
+      "#fafafa",
+      "#0A1A22",
+      "#D94F4F",
+      "#26A7B0"
+    ]
+  },
+  {
+    "id": "s21",
+    "slug": "21-campaign-moods",
+    "headings": [
+      "Campaign Specimens",
+      "Campaign Naming & Versioning",
+      "Cross-Touchpoint Consistency",
+      "Mood Application Specimens",
+      "Campaign Design Lab",
+      "Fixed Core (Never Changes)",
+      "Visual Intensity Levels",
+      "Graphic Treatment Gallery",
+      "Fixed Core (Never Changes)",
+      "Visual Intensity Levels",
+      "Graphic Treatment Gallery"
+    ],
+    "searchEN": "Campaign Specimens Campaign Naming & Versioning Cross-Touchpoint Consistency Mood Application Specimens Campaign Design Lab Fixed Core (Never Changes) Visual Intensity Levels Graphic Treatment Gallery Fixed Core (Never Changes) Visual Intensity Levels Graphic Treatment Gallery Standard — Brand Forward Default. Full turquoise-copper. Calm, professional. Mood Board Urgent — Security Alert Deep turquoise + black. High contrast. Minimal. Mood Board Warm — Community Green-turquoise. People-first phot",
+    "searchZH": "標準——品牌導向 預設。完整青綠-銅色。沉穩、專業。 情緒板 緊急——安全警報 深青綠 + 黑色。高對比。極簡。 情緒板 溫暖——社群 綠-青綠色。以人為本的攝影。 情緒板 前瞻——科技 銅-紫色。技術感、精確。 情緒板 柔和——家庭與健康 橘-銅色。溫暖、親切、個人化。 情緒板 深色——監控 黑-青綠色。警覺、精準。 情緒板 宣傳樣本 標準——品牌導向",
+    "codes": [],
+    "colors": [
+      "#CAC3D2",
+      "#8C9FCB",
+      "#26A7B0",
+      "#574A63",
+      "#8CC897",
+      "#0F4249",
+      "#F6AD90"
+    ]
+  },
+  {
+    "id": "s22",
+    "slug": "22-seasonal-event",
+    "headings": [
+      "Seasonal Specimens",
+      "Event Badge Variations"
+    ],
+    "searchEN": "Seasonal Specimens Event Badge Variations Season / Event Gradient Photography Accent Seasonal Specimens Each seasonal adaptation applies a specific gradient, photography mood, and accent color to the standard poster three-zone layout. Below are specimen mockups showing how each season transforms the brand while preserving core identity. Spring / New Year Summer / Safety Month Autumn / Fire Safety Winter / Year-End New Site Launch Global Safety Day Award / Recognition Event Badge Variations Safet",
+    "searchZH": "季節 / 活動 漸層 攝影 點綴色 季節視覺模擬 每個季節變體將特定漸層、攝影氛圍和點綴色應用於標準海報三區版面。以下為模擬示例，展示各季節如何在保留核心識別的同時轉化品牌。 春季 / 新年 夏季 / 安全月 秋季 / 消防安全 冬季 / 年終 新廠啟動 全球安全日 獎項 / 表彰 活動識別變體 安全月 消防安全 全球安全日 獎項 GPS 標誌不修改。Noto Sans TC + Lato。海報三區結構。語調屬性。安全空間。無障礙。 標誌色彩/形狀/比例。字體層級最多 3 種尺寸。標誌最小尺寸。核心青綠色或黑色代符。品牌行為或語調用語。",
+    "codes": [],
+    "colors": [
+      "#CAC3D2",
+      "#26A7B0",
+      "#8CC897",
+      "#0F4249",
+      "#0A1A22",
+      "#F6AD90"
+    ]
+  },
+  {
+    "id": "s23",
+    "slug": "23-co-branding",
+    "headings": [
+      "Organizational Logo Architecture",
+      "Visual Architecture",
+      "Brand Architecture Relationships"
+    ],
+    "searchEN": "Organizational Logo Architecture Visual Architecture Brand Architecture Relationships Organizational Logo Architecture Visual Architecture Brand Architecture Relationships Relationship Visual Treatment Approval When co-displayed, GSM logo takes parent position (left or top). GPS logo in subordinate position. 1px divider in var(--g200) separates entities. Minimum separation = GPS clearspace rule. Equal visual weight. Each division uses its own logo. Shared header/footer permitted with division id",
+    "searchZH": "組織標誌架構 視覺架構 品牌架構關係 關係 視覺處理 核准 同時展示時，GSM 標誌取上級位置（左側或頂部）。GPS 標誌居下級位置。var(--g200) 的 1px 分隔線區隔實體。最小間距 = GPS 安全空間規則。 同等視覺權重。各部門使用自己的標誌。允許共用頁首/頁尾加部門識別。不可合併或混搭部門標誌成複合圖標。 GPS 標誌始終從屬於企業標誌。必須隨時與企業規範保持視覺一致。 GPS 品牌主導。供應商標誌置於「supported by」次要位置。供應商品牌元素 ≤ 20% 視覺面積。 政府徽章依協議優先。GPS 居次要位置。中性背景——不使用 GPS 漸層。",
+    "codes": [
+      "var(--g200)"
+    ],
+    "colors": []
+  },
+  {
+    "id": "s24",
+    "slug": "24-brand-performance",
+    "headings": [
+      "Brand Metrics",
+      "Communications Infrastructure Metrics",
+      "Crisis Communication Protocol",
+      "Brand Evolution Governance",
+      "Dashboard Wireframe",
+      "Safety Feeling Index (SFI)",
+      "SFI Methodology",
+      "SFI Survey Instrument (8 Questions)",
+      "Measurement Cadence",
+      "Brand Adoption Rate",
+      "Measurement Framework",
+      "Director's Quarterly Brand Performance Brief",
+      "Brand Metrics",
+      "Communications Infrastructure Metrics",
+      "SFI Methodology",
+      "SFI Survey Instrument (8 Questions)",
+      "Measurement Cadence",
+      "Measurement Framework"
+    ],
+    "searchEN": "Brand Metrics Communications Infrastructure Metrics Crisis Communication Protocol Brand Evolution Governance Dashboard Wireframe Safety Feeling Index (SFI) SFI Methodology SFI Survey Instrument (8 Questions) Measurement Cadence Brand Adoption Rate Measurement Framework Director's Quarterly Brand Performance Brief Brand Metrics Communications Infrastructure Metrics SFI Methodology SFI Survey Instrument (8 Questions) Measurement Cadence Measurement Framework Pillar 01 Perception Do people understa",
+    "searchZH": "支柱 01 認知度 人們了解 GPS 的角色嗎？無提示回想、情感分析、語言分析。 支柱 02 一致性 所有產出都符合品牌嗎？每季稽核 20 個隨機樣本。 支柱 03 觸及率 訊息有傳達嗎？開信率、層級傳達完成率、地域覆蓋率。 品牌指標 指標 方法 頻率 目標 溝通基礎設施指標 指標 方法 頻率 目標 從總部發布到最後一個場域收到的時間",
+    "codes": [],
+    "colors": [
+      "#CAC3D2",
+      "#8C9FCB",
+      "#26A7B0",
+      "#ffffff",
+      "#e2e8f0",
+      "#0A1A22"
+    ]
+  },
+  {
+    "id": "s25",
+    "slug": "25-templates-toolkit",
+    "headings": [
+      "Visual Consistency",
+      "Visual Do's & Don'ts",
+      "Text Hierarchy",
+      "Illustration Style",
+      "Color Usage",
+      "Brand Violation Remediation",
+      "Assets Download Center",
+      "Grid System Parameters",
+      "Text Hierarchy",
+      "Illustration Style",
+      "Color Usage",
+      "Grid System Parameters"
+    ],
+    "searchEN": "Visual Consistency Visual Do's & Don'ts Text Hierarchy Illustration Style Color Usage Brand Violation Remediation Assets Download Center Grid System Parameters Text Hierarchy Illustration Style Color Usage Grid System Parameters Template Format Use Case Quick reference, shift briefing cards Visual Consistency Typography Brand Fonts Only Color Brand Palette Graphics Pattern for Highlight Visual Do's & Don'ts Text Hierarchy Illustration Style Color Usage Brand Violation Remediation Severity Exampl",
+    "searchZH": "模板 格式 使用場景 快速參考、換班簡報卡 視覺一致性 字體排版 僅使用品牌字體 色彩 品牌色盤 圖形 圖形用於強調 視覺規範 文字層級 插畫風格 色彩使用 品牌違規處理 嚴重度 範例 處置 時程",
+    "codes": [],
+    "colors": [
+      "#CAC3D2",
+      "#26A7B0"
+    ]
+  },
+  {
+    "id": "sA",
+    "slug": "app-a-activation",
+    "headings": [
+      "Activation Timeline",
+      "Activation Checklist by Phase",
+      "Security-in-Architectural-Design",
+      "Guard's Emergency Response Card",
+      "Brand Kit Manifest"
+    ],
+    "searchEN": "Activation Timeline Activation Checklist by Phase Security-in-Architectural-Design Guard's Emergency Response Card Brand Kit Manifest Phase Timeline Deliverables Owner 0: Pre-Arrival Day −30 to 0 Brand kit shipped. Local owner identified. Language supplement confirmed. Wayfinding designed. 1: Foundation Day 1–30 Signage installed. Access points branded. Welcome materials. Orientation session. 2: Integration Day 31–60 Poster rotation. Digital signage connected. Feedback loop activated. First bran",
+    "searchZH": "階段 時程 交付物 負責人 0：到場前 第 −30 至 0 天 品牌工具包寄出。指定當地負責人。語言補充版確認。指引導引設計完成。 1：基礎 第 1–30 天 標識安裝完成。出入口品牌化。歡迎材料。導覽說明會。 2：整合 第 31–60 天 海報輪替。數位看板連線。回饋機制啟動。首次品牌檢查。 3：校準 第 61–90 天 行為評估。認知基線。文化調整。場域宣告「品牌啟用」。 啟動時程視覺化  工會 (Betriebsrat) 簡報於第 0 階段必須完成。所有員工材料需德語補充版。審批流程加 2 週。  綠地建設——從零建立文化。將變革描述為改善 (kaizen)。需要根回共識。日語補充版。L",
+    "codes": [],
+    "colors": [
+      "#5bbcc3",
+      "#CAC3D2",
+      "#8C9FCB",
+      "#26A7B0",
+      "#93d5d9",
+      "#0A1A22"
+    ]
+  },
+  {
+    "id": "sL",
+    "slug": "app-l-language",
+    "headings": [
+      "Bilingual Layout Rules",
+      "Multilingual Signage",
+      "Regional Supplement Specimen",
+      "JP Regional Specimen — JASM Kumamoto",
+      "zh-CN Supplement — Shanghai &amp; Nanjing"
+    ],
+    "searchEN": "Bilingual Layout Rules Multilingual Signage Regional Supplement Specimen JP Regional Specimen — JASM Kumamoto zh-CN Supplement — Shanghai &amp; Nanjing Tier Language Code Scope Font All global, master document HQ-TW, all bilingual comms Bilingual Layout Rules Rule Value CJK headline size primary EN headline size CJK body line-height EN body line-height Stacking order Primary language on top, secondary below Paragraph spacing 1.5× normal between language blocks Multilingual Signage EN zh-TW SC DE",
+    "searchZH": "層級 語言 代碼 範圍 字體 全球通用，主文件 台灣總部，所有雙語通訊 雙語排版規則 規則 值 CJK 標題字級 主要 EN 標題字級 CJK 內文行高 EN 內文行高 堆疊順序 主要語言在上，次要語言在下 段落間距 語言區塊間為正常值的 1.5 倍 多語言標識",
+    "codes": [
+      "SC",
+      "1.75",
+      "ES",
+      "zh-TW",
+      "EN",
+      "DE",
+      "1.85",
+      "JP"
+    ],
+    "colors": [
+      "#F4F5F7",
+      "#8E9CA5",
+      "#26A7B0",
+      "#D2DAE0",
+      "#0A1A22",
+      "#6B7B85"
+    ]
+  },
+  {
+    "id": "sR",
+    "slug": "app-r-raci",
+    "headings": [],
+    "searchEN": "Director Strategy MarCom Section Hd Regional Brand Foundation Brand Behaviors Visual Identity (03–11) Motion Print Applications Digital Applications Creative Variations Co-branding Brand Performance Templates New Site Activation Language Supplements Quarterly Brand Audit",
+    "searchZH": "Director Strategy MarCom Section Hd Regional 品牌基礎 品牌行為準則 視覺識別 (03–11) 動態 印刷應用 數位應用 創意變體 聯合品牌 品牌績效 模板 新廠區啟動 語言補充版 季度品牌稽核",
+    "codes": [],
+    "colors": []
+  },
+  {
+    "id": "sT",
+    "slug": "app-t-design-tokens",
+    "headings": [
+      "JSON Tokens",
+      "Tailwind Config",
+      "SCSS Variables",
+      "Responsive Breakpoints",
+      "Component Token Mapping",
+      "TypeScript Type Definitions"
+    ],
+    "searchEN": "JSON Tokens Tailwind Config SCSS Variables Responsive Breakpoints Component Token Mapping TypeScript Type Definitions JSON Tokens Tailwind Config SCSS Variables Responsive Breakpoints Target Columns Small phones Tablets, large phones Laptops, small desktops Large desktops, signage panels Component Token Mapping Maps design primitives to component-level semantics. Use these mappings when building UI components to ensure consistent token usage across all GPS digital products. Component Property Va",
+    "searchZH": "JSON 代符 Tailwind 設定 SCSS 變數 響應式斷點 目標 欄數 小型手機 平板、大型手機 筆電、小型桌機 大型桌機、看板面板 元件代符對應 將設計原語對應至元件層級語意。建構 UI 元件時使用這些對應，確保所有 GPS 數位產品的代符使用一致。 元件 屬性 值 TypeScript 型別定義 將這些型別定義複製到您的專案中，實現型別安全的代符使用。自動完成和編譯時檢查可防止不符品牌的色彩/間距使用。 代符治理：所有代符變更需經 GPS 策略團隊核准。主要色彩或字體的變更需 GPS Director 簽核。代符版本與品牌聖經版本綁定（目前 v4.0）。重大變更必須提前 30 天通",
+    "codes": [
+      "radius.sm",
+      "$bp-xl",
+      "$bp-lg",
+      "spacing.sp2 × sp4",
+      "$bp-md",
+      "color.turquoise.500",
+      "color.neutral.white",
+      "transparent",
+      "$bp-sm",
+      "color.neutral.g200",
+      "color.neutral.black",
+      "radius.lg",
+      "spacing.sp4"
+    ],
+    "colors": [
+      "#CAC3D2",
+      "#4A5E6A",
+      "#8C9FCB",
+      "#26A7B0",
+      "#2D3E48",
+      "#8CC897",
+      "#1A2A32",
+      "#0A1A22",
+      "#F6AD90",
+      "#6B7B85"
+    ]
+  },
+  {
+    "id": "sV",
+    "slug": "app-v-version-history",
+    "headings": [
+      "Brand Support & Contact"
+    ],
+    "searchEN": "Brand Support & Contact Version Date Changes Approved By Major platform migration: monolithic HTML portal → Next.js component architecture with MDX. All 31 sections extracted into individual content files. New features: (1) Interactive visual demos — TintStrip, GradientSwatch (click-to-copy), DarkModeToggle, ContrastCards with WCAG ratings, SVG stationery/badge/lanyard mockups, campaign mood boards, dashboard wireframes, phase timelines, workflow diagrams. (2) Content additions — Physical Materi",
+    "searchZH": "版本 日期 變更內容 核准者 重大平台遷移：單體 HTML 入口網站 → 基於 Next.js 元件架構的 MDX。所有 31 個章節提取為個別內容檔案。新功能：(1) 互動式視覺展示——TintStrip、GradientSwatch（點擊複製）、DarkModeToggle、ContrastCards（含 WCAG 評級）、SVG 文具/識別證/識別帶模型、活動情緒板、儀表板線框圖、階段時間軸、工作流程圖。(2) 內容新增——實體材質與照明標準（Ch10/15）、安全感受指數 + 品牌採用率（Ch24）、地理多樣性要求（Ch11）、標準雙語電子郵件排版（Ch18）、建築設計中的安全整合（A",
+    "codes": [],
+    "colors": []
+  },
+  {
+    "id": "sW",
+    "slug": "app-w-quality-playbook",
+    "headings": [
+      "How We Work Together",
+      "Who Does What",
+      "Three Types of Work",
+      "Step by Step",
+      "Work Type Flow Diagrams",
+      "Two Simple Checklists",
+      "When Something's Off",
+      "Regular Check-Ups",
+      "Quick Lookup"
+    ],
+    "searchEN": "How We Work Together Who Does What Three Types of Work Step by Step Work Type Flow Diagrams Two Simple Checklists When Something's Off Regular Check-Ups Quick Lookup How We Work Together Sort first, then start Before making anything, decide how important it is. Big decisions go to the Division Head. Regular work stays between Strategy and Promotion. Use the checklist, not guesswork The Brand Bible tells us what's right. When checking work, refer to the specific chapter — not personal preference.",
+    "searchZH": "我們怎麼合作 先分類，再開始 製作任何東西之前，先判斷重要性。重大決策交給處長。一般工作在策略與推廣之間完成。 用檢查表，不靠猜測 品牌聖經告訴我們什麼是對的。檢查工作時，參照具體章節——而非個人偏好。 保護處長的時間 只有策略性事項需要處長。日常工作在策略與推廣之間流轉。有疑問時，先問策略。 誰負責什麼 角色 範圍 實際上 處長 設定方向。核准重大決策：品牌訊息變更、聯合品牌、新據點啟動、處長級訊息。Q4 檢視年度品牌健康報告。 每季看到幾次策略簡報。一輪回饋後即發布。 策略轉型 撰寫簡報、守護標準。審查所有活動級別作品的訊息一致性。維護品牌聖經。執行季度檢查。決定每個需求的類型。 每個活動",
+    "codes": [
+      "Big",
+      "Campaign",
+      "Everyday"
+    ],
+    "colors": [
+      "#e2e8f0",
+      "#f7f9fb",
+      "#0A1A22",
+      "#26A7B0"
+    ]
+  }
+]
