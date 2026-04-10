@@ -159,3 +159,45 @@ import CrossRef from '@/components/CrossRef'
 <Callout type="warning">
 <span className="en">Security-in-design is a Phase 0 requirement. If safety specs are not included in the architectural brief before construction begins, retrofitting is 3–5x more expensive and produces inferior results. The GPS Strategy team must be included in the architectural review committee for all new site projects.</span><span className="zh">安全設計是第 0 階段的要求。如果安全規格未在施工前納入建築簡報，改裝成本將高出 3–5 倍且效果較差。GPS 策略團隊必須加入所有新廠區專案的建築審查委員會。</span>
 </Callout>
+
+### <span className="en">Guard's Emergency Response Card</span><span className="zh">保全緊急應變卡</span>
+
+<p><span className="en">Printable reference card (148×100mm, waterproof laminate) for security guards. Designed for 30-second decision-making under pressure. Print double-sided, attach to lanyard or post at guard station.</span><span className="zh">可列印的保全參考卡片（148×100mm，防水護貝）。設計供壓力下 30 秒內決策使用。雙面印刷，繫於識別帶或張貼於警衛室。</span></p>
+
+<div style={{background:'#fff',border:'2px solid var(--color-turquoise-500)',borderRadius:'10px',padding:'0',overflow:'hidden',maxWidth:'500px',margin:'16px 0',breakInside:'avoid'}}>
+  <div style={{background:'linear-gradient(135deg,#26A7B0,#1E8A92)',padding:'10px 16px',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+    <div style={{color:'#fff',fontWeight:700,fontSize:'14px',letterSpacing:'0.04em'}}>GPS EMERGENCY RESPONSE</div>
+    <div style={{color:'rgba(255,255,255,0.7)',fontSize:'9px',fontFamily:'var(--font-mono)'}}>148×100mm</div>
+  </div>
+  <div style={{padding:'14px 16px'}}>
+    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'10px',marginBottom:'12px'}}>
+      <div style={{background:'rgba(217,79,79,0.06)',border:'1px solid rgba(217,79,79,0.15)',borderRadius:'6px',padding:'8px'}}>
+        <div style={{fontSize:'8px',fontWeight:700,color:'var(--color-danger)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}><span className="en">Fire / Explosion</span><span className="zh">火災 / 爆炸</span></div>
+        <div style={{fontSize:'9px',color:'var(--color-ink)',lineHeight:1.5}}><span className="en">1. Activate alarm<br/>2. Evacuate zone → Assembly Point<br/>3. Call Fire: ext. 119<br/>4. Report to GPS Control</span><span className="zh">1. 啟動警報<br/>2. 疏散區域 → 集合點<br/>3. 撥打消防：分機 119<br/>4. 回報 GPS 控制中心</span></div>
+      </div>
+      <div style={{background:'rgba(229,153,62,0.06)',border:'1px solid rgba(229,153,62,0.15)',borderRadius:'6px',padding:'8px'}}>
+        <div style={{fontSize:'8px',fontWeight:700,color:'var(--color-warning)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}><span className="en">Medical Emergency</span><span className="zh">醫療緊急</span></div>
+        <div style={{fontSize:'9px',color:'var(--color-ink)',lineHeight:1.5}}><span className="en">1. Secure scene<br/>2. Call Medical: ext. 995<br/>3. Apply first aid if trained<br/>4. Guide EMS to location</span><span className="zh">1. 確保現場安全<br/>2. 撥打醫療：分機 995<br/>3. 受過訓練則施行急救<br/>4. 引導救護至現場</span></div>
+      </div>
+      <div style={{background:'rgba(38,167,176,0.06)',border:'1px solid rgba(38,167,176,0.15)',borderRadius:'6px',padding:'8px'}}>
+        <div style={{fontSize:'8px',fontWeight:700,color:'var(--color-turquoise-700)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}><span className="en">Unauthorized Access</span><span className="zh">未授權進入</span></div>
+        <div style={{fontSize:'9px',color:'var(--color-ink)',lineHeight:1.5}}><span className="en">1. Greet, do not confront<br/>2. Request ID calmly<br/>3. Call GPS Control: ext. 7700<br/>4. Escort to security desk</span><span className="zh">1. 問候、不對抗<br/>2. 冷靜要求出示證件<br/>3. 撥打 GPS 控制中心：分機 7700<br/>4. 陪同至安全服務台</span></div>
+      </div>
+      <div style={{background:'rgba(140,159,203,0.06)',border:'1px solid rgba(140,159,203,0.15)',borderRadius:'6px',padding:'8px'}}>
+        <div style={{fontSize:'8px',fontWeight:700,color:'var(--color-gps-purple-600)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}><span className="en">Natural Disaster</span><span className="zh">天然災害</span></div>
+        <div style={{fontSize:'9px',color:'var(--color-ink)',lineHeight:1.5}}><span className="en">1. Follow site-specific protocol<br/>2. Move to designated shelter<br/>3. Account for all personnel<br/>4. Await all-clear from Control</span><span className="zh">1. 遵循廠區專屬程序<br/>2. 移動至指定避難處<br/>3. 確認所有人員到齊<br/>4. 等待控制中心解除警報</span></div>
+      </div>
+    </div>
+    <div style={{borderTop:'1px solid var(--color-g200)',paddingTop:'8px',display:'flex',justifyContent:'space-between',fontSize:'8px',color:'var(--color-g500)'}}>
+      <div><strong>GPS Control:</strong> ext. 7700</div>
+      <div><strong><span className="en">Assembly Points:</span><span className="zh">集合點：</span></strong> <span className="en">See site map</span><span className="zh">見廠區地圖</span></div>
+      <div style={{color:'var(--color-turquoise-600)',fontWeight:700}}><span className="en">Stay calm · Protect people</span><span className="zh">保持冷靜 · 保護人員</span></div>
+    </div>
+  </div>
+</div>
+
+### <span className="en">Brand Kit Manifest</span><span className="zh">品牌套件清單</span>
+
+<p><span className="en">Complete itemized list of everything that must ship to a new site 30 days before activation (Phase 0). Regional owner verifies receipt and completeness before Day 1.</span><span className="zh">完整的逐項清單，列出啟動前 30 天（第 0 階段）必須寄達新廠區的所有物品。區域負責人在第一天前確認收到和完整性。</span></p>
+
+<table className="gps-table"><thead><tr><th>#</th><th><span className="en">Item</span><span className="zh">項目</span></th><th><span className="en">Format</span><span className="zh">格式</span></th><th><span className="en">Qty</span><span className="zh">數量</span></th><th><span className="en">Owner</span><span className="zh">負責人</span></th></tr></thead><tbody><tr><td>1</td><td><span className="en">Logo file pack (12 variants)</span><span className="zh">標誌檔案包（12 種變體）</span></td><td>SVG, PNG, EPS</td><td>1 <span className="en">digital</span><span className="zh">數位</span></td><td>MarCom</td></tr><tr><td>2</td><td><span className="en">Color swatch book (print + digital)</span><span className="zh">色票簿（印刷 + 數位）</span></td><td><span className="en">Physical + PDF</span><span className="zh">實體 + PDF</span></td><td>2</td><td>MarCom</td></tr><tr><td>3</td><td><span className="en">Font files (Lato, Noto Sans TC/JP/SC)</span><span className="zh">字體檔案（Lato、Noto Sans TC/JP/SC）</span></td><td>WOFF2, OTF</td><td>1 <span className="en">digital</span><span className="zh">數位</span></td><td>MarCom</td></tr><tr><td>4</td><td><span className="en">Poster templates (6 moods)</span><span className="zh">海報模板（6 種情緒）</span></td><td>PSD, AI, Figma</td><td>1 <span className="en">digital</span><span className="zh">數位</span></td><td>MarCom</td></tr><tr><td>5</td><td><span className="en">Print safety items (12 types)</span><span className="zh">印刷安全物品（12 種）</span></td><td><span className="en">Physical print</span><span className="zh">實體印刷品</span></td><td><span className="en">Per site headcount</span><span className="zh">依廠區人數</span></td><td>MarCom + Procurement</td></tr><tr><td>6</td><td><span className="en">Wayfinding signage specs</span><span className="zh">導引標識規格</span></td><td>PDF + DWG</td><td>1 <span className="en">digital</span><span className="zh">數位</span></td><td>Facilities + MarCom</td></tr><tr><td>7</td><td><span className="en">Digital signage content pack</span><span className="zh">數位看板內容包</span></td><td>1920×1080 MP4/PNG</td><td>6 <span className="en">slides</span><span className="zh">張幻燈片</span></td><td>MarCom</td></tr><tr><td>8</td><td><span className="en">Email/newsletter templates</span><span className="zh">電子郵件/電子報模板</span></td><td>HTML, MJML</td><td>3 <span className="en">layouts</span><span className="zh">種版型</span></td><td>MarCom</td></tr><tr><td>9</td><td><span className="en">Language supplement (regional)</span><span className="zh">語言補充（區域性）</span></td><td><span className="en">Per App L requirements</span><span className="zh">依附錄 L 要求</span></td><td>1 <span className="en">set</span><span className="zh">套</span></td><td>GPS Strategy</td></tr><tr><td>10</td><td><span className="en">Emergency Response Cards (laminated)</span><span className="zh">緊急應變卡（護貝）</span></td><td>148×100mm <span className="en">waterproof</span><span className="zh">防水</span></td><td><span className="en">Per guard headcount + 20%</span><span className="zh">依保全人數 + 20%</span></td><td>GPS Strategy</td></tr></tbody></table>
