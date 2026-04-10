@@ -6,8 +6,14 @@ interface VocabIssue {
   word: string;
   line?: number;
   context?: string;
-  suggestion: string;
+  suggestion?: string;
+  reason?: string;
   severity: 'banned' | 'cautionary';
+  improvements?: {
+    level1?: { label: string; text: string };
+    level2?: { label: string; text: string };
+    level3?: { label: string; text: string };
+  };
 }
 
 interface ToneResult {
@@ -241,19 +247,49 @@ export default function AIComplianceChecker({ isOpen, onClose }: AIComplianceChe
                     <span className="en">No banned or cautionary vocabulary found.</span><span className="zh">未發現禁用或警示詞彙。</span>
                   </p>
                 ) : (
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-3">
                     {result.vocabulary.map((v, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs p-2 rounded" style={{ background: v.severity === 'banned' ? 'rgba(217,79,79,0.05)' : 'rgba(229,153,62,0.05)', border: `1px solid ${v.severity === 'banned' ? 'rgba(217,79,79,0.15)' : 'rgba(229,153,62,0.15)'}` }}>
-                        <span className="px-1.5 py-0.5 rounded text-[9px] font-bold text-white shrink-0" style={{ background: v.severity === 'banned' ? 'var(--color-danger)' : 'var(--color-warning)' }}>
-                          {v.severity === 'banned' ? 'BANNED' : 'CAUTION'}
-                        </span>
-                        <div>
-                          <span className="font-bold" style={{ color: 'var(--color-ink)' }}>"{v.word}"</span>
-                          {v.context && <span style={{ color: 'var(--color-g500)' }}> — {v.context}</span>}
-                          <div style={{ color: 'var(--color-turquoise-600)' }}>
-                            → {v.suggestion}
+                      <div key={i} className="text-xs rounded-lg overflow-hidden" style={{ border: `1px solid ${v.severity === 'banned' ? 'rgba(217,79,79,0.15)' : 'rgba(229,153,62,0.15)'}` }}>
+                        <div className="flex items-start gap-2 p-3" style={{ background: v.severity === 'banned' ? 'rgba(217,79,79,0.04)' : 'rgba(229,153,62,0.04)' }}>
+                          <span className="px-1.5 py-0.5 rounded text-[9px] font-bold text-white shrink-0" style={{ background: v.severity === 'banned' ? 'var(--color-danger)' : 'var(--color-warning)' }}>
+                            {v.severity === 'banned' ? 'BANNED' : 'CAUTION'}
+                          </span>
+                          <div>
+                            <span className="font-bold" style={{ color: 'var(--color-ink)' }}>"{v.word}"</span>
+                            {v.context && <span style={{ color: 'var(--color-g500)' }}> — {v.context}</span>}
+                            {v.reason && <div style={{ color: 'var(--color-g500)', marginTop: '4px', fontStyle: 'italic', lineHeight: 1.5 }}><span className="en">Why:</span><span className="zh">原因：</span> {v.reason}</div>}
                           </div>
                         </div>
+                        {v.improvements && (
+                          <div className="p-3" style={{ borderTop: '1px solid rgba(0,0,0,0.06)', background: '#fff' }}>
+                            <div className="text-[9px] font-bold uppercase mb-2" style={{ color: 'var(--color-turquoise-700)', letterSpacing: '0.06em' }}>
+                              <span className="en">Choose improvement level:</span><span className="zh">選擇改善層級：</span>
+                            </div>
+                            {v.improvements.level1 && (
+                              <div className="mb-1.5 p-1.5 rounded" style={{ background: 'var(--color-turquoise-50)' }}>
+                                <span className="font-bold" style={{ color: 'var(--color-turquoise-600)' }}>L1 {v.improvements.level1.label}:</span>{' '}
+                                <span style={{ color: 'var(--color-ink)' }}>{v.improvements.level1.text}</span>
+                              </div>
+                            )}
+                            {v.improvements.level2 && (
+                              <div className="mb-1.5 p-1.5 rounded" style={{ background: 'rgba(38,167,176,0.06)' }}>
+                                <span className="font-bold" style={{ color: 'var(--color-turquoise-600)' }}>L2 {v.improvements.level2.label}:</span>{' '}
+                                <span style={{ color: 'var(--color-ink)' }}>{v.improvements.level2.text}</span>
+                              </div>
+                            )}
+                            {v.improvements.level3 && (
+                              <div className="p-1.5 rounded" style={{ background: 'rgba(38,167,176,0.08)' }}>
+                                <span className="font-bold" style={{ color: 'var(--color-turquoise-700)' }}>L3 {v.improvements.level3.label}:</span>{' '}
+                                <span style={{ color: 'var(--color-ink)' }}>{v.improvements.level3.text}</span>
+                              </div>
+                            )}
+                          </div>
+                        )}
+                        {!v.improvements && v.suggestion && (
+                          <div className="p-2" style={{ borderTop: '1px solid rgba(0,0,0,0.06)', color: 'var(--color-turquoise-600)' }}>
+                            → {v.suggestion}
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
