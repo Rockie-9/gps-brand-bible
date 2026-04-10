@@ -1,0 +1,18 @@
+{
+  "name": "GPS Logo Pack v4.0",
+  "version": "4.0.0",
+  "contents": [
+    "logo-mark-standard.svg",
+    "logo-mark-reversed.svg",
+    "logo-horizontal-cn-light.svg",
+    "logo-horizontal-cn-dark.svg",
+    "logo-horizontal-en-light.svg",
+    "logo-horizontal-en-dark.svg",
+    "logo-vertical-cn-light.svg",
+    "logo-vertical-cn-dark.svg",
+    "logo-vertical-en-light.svg",
+    "logo-vertical-en-dark.svg"
+  ],
+  "formats": ["SVG", "PNG @1x @2x @3x"],
+  "instructions": "Use SVG for digital. Export PNG at required sizes. See Ch03 for clearspace and minimum size rules."
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "gps": {
+    "color": {
+      "primary": {
+        "turquoise": { "$value": "#26A7B0", "$type": "color", "pms": "PMS 7717 C", "cmyk": "C75 M23 Y37 K0", "ral": "RAL 5018" },
+        "copper": { "$value": "#CAC3D2", "$type": "color", "pms": "PMS 5235 C", "cmyk": "C25 M24 Y12 K0", "ral": "RAL 7047" }
+      },
+      "secondary": {
+        "purple": { "$value": "#8C9FCB", "$type": "color", "pms": "PMS 7674 C", "cmyk": "C30 M23 Y0 K20", "ral": "RAL 4011" },
+        "green": { "$value": "#8CC897", "$type": "color", "pms": "PMS 557 C", "cmyk": "C30 M0 Y25 K22", "ral": "RAL 6019" },
+        "orange": { "$value": "#F6AD90", "$type": "color", "pms": "PMS 1565 C", "cmyk": "C0 M30 Y41 K4", "ral": "RAL 3012" }
+      },
+      "neutral": {
+        "black": { "$value": "#0A1A22", "$type": "color" },
+        "ink": { "$value": "#1A2A32", "$type": "color" },
+        "charcoal": { "$value": "#2D3E48", "$type": "color" },
+        "slate": { "$value": "#4A5E6A", "$type": "color" },
+        "g500": { "$value": "#6B7B85", "$type": "color" },
+        "g400": { "$value": "#8E9CA5", "$type": "color" },
+        "g300": { "$value": "#B0BCC3", "$type": "color" },
+        "g200": { "$value": "#D2DAE0", "$type": "color" },
+        "g100": { "$value": "#E8EDF0", "$type": "color" },
+        "g50": { "$value": "#F4F5F7", "$type": "color" },
+        "white": { "$value": "#FAFBFC", "$type": "color" }
+      },
+      "semantic": {
+        "success": { "$value": "#2D9F5B", "$type": "color", "pms": "PMS 7731 C" },
+        "warning": { "$value": "#E5993E", "$type": "color", "pms": "PMS 7564 C" },
+        "danger": { "$value": "#D94F4F", "$type": "color", "pms": "PMS 7621 C" }
+      }
+    },
+    "spacing": {
+      "sp1": { "$value": "4px", "$type": "dimension" },
+      "sp2": { "$value": "8px", "$type": "dimension" },
+      "sp3": { "$value": "12px", "$type": "dimension" },
+      "sp4": { "$value": "16px", "$type": "dimension" },
+      "sp6": { "$value": "24px", "$type": "dimension" },
+      "sp8": { "$value": "32px", "$type": "dimension" },
+      "sp12": { "$value": "48px", "$type": "dimension" },
+      "sp16": { "$value": "64px", "$type": "dimension" },
+      "sp24": { "$value": "96px", "$type": "dimension" }
+    },
+    "typography": {
+      "fontEN": { "$value": "Lato, 'Trebuchet MS', Verdana, sans-serif", "$type": "fontFamily" },
+      "fontZH": { "$value": "'Noto Sans TC', 'Microsoft JhengHei', sans-serif", "$type": "fontFamily" },
+      "fontJP": { "$value": "'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif", "$type": "fontFamily" },
+      "fontSC": { "$value": "'Noto Sans SC', 'Microsoft YaHei', sans-serif", "$type": "fontFamily" },
+      "fontMono": { "$value": "'SF Mono', 'Fira Code', Consolas, monospace", "$type": "fontFamily" }
+    },
+    "breakpoint": {
+      "sm": { "$value": "420px", "$type": "dimension" },
+      "md": { "$value": "768px", "$type": "dimension" },
+      "lg": { "$value": "1024px", "$type": "dimension" },
+      "xl": { "$value": "1280px", "$type": "dimension" }
+    }
+  }
+}

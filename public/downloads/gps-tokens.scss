@@ -1,0 +1,45 @@
+// GPS Brand Bible v4.0 — SCSS Variables
+// Import this file: @use 'gps-tokens' as gps;
+
+// Primary
+$turquoise: #26A7B0;
+$copper: #CAC3D2;
+
+// Secondary
+$purple: #8C9FCB;
+$green: #8CC897;
+$orange: #F6AD90;
+
+// Neutral
+$black: #0A1A22;
+$ink: #1A2A32;
+$charcoal: #2D3E48;
+$slate: #4A5E6A;
+$g500: #6B7B85;
+$g400: #8E9CA5;
+$g300: #B0BCC3;
+$g200: #D2DAE0;
+$g100: #E8EDF0;
+$g50: #F4F5F7;
+$white: #FAFBFC;
+
+// Semantic
+$success: #2D9F5B;
+$warning: #E5993E;
+$danger: #D94F4F;
+
+// Typography
+$font-en: 'Lato', 'Trebuchet MS', Verdana, sans-serif;
+$font-zh: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+$font-jp: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+$font-sc: 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+$font-mono: 'SF Mono', 'Fira Code', Consolas, monospace;
+
+// Spacing
+$sp: (1: 4px, 2: 8px, 3: 12px, 4: 16px, 6: 24px, 8: 32px, 12: 48px, 16: 64px, 24: 96px);
+
+// Breakpoints
+$bp-sm: 420px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
